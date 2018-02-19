@@ -1,0 +1,45 @@
+name: Toya Llorca
+description: Web Developer
+logo: logo-i.html
+fold: nav
+
+title: "Mi sitio"
+
+
+nav-tools: 'true'
+
+#Nav tools
+navbutton:  'http://linkaloquequieras'
+iconshop:  'http://linkalacesta'
+iconsearch: 'true'
+
+
+
+icontwitter: '#'
+iconyoutube: '#'
+iconpinterest: '#'
+iconlinkedin: '#'
+
+
+
+
+logo-left:
+  header:
+    logo:
+      position: 'left'
+      align: 'left'
+      size: 's'
+      padding: 's'
+    menu:
+      align: 'right'
+      style: 'menu-style-line'
+    hero: 'true'
+    top-bar: 'false'
+    container: 'container-fluid'
+    navigation: 'top'
+
+
+
+
+
+footer: "Lorem Ipsum dolor sit amet. 989 556 443. info@tldxilon.github.io"
