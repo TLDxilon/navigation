@@ -1,0 +1,367 @@
+@import "mixins";
+@import "variables";
+@import "elements";
+@import "menu-styles";
+@import "navigation";
+//@import "iconos-css";
+
+
+/* Menú con flexbox */
+.navbar{
+  position: absolute;
+  width:100%;
+  top:-92px;
+  &.bg-white {
+    .navbar-item--logo {
+      @extend .bg-white;
+
+    }
+  }
+  &.search-is-open{
+    @extend .bg-white;
+  }
+
+
+
+
+  &.navbar-logo{
+   &--left, &--right{
+     .navbar-item--logo {
+
+       @media #{$smartphones}{
+         @include flex-basis(50%);
+       }
+       @media #{$tablets}{
+         @include flex-basis(50%);
+       }
+       @media #{$laptop}{
+         @include flex-basis(50%);
+       }
+
+     }
+     .navbar-item--menu {
+       @include flex-grow(1);
+     }
+     .navbar-item--tools {
+
+       @media #{$smartphones}{
+         @include flex-basis(50%);
+       }
+       @media #{$tablets}{
+         @include flex-basis(50%);
+       }
+       @media #{$laptop}{
+         @include flex-basis(50%);
+       }
+     }
+   }
+
+   &--top{
+     .navbar-item--logo{
+       @include transition(transform .3s ease, background .3s ease);
+     }
+     &.search-is-open{
+       .navbar-item--logo{
+         @extend .bg-white;
+
+       }
+     }
+     .navbar-inner{
+       .navbar-item--menu{
+         margin-right: 25px;
+       }
+     }
+
+
+
+
+   }
+
+   &--right{
+     .navbar-inner{
+       .navbar-item--logo{
+         @include order(3);
+       }
+     }
+
+   }
+ }
+}
+
+
+.navbar-content {
+  @include transition(transform .3s ease, background .3s ease);
+  &.navbar-fixed {
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    &.bg-white{
+
+      @extend .bg-white;
+
+
+    }
+    &.is-hide{
+      @include transform(translate(0, -100%));
+      @include transition(transform 0.3s ease-out);
+    }
+
+
+  }
+
+  &.search-is-open{
+    @extend .bg-white;
+  }
+  .navbar-inner{
+    @extend .flexbox-row-nowrap;
+    @include justify-content(center);
+    @include align-items(center);
+
+
+    .navbar-item--menu{
+      @extend .padding-lr-l;
+      @media #{$smartphones}{
+        display: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$tablets}{
+        display: none;
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$laptop}{
+        display: none;
+      }
+      @media #{$big}{
+
+      }
+
+    }
+    .navbar-item--logo{
+      @media #{$smartphones}{
+
+      }
+      @media #{$tablets}{
+
+      }
+      @media #{$laptop}{
+
+      }
+    }
+    .navbar-item--tools{
+      @extend .padding-lr-l;
+      @media #{$smartphones}{
+        padding-left: 0;
+        padding-right: 0;
+      }
+      @media #{$tablets}{
+        padding-left: 0;
+        padding-right: 0;
+      }
+
+      .tools-item{
+        margin: 5px;
+        vertical-align: middle;
+        display: inline-block;
+        height: 30px;
+
+
+        @media #{$smartphones}{
+          margin: 0 2px;
+        }
+
+      }
+
+
+
+    }
+
+
+  }
+  .navigation-bottom &{
+    @extend .bg-dark;
+  }
+}
+
+.btn-menu{
+  z-index:99;
+  position: relative;
+  overflow: hidden;
+  width: $tools-icon-size;
+
+  @media #{$big}{
+    display: none;
+  }
+
+  .open-menu, .close-menu{
+    position: absolute;
+    left: 0;
+    top:0;
+  }
+  .open-menu{
+    opacity: 0;
+    @include transition(opacity 0.3s linear);
+    .page-is-moving &{
+      opacity: 0;
+    }
+    .page-is-static &{
+      opacity: 1;
+    }
+  }
+  .close-menu{
+    opacity: 1;
+    @include transition(opacity 0.3s linear);
+    .page-is-moving &{
+      opacity: 1;
+    }
+    .page-is-static &{
+      opacity: 0;
+    }
+  }
+}
+
+.btn-search {
+  position: relative;
+  overflow: hidden;
+  width: $tools-icon-size;
+
+  .open-search, .close-search{
+    position: absolute;
+    left:0;
+  }
+  .open-search {
+    opacity: 1;
+    .search-is-open &{
+      opacity: 0;
+    }
+  }
+  .close-search {
+    opacity: 0;
+    .search-is-open &{
+      opacity: 1;
+    }
+  }
+}
+
+.topbar{
+  @extend .bg-dark;
+  .topbar-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .icon{
+    font-size: 22px;
+  }
+}
+
+.menu-mobile{
+  display: none;
+  position: absolute;
+  top: 0;
+  width: 260px;
+  right: 0;
+  height:100%;
+  z-index:-6;
+  @extend .bg-main;
+  .nav-menu-mobile-item{
+    display: list-item;
+    list-style-type: none;
+    @extend .border-bottom;
+    &:hover{
+      background: darken($tone-main, 10%);
+    }
+  }
+}
+
+.page-is-moving{
+  @include transform(translate(-260px, 0));
+  @include transition(transform 0.5s ease 0s);
+  .container &{
+    @include transform(translate(-240px, 0));
+  }
+
+
+
+}
+
+
+.search-bar{
+  position: relative;
+  height: 0;
+  opacity: 0;
+  width: 100%;
+  @include transition(opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s);
+  .search-is-open & {
+    height: auto;
+    opacity: 0.95;
+    visibility: visible;
+    @include transition(opacity 0.3s 0s, visibility 0s 0s, height 0.3s 0s);
+  }
+  .navigation-bottom &{
+    position: absolute;
+  }
+  .form-search-item{
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .input-search{
+    background: transparent;
+    border: none;
+    @extend .padding-s;
+    font-size: 30px;
+    width: 80%;
+    font-family: $font-family-base;
+    letter-spacing: 1px;
+    @extend .fg-dark;
+     &:focus{
+       outline: none;
+       @extend .fg-gray;
+     }
+    &::placeholder {
+      @extend .fg-clear;
+    }
+    @media #{$smartphones}{
+      width: 75%;
+      font-size: 20px;
+    }
+    @media #{$tablets}{
+      width: 75%;
+    }
+    @media #{$laptop}{
+      width: 75%;
+    }
+  }
+  .icon{
+    font-size: 30px;
+    @extend .padding-s;
+  }
+
+
+}
+
+.options{
+
+
+  @extend .padding-m;
+
+
+}
+
+
+
+
+
+.overflow-hidden{
+  overflow: hidden;
+}
+.display-none{
+  display: none;
+}
+.display-block{
+  display: block;
+}
+
+

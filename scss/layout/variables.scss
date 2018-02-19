@@ -1,0 +1,285 @@
+
+/*Breakpoints*/
+$smartphones:"only screen and (max-width: 479px)";
+$tablets:"only screen and (min-width: 480px) and (max-width: 768px)";
+$laptop:"only screen and (min-width: 768px) and (max-width: 960px)";
+$big:"only screen and (min-width: 960px)";
+
+
+
+$font-family-base: 'Poppins', sans-serif;
+
+
+$tone-white: #ffffff;
+$tone-clear: #ECECEC;
+$tone-dark: #222222;
+$tone-gray: #bcbcbc;
+$tone-main: #BE86B9;
+
+$tools-icon-size: 20px;
+
+
+/* COLORES */
+
+.fg{
+  &-dark{
+    color: $tone-dark;
+  }
+  &-gray{
+    color: $tone-gray;
+  }
+  &-clear{
+    color: $tone-clear;
+  }
+  &-white{
+    color: $tone-white;
+  }
+  &-main{
+    color: $tone-main;
+  }
+}
+
+
+.bg{
+  &-dark{
+    background: $tone-dark;
+    color: $tone-white;
+  }
+  &-gray{
+    background: $tone-gray;
+    color: $tone-white;
+  }
+  &-clear{
+    background: $tone-clear;
+    color: $tone-dark;
+  }
+  &-white{
+    background: $tone-white;
+    color: $tone-dark;
+  }
+  &-main{
+    background: $tone-main;
+    color: $tone-white;
+  }
+}
+
+
+
+
+
+/* CLASES DESCRIPTIVAS TEXTO */
+
+.text-align{
+  &-center{
+    text-align: center;
+  }
+  &-left{
+    text-align: left;
+  }
+  &-right{
+    text-align: right;
+  }
+}
+
+.font-weight{
+  &-bold{
+    font-weight: bold;
+  }
+}
+.text-transform{
+  &-uppercase {
+    text-transform: uppercase;
+  }
+}
+
+
+/*CLASES PADDINGS*/
+
+.padding{
+  &-xs{
+    padding: 5px;
+  }
+  &-s{
+    padding: 10px;
+  }
+  &-m{
+    padding: 15px;
+  }
+  &-l{
+    padding: 20px;
+  }
+  &-xl{
+    padding: 25px;
+  }
+}
+
+.padding-tb{
+  &-xs{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  &-s{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &-m{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &-l{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &-xl{
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &-xxl{
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+}
+
+.padding-lr{
+  &-s{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  &-m{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &-l{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
+
+.logo-size{
+  &-xs{
+    .branding-logo{
+      width: 100px;
+    }
+
+  }
+  &-s{
+    .branding-logo{
+      width: 200px;
+
+
+   }
+  }
+  &-m{
+    .branding-logo{
+      width: 250px;
+
+
+    }
+
+  }
+
+  &-l{
+    .branding-logo {
+      width: 300px;
+
+
+    }
+
+  }
+  &-xl{
+    .branding-logo {
+      width: 350px;
+
+
+    }
+
+  }
+}
+
+.position{
+  &-relative{
+    position: relative;
+  }
+  &-absolute{
+    position: absolute;
+  }
+}
+
+
+/* BORDE */
+
+.border {
+  &-bottom {
+    .navbar-content{
+      border-width: 0 0 1px 0;
+      border-style: solid;
+      border-color: transparentize($tone-gray, 0.5);
+    }
+  }
+  &-radius {
+
+    &-m {
+      border-radius: 10px;
+    }
+    &-l {
+      border-radius: 20px;
+    }
+    &-xl {
+      border-radius: 30px;
+    }
+  }
+}
+
+
+
+/* PORCENTAJES EN FLEXBOX */
+
+
+.transition-breakpoints{
+  transition: width .25s linear;
+  -moz-transition:  width .25s linear;
+  -webkit-transition:  width .25s linear;
+}
+
+
+.flexbox-row-nowrap{
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(nowrap);
+}
+
+
+/*ALINEAR IZQUIERDA O DERECHA CON FLEX*/
+
+.flex-align-left{
+  @include justify-content(flex-start);
+}
+.flex-align-right{
+  @include justify-content(flex-end);
+}
+.flex-align-center{
+  @include justify-content(center);
+}
+
+
+
+/* alturas barra menú*/
+
+.height{
+  &-xs{
+    height: 40px;
+  }
+  &-s{
+    height: 60px;
+  }
+  &-m{
+    height: 80px;
+  }
+  &-l{
+    height: 100px;
+  }
+  &-xl{
+    height: 120px;
+  }
+}
