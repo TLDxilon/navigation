@@ -1,12 +1,16 @@
 <header class=“site-header” role=“banner”>
 
+
+
+
+
     <!-- navbar -->
     <div class=“navbar”>
 
         {% if brand.position.center %}
 
             <div class=“navbar__item with-35 hidden-desktop “>
-                {% include _components/_icon.html class”js-mobile” icon=“mobile” %}
+                {% include _mobile-nav.html %}
             </div>
 
             {% endif %}
@@ -59,7 +63,7 @@
 
         {% else %}
              <div class=“navbar__item with-35”>
-            {% include _components/_icon.html class”js-search” icon=“search” type="icon-text" %}
+                 {% include _elements/_tools.html %}
             </div>
             <div class=“navbar__item with-full”>
                 {% include _elements/_brand.html %}
@@ -77,7 +81,7 @@
 
         {% if brand.position.left %}
         <div class=“navbar__item with-35 hidden-desktop “>
-            {% include _components/_icon.html class”js-mobile” icon=“mobile” %}
+            {% include _mobile-nav.html %}
         </div>
         {% endif %}
 
