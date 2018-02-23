@@ -4,88 +4,92 @@
     <div class=“navbar”>
 
         {% if brand.position.center %}
-        <div class=“navbar__item with-35 hidden-desktop “>
-            {% include _mobile-nav.html %}
-        </div>
+
+            <div class=“navbar__item with-35 hidden-desktop “>
+                {% include components/icon.html class”js-mobile” icon=“mobile” %}
+            </div>
+
+            {% endif %}
+
+            {% if page.navigation.top-left %}
+
+            <!-- FIX - FULL - FIX -->
+            <div class=“navbar__item with-35 visible-desktop”>
+                {% include elements/navigation.html %}
+            </div>
+            <div class=“navbar__item with-full”>
+                {% include elements/rand.html %}
+            </div>
+            <div class=“navbar__item with-35”>
+                {% include _elements/tools.html %}
+            </div>
+
         {% endif %}
 
-        {% if page.navigation.top-left %}
-        <!-- FIX - FULL - FIX -->
-        <div class=“navbar__item with-35 visible-desktop”>
-            {% include _navigation.html %}
-        </div>
-        <div class=“navbar__item with-full”>
-            {% include _brand.html %}
-        </div>
-        <div class=“navbar__item with-35”>
-            {% include _ctas.html %}
-            {% include _search.html %}
-            {% include _extras.html %}
-        </div>
-        {% endif %}
 
         {% if page.navigation.top-center %}
-        <!-- AUTO - FULL - AUTO -->
-        <div class=“navbar__item with-auto”>
-            {% include _brand.html %}
-        </div>
-        <div class=“navbar__item with-full visible-desktop”>
-            {% include _navigation.html %}
-        </div>
-        <div class=“navbar__item with-auto”>
-            {% include _ctas.html %}
-            {% include _search.html %}
-            {% include _extras.html %}
+
+            <!-- AUTO - FULL - AUTO -->
+            <div class=“navbar__item with-auto”>
+                {% include _brand.html %}
+            </div>
+            <div class=“navbar__item with-full visible-desktop”>
+                {% include _navigation.html %}
+            </div>
+            <div class=“navbar__item with-auto”>
+                {% include _elements/tools.html %}
+
+            </div>
+
+        {% endif %}
+
+
+        {% if page.navigation.bottom %}
+
+          {% if brand.position.left %}
+            <div class=“navbar__item with-auto”>
+                {% include _brand.html %}
+            </div>
+            <div class=“navbar__item with-full”>
+                {% include _elements/tools.html %}
+            </div>
+            <div class=“navbar__item with-full visible-desktop”>
+                {% include elements/navigation.html %}
+            </div>
+
+        {% else %}
+             <div class=“navbar__item with-35”>
+            {% include components/icon.html class”js-search” icon=“search” type="icon-text" %}
+            </div>
+            <div class=“navbar__item with-full”>
+                {% include elements/brand.html %}
+            </div>
+            <div class=“navbar__item with-35”>
+                {% include _elements/tools.html %}
+            </div>
+            <div class=“navbar__item with-full visible-desktop”>
+                {% include elements/navigation.html %}
+            </div>
+
+         {% endif %}
+
+        {% endif %}
+
+        {% if brand.position.left %}
+        <div class=“navbar__item with-35 hidden-desktop “>
+            {% include components/icon.html class”js-mobile” icon=“mobile” %}
         </div>
         {% endif %}
 
-        {% if page.navigation.bottom %}
-        {% if brand.position.left %}
-
-        <div class=“navbar__item with-auto”>
-            {% include _brand.html %}
-        </div>
-        <div class=“navbar__item with-full”>
-            {% include _ctas.html %}
-            {% include _search.html %}
-            {% include _extras.html %}
-        </div>
-        <div class=“navbar__item with-full visible-desktop”>
-            {% include _navigation.html %}
-        </div>
-
-        {% else %}
-
-        <div class=“navbar__item with-35">
-        {% include _search.html size=“icon-text” %}
-    </div>
-    <div class=“navbar__item with-full”>
-        {% include _brand.html %}
-    </div>
-    <div class=“navbar__item with-35”>
-        {% include _ctas.html }
-        {% include _extras.html %}
-    </div>
-    <div class=“navbar__item with-full visible-desktop”>
-        {% include _navigation.html %}
     </div>
 
-    {% endif %}
-    {% endif %}
-
-    {% if brand.position.left %}
-    <div class=“navbar__item with-35 hidden-desktop “>
-        {% include _mobile-nav.html %}
-    </div>
-    {% endif %}
-
-    </div><!-- /navbar -->
+    <!-- /navbar -->
 
 
     {% if page.hero %}
     <!-- hero -->
     <div class=“hero”>
-        {% include _hero.html %}
+        {% include elements/hero.html %}
     </div><!-- /hero -->
     {% endif %}
 
@@ -94,10 +98,17 @@
     <div class=“subnav visible-desktop”>
 
         <div class=“navbar__item with-full”>
-            {% include _navigation.html %}
+            {% include elements/navigation.html %}
         </div>
 
     </div><!-- /subnav -->
     {% endif %}
 
 </header>
+
+
+
+
+
+
+
