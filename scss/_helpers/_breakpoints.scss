@@ -8,20 +8,19 @@
   }
 }
 
-
-.hidden-mobile-tablets {
-  @media #{$mobile}{
-    display: none;
-  }
-  @media #{$tablets}{
-    display: none;
-  }
-}
 @media #{$mobile}{
   .hidden-mobile {
     display: none;
   }
   .visible-mobile {
+    display: block;
+  }
+}
+@media #{$tablets}{
+  .hidden-tablets {
+    display: none;
+  }
+  .visible-tablets {
     display: block;
   }
 }

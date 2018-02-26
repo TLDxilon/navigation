@@ -1,0 +1,20 @@
+.btn-search {
+  @extend .position-relative;
+  .open-search, .close-search{
+    position: absolute;
+    left:0;
+    top:0;
+  }
+  .open-search {
+    opacity: 1;
+    .search-is-open &{
+      opacity: 0;
+    }
+  }
+  .close-search {
+    opacity: 0;
+    .search-is-open &{
+      opacity: 1;
+    }
+  }
+}

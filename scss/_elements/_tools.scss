@@ -1,8 +1,15 @@
 .navbar__tools{
   @extend .flexbox-row-nowrap;
+  @include align-items(center);
 
 }
 
 .tools__item {
   @extend .margin-h-s;
+  vertical-align: middle;
+  display: inline-block;
+  position: relative;
+  .icon{
+    font-size: $tools-icon-size;
+  }
 }

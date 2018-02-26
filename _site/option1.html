@@ -30,7 +30,7 @@
    <div class="container">
      <div class="navbar-inner bg-white">
 
-        
+
 
             
 
@@ -44,7 +44,7 @@
      <h1 class="nav-item branding-title"><a class="fg-gray" href="/" title=""></a></h1>
 </div>
             </div>
-            <div class="navbar__item width-full hidden-mobile-tablets visible-desktop">
+            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
                 
     <ul class="navbar-menu-inner  flex-align-center js-align" >
         <li class="nav-menu-item active"><a class="nav-link fg-gray padding-tb-" href="#"><span class="">Home</span></a></li>
@@ -65,11 +65,15 @@
 
  </div> 
 
-                    
-                    <!--
+                    <a class="tools__item tools-item-btn btn-search fg-gray js-search-toogle" href="#searchbar">
+      <div class="open-search tools-item-btn"><span class="icon icon-search"></span></div>
+     <div class="close-search tools-item-btn"><span class="icon icon-x"></span></div>
+</a>
 
+
+                    <!---
 <div class=“extras”>
-    if extra.type = “ecommerce” {
+    if page.extra.type = “ecommerce” {
     <div class=“extras-item”>
         
 
@@ -79,8 +83,14 @@
     </div>
     }
 </div>
+--->
+    <a class="tools__item tools-item-btn btn-shop fg-gray" href=""><span class="icon icon-shopping-cart2"></span></a>
+    <a class="tools__item tools-item-btn btn-user fg-gray" href=""><span class="icon icon-user"></span></a>
 
--->
+                    <a class="tools__item tools-item-btn btn-menu fg-gray hidden-desktop js-menu-toogle">
+    <div class="open-menu tools-item-btn"><span class="icon icon-menu3"></span></div>
+    <div class="close-menu tools-item-btn" href=""><span class="icon icon-x"></span></div>
+</a>
                 </div>
 
 
@@ -91,11 +101,7 @@
 
         
 
-        
-        <div class="navbar__item hidden-desktop ">
-            
-        </div>
-        
+
       </div>
     </div>
  </div>

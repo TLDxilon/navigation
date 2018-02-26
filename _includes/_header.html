@@ -7,18 +7,19 @@
    <div class="{{ page.container }}">
      <div class="navbar-inner bg-{{ page.navbar.background }}">
 
-        {% if page.brand.position =='center' %}
 
-            <div class="navbar__item width-35 hidden-desktop">
-                {% include _elements/_mobile-nav.html %}
-            </div>
-
-        {% endif %}
 
             {% if page.navigation == 'top-left' %}
 
+             <div class="navbar__item width-35 hidden-desktop">
+                 <div class="navbar__tools">
+                 {% include _elements/_mobile-nav.html %}
+                 {% include _elements/_search.html %}
+                 </div>
+             </div>
+
             <!-- FIX - FULL - FIX -->
-            <div class="navbar__item width-35 hidden-mobile-tablets visible-desktop">
+            <div class="navbar__item width-35 hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-full text-align-center">
@@ -41,7 +42,7 @@
             <div class="navbar__item width-auto">
                 {% include _elements/_brand.html %}
             </div>
-            <div class="navbar__item width-full hidden-mobile-tablets visible-desktop">
+            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-auto">
@@ -49,6 +50,7 @@
                     {% include _elements/_ctas.html %}
                     {% include _elements/_search.html %}
                     {% include _elements/_extras.html %}
+                    {% include _elements/_mobile-nav.html %}
                 </div>
 
 
@@ -64,26 +66,34 @@
                 {% include _elements/_brand.html %}
             </div>
             <div class="navbar__item width-full">
+               <div class="navbar__tools">
                 {% include _elements/_ctas.html %}
                 {% include _elements/_search.html %}
                 {% include _elements/_extras.html %}
+                {% include _elements/_mobile-nav.html %}
+               </div>
             </div>
-            <div class="navbar__item width-full hidden-smartphones-tablets visible-desktop">
+            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
 
         {% else %}
              <div class="navbar__item width-35">
+                 <div class="navbar__tools">
+                 {% include _elements/_mobile-nav.html %}
                  {% include _elements/_search.html %}
+                 </div>
             </div>
             <div class="navbar__item width-full text-align-center">
                 {% include _elements/_brand.html %}
             </div>
             <div class="navbar__item width-35">
+                <div class="navbar__tools">
                 {% include _elements/_ctas.html %}
                 {% include _elements/_extras.html %}
+                </div>
             </div>
-            <div class="navbar__item width-full hidden-smartphones-tablets visible-desktop">
+            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
 
@@ -91,11 +101,7 @@
 
         {% endif %}
 
-        {% if page.brand.position =='left' %}
-        <div class="navbar__item hidden-desktop ">
-            {% include _elements/_mobile-nav.html %}
-        </div>
-        {% endif %}
+
       </div>
     </div>
  </div>
