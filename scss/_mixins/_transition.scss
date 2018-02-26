@@ -1,0 +1,18 @@
+// Transitions
+
+/* @include transition(all 2s ease-out); */
+@mixin transition($transition...) {
+  -webkit-transition: $transition;
+  -moz-transition:    $transition;
+  -ms-transition:     $transition;
+  -o-transition:      $transition;
+  transition:         $transition;
+}
+/* @include transition-delay(0.2s); */
+@mixin transition-delay($time: 0s) {
+  -webkit-transition-delay: $time;
+  -moz-transition-delay:    $time;
+  -ms-transition-delay:     $time;
+  -o-transition-delay:      $time;
+  transition-delay:         $time;
+}

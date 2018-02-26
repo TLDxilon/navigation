@@ -1,11 +1,22 @@
 .navbar-item--menu{
-  ul{
-    display:table;
-  }
+
+    @extend .flexbox-row-nowrap;
+    @include justify-content(center);
+    @include align-items(center);
+
+
 }
 
-.nav-menu-item {
+.nav-menu-item{
+    height:100%;
+}
 
-   display: table-cell;
-
+.nav-link{
+  @extend .flexbox-row-nowrap;
+  @include align-items(stretch);
+  height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  @extend .padding-h-l;
 }

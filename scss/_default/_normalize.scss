@@ -1,0 +1,17 @@
+
+*::after, *::before {
+  box-sizing: border-box;
+}
+
+ul{
+  list-style-type: none;
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+a{
+  text-decoration: none;
+}

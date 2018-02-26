@@ -1,0 +1,12 @@
+
+.branding-logo{
+  max-width: 100%;
+  vertical-align: middle;
+  @include transition(transform .3s ease, background .3s ease, width .25s linear);
+  @media #{$smartphones}{
+    max-width: 150px;
+  }
+  @media #{$tablets}{
+    max-width: 175px;
+  }
+}

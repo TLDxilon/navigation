@@ -1,0 +1,40 @@
+.btn{
+  @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out);
+  @extend .text-transform-uppercase;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+
+  &--small{
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  &--big{
+    padding: 15px 30px;
+    font-size: 15px;
+  }
+  &--s-flat{
+    border-width: 1.5px;
+    border-color: $tone-main;
+    border-style: solid;
+    @extend .bg-main;
+    @extend .fg-white;
+    &:hover{
+      background: darken($tone-main, 10%);
+      border-color: darken($tone-main, 10%);
+    }
+  }
+  &--s-outline{
+    @extend .fg-gray;
+    border-width: 1.5px;
+    border-color: $tone-gray;
+    border-style: solid;
+    &:hover{
+      @extend .bg-gray;
+      border-color: transparent;
+      @extend .fg-gray;
+    }
+  }
+}
