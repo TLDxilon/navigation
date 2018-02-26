@@ -201,6 +201,12 @@ a {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
 .btn {
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;

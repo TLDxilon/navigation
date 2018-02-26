@@ -1,76 +1,298 @@
-/*
-Error: File to import not found or unreadable: _positi.scss.
-        on line 11 of _helpers/helpers.scss
-        from line 5 of style.scss
+/*Breakpoints*/
+body {
+  font-family: "Poppins", sans-serif;
+  color: #222222;
+  margin: 0; }
 
-6: 
-7: @import "_components/components.scss";
-8: 
-9: @import "_layout/_navbar.scss";
-10: @import "_elements/_navigation.scss";
-11: @import "_elements/_background.scss";
-12: 
-13: 
-14: //@import "_elements/_brand.scss";
-15: //@import "_elements/_ctas.scss";
-16: //@import "_elements/_hero.scss";
+h1 {
+  font-size: 60px;
+  margin-bottom: 0;
+  margin-top: 0; }
 
-Backtrace:
-_helpers/helpers.scss:11
-style.scss:5
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:67:in `rescue in import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:45:in `import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:28:in `imported_file'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/import_node.rb:37:in `css_import?'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:329:in `block (2 levels) in visit_import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:329:in `map'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:329:in `block in visit_import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:88:in `block in with_import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:88:in `with_import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:326:in `visit_import'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `block in with_base'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:135:in `with_frame'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/stack.rb:79:in `with_base'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:162:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `map'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:52:in `visit_children'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `block in visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/base.rb:36:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:161:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/visitors/perform.rb:10:in `visit'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:36:in `css_tree'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `each'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/plugin.rb:82:in `update_stylesheets'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:340:in `watch_or_update'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/sass_scss.rb:51:in `process_result'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:52:in `parse'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/lib/sass/exec/base.rb:19:in `parse!'
-/usr/local/lib/ruby/gems/2.4.0/gems/sass-3.5.5/bin/scss:13:in `<top (required)>'
-/usr/local/bin/scss:22:in `load'
-/usr/local/bin/scss:22:in `<main>'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: File to import not found or unreadable: _positi.scss.\A         on line 11 of _helpers/helpers.scss\A         from line 5 of style.scss\A \A 6: \A 7: @import \"_components/components.scss\";\A 8: \A 9: @import \"_layout/_navbar.scss\";\A 10: @import \"_elements/_navigation.scss\";\A 11: @import \"_elements/_background.scss\";\A 12: \A 13: \A 14: //@import \"_elements/_brand.scss\";\A 15: //@import \"_elements/_ctas.scss\";\A 16: //@import \"_elements/_hero.scss\";"; }
+*::after, *::before {
+  box-sizing: border-box; }
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0; }
+
+a {
+  text-decoration: none; }
+
+/* @include transition(all 2s ease-out); */
+/* @include transition-delay(0.2s); */
+/* ALINEAR NORMAL */
+.text-align-center {
+  text-align: center; }
+.text-align-left {
+  text-align: left; }
+.text-align-right {
+  text-align: right; }
+
+/*ALINEAR CON FLEX*/
+.flex-align-left {
+  -webkit-justify-content: flex-start;
+  -moz-justify-content: flex-start;
+  -ms-justify-content: flex-start;
+  justify-content: flex-start;
+  -ms-flex-pack: flex-start; }
+
+.flex-align-right {
+  -webkit-justify-content: flex-end;
+  -moz-justify-content: flex-end;
+  -ms-justify-content: flex-end;
+  justify-content: flex-end;
+  -ms-flex-pack: flex-end; }
+
+.flex-align-center {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center; }
+
+/* BORDE */
+.border-bottom {
+  border-width: 0 0 1px 0;
+  border-style: solid;
+  border-color: rgba(188, 188, 188, 0.3); }
+.border-top {
+  border-width: 1px 0 0 0;
+  border-style: solid;
+  border-color: rgba(188, 188, 188, 0.5); }
+.border-radius-m {
+  border-radius: 10px; }
+.border-radius-l {
+  border-radius: 20px; }
+.border-radius-xl {
+  border-radius: 30px; }
+
+/* COLORES */
+.fg-dark {
+  color: #222222; }
+.fg-gray, .btn--s-outline, .btn--s-outline:hover {
+  color: #bcbcbc; }
+.fg-clear {
+  color: #ECECEC; }
+.fg-white, .btn--s-flat {
+  color: #ffffff; }
+.fg-main {
+  color: #BE86B9; }
+
+.bg-dark {
+  background: #222222;
+  color: #ffffff; }
+.bg-gray, .btn--s-outline:hover {
+  background: #bcbcbc;
+  color: #ffffff; }
+.bg-clear {
+  background: #ECECEC;
+  color: #222222; }
+.bg-white {
+  background: #ffffff;
+  color: #222222; }
+.bg-main, .btn--s-flat {
+  background: #BE86B9;
+  color: #ffffff; }
+.bg-transparent {
+  background: none; }
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px; }
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
+    .container {
+      max-width: 960px; } }
+  @media only screen and (max-width: 479px) {
+    .container {
+      max-width: 479px; } }
+
+.container-fluid {
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px; }
+
+.logo-size-xxs.branding-logo {
+  width: 100px; }
+.logo-size-xs.branding-logo {
+  width: 150px; }
+.logo-size-s.branding-logo {
+  width: 200px; }
+.logo-size-m.branding-logo {
+  width: 250px; }
+.logo-size-l.branding-logo {
+  width: 300px; }
+.logo-size-xl.branding-logo {
+  width: 350px; }
+
+/*CLASES PADDINGS*/
+.padding-xs {
+  padding: 0; }
+.padding-s {
+  padding: 10px; }
+.padding-m {
+  padding: 15px; }
+.padding-l {
+  padding: 20px; }
+.padding-xl {
+  padding: 25px; }
+
+.padding-v-xs {
+  padding-top: 5px;
+  padding-bottom: 5px; }
+.padding-v-s {
+  padding-top: 10px;
+  padding-bottom: 10px; }
+.padding-v-m {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+.padding-v-l {
+  padding-top: 40px;
+  padding-bottom: 40px; }
+.padding-v-xl {
+  padding-top: 80px;
+  padding-bottom: 80px; }
+.padding-v-xxl {
+  padding-top: 160px;
+  padding-bottom: 160px; }
+
+.padding-h-s {
+  padding-left: 5px;
+  padding-right: 5px; }
+.padding-h-m {
+  padding-left: 10px;
+  padding-right: 10px; }
+.padding-h-l, .nav-link {
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.font-weight-bold {
+  font-weight: bold; }
+
+.text-transform-uppercase, .btn {
+  text-transform: uppercase; }
+
+.width-auto {
+  width: auto; }
+
+.width-full {
+  width: 100%; }
+
+.width-35 {
+  width: 35%; }
+
+.flexbox-row-nowrap, .navbar, .navbar-item--menu, .nav-link {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -moz-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap; }
+
+.position-relative {
+  position: relative; }
+
+.position-absolute {
+  position: absolute; }
+
+.btn {
+  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
+  letter-spacing: 2px;
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle; }
+  .btn--small {
+    padding: 6px 12px;
+    font-size: 12px; }
+  .btn--big {
+    padding: 15px 30px;
+    font-size: 15px; }
+  .btn--s-flat {
+    border-width: 1.5px;
+    border-color: #BE86B9;
+    border-style: solid; }
+    .btn--s-flat:hover {
+      background: #ac65a6;
+      border-color: #ac65a6; }
+  .btn--s-outline {
+    border-width: 1.5px;
+    border-color: #bcbcbc;
+    border-style: solid; }
+    .btn--s-outline:hover {
+      border-color: transparent; }
+
+.navbar {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+
+.navbar-item--menu {
+  -webkit-justify-content: center;
+  -moz-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
+  -ms-flex-pack: center;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
+
+.nav-menu-item {
+  height: 100%; }
+
+.nav-link {
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  height: 100%;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px; }
+
+.background {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0; }
+  .background .bg-color {
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+    position: absolute; }
+  .background .bg-image {
+    width: 100%;
+    height: 100%;
+    z-index: -3;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 1;
+    position: absolute; }
+
+/*# sourceMappingURL=style.css.map */
