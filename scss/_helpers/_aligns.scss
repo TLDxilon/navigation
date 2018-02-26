@@ -1,0 +1,27 @@
+/* ALINEAR NORMAL */
+
+.text-align{
+  &-center{
+    text-align: center;
+  }
+  &-left{
+    text-align: left;
+  }
+  &-right{
+    text-align: right;
+  }
+}
+
+
+
+/*ALINEAR CON FLEX*/
+
+.flex-align-left{
+  @include justify-content(flex-start);
+}
+.flex-align-right{
+  @include justify-content(flex-end);
+}
+.flex-align-center{
+  @include justify-content(center);
+}

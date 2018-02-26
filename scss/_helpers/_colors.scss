@@ -1,0 +1,46 @@
+/* COLORES */
+
+.fg{
+  &-dark{
+    color: $tone-dark;
+  }
+  &-gray{
+    color: $tone-gray;
+  }
+  &-clear{
+    color: $tone-clear;
+  }
+  &-white{
+    color: $tone-white;
+  }
+  &-main{
+    color: $tone-main;
+  }
+}
+
+
+.bg{
+  &-dark{
+    background: $tone-dark;
+    color: $tone-white;
+  }
+  &-gray{
+    background: $tone-gray;
+    color: $tone-white;
+  }
+  &-clear{
+    background: $tone-clear;
+    color: $tone-dark;
+  }
+  &-white{
+    background: $tone-white;
+    color: $tone-dark;
+  }
+  &-main{
+    background: $tone-main;
+    color: $tone-white;
+  }
+  &-transparent{
+    background: none;
+  }
+}

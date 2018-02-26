@@ -1,0 +1,7 @@
+
+.navbar{
+  @extend .flexbox-row-nowrap;
+  @include justify-content(center);
+  @include align-items(center);
+
+}

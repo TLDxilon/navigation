@@ -1,0 +1,46 @@
+.logo-size{
+  &-xxs{
+    &.branding-logo{
+      width: 100px;
+    }
+
+  }
+  &-xs{
+    &.branding-logo{
+      width: 150px;
+    }
+
+  }
+  &-s{
+    &.branding-logo{
+      width: 200px;
+
+
+    }
+  }
+  &-m{
+    &.branding-logo{
+      width: 250px;
+
+
+    }
+
+  }
+
+  &-l{
+    &.branding-logo {
+      width: 300px;
+
+
+    }
+
+  }
+  &-xl{
+    &.branding-logo {
+      width: 350px;
+
+
+    }
+
+  }
+}

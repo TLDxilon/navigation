@@ -1,0 +1,28 @@
+/* BORDE */
+
+.border {
+  &-bottom {
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: transparentize($tone-gray, 0.7);
+
+  }
+  &-top {
+    border-width: 1px 0 0 0;
+    border-style: solid;
+    border-color: transparentize($tone-gray, 0.5);
+
+  }
+  &-radius {
+
+    &-m {
+      border-radius: 10px;
+    }
+    &-l {
+      border-radius: 20px;
+    }
+    &-xl {
+      border-radius: 30px;
+    }
+  }
+}

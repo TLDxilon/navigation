@@ -1,0 +1,62 @@
+/*CLASES PADDINGS*/
+
+.padding{
+  &-xs{
+    padding: 0;
+  }
+  &-s{
+    padding: 10px;
+  }
+  &-m{
+    padding: 15px;
+  }
+  &-l{
+    padding: 20px;
+  }
+  &-xl{
+    padding: 25px;
+  }
+}
+
+.padding-v{
+  &-xs{
+    padding-top: 5px;
+    padding-bottom: 5px;
+  }
+  &-s{
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  &-m{
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+  &-l{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  &-xl{
+    padding-top: 80px;
+    padding-bottom: 80px;
+  }
+  &-xxl{
+    padding-top: 160px;
+    padding-bottom: 160px;
+  }
+
+}
+
+.padding-h{
+  &-s{
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+  &-m{
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+  &-l{
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+}
