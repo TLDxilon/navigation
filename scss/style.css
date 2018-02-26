@@ -196,7 +196,7 @@ a {
   -ms-flex-basis: 35%;
   flex-basis: 35%; }
 
-.flexbox-row-nowrap, .navbar-inner, .nav-link, .navbar__tools {
+.flexbox-row-nowrap, .navbar-inner, .nav-link {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -211,7 +211,7 @@ a {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
-.flexbox-row-wrap, .navbar-menu-inner {
+.flexbox-row-wrap, .navbar-menu-inner, .navbar__tools {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -234,22 +234,22 @@ a {
 
 @media only screen and (min-width: 960px) {
   .hidden-desktop {
-    display: none; }
+    display: none !important; }
 
   .visible-desktop {
-    display: block; } }
+    display: block !important; } }
 @media only screen and (max-width: 479px) {
   .hidden-mobile {
-    display: none; }
+    display: none !important; }
 
   .visible-mobile {
-    display: block; } }
+    display: block !important; } }
 @media only screen and (min-width: 480px) and (max-width: 960px) {
   .hidden-tablets {
-    display: none; }
+    display: none !important; }
 
   .visible-tablets {
-    display: block; } }
+    display: block !important; } }
 /*CLASES MARGINS*/
 .margin-v-xs {
   margin-top: 5px;
@@ -418,12 +418,8 @@ a {
   -ms-align-items: center;
   align-items: center; }
 
-.tools__item {
-  vertical-align: middle;
-  display: inline-block;
-  position: relative; }
-  .tools__item .icon {
-    font-size: 25px; }
+.tools__item .icon {
+  font-size: 25px; }
 
 @font-face {
   font-family: 'icomoon';

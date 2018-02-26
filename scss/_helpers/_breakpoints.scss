@@ -1,26 +1,26 @@
 
 @media #{$desktop}{
   .hidden-desktop {
-    display: none;
+    display: none !important;
   }
   .visible-desktop {
-    display: block;
+    display: block !important;
   }
 }
 
 @media #{$mobile}{
   .hidden-mobile {
-    display: none;
+    display: none!important;
   }
   .visible-mobile {
-    display: block;
+    display: block!important;
   }
 }
 @media #{$tablets}{
   .hidden-tablets {
-    display: none;
+    display: none!important;
   }
   .visible-tablets {
-    display: block;
+    display: block!important;
   }
 }
