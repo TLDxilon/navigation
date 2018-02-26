@@ -5,7 +5,7 @@
       <!-- navbar -->
  <div class="navbar bg-{{ page.navbar.background }}">
    <div class="{{ page.container }}">
-     <div class="navbar-inner bg-{{ page.navbar.background }}">
+     <div class="navbar-inner">
 
 
 
@@ -27,8 +27,8 @@
             </div>
             <div class="navbar__item width-35">
                 <div class="navbar__tools flex-align-right">
-                {% include _elements/_ctas.html %}
-                {% include _elements/_search.html breakpoint='hidden-mobile hidden-tablets' %}
+                {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
+                {% include _elements/_search.html breakpoint='hidden-tablets' %}
                 {% include _elements/_extras.html %}
                 </div>
             </div>
@@ -66,18 +66,18 @@
                 {% include _elements/_brand.html %}
             </div>
             <div class="navbar__item width-full">
-               <div class="navbar__tools">
+               <div class="navbar__tools flex-align-right">
                 {% include _elements/_ctas.html %}
                 {% include _elements/_search.html %}
                 {% include _elements/_extras.html %}
                 {% include _elements/_mobile-nav.html %}
                </div>
             </div>
-            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-65 padding-v-m hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
 
-        {% else %}
+        {% elsif page.brand.position =='center' %}
              <div class="navbar__item width-35">
                  <div class="navbar__tools">
                  {% include _elements/_mobile-nav.html %}
@@ -88,12 +88,12 @@
                 {% include _elements/_brand.html %}
             </div>
             <div class="navbar__item width-35">
-                <div class="navbar__tools">
+                <div class="navbar__tools flex-align-right">
                 {% include _elements/_ctas.html %}
                 {% include _elements/_extras.html %}
                 </div>
             </div>
-            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-full padding-v-m hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
 
@@ -110,21 +110,25 @@
 
     {% if page.hero =='true' %}
     <!-- hero -->
+
     <div class="hero">
         {% include _elements/_hero.html %}
     </div>
+
     <!-- /hero -->
+
     {% else %}
     {% endif %}
 
     {% if page.navigation =='subnav' %}
-    <!-- subnav -->
-    <div class="subnav visible-desktop">
 
+    <!-- subnav -->
+    <div class="subnav bg-{{ page.subnav.background }} padding-v-m visible-desktop">
+       <div class="{{ page.container }}">
         <div class="navbar__item width-full">
             {% include _elements/_navigation.html %}
         </div>
-
+       </div>
     </div><!-- /subnav -->
     {% endif %}
 

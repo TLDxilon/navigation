@@ -15,7 +15,7 @@
     padding: 15px 30px;
     font-size: 15px;
   }
-  &--s-flat{
+  &--flat{
     border-width: 1.5px;
     border-color: $tone-main;
     border-style: solid;
@@ -26,7 +26,7 @@
       border-color: darken($tone-main, 10%);
     }
   }
-  &--s-outline{
+  &--outline{
     @extend .fg-gray;
     border-width: 1.5px;
     border-color: $tone-gray;

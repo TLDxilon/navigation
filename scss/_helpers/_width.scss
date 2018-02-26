@@ -12,4 +12,8 @@
 
 }
 
+.width-65{
+  @include flex-basis(65%);
+
+}
 

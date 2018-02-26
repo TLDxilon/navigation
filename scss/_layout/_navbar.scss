@@ -1,6 +1,6 @@
 
 .navbar-inner{
-  @extend .flexbox-row-nowrap;
+  @extend .flexbox-row-wrap;
   @include justify-content(space-between);
   @include align-items(center);
 
