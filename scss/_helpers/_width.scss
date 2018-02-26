@@ -1,17 +1,14 @@
 .width-auto{
-
-  width: auto;
+  @include flex-basis(auto);
 }
 
 .width-full{
-
-  width: 100%;
+  @include flex-grow(1);
 
 }
 
 .width-35{
-
-  width: 35%;
+  @include flex-basis(35%);
 
 }
 

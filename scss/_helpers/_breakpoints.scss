@@ -1,0 +1,19 @@
+
+@media #{$desktop}{
+  .hidden-desktop {
+    display: none;
+  }
+  .visible-desktop {
+    display: block;
+  }
+}
+
+
+  .hidden-smartphones-tablets {
+    @media #{$smartphones}{
+      display: none;
+    }
+    @media #{$tablets}{
+      display: none;
+    }
+  }
