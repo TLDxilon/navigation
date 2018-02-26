@@ -195,7 +195,7 @@ a {
   -ms-flex-basis: 35%;
   flex-basis: 35%; }
 
-.flexbox-row-nowrap, .navbar-inner, .navbar-menu-inner, .nav-link, .navbar__tools {
+.flexbox-row-nowrap, .navbar-inner, .nav-link, .navbar__tools {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -210,6 +210,21 @@ a {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
+.flexbox-row-wrap, .navbar-menu-inner {
+  display: -webkit-box;
+  display: -moz-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: wrap;
+  -moz-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+
 .position-relative {
   position: relative; }
 
@@ -223,12 +238,18 @@ a {
   .visible-desktop {
     display: block; } }
 @media only screen and (max-width: 479px) {
-  .hidden-smartphones-tablets {
+  .hidden-mobile-tablets {
     display: none; } }
 @media only screen and (min-width: 480px) and (max-width: 960px) {
-  .hidden-smartphones-tablets {
+  .hidden-mobile-tablets {
     display: none; } }
 
+@media only screen and (max-width: 479px) {
+  .hidden-mobile {
+    display: none; }
+
+  .visible-mobile {
+    display: block; } }
 /*CLASES MARGINS*/
 .margin-v-xs {
   margin-top: 5px;

@@ -3,3 +3,8 @@
   @include flex-direction(row);
   @include flex-wrap(nowrap);
 }
+.flexbox-row-wrap{
+  @include flexbox;
+  @include flex-direction(row);
+  @include flex-wrap(wrap);
+}

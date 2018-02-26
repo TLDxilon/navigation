@@ -9,11 +9,19 @@
 }
 
 
-  .hidden-smartphones-tablets {
-    @media #{$smartphones}{
-      display: none;
-    }
-    @media #{$tablets}{
-      display: none;
-    }
+.hidden-mobile-tablets {
+  @media #{$mobile}{
+    display: none;
   }
+  @media #{$tablets}{
+    display: none;
+  }
+}
+@media #{$mobile}{
+  .hidden-mobile {
+    display: none;
+  }
+  .visible-mobile {
+    display: block;
+  }
+}
