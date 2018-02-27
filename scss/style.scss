@@ -1,3 +1,5 @@
+@import "_variables/_variables.scss";
+
 @import "_default/_default.scss";
 
 @import "_mixins/_mixins.scss";
@@ -6,7 +8,7 @@
 
 @import "_components/_components.scss";
 
-@import "_layout/_navbar.scss";
+@import "_layout/_layout.scss";
 
 @import "_elements/_elements.scss";
 

@@ -1,0 +1,94 @@
+<div class="navbar-fixed is-hide bg-{{ page.navbar.background }}">
+    <div class="{{ page.container }}">
+        <div class="navbar-inner">
+
+            {% if page.navigation == 'top-left' %}
+
+            <div class="navbar__item width-35 hidden-desktop">
+                <div class="navbar__tools">
+                    {% include _elements/_mobile-nav.html %}
+                    {% include _elements/_search.html %}
+                </div>
+            </div>
+
+            <!-- FIX - FULL - FIX -->
+            <div class="navbar__item width-35 align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+                {% include _elements/_navigation.html %}
+            </div>
+            <div class="navbar__item width-full text-align-center">
+                {% include _elements/_brand.html %}
+            </div>
+            <div class="navbar__item width-35">
+                <div class="navbar__tools flex-align-right">
+                    {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
+                    {% include _elements/_search.html breakpoint='hidden-tablets hidden-mobile' %}
+                    {% include _elements/_extras.html %}
+                </div>
+            </div>
+
+            {% endif %}
+
+
+            {% if page.navigation == 'top-center' %}
+
+            <!-- AUTO - FULL - AUTO -->
+            <div class="navbar__item width-auto">
+                {% include _elements/_brand.html %}
+            </div>
+            <div class="navbar__item width-full align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+                {% include _elements/_navigation.html %}
+            </div>
+            <div class="navbar__item width-auto">
+                <div class="navbar__tools">
+                    {% include _elements/_ctas.html %}
+                    {% include _elements/_extras.html %}
+                    {% include _elements/_search.html %}
+                    {% include _elements/_mobile-nav.html %}
+                </div>
+
+
+            </div>
+
+            {% endif %}
+
+
+            {% if page.navigation == 'bottom' or page.navigation == 'subnav' %}
+
+            {% if page.brand.position =='left' %}
+            <div class="navbar__item width-auto">
+                {% include _elements/_brand.html %}
+            </div>
+            <div class="navbar__item width-full">
+                <div class="navbar__tools flex-align-right">
+                    {% include _elements/_ctas.html %}
+                    {% include _elements/_extras.html %}
+                    {% include _elements/_search.html %}
+                    {% include _elements/_mobile-nav.html %}
+                </div>
+            </div>
+
+            {% elsif page.brand.position =='center' %}
+            <div class="navbar__item width-35">
+                <div class="navbar__tools">
+                    {% include _elements/_mobile-nav.html %}
+                    {% include _elements/_search.html %}
+                </div>
+            </div>
+            <div class="navbar__item width-full text-align-center">
+                {% include _elements/_brand.html %}
+            </div>
+            <div class="navbar__item width-35">
+                <div class="navbar__tools flex-align-right">
+                    {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
+                    {% include _elements/_extras.html %}
+                </div>
+            </div>
+
+            {% endif %}
+
+            {% endif %}
+
+
+        </div>
+    </div>
+</div>
