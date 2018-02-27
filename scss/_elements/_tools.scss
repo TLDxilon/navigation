@@ -10,3 +10,6 @@
     font-size: $tools-icon-size;
   }
 }
+.tools-item-btn{
+  @extend .margin-h-m;
+}

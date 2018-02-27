@@ -17,7 +17,7 @@
              </div>
 
             <!-- FIX - FULL - FIX -->
-            <div class="navbar__item width-35 hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-35 align-self-stretch hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-full text-align-center">
@@ -40,14 +40,14 @@
             <div class="navbar__item width-auto">
                 {% include _elements/_brand.html %}
             </div>
-            <div class="navbar__item width-full hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-full align-self-stretch hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-auto">
                 <div class="navbar__tools">
                     {% include _elements/_ctas.html %}
-                    {% include _elements/_search.html %}
                     {% include _elements/_extras.html %}
+                    {% include _elements/_search.html %}
                     {% include _elements/_mobile-nav.html %}
                 </div>
 
@@ -66,8 +66,8 @@
             <div class="navbar__item width-full">
                <div class="navbar__tools flex-align-right">
                 {% include _elements/_ctas.html %}
-                {% include _elements/_search.html %}
                 {% include _elements/_extras.html %}
+                {% include _elements/_search.html %}
                 {% include _elements/_mobile-nav.html %}
                </div>
             </div>
@@ -102,7 +102,7 @@
     {% if page.navigation =='bottom' %}
 
     <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} padding-v-m hidden-mobile hidden-tablets visible-desktop">
+    <div class="subnav bg-{{ page.subnav.background }} hidden-mobile hidden-tablets visible-desktop">
         <div class="{{ page.container }}">
             <div class="navbar__item width-full">
                 {% include _elements/_navigation.html %}
@@ -126,7 +126,7 @@
     {% if page.navigation =='subnav' %}
 
     <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} padding-v-m  hidden-mobile hidden-tablets visible-desktop">
+    <div class="subnav bg-{{ page.subnav.background }}  hidden-mobile hidden-tablets visible-desktop">
        <div class="{{ page.container }}">
         <div class="navbar__item width-full">
             {% include _elements/_navigation.html %}

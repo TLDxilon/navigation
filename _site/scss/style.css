@@ -96,7 +96,7 @@ a {
 .bg-white {
   background: #ffffff;
   color: #222222; }
-.bg-main, .btn--flat {
+.bg-main, .menu--line span:after, .menu--back .active .nav-link, .menu--back .nav-link:hover, .btn--flat {
   background: #BE86B9;
   color: #ffffff; }
 .bg-transparent {
@@ -149,7 +149,7 @@ a {
 .padding-v-s {
   padding-top: 10px;
   padding-bottom: 10px; }
-.padding-v-m {
+.padding-v-m, .subnav .nav-link {
   padding-top: 20px;
   padding-bottom: 20px; }
 .padding-v-l {
@@ -232,6 +232,66 @@ a {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
+.align-self-stretch {
+  -webkit-align-self: stretch;
+  -moz-align-self: stretch;
+  -ms-align-self: stretch;
+  align-self: stretch; }
+
+.menu--line span {
+  position: relative;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center; }
+  .menu--line span:after {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s;
+    -ms-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+    -webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -ms-transition: transform 0.3s ease 0s;
+    -o-transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    -webkit-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    transform: translate(0, 20px); }
+  .menu--line span:hover:after {
+    opacity: 1;
+    -webkit-transform: translate(0, 15px);
+    -moz-transform: translate(0, 15px);
+    -ms-transform: translate(0, 15px);
+    transform: translate(0, 15px); }
+.menu--line .active span:after {
+  opacity: 1;
+  -webkit-transform: translate(0, 15px);
+  -moz-transform: translate(0, 15px);
+  -ms-transform: translate(0, 15px);
+  transform: translate(0, 15px); }
+
+.menu--back .active .nav-link {
+  -webkit-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
+.menu--back .nav-link:hover {
+  -webkit-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
+
 .position-relative, .btn-menu, .btn-search {
   position: relative; }
 
@@ -279,7 +339,7 @@ a {
 .margin-h-s, .tools__item {
   margin-left: 5px;
   margin-right: 5px; }
-.margin-h-m {
+.margin-h-m, .tools-item-btn {
   margin-left: 10px;
   margin-right: 10px; }
 .margin-h-l {
@@ -405,6 +465,13 @@ a {
   .search-is-open .btn-search .close-search {
     opacity: 1; }
 
+.navbar-menu-inner {
+  -webkit-align-items: stretch;
+  -moz-align-items: stretch;
+  -ms-align-items: stretch;
+  align-items: stretch;
+  height: 100%; }
+
 .nav-menu-item {
   height: 100%; }
 
@@ -417,6 +484,8 @@ a {
   text-transform: uppercase;
   letter-spacing: 2px;
   font-size: 14px; }
+  .nav-link span {
+    align-self: center; }
 
 .navbar__tools {
   -webkit-align-items: center;
@@ -426,6 +495,60 @@ a {
 
 .tools__item .icon {
   font-size: 25px; }
+
+.menu--line span {
+  position: relative;
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center; }
+  .menu--line span:after {
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    content: "";
+    opacity: 0;
+    -webkit-transition: opacity 0.3s ease 0s;
+    -moz-transition: opacity 0.3s ease 0s;
+    -ms-transition: opacity 0.3s ease 0s;
+    -o-transition: opacity 0.3s ease 0s;
+    transition: opacity 0.3s ease 0s;
+    -webkit-transition: transform 0.3s ease 0s;
+    -moz-transition: transform 0.3s ease 0s;
+    -ms-transition: transform 0.3s ease 0s;
+    -o-transition: transform 0.3s ease 0s;
+    transition: transform 0.3s ease 0s;
+    -webkit-transform: translate(0, 20px);
+    -moz-transform: translate(0, 20px);
+    -ms-transform: translate(0, 20px);
+    transform: translate(0, 20px); }
+  .menu--line span:hover:after {
+    opacity: 1;
+    -webkit-transform: translate(0, 15px);
+    -moz-transform: translate(0, 15px);
+    -ms-transform: translate(0, 15px);
+    transform: translate(0, 15px); }
+.menu--line .active span:after {
+  opacity: 1;
+  -webkit-transform: translate(0, 15px);
+  -moz-transform: translate(0, 15px);
+  -ms-transform: translate(0, 15px);
+  transform: translate(0, 15px); }
+
+.menu--back .active .nav-link {
+  -webkit-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
+.menu--back .nav-link:hover {
+  -webkit-transition: background 0.3s ease 0s;
+  -moz-transition: background 0.3s ease 0s;
+  -ms-transition: background 0.3s ease 0s;
+  -o-transition: background 0.3s ease 0s;
+  transition: background 0.3s ease 0s; }
 
 @font-face {
   font-family: 'icomoon';
