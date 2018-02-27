@@ -48,3 +48,26 @@
   @extend .fg-dark;
   @extend .bg-main;
 }
+
+.menu-options{
+  a{
+    display: inline-block;
+    margin:2px;
+    padding: 5px;
+    font-size: 14px;
+  }
+  @media #{$mobile}{
+    a{
+      display: block;
+      width: 100%;
+    }
+  }
+  @media #{$tablets}{
+    a{
+      display: block;
+      width: 100%;
+      margin:2px;
+      padding: 2px;
+    }
+  }
+}
