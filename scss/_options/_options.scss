@@ -1,0 +1,50 @@
+
+.options{
+  @extend .padding-xs;
+  position: fixed;
+  background: transparentize($tone-gray, 0.05);
+  left: -100px;
+  bottom: 0;
+ // @include box-shadow(0, 0, 15px, rgba(0, 0, 0, 0.7));
+  h2{
+    font-size: 12px;
+    font-weight: normal;
+    padding: 4px 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+  h3{
+    font-size: 10px;
+    font-weight: normal;
+    padding: 4px 0;
+    -webkit-margin-before: 0;
+    -webkit-margin-after: 0;
+  }
+  .open-options{
+    right: 0;
+    @extend .bg-white;
+    z-index: 111;
+    position: absolute;
+    top: 0;
+    @extend .padding-xs;
+  }
+  .close-options{
+    right: 0;
+    @extend .bg-white;
+    z-index: 111;
+    position: absolute;
+    top: 30px;
+    @extend .padding-xs;
+  }
+}
+
+
+
+
+.js-option{
+
+  font-size: 13px;
+  padding: 5px;
+  @extend .fg-dark;
+  @extend .bg-main;
+}

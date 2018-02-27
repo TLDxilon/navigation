@@ -38,4 +38,38 @@ $(document).ready(function(){
 
 
 
+    var $changeOption = $('.js-option');
+    var $openOptions = $('.open-options');
+    var $closeOptions = $('.close-options');
+
+    $changeOption.each(function(index) {
+        $(this).on('click', function(){
+
+            var dataValue         = $(this).data('value');
+            var dataOption        = $(this).data('option');
+            var dataElement       = $(this).data('element');
+            var $element          = $(dataElement);
+
+
+            $element.attr('class', function(i, c){
+                var pattern = '(^|\\s)' + dataOption + '\\S+';
+                var myReg  = new RegExp(pattern, "g");
+                return c.replace(myReg, '');
+            });
+            console.log(dataElement);
+            $element.addClass(dataOption + dataValue);
+
+
+        });
+    });
+
+    $openOptions.on('click', function(){
+        $('.options').css('left', '0');
+    });
+    $closeOptions.on('click', function(){
+        $('.options').css('left', '-120px');
+    });
+
+
+
 });

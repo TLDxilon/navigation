@@ -11,4 +11,8 @@
   .navbar-item--logo{
     @extend .padding-v-s;
   }
+  //Si es transparente fuerzo a que el fixed sea blanco
+  &.bg-transparent{
+    @extend .bg-white;
+  }
 }
