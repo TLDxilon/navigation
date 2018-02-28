@@ -12,6 +12,8 @@ ul {
 
 a {
   text-decoration: none; }
+  a:-webkit-any-link {
+    color: inherit; }
 
 body {
   font-family: "Poppins", sans-serif;

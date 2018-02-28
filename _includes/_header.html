@@ -13,7 +13,7 @@
     {% else %}
     {% endif %}
       <!-- navbar -->
- <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }}  js-border js-nav">
+ <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }}  js-border js-color">
 
 
    <div class="{{ page.container }} js-container">
@@ -49,10 +49,10 @@
         {% if page.navigation == 'top-center' %}
 
             <!-- AUTO - FULL - AUTO -->
-            <div class="navbar__item width-auto">
+            <div class="navbar__item width-auto padding-h-m">
                 {% include _elements/_brand.html %}
             </div>
-            <div class="navbar__item width-full align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-full align-self-stretch padding-h-m hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-auto">
@@ -114,7 +114,7 @@
     {% if page.navigation =='bottom' %}
 
     <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} hidden-mobile hidden-tablets visible-desktop">
+    <div class="subnav bg-{{ page.subnav.background }} js-subnav hidden-mobile js-border hidden-tablets visible-desktop">
         <div class="{{ page.container }} js-container">
             <div class="navbar__item width-full">
                 {% include _elements/_navigation.html %}
