@@ -1,0 +1,26 @@
+.topbar-inner{
+  @extend .flexbox-row-wrap;
+  @include justify-content(space-between);
+
+   font-size: 12px;
+
+  .icon{
+    font-size: 20px;
+    vertical-align: middle;
+    &.icon-phone2, &.icon-mail2{
+      font-size: 14px;
+      @extend .padding-h-s;
+    }
+
+  }
+  .social-item{
+    display: inline-block;
+
+  }
+}
+
+.topbar{
+  @media #{$mobile}{
+    display: none;
+  }
+}

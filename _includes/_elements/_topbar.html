@@ -1,12 +1,19 @@
-<div class="topbar bg-{{ page.topbar-background }} padding-tb-xs">
+<div class="topbar padding-v-xs bg-{{ page.topbar-background }}">
     <div class="{{ page.container }} js-container">
+      <div class="topbar-inner">
 
-        <div class="social text-align-right">
-            {% if site.icontwitter %}<a class="topbar-item btn-search" href="{{site.twitter}}"><span class="icon icon-twitter-with-circle fg-gray"></span></a>{% endif %}
-            {% if site.iconyoutube %}<a class="topbar-item btn-youtube" href="{{site.youtube}}"><span class="icon icon-youtube-with-circle fg-gray"></span></a>{% endif %}
-            {% if site.iconpinterest %}<a class="topbar-item btn-pinterest" href="{{site.pinterest}}"><span class="icon icon-pinterest-with-circle fg-gray"></span></a>{% endif %}
-            {% if site.iconlinkedin %}<a class="topbar-item btn-linkedin" href="{{site.linkedin}}"><span class="icon icon-linkedin-with-circle fg-gray"></span></a>{% endif %}
+            <div class="topbar__item  fg-gray text-align-right">
+                {% if site.phonenumber %}<a class="phone-item fg-gray" href="tel:{{ site.phonenumber }}"><span class="icon icon-phone2"></span>{{ site.phonenumber }}</a>{% endif %}
+                {% if site.email %}<a class="email-item fg-gray" href="mailto:{{ site.email }}"><span class="icon icon-mail2"></span>{{ site.email }}</a>{% endif %}
 
+
+            </div>
+            <div class="topbar__item topbar-social text-align-right">
+                {% if site.icontwitter %}<a class="social-item fg-gray" href="{{site.twitter}}"><span class="icon icon-twitter-with-circle"></span></a>{% endif %}
+                {% if site.iconyoutube %}<a class="social-item fg-gray" href="{{site.youtube}}"><span class="icon icon-youtube-with-circle"></span></a>{% endif %}
+                {% if site.iconpinterest %}<a class="social-item fg-gray" href="{{site.pinterest}}"><span class="icon icon-pinterest-with-circle"></span></a>{% endif %}
+                {% if site.iconlinkedin %}<a class="social-item fg-gray" href="{{site.linkedin}}"><span class="icon icon-linkedin-with-circle"></span></a>{% endif %}
+            </div>
         </div>
     </div>
 </div>
