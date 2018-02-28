@@ -1,9 +1,21 @@
 <header class="site-header position-relative" role="banner">
 
     {% include _elements/_navbar-fixed.html %}
+    {% if page.topbar =='true' %}
+    <!-- topbar -->
 
+
+        {% include _elements/_topbar.html %}
+
+
+    <!-- /topbar -->
+
+    {% else %}
+    {% endif %}
       <!-- navbar -->
- <div class="navbar bg-{{ page.navbar.background }} js-nav">
+ <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }} js-nav">
+
+
    <div class="{{ page.container }} js-container">
      <div class="navbar-inner">
 
@@ -25,8 +37,8 @@
             </div>
             <div class="navbar__item width-35">
                 <div class="navbar__tools flex-align-right">
-                {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
                 {% include _elements/_search.html breakpoint='hidden-tablets hidden-mobile' %}
+                {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
                 {% include _elements/_extras.html %}
                 </div>
             </div>
@@ -45,9 +57,9 @@
             </div>
             <div class="navbar__item width-auto">
                 <div class="navbar__tools">
+                    {% include _elements/_search.html %}
                     {% include _elements/_ctas.html %}
                     {% include _elements/_extras.html %}
-                    {% include _elements/_search.html %}
                     {% include _elements/_mobile-nav.html %}
                 </div>
 
@@ -65,9 +77,9 @@
             </div>
             <div class="navbar__item width-full">
                <div class="navbar__tools flex-align-right">
+                {% include _elements/_search.html %}
                 {% include _elements/_ctas.html %}
                 {% include _elements/_extras.html %}
-                {% include _elements/_search.html %}
                 {% include _elements/_mobile-nav.html %}
                </div>
             </div>

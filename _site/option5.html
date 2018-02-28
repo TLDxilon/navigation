@@ -59,12 +59,10 @@
             </div>
             <div class="navbar__item width-auto">
                 <div class="navbar__tools">
-                     <div class="tools__item hidden-mobile "><a class="btn btn--small btn--flat border-radius-xl js-btn" href="">Log in</a>
+                     <div class="tools__item margin-h-m hidden-mobile "><a class="btn btn--small btn--flat border-radius-xs js-btn" href="">Log in</a>
 
 </div>
- <div class="tools__item hidden-mobile "><a class="btn btn--small btn--outline border-radius-xl js-btn" href="">Call now</a>
 
- </div> 
 
                     <!---
 <div class=“extras”>
@@ -79,6 +77,7 @@
     }
 </div>
 --->
+
     <a class="tools__item tools-item-btn btn-shop fg-gray" href=""><span class="icon icon-shopping-cart2"></span></a>
     <a class="tools__item tools-item-btn btn-user fg-gray" href=""><span class="icon icon-user"></span></a>
 
@@ -99,9 +98,12 @@
         </div>
     </div>
 </div>
-
+    
+    
       <!-- navbar -->
- <div class="navbar bg-white js-nav">
+ <div class="navbar bg-white  js-nav">
+
+
    <div class="container js-container">
      <div class="navbar-inner">
 
@@ -122,12 +124,13 @@
             </div>
             <div class="navbar__item width-full">
                <div class="navbar__tools flex-align-right">
-                 <div class="tools__item hidden-mobile "><a class="btn btn--small btn--flat border-radius-xl js-btn" href="">Log in</a>
+                <a class="tools__item tools-item-btn btn-search fg-gray js-menu-toogle " href=""><span class="icon icon-search"></span></a>
+
+
+                 <div class="tools__item margin-h-m hidden-mobile "><a class="btn btn--small btn--flat border-radius-xs js-btn" href="">Log in</a>
 
 </div>
- <div class="tools__item hidden-mobile "><a class="btn btn--small btn--outline border-radius-xl js-btn" href="">Call now</a>
 
- </div> 
 
                 <!---
 <div class=“extras”>
@@ -142,11 +145,9 @@
     }
 </div>
 --->
+
     <a class="tools__item tools-item-btn btn-shop fg-gray" href=""><span class="icon icon-shopping-cart2"></span></a>
     <a class="tools__item tools-item-btn btn-user fg-gray" href=""><span class="icon icon-user"></span></a>
-
-                <a class="tools__item tools-item-btn btn-search fg-gray js-menu-toogle " href=""><span class="icon icon-search"></span></a>
-
 
                 <a class="tools__item tools-item-btn btn-menu fg-gray hidden-desktop js-menu-toogle" href=""><span class="icon icon-menu3"></span></a>
 
@@ -174,7 +175,7 @@
     <div class="hero-content  fix-header-padding">
         <h1 class="fg-white text-transform-uppercase">We design and develop </h1>
         <p class="fg-white">Tincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitaeTincidunt et urna purus tristique eros vitae purus tristique eros vitae</p>
-        <a class="btn btn--big btn--flat border-radius-xl js-btn" href="">Start</a>
+        <a class="btn btn--big btn--flat border-radius-xs js-btn" href="">Start</a>
 
 
 
@@ -182,7 +183,7 @@
 </div>
 
 <div class="background">
-    <div class="bg-color" style="background: rgba(0, 0, 0, 0.1)"></div>
+    <div class="bg-color" style="background: rgba(0, 0, 0, 0.2)"></div>
     <div class="bg-image" style="background-image:url('https://images.unsplash.com/photo-1484571113008-163c39101ccb?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=3586af0afdc8617b1b746d3662d0899b&auto=format&fit=crop&w=1950&q=80')"></div>
 </div>
     </div>
@@ -236,7 +237,7 @@
 
 
     <h2>Tamaño del logo</h2>
-
+    <a href="#" class="js-option" data-element=".branding-logo" data-option="logo-size-" data-value="xxs">XXS</a>
     <a href="#" class="js-option" data-element=".branding-logo" data-option="logo-size-" data-value="xs">XS</a>
     <a href="#" class="js-option" data-element=".branding-logo" data-option="logo-size-" data-value="s">S</a>
     <a href="#" class="js-option" data-element=".branding-logo" data-option="logo-size-" data-value="m">M</a>
@@ -250,10 +251,15 @@
     <a href="#" class="js-option" data-element=".navbar-item--logo" data-option="padding-v-" data-value="l">L</a>
     <a href="#" class="js-option" data-element=".navbar-item--logo" data-option="padding-v-" data-value="xl">XL</a>
 
+    <h2>Menú 1 border</h2>
+    <a href="#" class="js-option" data-element=".navbar-menu-inner" data-option="nav--" data-value="border">YES</a>
+    <a href="#" class="js-option" data-element=".navbar-menu-inner" data-option="nav--" data-value="">NO</a>
+
 
     <h2>Menú style</h2>
     <a href="#" class="js-option" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">LINE</a>
     <a href="#" class="js-option" data-element=".navbar-menu-inner" data-option="menu--" data-value="back">BACK</a>
+    <a href="#" class="js-option" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">LINE BOTTOM</a>
 
     <h2>Menú color</h2>
     <a href="#" class="js-option" data-element=".js-nav" data-option="bg-" data-value="main">1</a>
@@ -266,6 +272,7 @@
     <a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="left">left</a>
     <a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="center">center</a>
     <a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="right">right</a>
+    <a href="#" class="js-option" data-element=".js-align" data-option="flex-align-" data-value="justify">justify</a>
 
     <h2>Border bottom</h2>
     <a href="#" class="js-option" data-element=".js-nav" data-option="border-" data-value="bottom">YES</a>
@@ -277,6 +284,11 @@
     <a href="#" class="js-option" data-element=".subnav" data-option="bg-" data-value="gray">3</a>
     <a href="#" class="js-option" data-element=".subnav" data-option="bg-" data-value="dark">4</a>
     <a href="#" class="js-option" data-element=".subnav" data-option="bg-" data-value="transparent">NO</a>
+
+    <h2>Menú 2 border</h2>
+    <a href="#" class="js-option" data-element=".subnav" data-option="nav--" data-value="border">YES</a>
+    <a href="#" class="js-option" data-element=".subnav" data-option="nav--" data-value="">NO</a>
+
 
 
     <h2>CBo</h2>
@@ -290,21 +302,21 @@
     <br>
     <div class="menu-options">
         <h2>WITH HERO</h2>
-        <a class="fg-dark bg-main" href="/navigation/option1.html">Nav top + logo left</a>
-        <a class="fg-dark bg-main"  href="/navigation/option2.html">Nav top + logo center</a>
-        <a class="fg-dark bg-main"  href="/navigation/option3.html">Nav bottom + logo center</a>
-        <a class="fg-dark bg-main"  href="/navigation/option4.html">Nav bottom + logo left</a>
-        <a class="fg-dark bg-main"  href="/navigation/option5.html">Nav subnav + logo left</a>
-        <a class="fg-dark bg-main"  href="/navigation/option6.html">Nav subnav + logo center</a>
+        <a class="fg-dark bg-dark" href="/navigation/option1.html">Nav top + logo left</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option2.html">Nav top + logo center</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option3.html">Nav bottom + logo center</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option4.html">Nav bottom + logo left</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option5.html">Nav subnav + logo left</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option6.html">Nav subnav + logo center</a>
     </div>
     <div class="menu-options">
         <h2>NO HERO</h2>
-        <a class="fg-dark bg-main" href="/navigation/option7.html">Nav top + logo left</a>
-        <a class="fg-dark bg-main"  href="/navigation/option8.html">Nav top + logo center</a>
-        <a class="fg-dark bg-main"  href="/navigation/option9.html">Nav bottom + logo center</a>
-        <a class="fg-dark bg-main"  href="/navigation/option10.html">Nav bottom + logo left</a>
-        <a class="fg-dark bg-main"  href="/navigation/option11.html">Nav subnav + logo left</a>
-        <a class="fg-dark bg-main"  href="/navigation/option12.html">Nav subnav + logo center</a>
+        <a class="fg-dark bg-dark" href="/navigation/option7.html">Nav top + logo left</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option8.html">Nav top + logo center</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option9.html">Nav bottom + logo center</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option10.html">Nav bottom + logo left</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option11.html">Nav subnav + logo left</a>
+        <a class="fg-dark bg-dark"  href="/navigation/option12.html">Nav subnav + logo center</a>
     </div>
 <br><br>
 
