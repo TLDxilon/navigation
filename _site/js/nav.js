@@ -1,6 +1,17 @@
 $(document).ready(function(){
     var lastScrollPosition = 0;
     var $navBarFixed = $('.navbar-fixed');
+    var $searchBar = $('.js-searchbar');
+
+
+
+
+
+
+    $('.js-search-toogle').on('click', function(){
+        $searchBar.css('display', 'block');
+
+    });
 
 
 

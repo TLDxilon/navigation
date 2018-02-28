@@ -1,3 +1,10 @@
+
+.topbar{
+  @media #{$mobile}{
+    display: none;
+  }
+}
+
 .topbar-inner{
   @extend .flexbox-row-wrap;
   @include justify-content(space-between);
@@ -5,9 +12,9 @@
    font-size: 12px;
 
   .icon{
-    font-size: 20px;
+    font-size: 15px;
     vertical-align: middle;
-    &.icon-phone2, &.icon-mail2{
+    &.icon-phone, &.icon-mail{
       font-size: 14px;
       @extend .padding-h-s;
     }
@@ -15,12 +22,20 @@
   }
   .social-item{
     display: inline-block;
-
+    @extend .padding-h-s;
+   &:hover{
+     .icon{
+       @extend .fg-white;
+     }
+   }
   }
+   .phone-item, .email-item{
+     display: inline-block;
+     vertical-align: middle;
+     &:hover{
+       @extend .fg-white;
+     }
+   }
 }
 
-.topbar{
-  @media #{$mobile}{
-    display: none;
-  }
-}
+
