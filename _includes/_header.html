@@ -13,7 +13,7 @@
     {% else %}
     {% endif %}
       <!-- navbar -->
- <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }} js-nav">
+ <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }}  js-border js-nav">
 
 
    <div class="{{ page.container }} js-container">
@@ -115,7 +115,7 @@
 
     <!-- subnav -->
     <div class="subnav bg-{{ page.subnav.background }} hidden-mobile hidden-tablets visible-desktop">
-        <div class="{{ page.container }}">
+        <div class="{{ page.container }} js-container">
             <div class="navbar__item width-full">
                 {% include _elements/_navigation.html %}
             </div>
@@ -138,7 +138,7 @@
     {% if page.navigation =='subnav' %}
 
     <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }}  hidden-mobile hidden-tablets visible-desktop">
+    <div class="subnav bg-{{ page.subnav.background }} js-border hidden-mobile hidden-tablets visible-desktop">
        <div class="{{ page.container }} js-container">
         <div class="navbar__item width-full">
             {% include _elements/_navigation.html %}

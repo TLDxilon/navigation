@@ -1,12 +1,21 @@
 .nav--border {
-  border-top: $border-line;
-  border-bottom: $border-line;
+  border-top: 1px solid $tone-light-gray;
+  border-bottom: 1px solid $tone-light-gray;
+  margin-top: -1px;
+  margin-bottom: -1px;
+
 
   .nav-menu-item {
-    border-right: $border-line;
-    &:first-child {
-      border-left: $border-line;
-    }
+    border-top: 1px solid $tone-light-gray;
+    border-bottom: 1px solid $tone-light-gray;
+    border-left: 1px solid $tone-light-gray;
+    border-right: 1px solid $tone-light-gray;
+    margin-top: -1px;
+    margin-bottom: -1px;
+
+  }
+  .nav-menu-item + .nav-menu-item {
+    margin-left: -1px;
   }
 }
 
@@ -65,35 +74,40 @@
 
 
 .menu--line-bottom {
-  li{
-    position: relative;
-    &:after{
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      height: 3px;
-      @extend .bg-main;
-      content: "";
-      opacity: 0;
-      @include transition(opacity 0.3s ease 0s);
+    .nav-link{
+      position: relative;
+      &:after{
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        @extend .bg-main;
+        content: "";
+        opacity: 0;
+        @include transition(opacity 0.3s ease 0s);
 
-    }
-    &:hover:after{
-      opacity:1;
-
-    }
-    @include align-self(center);
-    &.active {
-
+      }
+      &:hover{
+        @extend .fg-main;
         &:after{
           opacity:1;
 
-          @include transition(opacity 0.3s ease 0s);
         }
-
+      }
     }
-  }
+
+    @include align-self(center);
+    li.active {
+        .nav-link {
+          @extend .fg-main;
+          &:after {
+            @extend .fg-main;
+            opacity: 1;
+            @include transition(opacity 0.3s ease 0s);
+          }
+        }
+    }
 
 
 }

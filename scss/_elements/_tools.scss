@@ -5,11 +5,8 @@
 }
 
 .tools__item {
-  @extend .margin-h-s;
+  @extend .margin-h-m;
   .icon{
     font-size: $tools-icon-size;
   }
-}
-.tools-item-btn{
-
 }
