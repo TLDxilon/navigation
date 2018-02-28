@@ -196,11 +196,11 @@ h1 {
   -ms-flex-grow: 1;
   flex-grow: 1; }
 
-.width-35 {
-  -webkit-flex-basis: 35%;
-  -moz-flex-basis: 35%;
-  -ms-flex-basis: 35%;
-  flex-basis: 35%; }
+.width-40 {
+  -webkit-flex-basis: 40%;
+  -moz-flex-basis: 40%;
+  -ms-flex-basis: 40%;
+  flex-basis: 40%; }
 
 .width-65 {
   -webkit-flex-basis: 65%;
