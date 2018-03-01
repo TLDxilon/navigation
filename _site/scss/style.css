@@ -175,10 +175,10 @@ h1 {
 .padding-h-s, .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2, .topbar-inner .social-item {
   padding-left: 5px;
   padding-right: 5px; }
-.padding-h-m, .topbar__item {
+.padding-h-m, .nav-link, .topbar__item {
   padding-left: 10px;
   padding-right: 10px; }
-.padding-h-l, .nav-link {
+.padding-h-l {
   padding-left: 15px;
   padding-right: 15px; }
 
@@ -212,7 +212,7 @@ h1 {
   -ms-flex-basis: 65%;
   flex-basis: 65%; }
 
-.flexbox-row-nowrap, .navbar-inner, .nav-link, .form-search, .topbar-inner {
+.flexbox-row-nowrap, .navbar-inner, .nav-link, .form-search, .navbar__tools, .topbar-inner {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -227,7 +227,7 @@ h1 {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap; }
 
-.flexbox-row-wrap, .navbar-menu-inner, .navbar__tools {
+.flexbox-row-wrap, .navbar-menu-inner {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -249,15 +249,15 @@ h1 {
   align-self: stretch; }
 
 .nav--border {
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
+  border-top: 1px solid rgba(214, 214, 214, 0.3);
+  border-bottom: 1px solid rgba(214, 214, 214, 0.3);
   margin-top: -1px;
   margin-bottom: -1px; }
   .nav--border .nav-menu-item {
-    border-top: 1px solid #d6d6d6;
-    border-bottom: 1px solid #d6d6d6;
-    border-left: 1px solid #d6d6d6;
-    border-right: 1px solid #d6d6d6;
+    border-top: 1px solid rgba(214, 214, 214, 0.3);
+    border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+    border-left: 1px solid rgba(214, 214, 214, 0.3);
+    border-right: 1px solid rgba(214, 214, 214, 0.3);
     margin-top: -1px;
     margin-bottom: -1px; }
   .nav--border .nav-menu-item + .nav-menu-item {
@@ -414,7 +414,8 @@ h1 {
   display: inline-block;
   font-weight: 400;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+  white-space: nowrap; }
   .btn--small {
     padding: 6px 12px;
     font-size: 12px; }
@@ -447,6 +448,7 @@ h1 {
   align-items: center; }
 
 .navbar-fixed {
+  z-index: 1;
   position: fixed;
   top: 0;
   width: 100%;
@@ -490,13 +492,12 @@ h1 {
     position: absolute; }
 
 .branding-logo {
-  max-width: 100%;
   vertical-align: middle;
-  -webkit-transition: transform 0.3s ease, background 0.3s ease, width 0.25s linear;
-  -moz-transition: transform 0.3s ease, background 0.3s ease, width 0.25s linear;
-  -ms-transition: transform 0.3s ease, background 0.3s ease, width 0.25s linear;
-  -o-transition: transform 0.3s ease, background 0.3s ease, width 0.25s linear;
-  transition: transform 0.3s ease, background 0.3s ease, width 0.25s linear; }
+  -webkit-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
+  -moz-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
+  -ms-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
+  -o-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
+  transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear; }
   @media only screen and (max-width: 479px) {
     .branding-logo {
       max-width: 100px; } }
@@ -613,15 +614,15 @@ h1 {
   font-size: 20px; }
 
 .nav--border {
-  border-top: 1px solid #d6d6d6;
-  border-bottom: 1px solid #d6d6d6;
+  border-top: 1px solid rgba(214, 214, 214, 0.3);
+  border-bottom: 1px solid rgba(214, 214, 214, 0.3);
   margin-top: -1px;
   margin-bottom: -1px; }
   .nav--border .nav-menu-item {
-    border-top: 1px solid #d6d6d6;
-    border-bottom: 1px solid #d6d6d6;
-    border-left: 1px solid #d6d6d6;
-    border-right: 1px solid #d6d6d6;
+    border-top: 1px solid rgba(214, 214, 214, 0.3);
+    border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+    border-left: 1px solid rgba(214, 214, 214, 0.3);
+    border-right: 1px solid rgba(214, 214, 214, 0.3);
     margin-top: -1px;
     margin-bottom: -1px; }
   .nav--border .nav-menu-item + .nav-menu-item {

@@ -1,5 +1,5 @@
 .navbar__tools{
-  @extend .flexbox-row-wrap;
+  @extend .flexbox-row-nowrap;
   @include align-items(center);
 
 }

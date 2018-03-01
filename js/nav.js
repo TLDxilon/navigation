@@ -2,7 +2,7 @@ $(document).ready(function(){
     var lastScrollPosition = 0;
     var $navBarFixed = $('.navbar-fixed');
     var $searchBar = $('.js-searchbar');
-
+    var $searchBarFixed = $('.js-fixed-searchbar');
 
 
 
@@ -27,7 +27,20 @@ $(document).ready(function(){
     });
 
 
+    $('.js-fixed-search-open').on('click', function(){
+        event.preventDefault();
+        $searchBarFixed.css('display', 'block');
+        $searchBar.find('input').focus();
+        $('.backdrop').css('display', 'block');
+        $('body').addClass('overflow-hidden');
+    });
 
+    $('.js-search-close').on('click', function(){
+        event.preventDefault();
+        $searchBarFixed.css('display', 'none');
+        $('.backdrop').css('display', 'none');
+        $('body').removeClass('overflow-hidden');
+    });
 
 
 
