@@ -23,6 +23,9 @@
   &-dark{
     background: $tone-dark;
     color: $tone-white;
+    a{
+      color: $tone-white;
+    }
   }
   &-gray{
     background: $tone-gray;

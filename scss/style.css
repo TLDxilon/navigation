@@ -93,6 +93,8 @@ h1 {
 .bg-dark {
   background: #222222;
   color: #ffffff; }
+  .bg-dark a {
+    color: #ffffff; }
 .bg-gray, .btn--outline:hover {
   background: #bcbcbc;
   color: #ffffff; }
