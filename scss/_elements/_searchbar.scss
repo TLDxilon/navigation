@@ -11,23 +11,30 @@
 }
 
 .form-search{
-  @extend .padding-v-m;
-}
-
-
-.icon-close-search{
-  font-size: 30px;
-
+  @extend .padding-h-m;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  @include translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  display: block;
 }
 .form-search-item{
   display: inline-block;
   vertical-align: middle;
 }
 
+.icon-close-search{
+  font-size: 30px;
+  width: 8%;
+  text-align: right;
+
+}
 
 .input-search{
   @extend .padding-v-s;
-  width: 85%;
+  width: 90%;
   vertical-align: middle;
   display: inline-block;
   border: 0;

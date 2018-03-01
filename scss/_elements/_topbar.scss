@@ -5,6 +5,11 @@
   }
 }
 
+
+.topbar__item{
+  @extend .padding-h-m;
+}
+
 .topbar-inner{
   @extend .flexbox-row-wrap;
   @include justify-content(space-between);
@@ -14,7 +19,7 @@
   .icon{
     font-size: 15px;
     vertical-align: middle;
-    &.icon-phone, &.icon-mail{
+    &.icon-phone2, &.icon-mail2{
       font-size: 14px;
       @extend .padding-h-s;
     }

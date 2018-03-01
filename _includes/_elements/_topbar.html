@@ -2,13 +2,12 @@
     <div class="{{ page.container }} js-container">
       <div class="topbar-inner">
 
-            <div class="topbar__item  fg-gray text-align-right">
-                {% if site.phonenumber %}<a class="phone-item fg-gray" href="tel:{{ site.phonenumber }}"><span class="icon icon-phone"></span>{{ site.phonenumber }}</a>{% endif %}
-                {% if site.email %}<a class="email-item fg-gray" href="mailto:{{ site.email }}"><span class="icon icon-mail"></span>{{ site.email }}</a>{% endif %}
+
+                {% if site.phonenumber %}<a class="topbar__item phone-item fg-gray" href="tel:{{ site.phonenumber }}"><span class="icon icon-phone2"></span>{{ site.phonenumber }}</a>{% endif %}
+                {% if site.email %}<a class="topbar__item email-item fg-gray" href="mailto:{{ site.email }}"><span class="icon icon-mail2"></span>{{ site.email }}</a>{% endif %}
 
 
-            </div>
-            <div class="topbar__item topbar-social text-align-right">
+            <div class="topbar__item  width-full topbar-social text-align-right">
                 {% if site.icontwitter %}<a class="social-item fg-gray" href="{{ site.twitter }}"><span class="icon icon-twitter"></span></a>{% endif %}
                 {% if site.iconpinterest %}<a class="social-item fg-gray" href="{{ site.pinterest }}"><span class="icon icon-pinterest"></span></a>{% endif %}
                 {% if site.iconlinkedin %}<a class="social-item fg-gray" href="{{ site.linkedin }}"><span class="icon icon-linkedin"></span></a>{% endif %}

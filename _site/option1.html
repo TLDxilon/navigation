@@ -23,7 +23,7 @@
 
 <header class="site-header position-relative" role="banner">
 
-    <div class="navbar-fixed is-hide border-bottom bg-white js-nav">
+    <div class="navbar-fixed is-hide border-bottom bg-white nav--border js-search-anchor position-relative js-border js-color">
     <div class="container  js-container">
         <div class="navbar-inner">
 
@@ -39,7 +39,7 @@
      <h1 class="nav-item branding-title"><a class="fg-gray" href="/" title=""></a></h1>
 </div>
             </div>
-            <div class="navbar__item width-full align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-full align-self-stretch padding-h-m hidden-mobile hidden-tablets visible-desktop">
                 
     <ul class="navbar-menu-inner menu--line-bottom flex-align-justify js-align" >
             <li class="nav-menu-item active"><a class="nav-link fg-dark " href="#"><span class="">Home</span></a></li>
@@ -57,7 +57,7 @@
                 <div class="navbar__tools">
                     
 <div class="tools__item ">
-    <a class="btn-search fg-dark js-menu-toogle " href="#"><span class="icon icon-search"></span></a>
+    <a class="btn-search fg-dark js-search-open " href="#"><span class="icon icon-search"></span></a>
 </div>
 
 
@@ -103,13 +103,12 @@
     <div class="container js-container">
       <div class="topbar-inner">
 
-            <div class="topbar__item  fg-gray text-align-right">
-                <a class="phone-item fg-gray" href="tel:123 456 789"><span class="icon icon-phone"></span>123 456 789</a>
-                <a class="email-item fg-gray" href="mailto:hola@mybrand.com"><span class="icon icon-mail"></span>hola@mybrand.com</a>
+
+                <a class="topbar__item phone-item fg-gray" href="tel:123 456 789"><span class="icon icon-phone2"></span>123 456 789</a>
+                <a class="topbar__item email-item fg-gray" href="mailto:hola@mybrand.com"><span class="icon icon-mail2"></span>hola@mybrand.com</a>
 
 
-            </div>
-            <div class="topbar__item topbar-social text-align-right">
+            <div class="topbar__item  width-full topbar-social text-align-right">
                 <a class="social-item fg-gray" href=""><span class="icon icon-twitter"></span></a>
                 <a class="social-item fg-gray" href=""><span class="icon icon-pinterest"></span></a>
                 <a class="social-item fg-gray" href=""><span class="icon icon-linkedin"></span></a>
@@ -128,13 +127,13 @@
       <!-- navbar -->
  <div class="navbar bg-white nav--border js-search-anchor position-relative js-border js-color">
 
-     <div class="searchbar bg-white nav--border js-searchbar">
-    <div class="container js-container">
-       <form class="form-search">
+     <div class="searchbar bg-white js-searchbar">
+
+       <form class="form-search container js-container">
         <input class="form-search-item input-search" type="text" placeholder="Buscar en mybrand.com">
-        <div class="form-search-item icon-close-search"><a class="fg-dark" href=""><span class="icon icon-x"></span></a></div>
+        <div class="form-search-item icon-close-search"><a class="js-search-close fg-dark" href=""><span class="icon icon-x"></span></a></div>
     </form>
-    </div>
+
     <div class="backdrop">
 
     </div>
@@ -173,7 +172,7 @@
                 <div class="navbar__tools">
                     
 <div class="tools__item ">
-    <a class="btn-search fg-dark js-menu-toogle " href="#"><span class="icon icon-search"></span></a>
+    <a class="btn-search fg-dark js-search-open " href="#"><span class="icon icon-search"></span></a>
 </div>
 
 
@@ -254,6 +253,27 @@
 
 
 <div class="container padding-m">
+
+    <br>
+    <div class="menu-options">
+        <h2>WITH HERO</h2>
+        <a class="fg-white bg-dark" href="/navigation/option1.html">Nav top + logo left</a>
+        <a class="fg-white bg-dark"  href="/navigation/option2.html">Nav top + logo center</a>
+        <a class="fg-white bg-dark"  href="/navigation/option3.html">Nav bottom + logo center</a>
+        <a class="fg-white bg-dark"  href="/navigation/option4.html">Nav bottom + logo left</a>
+        <a class="fg-white bg-dark"  href="/navigation/option5.html">Nav subnav + logo left</a>
+        <a class="fg-white bg-dark"  href="/navigation/option6.html">Nav subnav + logo center</a>
+    </div>
+    <div class="menu-options">
+        <h2>NO HERO</h2>
+        <a class="fg-white bg-dark" href="/navigation/option7.html">Nav top + logo left</a>
+        <a class="fg-white bg-dark"  href="/navigation/option8.html">Nav top + logo center</a>
+        <a class="fg-white bg-dark"  href="/navigation/option9.html">Nav bottom + logo center</a>
+        <a class="fg-white bg-dark"  href="/navigation/option10.html">Nav bottom + logo left</a>
+        <a class="fg-white bg-dark"  href="/navigation/option11.html">Nav subnav + logo left</a>
+        <a class="fg-white bg-dark"  href="/navigation/option12.html">Nav subnav + logo center</a>
+    </div>
+<br><br>
     <div class="options">
     <a href="#" class="open-options">Abrir</a><br>
     <a href="#" class="close-options">X</a>
@@ -322,26 +342,7 @@
 
 
 </div>
-    <br>
-    <div class="menu-options">
-        <h2>WITH HERO</h2>
-        <a class="fg-white bg-dark" href="/navigation/option1.html">Nav top + logo left</a>
-        <a class="fg-white bg-dark"  href="/navigation/option2.html">Nav top + logo center</a>
-        <a class="fg-white bg-dark"  href="/navigation/option3.html">Nav bottom + logo center</a>
-        <a class="fg-white bg-dark"  href="/navigation/option4.html">Nav bottom + logo left</a>
-        <a class="fg-white bg-dark"  href="/navigation/option5.html">Nav subnav + logo left</a>
-        <a class="fg-white bg-dark"  href="/navigation/option6.html">Nav subnav + logo center</a>
-    </div>
-    <div class="menu-options">
-        <h2>NO HERO</h2>
-        <a class="fg-white bg-dark" href="/navigation/option7.html">Nav top + logo left</a>
-        <a class="fg-white bg-dark"  href="/navigation/option8.html">Nav top + logo center</a>
-        <a class="fg-white bg-dark"  href="/navigation/option9.html">Nav bottom + logo center</a>
-        <a class="fg-white bg-dark"  href="/navigation/option10.html">Nav bottom + logo left</a>
-        <a class="fg-white bg-dark"  href="/navigation/option11.html">Nav subnav + logo left</a>
-        <a class="fg-white bg-dark"  href="/navigation/option12.html">Nav subnav + logo center</a>
-    </div>
-<br><br>
+
 
     <p>    Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh euismod tincidunt ut laoreet dolore magna aliquam erat volutpat. Ut wisi enim ad minim veniam, quis nostrud exerci tation ullamcorper suscipit lobortis nisl ut aliquip ex ea commodo consequat. Duis autem vel eum iriure dolor in hendrerit in vulputate velit esse molestie consequat, vel illum dolore eu feugiat nulla facilisis at vero eros et accumsan et iusto odio dignissim qui blandit praesent luptatum zzril delenit augue duis dolore te feugait nulla facilisi.</p>
 

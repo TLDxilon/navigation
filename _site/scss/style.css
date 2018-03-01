@@ -157,7 +157,7 @@ h1 {
 .padding-v-s, .navbar-fixed .navbar-item--logo, .input-search {
   padding-top: 10px;
   padding-bottom: 10px; }
-.padding-v-m, .subnav .nav-link, .form-search {
+.padding-v-m, .subnav .nav-link {
   padding-top: 20px;
   padding-bottom: 20px; }
 .padding-v-l {
@@ -170,10 +170,10 @@ h1 {
   padding-top: 160px;
   padding-bottom: 160px; }
 
-.padding-h-s, .topbar-inner .icon.icon-phone, .topbar-inner .icon.icon-mail, .topbar-inner .social-item {
+.padding-h-s, .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2, .topbar-inner .social-item {
   padding-left: 5px;
   padding-right: 5px; }
-.padding-h-m {
+.padding-h-m, .form-search, .topbar__item {
   padding-left: 10px;
   padding-right: 10px; }
 .padding-h-l, .nav-link {
@@ -580,15 +580,29 @@ h1 {
   height: 100%;
   z-index: 1; }
 
-.icon-close-search {
-  font-size: 30px; }
+.form-search {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -moz-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: auto;
+  display: block; }
 
 .form-search-item {
   display: inline-block;
   vertical-align: middle; }
 
+.icon-close-search {
+  font-size: 30px;
+  width: 8%;
+  text-align: right; }
+
 .input-search {
-  width: 85%;
+  width: 90%;
   vertical-align: middle;
   display: inline-block;
   border: 0;
@@ -721,7 +735,7 @@ h1 {
   .topbar-inner .icon {
     font-size: 15px;
     vertical-align: middle; }
-    .topbar-inner .icon.icon-phone, .topbar-inner .icon.icon-mail {
+    .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2 {
       font-size: 14px; }
   .topbar-inner .social-item {
     display: inline-block; }
@@ -1031,7 +1045,7 @@ h1 {
   position: fixed;
   background: rgba(188, 188, 188, 0.95);
   left: -100px;
-  top: 500px; }
+  bottom: 0; }
   .options h2 {
     font-size: 12px;
     font-weight: normal;
@@ -1056,7 +1070,7 @@ h1 {
     top: 30px; }
 
 .js-option {
-  font-size: 13px;
+  font-size: 12px;
   padding: 3px; }
 
 .menu-options a {

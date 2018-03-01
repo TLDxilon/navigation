@@ -11,12 +11,17 @@ $(document).ready(function(){
 
 
 
-    $('.js-menu-toogle').on('click', function(){
+    $('.js-search-open').on('click', function(){
         event.preventDefault();
         $searchBar.css('display', 'block');
+        $searchBar.find('input').focus();
 
     });
 
+    $('.js-search-close').on('click', function(){
+        event.preventDefault();
+        $searchBar.css('display', 'none');
+    });
 
 
 
