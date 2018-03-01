@@ -31,6 +31,10 @@
   vertical-align: middle;
   display: inline-block;
   border: 0;
+  font-size: 25px;
+  @media #{$mobile}{
+    font-size: 20px;
+  }
   &:focus{
     outline: none;
     @extend .fg-gray;
@@ -39,11 +43,6 @@
     @extend .fg-clear;
 
   }
-  &:focus,&::placeholder{
-    font-size: 25px;
-    @media #{$mobile}{
-      font-size: 20px;
-    }
-  }
+
 
 }

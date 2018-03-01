@@ -591,14 +591,13 @@ h1 {
   width: 80%;
   vertical-align: middle;
   display: inline-block;
-  border: 0; }
+  border: 0;
+  font-size: 25px; }
+  @media only screen and (max-width: 479px) {
+    .input-search {
+      font-size: 20px; } }
   .input-search:focus {
     outline: none; }
-  .input-search:focus, .input-search::placeholder {
-    font-size: 25px; }
-    @media only screen and (max-width: 479px) {
-      .input-search:focus, .input-search::placeholder {
-        font-size: 20px; } }
 
 .navbar__tools {
   -webkit-align-items: center;
