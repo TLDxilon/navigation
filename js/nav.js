@@ -30,7 +30,7 @@ $(document).ready(function(){
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
         $searchBarFixed.css('display', 'block');
-        $searchBar.find('input').focus();
+        $searchBarFixed.find('input').focus();
         $('.backdrop').css('display', 'block');
         $('body').addClass('overflow-hidden');
     });
