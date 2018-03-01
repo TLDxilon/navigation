@@ -8,10 +8,18 @@ $(document).ready(function(){
 
 
 
-    $('.js-search-toogle').on('click', function(){
+
+
+
+    $('.js-menu-toogle').on('click', function(){
+        event.preventDefault();
         $searchBar.css('display', 'block');
 
     });
+
+
+
+
 
 
 

@@ -8,15 +8,42 @@
   width: 100%;
   height: 100%;
   z-index: 1;
-  input{
-    @extend .padding-v-m;
-    width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    font-size: 30px;
-    border: 0;
-   &::placeholder{
-     @extend .fg-gray;
-   }
+}
+
+.form-search{
+  @extend .padding-v-m;
+}
+
+
+.icon-close-search{
+  font-size: 30px;
+
+}
+.form-search-item{
+  display: inline-block;
+  vertical-align: middle;
+}
+
+
+.input-search{
+  @extend .padding-v-s;
+  width: 80%;
+  vertical-align: middle;
+  display: inline-block;
+  border: 0;
+  &:focus{
+    outline: none;
+    @extend .fg-gray;
   }
+  &::placeholder{
+    @extend .fg-clear;
+
+  }
+  &:focus,&::placeholder{
+    font-size: 25px;
+    @media #{$mobile}{
+      font-size: 20px;
+    }
+  }
+
 }

@@ -4,19 +4,19 @@
   position: fixed;
   background: transparentize($tone-gray, 0.05);
   left: -100px;
-  bottom: 0;
+  top: 500px;
  // @include box-shadow(0, 0, 15px, rgba(0, 0, 0, 0.7));
   h2{
     font-size: 12px;
     font-weight: normal;
-    padding: 4px 0;
+    padding: 1px 0;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
   }
   h3{
     font-size: 10px;
     font-weight: normal;
-    padding: 4px 0;
+    padding: 2px 0;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0;
   }
@@ -44,7 +44,7 @@
 .js-option{
 
   font-size: 13px;
-  padding: 5px;
+  padding: 3px;
   @extend .fg-dark;
   @extend .bg-main;
 }

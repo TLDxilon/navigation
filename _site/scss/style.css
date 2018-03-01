@@ -81,9 +81,9 @@ h1 {
 /* COLORES */
 .fg-dark, .js-option {
   color: #222222; }
-.fg-gray, .btn--outline, .btn--outline:hover, .searchbar input::placeholder {
+.fg-gray, .btn--outline, .btn--outline:hover, .input-search:focus {
   color: #bcbcbc; }
-.fg-clear {
+.fg-clear, .input-search::placeholder {
   color: #ECECEC; }
 .fg-white, .btn--flat, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover {
   color: #ffffff; }
@@ -154,10 +154,10 @@ h1 {
 .padding-v-xs {
   padding-top: 5px;
   padding-bottom: 5px; }
-.padding-v-s, .navbar-fixed .navbar-item--logo {
+.padding-v-s, .navbar-fixed .navbar-item--logo, .input-search {
   padding-top: 10px;
   padding-bottom: 10px; }
-.padding-v-m, .subnav .nav-link, .searchbar input {
+.padding-v-m, .subnav .nav-link, .form-search {
   padding-top: 20px;
   padding-bottom: 20px; }
 .padding-v-l {
@@ -579,12 +579,26 @@ h1 {
   width: 100%;
   height: 100%;
   z-index: 1; }
-  .searchbar input {
-    width: 100%;
-    vertical-align: middle;
-    display: inline-block;
-    font-size: 30px;
-    border: 0; }
+
+.icon-close-search {
+  font-size: 30px; }
+
+.form-search-item {
+  display: inline-block;
+  vertical-align: middle; }
+
+.input-search {
+  width: 80%;
+  vertical-align: middle;
+  display: inline-block;
+  border: 0; }
+  .input-search:focus {
+    outline: none; }
+  .input-search:focus, .input-search::placeholder {
+    font-size: 25px; }
+    @media only screen and (max-width: 479px) {
+      .input-search:focus, .input-search::placeholder {
+        font-size: 20px; } }
 
 .navbar__tools {
   -webkit-align-items: center;
@@ -1018,17 +1032,17 @@ h1 {
   position: fixed;
   background: rgba(188, 188, 188, 0.95);
   left: -100px;
-  bottom: 0; }
+  top: 500px; }
   .options h2 {
     font-size: 12px;
     font-weight: normal;
-    padding: 4px 0;
+    padding: 1px 0;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
   .options h3 {
     font-size: 10px;
     font-weight: normal;
-    padding: 4px 0;
+    padding: 2px 0;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
   .options .open-options {
@@ -1044,7 +1058,7 @@ h1 {
 
 .js-option {
   font-size: 13px;
-  padding: 5px; }
+  padding: 3px; }
 
 .menu-options a {
   display: inline-block;
