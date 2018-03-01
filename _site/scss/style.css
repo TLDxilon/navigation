@@ -75,7 +75,7 @@ h1 {
   border-radius: 10px; }
 .border-radius-l {
   border-radius: 20px; }
-.border-radius-xl, .btn-search-close .icon {
+.border-radius-xl {
   border-radius: 30px; }
 
 /* COLORES */
@@ -104,7 +104,7 @@ h1 {
 .bg-white, .navbar-fixed.bg-transparent, .options .open-options, .options .close-options {
   background: #ffffff;
   color: #222222; }
-.bg-main, .menu--line span:after, .menu--back .active .nav-link, .menu--back .nav-link:hover, .menu--line-bottom .nav-link:after, .btn--flat, .btn-search-close .icon, .js-option {
+.bg-main, .menu--line span:after, .menu--back .active .nav-link, .menu--back .nav-link:hover, .menu--line-bottom .nav-link:after, .btn--flat, .js-option {
   background: #35affc;
   color: #ffffff; }
 .bg-transparent {
@@ -142,7 +142,7 @@ h1 {
 /*CLASES PADDINGS*/
 .padding-xxs {
   padding: 0; }
-.padding-xs, .btn-search-close .icon, .options, .options .open-options, .options .close-options {
+.padding-xs, .options, .options .open-options, .options .close-options {
   padding: 5px; }
 .padding-s {
   padding: 10px; }
@@ -599,7 +599,7 @@ h1 {
   display: table;
   height: 100%; }
 
-.btn-search-close {
+.search-close {
   display: table-cell;
   vertical-align: middle; }
 

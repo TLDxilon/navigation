@@ -36,13 +36,11 @@
     height: 100%;
 
 }
-.btn-search-close{
+.search-close{
    display: table-cell;
     vertical-align: middle;
   .icon{
-     @extend .bg-main;
-     @extend .border-radius-xl;
-     @extend .padding-xs;
+
 
   }
 }
