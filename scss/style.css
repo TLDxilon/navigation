@@ -743,6 +743,28 @@ h1 {
     display: inline-block;
     vertical-align: middle; }
 
+@media only screen and (max-width: 479px) {
+  .topbar {
+    display: none; } }
+
+.topbar-inner {
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  font-size: 12px; }
+  .topbar-inner .icon {
+    font-size: 15px;
+    vertical-align: middle; }
+    .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2 {
+      font-size: 14px; }
+  .topbar-inner .social-item {
+    display: inline-block; }
+  .topbar-inner .phone-item, .topbar-inner .email-item {
+    display: inline-block;
+    vertical-align: middle; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?b45r3v");

@@ -15,7 +15,7 @@ $(document).ready(function(){
         event.preventDefault();
         $searchBar.css('display', 'block');
         $searchBar.find('input').focus();
-
+        $('.backdrop').css('display', 'block');
     });
 
     $('.js-search-close').on('click', function(){
