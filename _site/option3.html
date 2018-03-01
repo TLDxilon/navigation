@@ -24,6 +24,10 @@
 <header class="site-header position-relative" role="banner">
 
     <div class="navbar-fixed is-hide border-bottom bg-white  js-search-anchor position-relative js-border js-color">
+
+
+
+
     <div class="container  js-container">
         <div class="navbar-inner">
 
@@ -37,8 +41,25 @@
 
             
 
+            <div class="navbar__item width-35 hidden-desktop">
+                <div class="navbar__tools">
+                    <div class="tools__item hidden-desktop ">
+    <a class="btn-menu fg-dark js-menu-toogle" href=""><span class="icon icon-menu3"></span></a>
+</div>
 
-            <div class="navbar__item width-35 align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+
+
+                    
+<div class="tools__item ">
+    <a class="btn-search fg-dark js-search-open " href="#"><span class="icon icon-search"></span></a>
+</div>
+
+
+
+                </div>
+            </div>
+
+            <div class="navbar__item width-35 align-self-stretch overflow-hidden hidden-mobile hidden-tablets visible-desktop">
                 
     <ul class="navbar-menu-inner menu--line-bottom flex-align-justify js-align" >
             <li class="nav-menu-item active"><a class="nav-link fg-dark " href="#"><span class="">Home</span></a></li>
@@ -60,16 +81,16 @@
             </div>
             <div class="navbar__item width-35">
                 <div class="navbar__tools flex-align-right">
-                     <div class="tools__item hidden-mobile hidden-tablets"><a class="btn btn--small btn--flat border-radius-xs js-btn" href="">Log in</a>
-
-</div>
-
-
                     
 <div class="tools__item ">
     <a class="btn-search fg-dark js-search-open hidden-tablets hidden-mobile" href="#"><span class="icon icon-search"></span></a>
 </div>
 
+
+
+                     <div class="tools__item hidden-mobile hidden-tablets"><a class="btn btn--small btn--flat border-radius-xs js-btn" href="">Log in</a>
+
+</div>
 
 
                     <div class="tools__item">
@@ -100,13 +121,10 @@
      <div class="searchbar bg-white js-searchbar">
 
        <form class="form-search container js-container">
-        <input class="form-search-item input-search" type="text" placeholder="Buscar en mybrand.com">
-        <div class="form-search-item icon-close-search"><a class="js-search-close fg-dark" href=""><span class="icon icon-x"></span></a></div>
+        <input class="form-search-item input-search width-full" type="text" placeholder="Buscar en mybrand.com">
+        <div class="form-search-item icon-close-search width-auto"><a class="btn-search-close js-search-close fg-dark" href=""><span class="icon icon-x"></span></a></div>
     </form>
 
-    <div class="backdrop">
-
-    </div>
 </div>
 
    <div class="container js-container">
@@ -176,7 +194,7 @@
 
     <!-- subnav -->
     <div class="subnav bg-dark js-subnav hidden-mobile js-border hidden-tablets visible-desktop">
-        <div class="container js-container">
+        <div class="container js-container fix-padding-container">
             <div class="navbar__item width-full">
                 
     <ul class="navbar-menu-inner menu--line-bottom flex-align-justify js-align" >
@@ -221,6 +239,10 @@
     
 
     
+
+    <div class="backdrop">
+
+    </div>
 
 </header>
 

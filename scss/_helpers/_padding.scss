@@ -1,8 +1,11 @@
 /*CLASES PADDINGS*/
 
 .padding{
-  &-xs{
+  &-xxs{
     padding: 0;
+  }
+  &-xs{
+    padding: 5px;
   }
   &-s{
     padding: 10px;

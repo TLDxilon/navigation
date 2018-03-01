@@ -1,4 +1,8 @@
 <div class="navbar-fixed is-hide border-bottom bg-{{ page.navbar.background }} {{ page.navbar.border }} js-search-anchor position-relative js-border js-color">
+
+
+
+
     <div class="{{ page.container }}  js-container">
         <div class="navbar-inner">
 
@@ -60,14 +64,14 @@
             <div class="navbar__item width-auto">
                 {% include _elements/_brand.html %}
             </div>
-            <div class="navbar__item width-full align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-full align-self-stretch  overflow-hidden hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-auto">
                 <div class="navbar__tools">
+                    {% include _elements/_search.html %}
                     {% include _elements/_ctas.html %}
                     {% include _elements/_extras.html %}
-                    {% include _elements/_search.html %}
                     {% include _elements/_mobile-nav.html %}
                 </div>
 
@@ -75,8 +79,14 @@
             </div>
             {% elsif page.brand.position =='center' %}
 
+            <div class="navbar__item width-35 hidden-desktop">
+                <div class="navbar__tools">
+                    {% include _elements/_mobile-nav.html %}
+                    {% include _elements/_search.html %}
+                </div>
+            </div>
 
-            <div class="navbar__item width-35 align-self-stretch hidden-mobile hidden-tablets visible-desktop">
+            <div class="navbar__item width-35 align-self-stretch overflow-hidden hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
             </div>
             <div class="navbar__item width-full text-align-center">
@@ -84,8 +94,8 @@
             </div>
             <div class="navbar__item width-35">
                 <div class="navbar__tools flex-align-right">
-                    {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
                     {% include _elements/_search.html breakpoint='hidden-tablets hidden-mobile' %}
+                    {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
                     {% include _elements/_extras.html %}
                 </div>
             </div>

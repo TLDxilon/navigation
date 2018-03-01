@@ -11,7 +11,7 @@
 }
 
 .topbar-inner{
-  @extend .flexbox-row-wrap;
+  @extend .flexbox-row-nowrap;
   @include justify-content(space-between);
 
    font-size: 12px;
