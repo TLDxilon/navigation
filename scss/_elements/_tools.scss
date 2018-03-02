@@ -17,4 +17,8 @@
   &::placeholder{
     @extend .fg-gray;
   }
+  &:focus{
+    outline: none;
+    @extend .fg-dark;
+  }
 }

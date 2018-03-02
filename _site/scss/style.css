@@ -79,7 +79,7 @@ h1 {
   border-radius: 30px; }
 
 /* COLORES */
-.fg-dark, .js-option {
+.fg-dark, .tools__item-search:focus, .js-option {
   color: #222222; }
 .fg-gray, .btn--outline, .btn--outline:hover, .input-search:focus, .tools__item-search::placeholder {
   color: #bcbcbc; }
@@ -628,6 +628,8 @@ h1 {
   font-size: 15px;
   height: 30px;
   border: 0; }
+  .tools__item-search:focus {
+    outline: none; }
 
 .nav--border {
   border-top: 1px solid rgba(214, 214, 214, 0.3);
