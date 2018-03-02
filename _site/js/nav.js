@@ -16,14 +16,16 @@ $(document).ready(function(){
         $searchBar.css('display', 'block');
         $searchBar.find('input').focus();
         $backdrop.css('display', 'block');
-        $('body').addClass('overflow-hidden');
+        $('body').addClass('no-scroll-body');
+        $('html').addClass('no-scroll-html');
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
-        $('body').removeClass('overflow-hidden');
+        $('body').removeClass('no-scroll-body');
+        $('html').removeClass('no-scroll-html');
     });
 
 
@@ -32,20 +34,23 @@ $(document).ready(function(){
         $searchBarFixed.css('display', 'block');
         $searchBarFixed.find('input').focus();
         $backdrop.css('display', 'block');
-        $('body').addClass('overflow-hidden');
+        $('body').addClass('no-scroll-body');
+        $('html').addClass('no-scroll-html');
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $searchBarFixed.css('display', 'none');
         $backdrop.css('display', 'none');
-        $('body').removeClass('overflow-hidden');
+        $('body').removeClass('no-scroll-body');
+        $('html').removeClass('no-scroll-html');
     });
     $backdrop.on('click', function(){
         $searchBarFixed.css('display', 'none');
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
-        $('body').removeClass('overflow-hidden');
+        $('body').removeClass('no-scroll-body');
+        $('html').removeClass('no-scroll-html');
     });
 
 
