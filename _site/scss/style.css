@@ -249,15 +249,16 @@ h1 {
   align-self: stretch; }
 
 .nav--border {
-  border-top: 1px solid rgba(214, 214, 214, 0.3);
-  border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+  overflow: hidden;
+  border-top: 1px solid rgba(201, 201, 201, 0.3);
+  border-bottom: 1px solid rgba(201, 201, 201, 0.3);
   margin-top: -1px;
   margin-bottom: -1px; }
   .nav--border .nav-menu-item {
-    border-top: 1px solid rgba(214, 214, 214, 0.3);
-    border-bottom: 1px solid rgba(214, 214, 214, 0.3);
-    border-left: 1px solid rgba(214, 214, 214, 0.3);
-    border-right: 1px solid rgba(214, 214, 214, 0.3);
+    border-top: 1px solid rgba(201, 201, 201, 0.3);
+    border-bottom: 1px solid rgba(201, 201, 201, 0.3);
+    border-left: 1px solid rgba(201, 201, 201, 0.3);
+    border-right: 1px solid rgba(201, 201, 201, 0.3);
     margin-top: -1px;
     margin-bottom: -1px; }
   .nav--border .nav-menu-item + .nav-menu-item {
@@ -628,19 +629,22 @@ h1 {
   font-size: 15px;
   height: 30px;
   border: 0; }
+  .tools__item-search::placeholder {
+    font-family: "Poppins", sans-serif; }
   .tools__item-search:focus {
     outline: none; }
 
 .nav--border {
-  border-top: 1px solid rgba(214, 214, 214, 0.3);
-  border-bottom: 1px solid rgba(214, 214, 214, 0.3);
+  overflow: hidden;
+  border-top: 1px solid rgba(201, 201, 201, 0.3);
+  border-bottom: 1px solid rgba(201, 201, 201, 0.3);
   margin-top: -1px;
   margin-bottom: -1px; }
   .nav--border .nav-menu-item {
-    border-top: 1px solid rgba(214, 214, 214, 0.3);
-    border-bottom: 1px solid rgba(214, 214, 214, 0.3);
-    border-left: 1px solid rgba(214, 214, 214, 0.3);
-    border-right: 1px solid rgba(214, 214, 214, 0.3);
+    border-top: 1px solid rgba(201, 201, 201, 0.3);
+    border-bottom: 1px solid rgba(201, 201, 201, 0.3);
+    border-left: 1px solid rgba(201, 201, 201, 0.3);
+    border-right: 1px solid rgba(201, 201, 201, 0.3);
     margin-top: -1px;
     margin-bottom: -1px; }
   .nav--border .nav-menu-item + .nav-menu-item {

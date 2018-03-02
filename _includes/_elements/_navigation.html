@@ -1,5 +1,24 @@
 
     <ul class="navbar-menu-inner menu--{{ page.menu-style }} flex-align-{{ page.menu-align }} js-align" >
-        {% include _elements/_navigation/_menu.html %}
+
+      {% if page.nav %}
+
+        {% for item in page.nav %}
+
+            {% include _elements/_navigation/_menu.html %}
+
+        {% endfor %}
+
+      {% else %}
+
+        {% for item in site.nav %}
+
+            {% include _elements/_navigation/_menu.html %}
+
+        {% endfor %}
+
+      {% endif %}
+
+
     </ul>
 

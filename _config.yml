@@ -10,3 +10,17 @@ iconlinkedin: '#'
 iconflickr: '#'
 iconvimeo: '#'
 iconyoutube: '#'
+
+
+nav:
+  -
+    name: "Home"
+    actual: "true"
+  -
+    name: "Products"
+  -
+    name: "Gallery"
+  -
+    name: "News"
+  -
+    name: "Contact"

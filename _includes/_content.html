@@ -1,5 +1,22 @@
 
-<div class="{{ page.container }} padding-m">
+<p class="{{ page.container }} padding-m">
+
+    <ul>
+    {% for item in include.mivariable %}
+        <li>
+            <p>Page nav: <i>{{ item.name }}</i>{% if item.actual %} (Menu activo) {% endif %}</p>
+        </li>
+    {% endfor %}
+    </ul>
+
+{{site.nav}}
+    <ul>
+    {% for item in site.nav %}
+        <li>
+            <p>Page nav: <i>{{ item.name }}</i>{% if item.actual %} (Menu activo) {% endif %}</p>
+        </li>
+    {% endfor %}
+    </ul>
 
     <br>
     <div class="menu-options">

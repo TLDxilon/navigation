@@ -1,9 +1,13 @@
 .nav--border {
+  overflow:hidden;
   border-top: 1px solid $gray-transparent;
   border-bottom: 1px solid $gray-transparent;
   margin-top: -1px;
   margin-bottom: -1px;
 
+.navbar-menu-inner{
+
+}
 
   .nav-menu-item {
     border-top: 1px solid $gray-transparent;
@@ -17,6 +21,7 @@
   .nav-menu-item + .nav-menu-item {
     margin-left: -1px;
   }
+
 }
 
 

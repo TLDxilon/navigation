@@ -16,6 +16,7 @@
    border: 0;
   &::placeholder{
     @extend .fg-gray;
+    font-family: $font-family-base;
   }
   &:focus{
     outline: none;
