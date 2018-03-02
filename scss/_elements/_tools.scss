@@ -10,16 +10,4 @@
     font-size: $tools-icon-size;
   }
 }
-.tools__item-search{
-   font-size:15px;
-   height:30px;
-   border: 0;
-  &::placeholder{
-    @extend .fg-gray;
-    font-family: $font-family-base;
-  }
-  &:focus{
-    outline: none;
-    @extend .fg-dark;
-  }
-}
+
