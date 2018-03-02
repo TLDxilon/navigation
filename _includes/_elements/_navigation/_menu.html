@@ -1,3 +1,7 @@
+
+{% for item in include.menu %}
+
     <li class="nav-menu-item {% if item.actual %} active {% endif %}"><a class="nav-link fg-dark {{ page.subnav-padding }}" href="#"><span class="">{{ item.name }}</span></a></li>
 
+{% endfor %}
 

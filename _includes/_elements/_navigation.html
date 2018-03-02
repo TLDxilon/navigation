@@ -3,19 +3,11 @@
 
       {% if page.nav %}
 
-        {% for item in page.nav %}
-
-            {% include _elements/_navigation/_menu.html %}
-
-        {% endfor %}
+            {% include _elements/_navigation/_menu.html menu = page.nav %}
 
       {% else %}
 
-        {% for item in site.nav %}
-
-            {% include _elements/_navigation/_menu.html %}
-
-        {% endfor %}
+            {% include _elements/_navigation/_menu.html menu = site.nav %}
 
       {% endif %}
 
