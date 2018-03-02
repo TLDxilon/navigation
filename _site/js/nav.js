@@ -34,7 +34,7 @@ $(document).ready(function(){
         $searchBarFixed.css('display', 'block');
         $searchBarFixed.find('input').focus();
         $backdrop.css('display', 'block');
-        $body.addClass('overflow-hidden');
+        $body.addClass('no-scroll-body');
 
     });
 
@@ -43,7 +43,6 @@ $(document).ready(function(){
         $searchBarFixed.css('display', 'none');
         $backdrop.css('display', 'none');
         $body.removeClass('no-scroll-body');
-        $body.removeClass('overflow-hidden');
         $html.removeClass('no-scroll-html');
     });
     $backdrop.on('click', function(){
@@ -51,7 +50,6 @@ $(document).ready(function(){
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
         $body.removeClass('no-scroll-body');
-        $body.removeClass('overflow-hidden');
         $html.removeClass('no-scroll-html');
     });
 
