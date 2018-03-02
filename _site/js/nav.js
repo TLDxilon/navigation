@@ -3,7 +3,7 @@ $(document).ready(function(){
     var $navBarFixed = $('.navbar-fixed');
     var $searchBar = $('.js-searchbar');
     var $searchBarFixed = $('.js-fixed-searchbar');
-
+    var $backdrop = $('.backdrop');
 
 
 
@@ -15,14 +15,14 @@ $(document).ready(function(){
         event.preventDefault();
         $searchBar.css('display', 'block');
         $searchBar.find('input').focus();
-        $('.backdrop').css('display', 'block');
+        $backdrop.css('display', 'block');
         $('body').addClass('overflow-hidden');
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $searchBar.css('display', 'none');
-        $('.backdrop').css('display', 'none');
+        $backdrop.css('display', 'none');
         $('body').removeClass('overflow-hidden');
     });
 
@@ -30,15 +30,21 @@ $(document).ready(function(){
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
         $searchBarFixed.css('display', 'block');
-        $searchBar.find('input').focus();
-        $('.backdrop').css('display', 'block');
+        $searchBarFixed.find('input').focus();
+        $backdrop.css('display', 'block');
         $('body').addClass('overflow-hidden');
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $searchBarFixed.css('display', 'none');
-        $('.backdrop').css('display', 'none');
+        $backdrop.css('display', 'none');
+        $('body').removeClass('overflow-hidden');
+    });
+    $backdrop.on('click', function(){
+        $searchBarFixed.css('display', 'none');
+        $searchBar.css('display', 'none');
+        $backdrop.css('display', 'none');
         $('body').removeClass('overflow-hidden');
     });
 

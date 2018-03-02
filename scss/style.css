@@ -603,6 +603,9 @@ h1 {
 .search-close {
   display: table-cell;
   vertical-align: middle; }
+  .search-close .btn {
+    height: 25px;
+    width: 25px; }
 
 .navbar__tools {
   -webkit-align-items: center;
