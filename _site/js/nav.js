@@ -4,8 +4,8 @@ $(document).ready(function(){
     var $searchBar = $('.js-searchbar');
     var $searchBarFixed = $('.js-fixed-searchbar');
     var $backdrop = $('.backdrop');
-
-
+    var $body = $('body');
+    var $html = $('html');
 
 
 
@@ -16,16 +16,16 @@ $(document).ready(function(){
         $searchBar.css('display', 'block');
         $searchBar.find('input').focus();
         $backdrop.css('display', 'block');
-        $('body').addClass('no-scroll-body');
-        $('html').addClass('no-scroll-html');
+        $body.addClass('no-scroll-body');
+        $html.addClass('no-scroll-html');
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
-        $('body').removeClass('no-scroll-body');
-        $('html').removeClass('no-scroll-html');
+        $body.removeClass('no-scroll-body');
+        $html.removeClass('no-scroll-html');
     });
 
 
@@ -34,23 +34,25 @@ $(document).ready(function(){
         $searchBarFixed.css('display', 'block');
         $searchBarFixed.find('input').focus();
         $backdrop.css('display', 'block');
-        $('body').addClass('no-scroll-body');
-        $('html').addClass('no-scroll-html');
+        $body.addClass('overflow-hidden');
+
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $searchBarFixed.css('display', 'none');
         $backdrop.css('display', 'none');
-        $('body').removeClass('no-scroll-body');
-        $('html').removeClass('no-scroll-html');
+        $body.removeClass('no-scroll-body');
+        $body.removeClass('overflow-hidden');
+        $html.removeClass('no-scroll-html');
     });
     $backdrop.on('click', function(){
         $searchBarFixed.css('display', 'none');
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
-        $('body').removeClass('no-scroll-body');
-        $('html').removeClass('no-scroll-html');
+        $body.removeClass('no-scroll-body');
+        $body.removeClass('overflow-hidden');
+        $html.removeClass('no-scroll-html');
     });
 
 
