@@ -79,11 +79,11 @@ h1 {
   border-radius: 30px; }
 
 /* COLORES */
-.fg-dark, .tools__item-search:focus, .js-option {
+.fg-dark, .search-input .tools__item-search:focus, .js-option {
   color: #222222; }
 .fg-gray, .btn--outline, .btn--outline:hover, .input-search:focus {
   color: #bcbcbc; }
-.fg-clear, .input-search::placeholder, .tools__item-search::placeholder {
+.fg-clear, .input-search::placeholder, .search-input .tools__item-search::placeholder {
   color: #ECECEC; }
 .fg-white, .btn--flat, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover {
   color: #ffffff; }
@@ -172,7 +172,7 @@ h1 {
   padding-top: 160px;
   padding-bottom: 160px; }
 
-.padding-h-s, .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2, .topbar-inner .social-item, .tools-search-content {
+.padding-h-s, .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2, .topbar-inner .social-item, .search-input .tools-search-content {
   padding-left: 5px;
   padding-right: 5px; }
 .padding-h-m, .nav-link, .topbar__item {
@@ -756,20 +756,18 @@ h1 {
   right: 0;
   background: rgba(34, 34, 34, 0.9); }
 
-.tools-search-content {
+.search-input .tools-search-content {
   border: 1px solid rgba(201, 201, 201, 0.3); }
-
-.btn-search {
+.search-input .btn-search {
   height: 30px; }
-  .btn-search .icon {
+  .search-input .btn-search .icon {
     vertical-align: middle; }
-
-.tools__item-search {
-  width: 200px;
+.search-input .tools__item-search {
+  width: 180px;
   font-size: 12px;
   height: 30px;
   border: 0; }
-  .tools__item-search:focus {
+  .search-input .tools__item-search:focus {
     outline: none; }
 
 @font-face {
