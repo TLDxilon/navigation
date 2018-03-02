@@ -13,6 +13,7 @@ $(document).ready(function(){
 
     $('.js-search-open').on('click', function(){
         event.preventDefault();
+        $html.addClass('search-is-open');
         $searchBar.css('display', 'block');
         $searchBar.find('input').focus();
         $backdrop.css('display', 'block');
@@ -22,6 +23,7 @@ $(document).ready(function(){
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
+        $html.removeClass('search-is-open');
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
         $body.removeClass('no-scroll-body');
@@ -31,6 +33,7 @@ $(document).ready(function(){
 
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
+        $html.addClass('search-is-open');
         $searchBarFixed.css('display', 'block');
         $searchBarFixed.find('input').focus();
         $backdrop.css('display', 'block');
@@ -40,12 +43,14 @@ $(document).ready(function(){
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
+        $html.removeClass('search-is-open');
         $searchBarFixed.css('display', 'none');
         $backdrop.css('display', 'none');
         $body.removeClass('no-scroll-body');
         $html.removeClass('no-scroll-html');
     });
     $backdrop.on('click', function(){
+        $html.removeClass('search-is-open');
         $searchBarFixed.css('display', 'none');
         $searchBar.css('display', 'none');
         $backdrop.css('display', 'none');
