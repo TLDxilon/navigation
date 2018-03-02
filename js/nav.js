@@ -120,9 +120,11 @@ $(document).ready(function(){
     });
 
     $openOptions.on('click', function(){
+        event.preventDefault();
         $('.options').css('left', '0');
     });
     $closeOptions.on('click', function(){
+        event.preventDefault();
         $('.options').css('left', '-120px');
     });
 
