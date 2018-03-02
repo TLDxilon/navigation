@@ -115,7 +115,7 @@
     {% if page.navigation =='bottom' %}
 
     <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} js-subnav hidden-mobile js-border hidden-tablets visible-desktop">
+    <div class="subnav bg-{{ page.subnav.background }} js-subnav js-border hidden-mobile hidden-tablets visible-desktop">
         <div class="{{ page.container }} js-container fix-padding-container">
             <div class="navbar__item width-full">
                 {% include _elements/_navigation.html %}
@@ -139,7 +139,7 @@
     {% if page.navigation =='subnav' %}
 
     <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} js-border hidden-mobile hidden-tablets visible-desktop">
+    <div class="subnav bg-{{ page.subnav.background }} js-subnav js-border hidden-mobile hidden-tablets visible-desktop">
        <div class="{{ page.container }} js-container fix-padding-container">
         <div class="navbar__item width-full">
             {% include _elements/_navigation.html %}
