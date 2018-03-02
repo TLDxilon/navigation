@@ -81,7 +81,7 @@ h1 {
 /* COLORES */
 .fg-dark, .js-option {
   color: #222222; }
-.fg-gray, .btn--outline, .btn--outline:hover, .input-search:focus {
+.fg-gray, .btn--outline, .btn--outline:hover, .input-search:focus, .tools__item-search::placeholder {
   color: #bcbcbc; }
 .fg-clear, .input-search::placeholder {
   color: #ECECEC; }
@@ -623,6 +623,11 @@ h1 {
 
 .tools__item .icon {
   font-size: 20px; }
+
+.tools__item-search {
+  font-size: 15px;
+  height: 30px;
+  border: 0; }
 
 .nav--border {
   border-top: 1px solid rgba(214, 214, 214, 0.3);
