@@ -8,9 +8,9 @@
   .js-searchbar{
     opacity: 1;
     z-index: 1;
-    left: 0;
     width: 100%;
     @include transition(opacity 0.3s ease, width 0.3s ease);
+
   }
   .input-search{
     opacity: 1;
@@ -33,7 +33,6 @@
   .js-fixed-searchbar{
     opacity: 1;
     z-index: 1;
-    left: 0;
     width: 100%;
     @include transition(opacity 0.3s ease, width 0.3s ease);
   }
