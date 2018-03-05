@@ -28,14 +28,14 @@
     }
   }
   &--outline{
-    @extend .fg-gray;
+    @extend .fg-main;
     border-width: 1.5px;
-    border-color: $tone-gray;
+    border-color: $tone-main;
     border-style: solid;
     &:hover{
-      @extend .bg-gray;
+      @extend .bg-main;
       border-color: transparent;
-      @extend .fg-gray;
+      @extend .fg-main;
     }
   }
 }

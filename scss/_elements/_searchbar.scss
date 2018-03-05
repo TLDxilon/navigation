@@ -19,10 +19,10 @@
     background: transparent;
     opacity: 0;
     border: 0;
-    font-size: 15px;
+    font-size: 20px;
   @include transform(translate(100px, 0));
     @media #{$mobile}{
-      font-size: 20px;
+      font-size: 15px;
     }
     &:focus{
       outline: none;

@@ -28,6 +28,7 @@ $(document).ready(function(){
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-fixed-is-open');
+        $searchBarFixed.find('input').focus();
 
 
     });

@@ -85,13 +85,13 @@ h1 {
 /* COLORES */
 .fg-dark, .input-search:focus, .search-input .tools__item-search:focus, .js-option {
   color: #222222; }
-.fg-gray, .btn--outline, .btn--outline:hover, .input-search::placeholder {
+.fg-gray, .input-search::placeholder {
   color: #bcbcbc; }
 .fg-clear, .search-input .tools__item-search::placeholder {
   color: #ECECEC; }
 .fg-white, .btn--flat, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover {
   color: #ffffff; }
-.fg-main, .menu--line-bottom .nav-link:hover, .menu--line-bottom li.active .nav-link, .menu--line-bottom li.active .nav-link:after {
+.fg-main, .menu--line-bottom .nav-link:hover, .menu--line-bottom li.active .nav-link, .menu--line-bottom li.active .nav-link:after, .btn--outline, .btn--outline:hover {
   color: #35affc; }
 
 .bg-dark {
@@ -99,7 +99,7 @@ h1 {
   color: #ffffff; }
   .bg-dark a {
     color: #ECECEC; }
-.bg-gray, .btn--outline:hover {
+.bg-gray {
   background: #bcbcbc;
   color: #ffffff; }
 .bg-clear {
@@ -108,7 +108,7 @@ h1 {
 .bg-white, .navbar-fixed.bg-transparent, .options .open-options, .options .close-options {
   background: #ffffff;
   color: #222222; }
-.bg-main, .menu--line span:after, .menu--back .active .nav-link, .menu--back .nav-link:hover, .menu--line-bottom .nav-link:after, .btn--flat, .js-option {
+.bg-main, .menu--line span:after, .menu--back .active .nav-link, .menu--back .nav-link:hover, .menu--line-bottom .nav-link:after, .btn--flat, .btn--outline:hover, .js-option {
   background: #35affc;
   color: #ffffff; }
 .bg-transparent {
@@ -518,7 +518,7 @@ h1 {
       border-color: #049bfa; }
   .btn--outline {
     border-width: 1.5px;
-    border-color: #bcbcbc;
+    border-color: #35affc;
     border-style: solid; }
     .btn--outline:hover {
       border-color: transparent; }
@@ -676,14 +676,14 @@ h1 {
   background: transparent;
   opacity: 0;
   border: 0;
-  font-size: 15px;
+  font-size: 20px;
   -webkit-transform: translate(100px, 0);
   -moz-transform: translate(100px, 0);
   -ms-transform: translate(100px, 0);
   transform: translate(100px, 0); }
   @media only screen and (max-width: 479px) {
     .input-search {
-      font-size: 20px; } }
+      font-size: 15px; } }
   .input-search:focus {
     outline: none; }
 
