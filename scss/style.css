@@ -716,14 +716,14 @@ h1 {
   background: transparent;
   opacity: 0;
   border: 0;
-  font-size: 20px;
+  font-size: 22px;
   -webkit-transform: translate(100px, 0);
   -moz-transform: translate(100px, 0);
   -ms-transform: translate(100px, 0);
   transform: translate(100px, 0); }
   @media only screen and (max-width: 479px) {
     .input-search {
-      font-size: 15px; } }
+      font-size: 18px; } }
   .input-search:focus {
     outline: none; }
 
