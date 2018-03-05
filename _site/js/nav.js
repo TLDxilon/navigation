@@ -1,11 +1,13 @@
 $(document).ready(function(){
     var lastScrollPosition = 0;
+    var widthLogo = $('.branding-logo').outerWidth(true);
     var $navBarFixed = $('.navbar-fixed');
     var $searchBar = $('.js-searchbar');
     var $searchBarFixed = $('.js-fixed-searchbar');
     var $backdrop = $('.backdrop');
     var $body = $('body');
     var $html = $('html');
+    var $logo = $('.navbar-item--logo');
 
 
 
@@ -14,7 +16,9 @@ $(document).ready(function(){
     $('.js-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-is-open');
-        $searchBar.find('input').focus();
+        setTimeout(function(){
+            $searchBar.find('input').focus();
+        },300);
 
     });
 
@@ -28,7 +32,9 @@ $(document).ready(function(){
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-fixed-is-open');
-        $searchBarFixed.find('input').focus();
+        setTimeout(function(){
+            $searchBarFixed.find('input').focus();
+        },300);
 
 
     });
@@ -43,6 +49,9 @@ $(document).ready(function(){
         $html.removeClass('search-fixed-is-open');
 
     });
+
+
+    $logo.css('width', (widthLogo) + 'px');
 
 
 
@@ -91,7 +100,10 @@ $(document).ready(function(){
             var dataOption        = $(this).data('option');
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
+            var widthLogo = $('.branding-logo').outerWidth(true);
 
+
+            $logo.css('width', (widthLogo) + 'px');
 
             $element.attr('class', function(i, c){
                 var pattern = '(^|\\s)' + dataOption + '\\S+';

@@ -85,7 +85,7 @@ h1 {
 /* COLORES */
 .fg-dark, .input-search:focus, .search-input .tools__item-search:focus, .js-option {
   color: #222222; }
-.fg-gray, .input-search::placeholder {
+.fg-gray, .input-search::placeholder, .search-close .btn {
   color: #bcbcbc; }
 .fg-clear, .search-input .tools__item-search::placeholder {
   color: #ECECEC; }
@@ -99,7 +99,7 @@ h1 {
   color: #ffffff; }
   .bg-dark a {
     color: #ECECEC; }
-.bg-gray {
+.bg-gray, .search-close .btn:hover {
   background: #bcbcbc;
   color: #ffffff; }
 .bg-clear {
@@ -460,7 +460,6 @@ h1 {
   .search-is-open .js-searchbar {
     opacity: 1;
     z-index: 1;
-    width: 100%;
     -webkit-transition: opacity 0.3s ease, width 0.3s ease;
     -moz-transition: opacity 0.3s ease, width 0.3s ease;
     -ms-transition: opacity 0.3s ease, width 0.3s ease;
@@ -497,7 +496,6 @@ h1 {
 .search-fixed-is-open .js-fixed-searchbar {
   opacity: 1;
   z-index: 1;
-  width: 100%;
   -webkit-transition: opacity 0.3s ease, width 0.3s ease;
   -moz-transition: opacity 0.3s ease, width 0.3s ease;
   -ms-transition: opacity 0.3s ease, width 0.3s ease;
@@ -572,7 +570,7 @@ h1 {
   align-items: center; }
 
 .navbar-fixed {
-  z-index: 1;
+  z-index: 99999;
   position: fixed;
   top: 0;
   width: 90%;
@@ -628,6 +626,9 @@ h1 {
   @media only screen and (min-width: 480px) and (max-width: 960px) {
     .branding-logo {
       max-width: 175px; } }
+
+.logo-floating .branding-logo {
+  position: absolute; }
 
 .btn-menu .open-menu, .btn-menu .close-menu {
   position: absolute;
@@ -702,7 +703,7 @@ h1 {
   top: 0;
   bottom: 0;
   right: 0;
-  width: 0;
+  width: 100%;
   left: 0;
   height: 100%;
   z-index: -1; }
@@ -733,7 +734,8 @@ h1 {
   display: table-cell;
   vertical-align: middle; }
   .search-close .btn {
-    letter-spacing: 0; }
+    letter-spacing: 0;
+    border-color: #bcbcbc; }
 
 .navbar__tools {
   -webkit-align-items: center;
@@ -912,7 +914,7 @@ h1 {
   bottom: 0;
   left: 0;
   right: 0;
-  background: rgba(2, 93, 150, 0.9);
+  background: rgba(3, 124, 200, 0.9);
   z-index: -5; }
 
 .search-input .tools-search-content {
