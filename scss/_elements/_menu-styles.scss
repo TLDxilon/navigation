@@ -24,10 +24,9 @@
 
 }
 
-
-
-.menu--line {
-  span{
+.menu{
+  &--line {
+    span{
       position: relative;
       &:after{
         position: absolute;
@@ -46,39 +45,57 @@
         opacity:1;
         @include transform(translate(0, 15px));
       }
-    @include align-self(center);
+      @include align-self(center);
     }
 
-  .active {
-    span{
-      &:after{
-        opacity:1;
-        @include transform(translate(0, 15px));
+    .active {
+      span{
+        &:after{
+          opacity:1;
+          @include transform(translate(0, 15px));
+        }
       }
     }
   }
-  }
 
-
-.menu--back {
-  .active {
+  &--simple {
+    .active {
+      span {
+        @extend .fg-main;
+        @include transition(color 0.3s ease 0s);
+      }
+    }
     .nav-link {
-      @extend .bg-main;
-      @include transition(background 0.3s ease 0s);
+      &:hover {
+        span{
+          @extend .fg-main;
+          @include transition(color 0.3s ease 0s);
+        }
+
+
+      }
     }
   }
-  .nav-link {
-    &:hover {
 
-      @extend .bg-main;
-      @include transition(background 0.3s ease 0s);
+  &--back-all {
+    .active {
+      .nav-link {
+        @extend .bg-main;
+        @include transition(background 0.3s ease 0s);
+      }
+    }
+    .nav-link {
+      &:hover {
 
+        @extend .bg-main;
+        @include transition(background 0.3s ease 0s);
+
+      }
     }
   }
-}
 
 
-.menu--line-bottom {
+  &--line-bottom {
     .nav-link{
       position: relative;
       &:after{
@@ -104,17 +121,58 @@
 
     @include align-self(center);
     li.active {
-        .nav-link {
+      .nav-link {
+        @extend .fg-main;
+        &:after {
           @extend .fg-main;
-          &:after {
-            @extend .fg-main;
-            opacity: 1;
-            @include transition(opacity 0.3s ease 0s);
-          }
+          opacity: 1;
+          @include transition(opacity 0.3s ease 0s);
         }
+      }
     }
 
 
+  }
+
+  &--line-top {
+    .nav-link{
+      position: relative;
+      &:after{
+        position: absolute;
+        top: -1px;
+        left: 0;
+        width: 100%;
+        height: 4px;
+        @extend .bg-main;
+        content: "";
+        opacity: 0;
+        @include transition(opacity 0.3s ease 0s);
+
+      }
+      &:hover{
+        @extend .fg-main;
+        &:after{
+          opacity:1;
+
+        }
+      }
+    }
+
+    @include align-self(center);
+    li.active {
+      .nav-link {
+        @extend .fg-main;
+        &:after {
+          @extend .fg-main;
+          opacity: 1;
+          @include transition(opacity 0.3s ease 0s);
+        }
+      }
+    }
+
+
+  }
 }
+
 
 
