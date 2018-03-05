@@ -14,48 +14,33 @@ $(document).ready(function(){
     $('.js-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-is-open');
-        $searchBar.css('display', 'block');
         $searchBar.find('input').focus();
-        $backdrop.css('display', 'block');
-        $body.addClass('no-scroll-body');
-        $html.addClass('no-scroll-html');
+
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $html.removeClass('search-is-open');
-        $searchBar.css('display', 'none');
-        $backdrop.css('display', 'none');
-        $body.removeClass('no-scroll-body');
-        $html.removeClass('no-scroll-html');
+
     });
 
 
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
-        $html.addClass('search-is-open');
-        $searchBarFixed.css('display', 'block');
-        $searchBarFixed.find('input').focus();
-        $backdrop.css('display', 'block');
-        $body.addClass('no-scroll-body');
+        $html.addClass('search-fixed-is-open');
+
 
     });
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
-        $html.removeClass('search-is-open');
-        $searchBarFixed.css('display', 'none');
-        $backdrop.css('display', 'none');
-        $body.removeClass('no-scroll-body');
-        $html.removeClass('no-scroll-html');
+        $html.removeClass('search-fixed-is-open');
+
     });
     $backdrop.on('click', function(){
         $html.removeClass('search-is-open');
-        $searchBarFixed.css('display', 'none');
-        $searchBar.css('display', 'none');
-        $backdrop.css('display', 'none');
-        $body.removeClass('no-scroll-body');
-        $html.removeClass('no-scroll-html');
+        $html.removeClass('search-fixed-is-open');
+
     });
 
 
@@ -100,7 +85,7 @@ $(document).ready(function(){
 
     $changeOption.each(function(index) {
         $(this).on('click', function(){
-
+            event.preventDefault();
             var dataValue         = $(this).data('value');
             var dataOption        = $(this).data('option');
             var dataElement       = $(this).data('element');

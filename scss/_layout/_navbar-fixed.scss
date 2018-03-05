@@ -10,10 +10,15 @@
     @include transition(transform 0.5s ease);
   }
   .navbar-item--logo{
-    @extend .padding-v-s;
+    @extend .padding-v-xxs;
   }
   //Si es transparente fuerzo a que el fixed sea blanco
   &.bg-transparent{
     @extend .bg-white;
+  }
+  .subnav{
+    .nav-link{
+      @extend .padding-v-s;
+    }
   }
 }

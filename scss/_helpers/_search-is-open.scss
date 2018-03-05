@@ -1,0 +1,49 @@
+.search-is-open{
+    overflow-y: scroll;
+    height: 100%;
+  body{
+    overflow: hidden;
+    height: 100%;
+  }
+  .js-searchbar{
+    opacity: 1;
+    z-index: 1;
+    left: 0;
+    width: 100%;
+    @include transition(opacity 0.3s ease, width 0.3s ease);
+  }
+  .input-search{
+    opacity: 1;
+    @include transform(translate(0, 0));
+    @include transition(transform 0.3s ease, opacity 0.3s ease);
+    @include transition-delay(0.3s);
+  }
+  .backdrop{
+    opacity: 1;
+    z-index: 0;
+    @include transition(opacity 0.3s ease);
+  }
+}
+.search-fixed-is-open{
+
+  body{
+    overflow: hidden;
+    height: 100%;
+  }
+  .js-fixed-searchbar{
+    opacity: 1;
+    z-index: 1;
+    @include transition(opacity 0.3s ease);
+  }
+  .input-search{
+    opacity: 1;
+    @include transform(translate(0, 0));
+    @include transition(transform 0.3s ease, opacity 0.3s ease);
+    @include transition-delay(0.3s);
+  }
+  .backdrop{
+    opacity: 1;
+    z-index: 0;
+    @include transition(opacity 0.3s ease);
+  }
+}

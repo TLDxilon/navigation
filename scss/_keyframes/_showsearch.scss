@@ -1,0 +1,14 @@
+@keyframes showSearch {
+  0% {
+    display: none;
+    opacity: 0;
+  }
+  100% {
+    display: block;
+    opacity: 1;
+  }
+}
+
+.showSearch{
+  @include animation (0.3s, 1s, showSearch);
+}
