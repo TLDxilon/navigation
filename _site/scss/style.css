@@ -219,7 +219,7 @@ h1 {
   -ms-flex-basis: 65%;
   flex-basis: 65%; }
 
-.flexbox-row-nowrap, .navbar-inner, .nav-link, .form-search, .navbar__tools, .topbar-inner {
+.flexbox-row-nowrap, .navbar-inner, .nav-link, .form-search, .navbar__tools, .topbar-inner, body {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -344,7 +344,7 @@ h1 {
     position: relative; }
     .menu--line-bottom .nav-link:after {
       position: absolute;
-      bottom: -1px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: 4px;
@@ -373,7 +373,7 @@ h1 {
     position: relative; }
     .menu--line-top .nav-link:after {
       position: absolute;
-      top: -1px;
+      top: 0;
       left: 0;
       width: 100%;
       height: 4px;
@@ -575,7 +575,7 @@ h1 {
   z-index: 1;
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 90%;
   -webkit-transition: transform 0.5s ease;
   -moz-transition: transform 0.5s ease;
   -ms-transition: transform 0.5s ease;
@@ -833,7 +833,7 @@ h1 {
     position: relative; }
     .menu--line-bottom .nav-link:after {
       position: absolute;
-      bottom: -1px;
+      bottom: 0;
       left: 0;
       width: 100%;
       height: 4px;
@@ -862,7 +862,7 @@ h1 {
     position: relative; }
     .menu--line-top .nav-link:after {
       position: absolute;
-      top: -1px;
+      top: 0;
       left: 0;
       width: 100%;
       height: 4px;
@@ -1227,11 +1227,13 @@ h1 {
 .icon-reorder:before {
   content: "\f0c9"; }
 
+.design {
+  width: 90%; }
+
 .options {
-  position: fixed;
   background: rgba(188, 188, 188, 0.95);
-  left: -100px;
-  bottom: 0; }
+  width: 10%;
+  border-right: 1px solid #222222; }
   .options h2 {
     font-size: 12px;
     font-weight: normal;
@@ -1245,15 +1247,9 @@ h1 {
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
   .options .open-options {
-    right: 0;
-    z-index: 111;
-    position: absolute;
-    top: 0; }
+    z-index: 111; }
   .options .close-options {
-    right: 0;
-    z-index: 111;
-    position: absolute;
-    top: 30px; }
+    z-index: 111; }
 
 .js-option {
   font-size: 12px;

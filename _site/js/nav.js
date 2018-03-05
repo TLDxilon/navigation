@@ -107,11 +107,15 @@ $(document).ready(function(){
 
     $openOptions.on('click', function(){
         event.preventDefault();
-        $('.options').css('left', '0');
+        $('.options').css('display', 'block');
+        $('.design').css('width', '90%');
+        $('.navbar-fixed').css('width', '90%');
     });
     $closeOptions.on('click', function(){
         event.preventDefault();
-        $('.options').css('left', '-120px');
+        $('.options').css('display', 'none');
+        $('.design').css('width', '100%');
+        $('.navbar-fixed').css('width', '100%');
     });
 
 

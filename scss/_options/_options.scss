@@ -1,10 +1,15 @@
 
+body{
+  @extend .flexbox-row-nowrap;
+}
+.design{
+  width:90%;
+}
 .options{
   @extend .padding-xs;
-  position: fixed;
   background: transparentize($tone-gray, 0.05);
-  left: -100px;
-  bottom: 0;
+  width:10%;
+  border-right: 1px solid $tone-dark;
 
   h2{
     font-size: 12px;
@@ -22,19 +27,18 @@
   }
 
   .open-options{
-    right: 0;
+
     @extend .bg-white;
     z-index: 111;
-    position: absolute;
-    top: 0;
+
+
     @extend .padding-xs;
   }
   .close-options{
-    right: 0;
+
     @extend .bg-white;
     z-index: 111;
-    position: absolute;
-    top: 30px;
+
     @extend .padding-xs;
   }
 
