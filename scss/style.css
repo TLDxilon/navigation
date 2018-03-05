@@ -459,11 +459,13 @@ h1 {
 .search-fixed-is-open .js-fixed-searchbar {
   opacity: 1;
   z-index: 1;
-  -webkit-transition: opacity 0.3s ease;
-  -moz-transition: opacity 0.3s ease;
-  -ms-transition: opacity 0.3s ease;
-  -o-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease; }
+  left: 0;
+  width: 100%;
+  -webkit-transition: opacity 0.3s ease, width 0.3s ease;
+  -moz-transition: opacity 0.3s ease, width 0.3s ease;
+  -ms-transition: opacity 0.3s ease, width 0.3s ease;
+  -o-transition: opacity 0.3s ease, width 0.3s ease;
+  transition: opacity 0.3s ease, width 0.3s ease; }
 .search-fixed-is-open .input-search {
   opacity: 1;
   -webkit-transform: translate(0, 0);
@@ -671,6 +673,7 @@ h1 {
   height: 100%; }
 
 .input-search {
+  background: transparent;
   opacity: 0;
   border: 0;
   font-size: 15px;

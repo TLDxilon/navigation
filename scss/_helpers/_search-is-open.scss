@@ -33,7 +33,9 @@
   .js-fixed-searchbar{
     opacity: 1;
     z-index: 1;
-    @include transition(opacity 0.3s ease);
+    left: 0;
+    width: 100%;
+    @include transition(opacity 0.3s ease, width 0.3s ease);
   }
   .input-search{
     opacity: 1;
