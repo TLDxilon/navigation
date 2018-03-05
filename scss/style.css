@@ -628,7 +628,8 @@ h1 {
       max-width: 175px; } }
 
 .logo-floating .branding-logo {
-  position: absolute; }
+  position: absolute;
+  top: 0; }
 
 .btn-menu .open-menu, .btn-menu .close-menu {
   position: absolute;
