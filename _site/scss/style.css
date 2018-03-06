@@ -532,6 +532,9 @@ h1 {
   -o-transition: opacity 0.3s ease;
   transition: opacity 0.3s ease; }
 
+.block-floating {
+  margin-top: -100px; }
+
 .btn {
   -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
   -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out;
