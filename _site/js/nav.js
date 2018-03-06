@@ -116,8 +116,8 @@ $(document).ready(function(){
             $element.addClass(dataOption + dataValue);
 
             var widthLogo = $('.js-width-logo').outerWidth(true);
-
-            $logo.css('width', (widthLogo) + 'px');
+            var $logo2 = $('.logo-floating');
+            $logo2.css('width', (widthLogo) + 'px');
         });
     });
 

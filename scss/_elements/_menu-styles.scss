@@ -1,28 +1,15 @@
 .nav--border {
   overflow:hidden;
-  border-top: 1px solid $gray-transparent;
-  border-bottom: 1px solid $gray-transparent;
-  margin-top: -1px;
-  margin-bottom: -1px;
-
-.navbar-menu-inner{
-
-}
+  border-color: $gray-transparent;
 
   .nav-menu-item {
-    border-top: 1px solid $gray-transparent;
-    border-bottom: 1px solid $gray-transparent;
     border-left: 1px solid $gray-transparent;
-    border-right: 1px solid $gray-transparent;
-    margin-top: -1px;
-    margin-bottom: -1px;
-
+    &:last-child{
+      border-right: 1px solid $gray-transparent;
+    }
   }
-  .nav-menu-item + .nav-menu-item {
-    margin-left: -1px;
-  }
-
 }
+
 
 .menu{
   &--line {
