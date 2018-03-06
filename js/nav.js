@@ -17,9 +17,9 @@ $(document).ready(function(){
     $('.js-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-is-open');
-      //  setTimeout(function(){
+        setTimeout(function(){
             $searchBar.find('input').focus();
-      //  },100);
+        },100);
 
     });
 
@@ -33,9 +33,9 @@ $(document).ready(function(){
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-fixed-is-open');
-      //  setTimeout(function(){
+        setTimeout(function(){
             $searchBarFixed.find('input').focus();
-      //  }, 100);
+        }, 100);
 
 
     });
