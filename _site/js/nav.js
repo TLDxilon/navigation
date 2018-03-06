@@ -100,20 +100,21 @@ $(document).ready(function(){
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
             var widthLogo2 = $('.branding-logo').outerWidth(true);
-            var $logo2 = $('.logo-floating');
+            var $logo = $('.logo-floating');
 
 
-            $logo2.css('width', (widthLogo2) + 'px');
 
             $element.attr('class', function(i, c){
                 var pattern = '(^|\\s)' + dataOption + '\\S+';
                 var myReg  = new RegExp(pattern, "g");
                 return c.replace(myReg, '');
             });
+
+
             console.log(dataElement);
             $element.addClass(dataOption + dataValue);
 
-
+            $logo.css('width', (widthLogo2) + 'px');
         });
     });
 

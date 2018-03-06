@@ -11,6 +11,9 @@
   }
   .navbar-item--logo{
     @extend .padding-v-xxs;
+    .branding-logo{
+      max-height: 100px;
+    }
   }
   //Si es transparente fuerzo a que el fixed sea blanco
   &.bg-transparent{
