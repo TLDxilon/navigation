@@ -19,7 +19,7 @@ $(document).ready(function(){
         $html.addClass('search-is-open');
         setTimeout(function(){
             $searchBar.find('input').focus();
-        },200);
+        },100);
 
     });
 
@@ -35,7 +35,7 @@ $(document).ready(function(){
         $html.addClass('search-fixed-is-open');
         setTimeout(function(){
             $searchBarFixed.find('input').focus();
-        }, 200);
+        }, 100);
 
 
     });
