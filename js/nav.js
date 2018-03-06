@@ -7,10 +7,11 @@ $(document).ready(function(){
     var $backdrop = $('.backdrop');
     var $body = $('body');
     var $html = $('html');
-    var $logo = $('.navbar-item--logo');
+    var $logo = $('.logo-floating');
 
 
 
+    $logo.css('width', (widthLogo) + 'px');
 
 
     $('.js-search-open').on('click', function(){
@@ -50,8 +51,6 @@ $(document).ready(function(){
 
     });
 
-
-    $logo.css('width', (widthLogo) + 'px');
 
 
 
@@ -100,10 +99,11 @@ $(document).ready(function(){
             var dataOption        = $(this).data('option');
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
-            var widthLogo = $('.branding-logo').outerWidth(true);
+            var widthLogo2 = $('.branding-logo').outerWidth(true);
+            var $logo2 = $('.logo-floating');
 
 
-            $logo.css('width', (widthLogo) + 'px');
+            $logo2.css('width', (widthLogo2) + 'px');
 
             $element.attr('class', function(i, c){
                 var pattern = '(^|\\s)' + dataOption + '\\S+';
@@ -129,6 +129,7 @@ $(document).ready(function(){
         $('.design').css('width', '100%');
         $('.navbar-fixed').css('width', '100%');
     });
+
 
 
 

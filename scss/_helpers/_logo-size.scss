@@ -1,30 +1,32 @@
 .logo-size{
   &-xxs{
     &.branding-logo{
-      width: 80px;
+      max-width: 80px;
+      max-height:60px;
 
     }
 
   }
   &-xs{
     &.branding-logo{
-      width: 120px;
+      max-width: 120px;
+      max-height: 140px;
 
     }
 
   }
   &-s{
     &.branding-logo{
-      width: 180px;
-
+      max-width: 180px;
+      max-height: 180px;
 
 
     }
   }
   &-m{
     &.branding-logo{
-      width: 240px;
-
+      max-width: 240px;
+      max-height: 200px;
 
 
     }
@@ -33,7 +35,8 @@
 
   &-l{
     &.branding-logo {
-      width: 300px;
+      max-width: 300px;
+      max-height: 250px;
 
 
 
@@ -42,8 +45,8 @@
   }
   &-xl{
     &.branding-logo {
-      width: 350px;
-
+      max-width: 350px;
+      max-height: 300px;
 
 
     }
