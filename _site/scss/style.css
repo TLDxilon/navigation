@@ -112,10 +112,7 @@ h1 {
   background: #35affc;
   color: #ffffff; }
 .bg-transparent {
-  background: none;
-  color: #ffffff; }
-  .bg-transparent a {
-    color: #ECECEC; }
+  background: none; }
 
 .container {
   max-width: 1140px;
