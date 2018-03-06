@@ -112,7 +112,10 @@ h1 {
   background: #35affc;
   color: #ffffff; }
 .bg-transparent {
-  background: none; }
+  background: none;
+  color: #ffffff; }
+  .bg-transparent a {
+    color: #ECECEC; }
 
 .container {
   max-width: 1140px;
@@ -527,7 +530,7 @@ h1 {
   transition: opacity 0.3s ease; }
 
 .block-floating {
-  margin-top: -100px;
+  margin-top: -120px;
   -webkit-transition: margin 0.3s ease;
   -moz-transition: margin 0.3s ease;
   -ms-transition: margin 0.3s ease;
