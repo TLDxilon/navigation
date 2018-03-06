@@ -19,7 +19,8 @@ $(document).ready(function(){
         $html.addClass('search-is-open');
         setTimeout(function(){
             $searchBar.find('input').focus();
-        },100);
+            console.log('INPUT');
+        },200);
 
     });
 
@@ -35,7 +36,8 @@ $(document).ready(function(){
         $html.addClass('search-fixed-is-open');
         setTimeout(function(){
             $searchBarFixed.find('input').focus();
-        }, 100);
+            console.log('INPUT');
+        }, 200);
 
 
     });
@@ -99,8 +101,7 @@ $(document).ready(function(){
             var dataOption        = $(this).data('option');
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
-            var widthLogo2 = $('.js-width-logo').outerWidth(true);
-            var $logo = $('.logo-floating');
+
 
 
 
@@ -114,7 +115,9 @@ $(document).ready(function(){
             console.log(dataElement);
             $element.addClass(dataOption + dataValue);
 
-            $logo.css('width', (widthLogo2) + 'px');
+            var widthLogo = $('.js-width-logo').outerWidth(true);
+
+            $logo.css('width', (widthLogo) + 'px');
         });
     });
 
