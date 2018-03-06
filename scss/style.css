@@ -699,6 +699,7 @@ h1 {
     align-self: center; }
 
 .searchbar {
+  overflow: hidden;
   opacity: 0;
   position: absolute;
   top: 0;
