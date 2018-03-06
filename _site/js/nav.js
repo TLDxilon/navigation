@@ -1,6 +1,6 @@
 $(document).ready(function(){
     var lastScrollPosition = 0;
-    var widthLogo = $('.branding-logo').outerWidth(true);
+    var widthLogo = $('.js-width-logo').outerWidth(true);
     var $navBarFixed = $('.navbar-fixed');
     var $searchBar = $('.js-searchbar');
     var $searchBarFixed = $('.js-fixed-searchbar');
@@ -99,7 +99,7 @@ $(document).ready(function(){
             var dataOption        = $(this).data('option');
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
-            var widthLogo2 = $('.branding-logo').outerWidth(true);
+            var widthLogo2 = $('.js-width-logo').outerWidth(true);
             var $logo = $('.logo-floating');
 
 
