@@ -16,16 +16,21 @@ $(document).ready(function(){
         "extensions": [
             "pagedim-black",
             "position-right",
-            "theme-dark"
+            "theme-dark",
+            "border-full",
+            "listview-huge"
         ],
         "iconPanels": true,
         "navbars": [
             {
                 "position": "bottom",
                 "content": [
-                    "<a class='fa fa-envelope' href='#/'></a>",
-                    "<a class='fa fa-twitter' href='#/'></a>",
-                    "<a class='fa fa-facebook' href='#/'></a>"
+                    "<a class=\"social-item fg-gray\" href=\"{{ site.twitter }}\"><span class=\"icon icon-twitter\"></span></a>",
+                    "<a class=\"social-item fg-gray\" href=\"{{ site.pinterest }}\"><span class=\"icon icon-pinterest\"></span></a>",
+                    "<a class=\"social-item fg-gray\" href=\"{{ site.linkedin }}\"><span class=\"icon icon-linkedin\"></span></a>",
+                    "<a class=\"social-item fg-gray\" href=\"{{ site.twitter }}\"><span class=\"icon icon-twitter\"></span></a>",
+                    "<a class=\"social-item fg-gray\" href=\"{{ site.pinterest }}\"><span class=\"icon icon-pinterest\"></span></a>",
+                    "<a class=\"social-item fg-gray\" href=\"{{ site.linkedin }}\"><span class=\"icon icon-linkedin\"></span></a>"
                 ]
             }
         ]
