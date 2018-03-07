@@ -10,6 +10,29 @@ $(document).ready(function(){
     var $logo = $('.logo-floating');
 
 
+///////////////MMENU///////////////
+
+    $("#menu").mmenu({
+        "extensions": [
+            "pagedim-black",
+            "position-right",
+            "theme-dark"
+        ],
+        "iconPanels": true,
+        "navbars": [
+            {
+                "position": "bottom",
+                "content": [
+                    "<a class='fa fa-envelope' href='#/'></a>",
+                    "<a class='fa fa-twitter' href='#/'></a>",
+                    "<a class='fa fa-facebook' href='#/'></a>"
+                ]
+            }
+        ]
+    });
+
+/////////////////////////////
+
 
     $logo.css('width', (widthLogo) + 'px');
 
