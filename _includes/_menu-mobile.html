@@ -1,0 +1,19 @@
+<nav id="menu">
+
+    <ul class="" >
+
+        {% if page.nav %}
+
+        {% include _elements/_navigation/_menu-item.html menu = page.nav %}
+
+        {% else %}
+
+        {% include _elements/_navigation/_menu-item.html menu = site.nav %}
+
+        {% endif %}
+
+
+    </ul>
+
+</nav>
+

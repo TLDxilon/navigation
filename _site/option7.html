@@ -7,7 +7,8 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-
+    <!-- Include jQuery.mmenu .css files -->
+    <link href="components/mmenu/jquery.mmenu.all.css" rel="stylesheet" />
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Google Fonts -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
@@ -16,13 +17,39 @@
 
 
     <link rel="stylesheet" type="text/css" href="scss/style.css" />
-
-    <script src="//code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
+    <!-- Include jQuery and the jQuery.mmenu .js files -->
+    <script src="components/mmenu/jquery.mmenu.all.js"></script>
+    <script src="//code.jquery.com/jquery-3.3.1.min.js" type="text/javascript"></script>
     <script src="js/nav.js" type="text/javascript"></script>
+    <script src="js/mmenu.js" type="text/javascript"></script>
 </head>
 
-<body>
 
+
+
+<body>
+<!-- Fire the plugin onDocumentReady -->
+<script>
+    jQuery(document).ready(function( $ ) {
+        $("#menu").mmenu({
+            "extensions": [
+                "pagedim-black",
+                "position-right"
+            ],
+            "iconPanels": true,
+            "navbars": [
+                {
+                    "position": "bottom",
+                    "content": [
+                        "<a class='fa fa-envelope' href='#/'></a>",
+                        "<a class='fa fa-twitter' href='#/'></a>",
+                        "<a class='fa fa-facebook' href='#/'></a>"
+                    ]
+                }
+            ]
+        });
+    });
+</script>
 <div class="options">
 
     <a href="#" class="close-options">X</a>
@@ -104,6 +131,7 @@
     <a href="#" class="js-option" data-element=".block" data-option="block-" data-value="no-floating">NO</a>
 
 </div>
+
 
 <div class="design">
     <header class="site-header position-relative" role="banner">
@@ -197,7 +225,7 @@
 
 
                     <div class="tools__item hidden-desktop ">
-    <a class="btn-menu fg-dark js-menu-toogle" href=""><span class="icon icon-menu3"></span></a>
+    <a class="btn-menu fg-dark js-menu-toogle" href="#menu"><span class="icon icon-menu3"></span></a>
 </div>
 
 
@@ -309,7 +337,7 @@
 
 
                     <div class="tools__item hidden-desktop ">
-    <a class="btn-menu fg-dark js-menu-toogle" href=""><span class="icon icon-menu3"></span></a>
+    <a class="btn-menu fg-dark js-menu-toogle" href="#menu"><span class="icon icon-menu3"></span></a>
 </div>
 
 
@@ -433,6 +461,44 @@
 
 
 </div>
+<nav id="menu">
+
+    <ul class="" >
+
+        
+
+        
+
+
+    <li class="nav-menu-item  active "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
+
+
+
+    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
+
+
+
+    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
+
+
+
+    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
+
+
+
+    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
+
+
+
+
+
+        
+
+
+    </ul>
+
+</nav>
+
 
 </body>
 </html>
