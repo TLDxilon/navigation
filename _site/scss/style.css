@@ -533,13 +533,13 @@ h1 {
 .padding-xl {
   padding: 25px; }
 
-.padding-v-xxs, .navbar-fixed .navbar-item--logo {
+.padding-v-xxs {
   padding-top: 0;
   padding-bottom: 0; }
 .padding-v-xs {
   padding-top: 5px;
   padding-bottom: 5px; }
-.padding-v-s, .navbar-fixed .subnav .nav-link {
+.padding-v-s, .navbar-fixed .navbar-item--logo, .navbar-fixed .subnav .nav-link {
   padding-top: 10px;
   padding-bottom: 10px; }
 .padding-v-m, .subnav .nav-link {
@@ -595,7 +595,7 @@ h1 {
   -ms-flex-basis: 65%;
   flex-basis: 65%; }
 
-.flexbox-row-nowrap, .nav-link, .nav-link-content, .form-search, .navbar__tools, .topbar-inner, .navbar-inner, body {
+.flexbox-row-nowrap, .nav-link, .nav-link-content, .form-search, .navbar__tools, .topbar-inner, .navbar-inner, .mm-page {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;
@@ -911,7 +911,7 @@ h1 {
   transition: margin 0.3s ease; }
 
 .navbar {
-  border-width: 1px 0 1px 0;
+  border-width: 0;
   border-color: transparent;
   border-style: solid; }
 
@@ -1252,7 +1252,7 @@ h1 {
   content: "\f0c9"; }
 
 .design {
-  width: 100%; }
+  width: 90%; }
 
 .options {
   background: rgba(188, 188, 188, 0.95);

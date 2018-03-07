@@ -1,9 +1,9 @@
 
-body{
+.mm-page{
   @extend .flexbox-row-nowrap;
 }
 .design{
-  width: 100%;
+  width: 90%;
 }
 .options{
   @extend .padding-xs;

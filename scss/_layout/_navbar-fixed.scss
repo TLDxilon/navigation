@@ -9,7 +9,7 @@
     @include transition(transform 0.5s ease);
   }
   .navbar-item--logo{
-    @extend .padding-v-xxs;
+    @extend .padding-v-s;
     .branding-logo{
       max-width: 80px;
     }
