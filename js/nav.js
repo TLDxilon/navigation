@@ -1,24 +1,30 @@
-$(document).ready(function(){
+$(document).ready(function($){
     var lastScrollPosition = 0;
-    var widthLogo = $('.js-width-logo').outerWidth(true);
-    var $navBarFixed = $('.navbar-fixed');
-    var $searchBar = $('.js-searchbar');
+    var widthLogo       = $('.js-width-logo').outerWidth(true);
+    var $navBarFixed    = $('.navbar-fixed');
+    var $searchBar      = $('.js-searchbar');
     var $searchBarFixed = $('.js-fixed-searchbar');
-    var $backdrop = $('.backdrop');
-    var $body = $('body');
-    var $html = $('html');
-    var $logo = $('.logo-floating');
+    var $backdrop       = $('.backdrop');
+    var $body           = $('body');
+    var $html           = $('html');
+    var $logo           = $('.logo-floating');
+    var $menuMobile     = $('#menu')
 
 
 ///////////////MMENU///////////////
 
-    $("#menu").mmenu({
+
+
+
+console.log( $menuMobile.data('extension'));
+
+
+    var menuDefault = {
         "extensions": [
             "pagedim-black",
             "position-right",
             "theme-dark",
-            "border-full",
-            "listview-huge"
+            "border-full"
         ],
         "iconPanels": true,
         "navbars": [
@@ -34,9 +40,21 @@ $(document).ready(function(){
                 ]
             }
         ]
-    });
+    };
 
-/////////////////////////////
+
+    var menuCustomize = {
+        "extensions": $menuMobile.data('extension')
+    };
+
+    var menuOptions = $.extend({}, menuDefault, menuCustomize);
+
+    console.log(menuOptions);
+
+    $menuMobile.mmenu(menuOptions);
+
+
+///////////////////////////////////
 
 
     $logo.css('width', (widthLogo) + 'px');
@@ -142,6 +160,8 @@ $(document).ready(function(){
 
             console.log(dataElement);
             $element.addClass(dataOption + dataValue);
+
+
 
             var widthLogo = $('.js-width-logo').outerWidth(true);
             var $logo2 = $('.logo-floating');
