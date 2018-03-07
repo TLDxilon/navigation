@@ -44,7 +44,8 @@ console.log( $menuMobile.data('extension'));
 
 
     var menuCustomize = {
-        "extensions": $menuMobile.data('extension')
+        "extensions": $menuMobile.data('extension'),
+        "iconPanels": $menuMobile.data('icon-panels'),
     };
 
     var menuOptions = $.extend({}, menuDefault, menuCustomize);
