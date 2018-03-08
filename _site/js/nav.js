@@ -8,22 +8,33 @@ $(document).ready(function($){
     var $body           = $('body');
     var $html           = $('html');
     var $logo           = $('.logo-floating');
-    var $menuMobile     = $('#menu')
+    var $menuMobile     = $('#menu');
 
 
-///////////////MMENU///////////////
+    /* Custom mmenu options */
+    var menuCustomize = {
+        "extensions": [
+            $menuMobile.data('extension-position'),
+            $menuMobile.data('extension-theme'),
+        ],
+        "iconPanels": $menuMobile.data('icon-panels')
 
+    };
 
+    /*
+     * initMmenu funtcion
+     * @options: object with custom mmenu options
+     *
+     */
+    function initMmenu(options) {
 
-
-console.log( $menuMobile.data('extension'));
-
-
-    var menuDefault = {
+        var menuDefault = {
         "extensions": [
             "pagedim-black",
-            "position-right",
             "theme-dark",
+            "fx-menu-fade",
+            "listview-50",
+            "fx-panels-slide-100",
             "border-full"
         ],
         "iconPanels": true,
@@ -42,20 +53,18 @@ console.log( $menuMobile.data('extension'));
         ]
     };
 
+        var menuOptions = $.extend({}, menuDefault, options);
 
-    var menuCustomize = {
-        "extensions": $menuMobile.data('extension'),
-        "iconPanels": $menuMobile.data('icon-panels'),
-    };
+        console.log("calling mmenu!!!");
+        $menuMobile.mmenu(menuOptions);
 
-    var menuOptions = $.extend({}, menuDefault, menuCustomize);
-
-    console.log(menuOptions);
-
-    $menuMobile.mmenu(menuOptions);
+    }// initMmenu
 
 
-///////////////////////////////////
+    /* Init mmenu with custom options */
+    initMmenu(menuCustomize);
+
+    var API = $menuMobile.data( "mmenu" );
 
 
     $logo.css('width', (widthLogo) + 'px');
@@ -137,7 +146,11 @@ console.log( $menuMobile.data('extension'));
 
 
 
+
+
+
     var $changeOption = $('.js-option');
+    var $changeOptionMobile = $('.js-option-mobile');
     var $openOptions = $('.open-options');
     var $closeOptions = $('.close-options');
 
@@ -164,11 +177,50 @@ console.log( $menuMobile.data('extension'));
 
 
 
+
+
             var widthLogo = $('.js-width-logo').outerWidth(true);
             var $logo2 = $('.logo-floating');
             $logo2.css('width', (widthLogo) + 'px');
         });
     });
+
+
+
+
+    $changeOptionMobile.each(function(index) {
+            $(this).on('click', function(){
+                event.preventDefault();
+                var dataValue             = $(this).data('value');
+                var dataOption            = $(this).data('option');
+                var dataElement           = $(this).data('element');
+                var dataType              = $(this).data('type');
+                var $element              = $(dataElement);
+
+
+
+                $element.attr('data-'+ dataType, dataOption + dataValue);
+                console.log(dataType, dataOption + dataValue);
+
+                /* Update mmenu options */
+                menuCustomize = {
+                    "extensions": [
+                        $menuMobile.data('extension-position'),
+                        $menuMobile.data('extension-theme'),
+                    ],
+                    "iconPanels": $menuMobile.data('icon-panels')
+
+                };
+
+                /* Update mmenu with custom options */
+                API.initPanels();
+                //initMmenu(menuCustomize);
+
+
+         });
+    });
+
+
 
     $openOptions.on('click', function(){
         event.preventDefault();
@@ -182,8 +234,5 @@ console.log( $menuMobile.data('extension'));
         $('.design').css('width', '100%');
         $('.navbar-fixed').css('width', '100%');
     });
-
-
-
 
 });

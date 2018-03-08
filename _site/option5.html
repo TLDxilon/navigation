@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <!-- Include jQuery.mmenu .css files -->
-    <link href="components/mmenu/css/jquery.mmenu.all.css" rel="stylesheet" />
+
     <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <!-- Google Fonts -->
     <link href="//fonts.googleapis.com/css?family=Open+Sans:400,600,700" rel="stylesheet">
@@ -106,9 +106,19 @@
     <a href="#" class="js-option" data-element=".js-btn" data-option="border-radius-" data-value="xs">NO</a>
     <a href="#" class="js-option" data-element=".js-btn" data-option="border-radius-" data-value="xl">SÍ</a>
 
-    <h2>BLoque superpuesto</h2>
+    <h2>Bloque superpuesto</h2>
     <a href="#" class="js-option" data-element=".block" data-option="block-" data-value="floating">SI</a>
     <a href="#" class="js-option" data-element=".block" data-option="block-" data-value="no-floating">NO</a>
+    <br>
+   ---------------
+    <!--<h2>MENÚ MOBILE</h2>-->
+    <!--<h2>Posición del menú móvil</h2>-->
+    <!--<a href="#" class="js-option-mobile" data-element=".js-menu-mobile" data-type="extension-position" data-option="position-" data-value="left">Left</a>-->
+    <!--<a href="#" class="js-option-mobile" data-element=".js-menu-mobile" data-type="extension-position" data-option="position-" data-value="right">Right</a>-->
+
+    <!--<h2>Tema del menú móvil</h2>-->
+    <!--<a href="#" class="js-option-mobile" data-element=".js-menu-mobile" data-type="extension-theme" data-option="theme-" data-value="black">Black</a>-->
+    <!--<a href="#" class="js-option-mobile" data-element=".js-menu-mobile" data-type="extension-theme" data-option="theme-" data-value="dark">Dark</a>-->
 
 
 </div>
@@ -210,23 +220,23 @@
             
 
 
-    <li class="nav-menu-item  active "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
+    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
 
 
 
@@ -369,23 +379,23 @@
             
 
 
-    <li class="nav-menu-item  active "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
+    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
 
 
 
@@ -498,32 +508,32 @@
 
 
 </div>
-<nav id="menu" data-extension='["position-left","theme-black"]' data-icon-panels='false'>
+<nav id="menu" class="js-menu-mobile mm-menu_pagedim-black" data-extension-position="position-right" data-extension-theme="theme-white" data-icon-panels='false'>
 
-    <ul class="" >
-
-        
+    <ul class=" mm-border-full" >
 
         
 
-
-    <li class="nav-menu-item  active "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
-
+        
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
+    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Home</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Products</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Gallery</span></div></a></li>
 
 
 
-    <li class="nav-menu-item "><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">News</span></div></a></li>
+
+
+
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-dark " href="#"><div class="nav-link-content"><span class="">Contact</span></div></a></li>
 
 
 

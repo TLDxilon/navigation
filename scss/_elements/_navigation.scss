@@ -1,41 +1,48 @@
-.navbar-menu-inner{
+
+  .navbar-menu-inner{
     @extend .flexbox-row-wrap;
-  @include align-items(stretch);
-  height:100%;
-}
-
-.nav-menu-item{
+    @include align-items(stretch);
     height:100%;
-   .flex-align-justify &{
-       @include flex-grow(1);
-   }
+  }
+
+  .nav-menu-item {
+    height: 100%;
+    .flex-align-justify & {
+      @include flex-grow(1);
+    }
+  }
+
+.navbar, .navbar-fixed{
+  .nav-link{
+    @extend .flexbox-row-nowrap;
+    @include align-items(stretch);
+    height: 100%;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    font-size: 14px;
+    @extend .padding-h-m;
+    span{
+      align-self: center;
+    }
+    .subnav &{
+      @extend .padding-v-m;
+
+    }
+    .flex-align-justify &{
+      @extend .flex-align-justify;
+    }
+  }
+
+  .nav-link-content{
+    @extend .flexbox-row-nowrap;
+    @include align-items(stretch);
+    height: 100%;
+  }
+
 }
 
 
 
 
-.nav-link{
-  @extend .flexbox-row-nowrap;
-  @include align-items(stretch);
-  height: 100%;
-  text-transform: uppercase;
-  letter-spacing: 2px;
-  font-size: 14px;
-  @extend .padding-h-m;
-  span{
-    align-self: center;
-  }
-  .subnav &{
-    @extend .padding-v-m;
 
-  }
-  .flex-align-justify &{
-    @extend .flex-align-justify;
-  }
-}
 
-.nav-link-content{
-  @extend .flexbox-row-nowrap;
-  @include align-items(stretch);
-  height: 100%;
-}

@@ -1,4 +1,6 @@
-
+.site-main{
+  @extend .bg-white;
+}
 .mm-page{
   @extend .flexbox-row-nowrap;
 }
@@ -54,7 +56,13 @@
   @extend .fg-dark;
   @extend .bg-main;
 }
+.js-option-mobile{
 
+  font-size: 12px;
+  padding: 3px;
+  @extend .fg-dark;
+  background: #ea69e6;
+}
 .menu-options{
   a{
     display: inline-block;

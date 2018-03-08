@@ -1,0 +1,5 @@
+.mm-menu_theme-main {
+  background: $tone-main;
+  border-color: lighten($tone-main, 10%);
+  @extend .fg-white;
+}
