@@ -1,16 +1,16 @@
-.nav--border {
-  overflow:hidden;
-  border-color: $gray-transparent;
+.navbar, .navbar-fixed, .subnav {
+  &.nav--border {
+    overflow: hidden;
+    border-color: $gray-transparent;
 
-  .nav-menu-item {
-    border-left: 1px solid $gray-transparent;
-    &:last-child{
-      border-right: 1px solid $gray-transparent;
+    .nav-menu-item {
+      border-left: 1px solid $gray-transparent;
+      &:last-child {
+        border-right: 1px solid $gray-transparent;
+      }
     }
   }
 }
-
-
 .menu{
   &--line {
     span{
