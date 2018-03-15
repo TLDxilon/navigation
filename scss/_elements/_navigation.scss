@@ -18,7 +18,7 @@
     @include align-items(stretch);
     @include justify-content(center);
     height: 100%;
-    font-size: 16px;
+    font-size: 1em;
     @extend .padding-h-l;
     span{
       align-self: center;

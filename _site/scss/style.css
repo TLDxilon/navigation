@@ -461,7 +461,7 @@ a {
   justify-content: center;
   -ms-flex-pack: center;
   height: 100%;
-  font-size: 16px; }
+  font-size: 1em; }
   .navbar .nav-link span, .navbar-fixed .nav-link span, .subnav .nav-link span {
     align-self: center; }
 .navbar .nav-link-content, .navbar-fixed .nav-link-content, .subnav .nav-link-content {
