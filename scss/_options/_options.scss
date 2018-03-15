@@ -1,12 +1,12 @@
-.site-main{
+.site-one{
   @extend .bg-white;
 }
-.mm-page{
-  @extend .flexbox-row-nowrap;
-}
-.design{
-  width: 90%;
-}
+//.mm-page{
+//  @extend .flexbox-row-nowrap;
+//}
+//.design{
+//  width: 90%;
+//}
 .options{
   @extend .padding-xs;
   background: transparentize($tone-gray, 0.05);
@@ -54,7 +54,7 @@
   font-size: 12px;
   padding: 3px;
   @extend .fg-dark;
-  @extend .bg-main;
+  @extend .bg-one;
 }
 .js-option-mobile{
 

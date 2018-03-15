@@ -2,11 +2,28 @@ body{
   font-family: $font-family-base;
   color: $tone-dark;
   margin: 0;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  font-weight: 500;
+  font-size: 16px;
 }
 
-h1{
-  font-size: 60px;
-  margin-bottom: 0;
-  margin-top: 0;
+
+
+
+*::after, *::before {
+  box-sizing: border-box;
 }
 
+ul{
+  list-style-type: none;
+  padding-left: 0;
+  padding-start: 0;
+  -webkit-padding-start: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+}
+
+a{
+  text-decoration: none;
+}

@@ -20,7 +20,7 @@
   .backdrop{
     opacity: 1;
     z-index: 0;
-    @include transition(opacity 0.3s ease);
+    @include transition(opacity .4s ease .4s);
   }
 }
 .search-fixed-is-open{
@@ -43,6 +43,6 @@
   .backdrop{
     opacity: 1;
     z-index: 0;
-    @include transition(opacity 0.3s ease);
+    @include transition(opacity .4s ease .4s);
   }
 }

@@ -5,7 +5,7 @@
   bottom:0;
   left:0;
   right:0;
-  background: transparentize(darken($tone-main, 20%), 0.1);
+  background: transparentize($tone-black, 0.3);
   z-index:-5;
 
 }

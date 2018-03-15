@@ -1,50 +1,107 @@
 /* COLORES */
 
 .fg{
-  &-dark{
-    color: $tone-dark;
+  &-one{
+    color: $tone-one;
+  }
+  &-two{
+    color: $tone-two;
+  }
+  &-three{
+    color: $tone-three;
+  }
+  &-four{
+    color: $tone-four;
+  }
+  &-five{
+    color: $tone-five;
+  }
+
+  &-white{
+    color: $tone-white;
+  }
+  &-light{
+    color: $tone-light;
   }
   &-gray{
     color: $tone-gray;
   }
-  &-clear{
-    color: $tone-clear;
+  &-dark{
+    color: $tone-dark;
   }
-  &-white{
-    color: $tone-white;
+  &-black{
+    color: $tone-black;
   }
-  &-main{
-    color: $tone-main;
+
+  &-warning{
+    color: $tone-warning;
   }
+  &-error{
+    color: $tone-error;
+  }
+  &-info{
+    color: $tone-info;
+  }
+  &-success{
+    color: $tone-success;
+  }
+
+
+
 }
 
 
 .bg{
-  &-dark{
-    background: $tone-dark;
-    color: $tone-white;
-    a{
-      color: $tone-clear;
-    }
+  &-one{
+    background: $tone-one;
+  }
+  &-two{
+    background: $tone-two;
+  }
+  &-three{
+    background: $tone-three;
+  }
+  &-four{
+    background: $tone-four;
+  }
+  &-five{
+    background: $tone-five;
+  }
+
+  &-white{
+    background: $tone-white;
+  }
+  &-light{
+    background: $tone-light;
   }
   &-gray{
     background: $tone-gray;
-    color: $tone-white;
   }
-  &-clear{
-    background: $tone-clear;
-    color: $tone-dark;
+  &-dark{
+    background: $tone-dark;
   }
-  &-white{
-    background: $tone-white;
-    color: $tone-dark;
+  &-black{
+    background: $tone-black;
   }
-  &-main{
-    background: $tone-main;
-    color: $tone-white;
+
+  &-warning{
+    background: $tone-warning;
   }
+  &-error{
+    background: $tone-error;
+  }
+  &-info{
+    background: $tone-info;
+  }
+  &-success{
+    background: $tone-success;
+  }
+
   &-transparent{
     background: none;
-
+    @extend .fg-white;
+    a{
+      @extend .fg-white;
+    }
   }
 }

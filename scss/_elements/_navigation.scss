@@ -18,10 +18,8 @@
     @include align-items(stretch);
     @include justify-content(center);
     height: 100%;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    font-size: 14px;
-    @extend .padding-h-m;
+    font-size: 16px;
+    @extend .padding-h-l;
     span{
       align-self: center;
     }

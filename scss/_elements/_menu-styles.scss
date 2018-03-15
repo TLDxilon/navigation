@@ -21,7 +21,7 @@
         left: 0;
         width: 100%;
         height: 2px;
-        @extend .bg-main;
+        @extend .bg-one;
         content: "";
         opacity: 0;
         @include transition(opacity 0.3s ease 0s);
@@ -48,14 +48,14 @@
   &--simple {
     .active {
       span {
-        @extend .fg-main;
+        @extend .fg-one;
         @include transition(color 0.3s ease 0s);
       }
     }
     .nav-link {
       &:hover {
         span{
-          @extend .fg-main;
+          @extend .fg-one;
           @include transition(color 0.3s ease 0s);
         }
 
@@ -67,14 +67,14 @@
   &--back-all {
     .active {
       .nav-link {
-        @extend .bg-main;
+        @extend .bg-one;
         @include transition(background 0.3s ease 0s);
       }
     }
     .nav-link {
       &:hover {
 
-        @extend .bg-main;
+        @extend .bg-one;
         @include transition(background 0.3s ease 0s);
 
       }
@@ -91,14 +91,14 @@
         left: 0;
         width: 100%;
         height: 4px;
-        @extend .bg-main;
+        @extend .bg-one;
         content: "";
         opacity: 0;
         @include transition(opacity 0.3s ease 0s);
 
       }
       &:hover{
-        @extend .fg-main;
+        @extend .fg-one;
         &:after{
           opacity:1;
 
@@ -109,9 +109,9 @@
     @include align-self(center);
     li.active {
       .nav-link {
-        @extend .fg-main;
+        @extend .fg-one;
         &:after {
-          @extend .fg-main;
+          @extend .fg-one;
           opacity: 1;
           @include transition(opacity 0.3s ease 0s);
         }
@@ -130,14 +130,14 @@
         left: 0;
         width: 100%;
         height: 4px;
-        @extend .bg-main;
+        @extend .bg-one;
         content: "";
         opacity: 0;
         @include transition(opacity 0.3s ease 0s);
 
       }
       &:hover{
-        @extend .fg-main;
+        @extend .fg-one;
         &:after{
           opacity:1;
 
@@ -148,9 +148,9 @@
     @include align-self(center);
     li.active {
       .nav-link {
-        @extend .fg-main;
+        @extend .fg-one;
         &:after {
-          @extend .fg-main;
+          @extend .fg-one;
           opacity: 1;
           @include transition(opacity 0.3s ease 0s);
         }

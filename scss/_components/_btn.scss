@@ -1,41 +1,41 @@
 .btn{
   @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out);
-  @extend .text-transform-uppercase;
-  letter-spacing: 2px;
   display: inline-block;
-  font-weight: 400;
   text-align: center;
   vertical-align: middle;
   white-space: nowrap;
 
-  &--small{
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-  &--big{
-    padding: 15px 30px;
-    font-size: 15px;
-  }
   &--flat{
     border-width: 1.5px;
-    border-color: $tone-main;
+    border-color: $tone-one;
     border-style: solid;
-    @extend .bg-main;
+    @extend .bg-one;
     @extend .fg-white;
     &:hover{
-      background: darken($tone-main, 10%);
-      border-color: darken($tone-main, 10%);
+      background: darken($tone-one, 10%);
+      border-color: darken($tone-one, 10%);
     }
   }
   &--outline{
-    @extend .fg-main;
+    @extend .fg-one;
     border-width: 1.5px;
-    border-color: $tone-main;
+    border-color: $tone-one;
     border-style: solid;
     &:hover{
-      @extend .bg-main;
+      @extend .bg-one;
       border-color: transparent;
-      @extend .fg-main;
+      @extend .fg-white;
+    }
+  }
+  &--ghost{
+    @extend .fg-light;
+    border-width: 1.5px;
+    border-color: transparentize($tone-gray, 0.3);
+    border-style: solid;
+    &:hover{
+      @extend .bg-white;
+      border-color: transparent;
+      @extend .fg-one;
     }
   }
 }
