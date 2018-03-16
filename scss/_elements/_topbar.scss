@@ -14,13 +14,13 @@
   @extend .flexbox-row-nowrap;
   @include justify-content(space-between);
 
-   font-size: 12px;
+   font-size: 1em;
 
   .icon{
-    font-size: 15px;
+    font-size: 1.1em;
     vertical-align: middle;
     &.icon-phone2, &.icon-mail2{
-      font-size: 14px;
+      font-size: 0.8em;
       @extend .padding-h-s;
     }
 

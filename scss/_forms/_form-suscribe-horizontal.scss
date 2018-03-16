@@ -1,0 +1,11 @@
+
+.form-suscribe-horizontal{
+   .btn{
+      margin-left:-3px;
+   }
+   .input-suscribe{
+      @extend .input-size-s;
+      @extend .border-radius-topRight-bottomRight-s;
+      @extend .border-width-1-5;
+   }
+}

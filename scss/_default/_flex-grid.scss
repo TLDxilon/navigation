@@ -1,0 +1,28 @@
+.col-6{
+
+  @include flex-basis(50%);
+
+  @media #{$tablets}{
+    @include flex-basis(100%);
+
+  }
+  @media #{$mobile}{
+    @include flex-basis(100%);
+
+  }
+
+}
+.col-12{
+
+  @include flex-basis(100%);
+
+  @media #{$tablets}{
+    @include flex-basis(100%);
+
+  }
+  @media #{$mobile}{
+    @include flex-basis(100%);
+
+  }
+
+}

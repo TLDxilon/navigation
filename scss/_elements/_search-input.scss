@@ -1,29 +1,39 @@
 
 .search-input{
-  .tools-search-content{
-    border: 1px solid $gray-transparent;
+  .tools-search-content {
+    @extend .border-width-1;
+    border-style: solid;
+    @extend .border-color-gray-transparent;
     @extend .padding-h-s;
 
   }
+
+
+
   .btn-search{
-    height: 30px;
-    .icon{
-      vertical-align: middle;
-    }
+    height: 40px;
+    vertical-align: middle;
+    @extend .padding-h-s;
   }
 
   .tools__item-search{
-    width: 180px;
-    font-size:12px;
-    height: 30px;
+    background: none;
+    width: auto;
+    font-size: 1em;
+    height: 40px;
     border: 0;
+    @extend .padding-h-m;
     &::placeholder{
-      @extend .fg-light;
+      @extend .fg-gray;
     }
     &:focus{
       outline: none;
       @extend .fg-dark;
+      .bg-transparent &{
+        @extend .fg-white;
+      }
     }
+
 
   }
 

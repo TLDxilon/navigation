@@ -5,9 +5,24 @@
 }
 
 .tools__item {
-  @extend .margin-h-m;
   .icon{
     font-size: $tools-icon-size;
   }
 }
-
+.tools__item-icon {
+  @extend .margin-h-s;
+   width: 40px;
+  @extend .text-align-center;
+}
+.tools__item-icon + .tools__item-icon{
+  margin-left: 0;
+}
+.tools__item-cta {
+  @extend .margin-h-m;
+}
+.tools__item-cta + .tools__item-cta{
+  margin-left: 0;
+}
+.tools__item-input{
+  @extend .margin-h-m;
+}

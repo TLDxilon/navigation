@@ -1,0 +1,10 @@
+input{
+  @extend .border-color-white;
+  @extend .border-width-1;
+  border-style: solid;
+  @extend .padding-h-m;
+  &:focus{
+    @extend .border-color-success;
+    outline-color: $tone-info;
+  }
+}

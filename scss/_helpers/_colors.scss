@@ -57,9 +57,17 @@
   }
   &-two{
     background: $tone-two;
+    @extend .fg-white;
+    a{
+      @extend .fg-white;
+    }
   }
   &-three{
     background: $tone-three;
+    @extend .fg-white;
+    a{
+      @extend .fg-white;
+    }
   }
   &-four{
     background: $tone-four;
@@ -70,18 +78,31 @@
 
   &-white{
     background: $tone-white;
+    @extend .fg-dark;
   }
   &-light{
     background: $tone-light;
   }
   &-gray{
     background: $tone-gray;
+    @extend .fg-white;
+    a{
+      @extend .fg-white;
+    }
   }
   &-dark{
     background: $tone-dark;
+    @extend .fg-white;
+    a{
+      @extend .fg-white;
+    }
   }
   &-black{
     background: $tone-black;
+    @extend .fg-white;
+    a{
+      @extend .fg-white;
+    }
   }
 
   &-warning{

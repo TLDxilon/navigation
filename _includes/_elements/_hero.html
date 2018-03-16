@@ -1,8 +1,8 @@
 <div class="{{ page.container }} padding-v-{{ page.hero-padding }}">
     <div class="hero-content fix-header-padding">
         <h1 class="fg-white">Build a company your customers love. </h1>
-       {% include _components/_btn.html size="l" style="flat" title="Start" %}
-        {% include _components/_btn.html size="l" style="ghost" title="Sing in" %}
+        {% if page.hero-cta-1 == 'true' %}  {% include _components/_btn.html size="l" style="flat" title="Start" %}{% endif %}
+        {% if page.hero-cta-2 == 'true' %} {% include _components/_btn.html size="l" style="ghost" title="Sing in" %}{% endif %}
 
     </div>
 </div>
