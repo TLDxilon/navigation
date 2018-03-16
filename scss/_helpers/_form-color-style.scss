@@ -1,0 +1,24 @@
+.form-white{
+   .btn{
+     @extend .bg-white;
+     @extend .fg-one;
+     @extend .border-width-1-5;
+     @extend .border-color-white;
+     &:hover{
+
+     }
+   }
+   input{
+     @extend .border-color-white;
+     @extend .fg-white;
+     &::placeholder{
+       @extend .fg-light;
+     }
+     &:focus{
+       outline: none;
+       @extend .border-color-white;
+     }
+   }
+
+
+}

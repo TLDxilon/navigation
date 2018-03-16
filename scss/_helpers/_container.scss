@@ -14,3 +14,19 @@
 }
 
 
+.container-fluid{
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+
+  @media #{$tablets}{
+    max-width: 960px;
+
+  }
+  @media #{$mobile}{
+    max-width: 479px;
+  }
+
+}
+
+

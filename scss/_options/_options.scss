@@ -1,15 +1,18 @@
 .site-one{
   @extend .bg-white;
 }
-//.mm-page{
-//  @extend .flexbox-row-nowrap;
-//}
-//.design{
-//  width: 90%;
-//}
+.mm-page{
+  @extend .flexbox-row-nowrap;
+}
+.design{
+  width: 90%;
+  .navbar-fixed{
+    width: 90%;
+  }
+}
 .options{
   @extend .padding-xs;
-  background: transparentize($tone-gray, 0.05);
+  @extend .bg-light;
   width:10%;
   border-right: 1px solid $tone-dark;
 
@@ -50,11 +53,8 @@
 
 
 .js-option{
-
-  font-size: 12px;
-  padding: 3px;
-  @extend .fg-dark;
-  @extend .bg-one;
+  font-size: 0.8em;
+  margin:2px;
 }
 .js-option-mobile{
 
