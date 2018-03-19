@@ -1,6 +1,7 @@
 .form-white{
    .btn{
      @extend .bg-white;
+     @extend .bg-white--hover;
      @extend .fg-one;
      @extend .border-width-1-5;
      @extend .border-color-white;

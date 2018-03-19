@@ -1,40 +1,19 @@
 .btn{
-  @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out);
+  @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out, border .15s ease-in-out);
   display: inline-block;
   text-align: center;
   white-space: nowrap;
+  border-width: 1.5px;
+  border-style: solid;
 
   &--flat{
-    border-width: 1.5px;
-    border-color: $tone-one;
-    border-style: solid;
-    @extend .bg-one;
     @extend .fg-white;
-    &:hover{
-      background: darken($tone-one, 10%);
-      border-color: darken($tone-one, 10%);
-    }
+
   }
   &--outline{
-    @extend .fg-one;
-    border-width: 1.5px;
-    border-color: $tone-one;
-    border-style: solid;
+    background: transparent;
     &:hover{
-      @extend .bg-one;
-      border-color: transparent;
-      @extend .fg-white;
-    }
-  }
-  &--ghost{
-    @extend .fg-light;
-    border-width: 1.5px;
-    border-color: transparentize($tone-gray, 0.3);
-    border-style: solid;
-    &:hover{
-      @extend .bg-white;
-      border-color: transparent;
-      @extend .fg-one;
+
     }
   }
 }

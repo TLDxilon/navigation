@@ -56,6 +56,8 @@
   font-size: 0.8em;
   margin:2px;
   @extend .border-radius-s;
+  @extend .bg-three;
+  @extend .border-color-three;
 }
 .js-option-mobile{
 
