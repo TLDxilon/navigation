@@ -11,4 +11,10 @@
 .align-self-stretch{
   @include align-self(stretch);
 }
+.flexbox-align-conten-center{
+  @include align-content(center);
+}
 
+.flexbox-align-items{
+  @include align-items(center);
+}

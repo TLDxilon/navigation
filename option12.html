@@ -5,13 +5,13 @@ navbar:
   cta-1: 'true'
   cta-2: 'false'
 navigation: 'subnav'
-menu-style: 'line'
+menu-style: 'line-bottom'
 brand:
   position: 'center'
   padding: 'm'
 logo:
   size: 's'
-menu-align: 'left'
+menu-align: 'justify'
 hero: 'false'
 hero-cta-1: 'true'
 hero-cta-2: 'true'
@@ -22,9 +22,25 @@ btn:
   border-radius: 'xs'
 subnav:
   background: 'light'
+  border: 'nav--border'
 menu-mobile:
   position: 'left'
   theme: 'main'
 
----
 
+nav:
+  -
+      name: 'Home'
+      actual: true
+  -
+      name: 'Blog'
+  -
+      name: 'Products'
+  -
+      name: 'News'
+  -
+      name: 'Company'
+  -
+      name: 'Contact'
+
+---
