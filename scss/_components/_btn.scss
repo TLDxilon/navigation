@@ -7,7 +7,7 @@
   border-style: solid;
 
   &--flat{
-    @extend .fg-white;
+    color: $tone-white !important;
 
   }
   &--outline{
