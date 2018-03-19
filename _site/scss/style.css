@@ -773,7 +773,8 @@ h2 {
   text-align: center;
   white-space: nowrap;
   border-width: 1.5px;
-  border-style: solid; }
+  border-style: solid;
+  font-size: 1em; }
   .btn--flat {
     color: #FFFFFF !important; }
   .btn--outline {
