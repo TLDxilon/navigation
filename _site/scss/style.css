@@ -1832,6 +1832,9 @@ h2 {
     margin: 2px;
     padding: 2px; } }
 
+.option-slider {
+  width: 100px; }
+
 .fix-padding-container {
   padding: 0; }
 

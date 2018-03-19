@@ -238,4 +238,22 @@ $(document).ready(function($){
         $('.navbar-fixed').css('width', '100%');
     });
 
+
+
+
+    var $sliderOptions = $('.option-slider');
+
+    $sliderOptions.on('change', function() {
+
+        var brandSize = ["logo-size-xxs", "logo-size-xs", "logo-size-s", "logo-size-m", "logo-size-l", "logo-size-xl"];
+
+        console.log(brandSize[2],brandSize[4]);
+
+        $('input[name=valor1]').val($(this).val());
+    });
+
+
+
+
+
 });
