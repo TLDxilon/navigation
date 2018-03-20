@@ -28,7 +28,7 @@
     }
     &:focus{
       outline: none;
-      @extend .fg-dark;
+      @extend .fg-light;
       .bg-transparent &{
         @extend .fg-white;
       }

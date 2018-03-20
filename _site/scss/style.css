@@ -923,11 +923,11 @@ h2 {
   color: #FFBF8B; }
 .fg-white, .search-close .btn:hover, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .form-white input, .mm-menu_theme-main {
   color: #FFFFFF; }
-.fg-light, .form-white input::placeholder {
+.fg-light, .search-input .tools__item-search:focus, .form-white input::placeholder {
   color: #D8D8D8; }
 .fg-gray, .input-search::placeholder, .search-close .btn, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-.fg-dark, .input-search:focus, .search-input .tools__item-search:focus, .bg-white--hover:hover, .form-white .btn:hover, .bg-light--hover:hover, .navbar-fixed.bg-transparent, .navbar-fixed.bg-transparent a, .js-option-mobile {
+.fg-dark, .input-search:focus, .bg-white--hover:hover, .form-white .btn:hover, .bg-light--hover:hover, .navbar-fixed.bg-transparent, .navbar-fixed.bg-transparent a, .js-option-mobile {
   color: #4A4A4A; }
 .fg-black {
   color: #000000; }
@@ -965,7 +965,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .subnav-options, .hero-options {
+.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .group-options {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
@@ -1039,9 +1039,9 @@ h2 {
 /*CLASES PADDINGS*/
 .padding-xxs {
   padding: 0; }
-.padding-xs, .options, .options .open-options, .options .close-options {
+.padding-xs, .options .open-options, .options .close-options {
   padding: 5px; }
-.padding-s {
+.padding-s, .options {
   padding: 10px; }
 .padding-m {
   padding: 15px; }

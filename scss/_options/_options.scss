@@ -11,7 +11,7 @@
   }
 }
 .options{
-  @extend .padding-xs;
+  @extend .padding-s;
   @extend .bg-light;
   width:10%;
   border-right: 1px solid $tone-gray;
@@ -126,6 +126,6 @@
 }
 
 
-.subnav-options, .hero-options{
+.group-options{
   @extend .bg-white;
 }

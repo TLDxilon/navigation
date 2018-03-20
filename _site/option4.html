@@ -44,16 +44,31 @@
 
     <h2>Tamaño del logo</h2>
     <input class="option-slider"  type="range" min="0" max="6" value="1" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
-
+    <br><br>
+    <div class="group-options padding-xs">
     <h2>Nav Padding</h2>
     <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
 
 
-    <h2>Border bottom</h2>
+    <h2>Nav border bottom</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
 
+    <h2>Nav background</h2>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-color" data-option="bg-" data-value="one">1</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-color" data-option="bg-" data-value="two">2</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-color" data-option="bg-" data-value="three">3</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-color" data-option="bg-" data-value="four">4</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-color" data-option="bg-" data-value="five">5</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white" data-element=".js-color" data-option="bg-" data-value="white">6</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-transparent" data-element=".js-color" data-option="bg-" data-value="transparent">NO</a>
 
+
+    <h2>Nav color style</h2>
+    <a href="#" class="js-option btn btn-xs bg-dark fg-white" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="white">Light</a>
+    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="dark">Dark</a>
+    </div>
+     <br>
     <h2>Menú align</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-align" data-option="flex-align-" data-value="left">left</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-align" data-option="flex-align-" data-value="center">center</a>
@@ -68,7 +83,6 @@
     <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">Line bottom</a><br>
     <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">Line top</a><br>
 
-
     <br>
     <h2>Menú border</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="nav--" data-value="border">YES</a>
@@ -76,22 +90,8 @@
 
 
 
-    <h2>Menú background</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-color" data-option="bg-" data-value="one">1</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-color" data-option="bg-" data-value="two">2</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-color" data-option="bg-" data-value="three">3</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-color" data-option="bg-" data-value="four">4</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-color" data-option="bg-" data-value="five">5</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white" data-element=".js-color" data-option="bg-" data-value="white">6</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-transparent" data-element=".js-color" data-option="bg-" data-value="transparent">NO</a>
-
-
-    <h2>Navbar color style</h2>
-    <a href="#" class="js-option btn btn-xs bg-dark fg-white" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="white">Light</a>
-    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="dark">Dark</a>
-
     <br><br>
-    <div class="hero-options padding-xs">
+    <div class="group-options padding-xs">
         <h2>Hero Padding</h2>
         <input class="option-slider"  type="range" min="0" max="6" value="5" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".js-hero">
 
@@ -106,7 +106,7 @@
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="right">right</a>
     </div>
     <br>
-    <div class="subnav-options padding-xs">
+    <div class="group-options padding-xs">
         <h2>Subnav background</h2>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="bg-" data-value="one">1</a>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-subnav" data-option="bg-" data-value="two">2</a>
@@ -189,7 +189,7 @@
                     
 <div class="tools__item tools__item-input hidden-tablets hidden-mobile search-input">
     <form class="tools-search-content  border-radius-s">
-        <input class="tools__item-search js-color  js-fg" type="text" placeholder="Buscar en mybrand.com">
+        <input class="tools__item-search js-color fg-white  js-fg" type="text" placeholder="Buscar en mybrand.com">
         <a class="btn-search fg-gray  fg-white js-fg"><span class="icon icon-search"></span></a>
     </form>
 
@@ -332,7 +332,7 @@
                 
 <div class="tools__item tools__item-input hidden-tablets hidden-mobile search-input">
     <form class="tools-search-content  border-radius-s">
-        <input class="tools__item-search js-color  js-fg" type="text" placeholder="Buscar en mybrand.com">
+        <input class="tools__item-search js-color fg-white  js-fg" type="text" placeholder="Buscar en mybrand.com">
         <a class="btn-search fg-gray  fg-white js-fg"><span class="icon icon-search"></span></a>
     </form>
 
