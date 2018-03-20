@@ -241,19 +241,28 @@ $(document).ready(function($){
 
 
 
+
     var $sliderOptions = $('.option-slider');
+    var brandSize = ["logo-size-xxs", "logo-size-xs", "logo-size-s", "logo-size-m", "logo-size-l", "logo-size-xl"];
 
-    $sliderOptions.on('change', function() {
+    console.log(brandSize[2],brandSize[4]);
 
-        var brandSize = ["logo-size-xxs", "logo-size-xs", "logo-size-s", "logo-size-m", "logo-size-l", "logo-size-xl"];
+    $sliderOptions.prop({
+        max: brandSize.length - 1
+    })
+        .find(".option-slider")
+        .text(brandSize[0]);
 
-        console.log(brandSize[2],brandSize[4]);
+    $sliderOptions.on("change", function () {
+        var value = $(this).val(),
+            button = $(this)
 
-        $('input[name=valor1]').val($(this).val());
+                .find(".option-slider");
+        setTimeout(function () { /* update text after jQM refreshes slider */
+            button.text(brandSize[value]);
+            console.log(brandSize[value]);
+        }, 0);
     });
-
-
-
 
 
 });
