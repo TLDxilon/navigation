@@ -8,9 +8,9 @@
   font-size: 1em;
 
   &--flat{
-    color: $tone-white !important;
+    color: $tone-white;
     .form-white &{
-      color: $tone-one !important;
+      color: $tone-one;
     }
 
   }

@@ -776,9 +776,9 @@ h2 {
   border-style: solid;
   font-size: 1em; }
   .btn--flat {
-    color: #FFFFFF !important; }
+    color: #FFFFFF; }
     .form-white .btn--flat {
-      color: #00BDB6 !important; }
+      color: #00BDB6; }
   .btn--outline {
     background: transparent; }
 
