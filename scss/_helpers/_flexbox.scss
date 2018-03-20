@@ -18,3 +18,10 @@
 .flexbox-align-items{
   @include align-items(center);
 }
+
+.flexbox-order-1{
+  @include order(1);
+}
+.flexbox-order-2{
+  @include order(2);
+}
