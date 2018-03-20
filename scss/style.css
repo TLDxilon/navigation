@@ -1461,7 +1461,7 @@ h2 {
   transition: margin 0.3s ease; }
 
 .btn-xs {
-  padding: 0.3em 0.6em; }
+  padding: 0.2em 0.5em; }
 .btn-s {
   padding: 0.72em 1.2em; }
 .btn-l {
@@ -1841,7 +1841,7 @@ h2 {
 
 .js-option {
   font-size: 0.8em;
-  margin: 2px; }
+  margin: 2px 0; }
   .js-option.btn {
     border: 0; }
 

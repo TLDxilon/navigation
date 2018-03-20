@@ -54,7 +54,7 @@
 
 .js-option{
   font-size: 0.8em;
-  margin:2px;
+  margin:2px 0;
   &:hover{
     @extend .fg-one;
   }
@@ -86,7 +86,7 @@
     a{
       display: block;
       width: 100%;
-      margin:2px;
+      margin:2px ;
       padding: 2px;
     }
   }
