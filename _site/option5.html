@@ -48,18 +48,18 @@
     <h2>Nav Padding</h2>
     <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
 
-    <h2>Hero Padding</h2>
-    <input class="option-slider"  type="range" min="0" max="6" value="5" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".js-hero">
 
     <h2>Border bottom</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
+
 
     <h2>Menú align</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-align" data-option="flex-align-" data-value="left">left</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-align" data-option="flex-align-" data-value="center">center</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-align" data-option="flex-align-" data-value="right">right</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-align" data-option="flex-align-" data-value="justify">justify</a>
+
 
     <h2>Menú style</h2>
     <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a><br>
@@ -86,24 +86,46 @@
     <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-transparent" data-element=".js-color" data-option="bg-" data-value="transparent">NO</a>
 
 
-    <h2>Menú color style</h2>
-    <a href="#" class="js-option btn btn-xs bg-dark fg-white" data-element=".js-fg" data-option="fg-" data-value="white">Light</a>
-    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".js-fg" data-option="fg-" data-value="dark">Dark</a>
-    <br><br>
-    <h2>Menú 2 background</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="bg-" data-value="one">1</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-subnav" data-option="bg-" data-value="two">2</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-subnav" data-option="bg-" data-value="three">3</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-subnav" data-option="bg-" data-value="four">4</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-subnav" data-option="bg-" data-value="five">5</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white" data-element=".js-subnav" data-option="bg-" data-value="white">6</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-transparent" data-element=".js-subnav" data-option="bg-" data-value="transparent">NO</a>
+    <h2>Navbar color style</h2>
+    <a href="#" class="js-option btn btn-xs bg-dark fg-white" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="white">Light</a>
+    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="dark">Dark</a>
 
-    <h2>Menú 2 border</h2>
+    <br><br>
+    <div class="hero-options padding-xs">
+        <h2>Hero Padding</h2>
+        <input class="option-slider"  type="range" min="0" max="6" value="5" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".js-hero">
+
+        <h2>Hero align</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="left">left</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="center">center</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="right">right</a>
+
+        <h2>Hero position</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="left">left</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="center">center</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="right">right</a>
+    </div>
+    <br>
+    <div class="subnav-options padding-xs">
+        <h2>Subnav background</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="bg-" data-value="one">1</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-subnav" data-option="bg-" data-value="two">2</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-subnav" data-option="bg-" data-value="three">3</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-subnav" data-option="bg-" data-value="four">4</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-subnav" data-option="bg-" data-value="five">5</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white" data-element=".js-subnav" data-option="bg-" data-value="white">6</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-transparent" data-element=".js-subnav" data-option="bg-" data-value="transparent">NO</a>
+        <h2>Subnav color style</h2>
+        <a href="#" class="js-option btn btn-xs bg-dark fg-white" data-element=".subnav .js-fg, .subnav .js-fg" data-option="fg-" data-value="white">Light</a>
+        <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".subnav .js-fg, .subnav .js-fg" data-option="fg-" data-value="dark">Dark</a>
+
+
+
+    <h2>Subnav border</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border-2" data-option="nav--" data-value="border">YES</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border-2" data-option="nav--" data-value="">NO</a>
 
-
+</div>
 
     <h2>CTA</h2>
     <h3>Border radius</h3>
@@ -268,7 +290,7 @@
     
     
       <!-- navbar -->
- <div class="navbar bg-two  position-relative js-border js-color">
+ <div class="navbar bg-two  position-relative js-border js-color js-fg-nav">
 
      <div class="searchbar bg-two  js-searchbar js-color">
 
@@ -357,18 +379,21 @@
     <!-- hero -->
 
     <div class="hero">
-        <div class="container hero-inner  padding-v-l js-hero">
-    <div class="hero-content fix-header-padding">
-        <h1 class="fg-white">Build a company your customers love. </h1>
-        
-        
+        <div class="container">
+    <div class="hero-inner  padding-v-l hero-content-position-left js-hero">
+        <div class="hero-content fix-header-padding text-align-left js-hero-align">
+            <h1 class="fg-white">Build a company your customers love. </h1>
+            
+            
 
+        </div>
     </div>
+
 </div>
 
 <div class="background">
     <div class="bg-color" style="background: rgba(0, 0, 0, 0)"></div>
-    <div class="bg-image" style="background-image:url('img/back.png')"></div>
+    <div class="bg-image" style="background-image:url('img/back2.png')"></div>
 </div>
     </div>
 

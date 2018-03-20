@@ -1,18 +1,45 @@
 .hero{
   h1{
-    font-size: 3.5em;
+    font-size: 4em;
   }
   &-inner{
     @include transition(padding .3s linear);
   }
   &-content{
-    width: 50%;
-    @media #{$tablets}{
-      width: 100%;
 
-    }
-    @media #{$mobile}{
-      width: 100%;
+    &-position{
+      &-left{
+        width: 50%;
+        @media #{$tablets}{
+          width: 100%;
+
+        }
+        @media #{$mobile}{
+          width: 100%;
+        }
+      }
+      &-right{
+        width: 50%;
+        margin-left: 50%;
+        @media #{$tablets}{
+          width: 100%;
+
+        }
+        @media #{$mobile}{
+          width: 100%;
+        }
+      }
+      &-center{
+        width: 50%;
+        margin-left: 25%;
+        margin-right: 25%;
+        @media #{$tablets}{
+          width: 100%;
+
+        }
+        @media #{$mobile}{
+          width: 100%;
+        }}
     }
 
   }

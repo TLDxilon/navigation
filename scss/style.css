@@ -432,20 +432,39 @@ h2 {
   top: 0; }
 
 .hero h1 {
-  font-size: 3.5em; }
+  font-size: 4em; }
 .hero-inner {
   -webkit-transition: padding 0.3s linear;
   -moz-transition: padding 0.3s linear;
   -ms-transition: padding 0.3s linear;
   -o-transition: padding 0.3s linear;
   transition: padding 0.3s linear; }
-.hero-content {
+.hero-content-position-left {
   width: 50%; }
   @media only screen and (min-width: 480px) and (max-width: 960px) {
-    .hero-content {
+    .hero-content-position-left {
       width: 100%; } }
   @media only screen and (max-width: 479px) {
-    .hero-content {
+    .hero-content-position-left {
+      width: 100%; } }
+.hero-content-position-right {
+  width: 50%;
+  margin-left: 50%; }
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
+    .hero-content-position-right {
+      width: 100%; } }
+  @media only screen and (max-width: 479px) {
+    .hero-content-position-right {
+      width: 100%; } }
+.hero-content-position-center {
+  width: 50%;
+  margin-left: 25%;
+  margin-right: 25%; }
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
+    .hero-content-position-center {
+      width: 100%; } }
+  @media only screen and (max-width: 479px) {
+    .hero-content-position-center {
       width: 100%; } }
 
 .btn-menu .open-menu, .btn-menu .close-menu {
@@ -946,7 +965,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider {
+.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .subnav-options, .hero-options {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
