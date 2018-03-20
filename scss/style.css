@@ -1815,12 +1815,13 @@ h2 {
   content: "\f0c9"; }
 
 .design {
-  width: 90%; }
-  .design .navbar-fixed {
-    width: 90%; }
+  width: calc( 100vw - 240px ); }
+
+.navbar-fixed {
+  width: calc( 100vw - 240px ); }
 
 .options {
-  width: 10%;
+  min-width: 240px;
   border-right: 1px solid #B0B0B0; }
   .options h2 {
     font-size: 12px;

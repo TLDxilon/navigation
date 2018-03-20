@@ -5,15 +5,17 @@
   @extend .flexbox-row-nowrap;
 }
 .design{
-  width: 90%;
-  .navbar-fixed{
-    width: 90%;
-  }
+  width: calc( 100vw - 240px );
+
+}
+
+.navbar-fixed{
+  width: calc( 100vw - 240px );
 }
 .options{
   @extend .padding-s;
   @extend .bg-light;
-  width:10%;
+  min-width: 240px;
   border-right: 1px solid $tone-gray;
 
   h2{
