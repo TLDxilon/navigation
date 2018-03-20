@@ -9,6 +9,9 @@
 
   &--flat{
     color: $tone-white !important;
+    .form-white &{
+      color: $tone-one !important;
+    }
 
   }
   &--outline{

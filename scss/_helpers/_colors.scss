@@ -3,11 +3,6 @@
 .fg{
   &-one{
     color: $tone-one;
-    &--hover{
-      &:hover{
-        color: adjust-color($tone-one, $saturation: 10%, $lightness: -10%);
-      }
-    }
   }
   &-two{
     color: $tone-two;

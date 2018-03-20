@@ -35,41 +35,39 @@
     <br><br>
 
     <h2>Container</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-container" data-option="container" data-value="container">Container</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-container" data-option="container" data-value="-fluid">Fluid</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-container" data-option="container" data-value="container">Container</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-container" data-option="container" data-value="-fluid">Fluid</a>
 
-    <h2>Logo flotante</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".static-nav-logo" data-option="logo-" data-value="static">No</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>
+    <!--<h2>Logo flotante</h2>-->
+    <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="static">No</a>-->
+    <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>-->
 
     <h2>Tamaño del logo</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".branding-logo" data-option="logo-size-" data-value="xxs">XXS</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".branding-logo" data-option="logo-size-" data-value="xs">XS</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".branding-logo" data-option="logo-size-" data-value="s">S</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".branding-logo" data-option="logo-size-" data-value="m">M</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".branding-logo" data-option="logo-size-" data-value="l">L</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".branding-logo" data-option="logo-size-" data-value="xl">XL</a>
-
-    <input class="option-slider" id="option-slider" type="range" data-option="logo-size-" data-value="s" data-element=".branding-logo" id="myRange">
+    <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl"]' data-element=".branding-logo">
 
     <h2>Padding</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-item--logo" data-option="padding-v-" data-value="xs">XS</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-item--logo" data-option="padding-v-" data-value="s">S</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-item--logo" data-option="padding-v-" data-value="m">M</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-item--logo" data-option="padding-v-" data-value="l">L</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-item--logo" data-option="padding-v-" data-value="xl">XL</a>
+    <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
 
-    <h2>Menú border</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-border" data-option="nav--" data-value="border">YES</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-border" data-option="nav--" data-value="">NO</a>
+    <h2>Border bottom</h2>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
 
+    <h2>Menú align</h2>
+    <input class="option-slider" type="range" min="0" max="3" value="1" data-option="flex-align" data-values='["left","center","justify","right"]' data-element=".js-align">
 
     <h2>Menú style</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">LINE</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">SIMPLE</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">BACK ALL</a><br>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">LINE BOTTOM</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">LINE TOP</a>
+    <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a><br>
+    <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">Simple</a><br>
+    <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">Back all</a><br>
+    <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">Line bottom</a><br>
+    <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">Line top</a><br>
+
+
+    <br>
+    <h2>Menú border</h2>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="nav--" data-value="border">YES</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="nav--" data-value="">NO</a>
+
 
 
     <h2>Menú background</h2>
@@ -78,45 +76,35 @@
     <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-color" data-option="bg-" data-value="three">3</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-color" data-option="bg-" data-value="four">4</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-color" data-option="bg-" data-value="five">5</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-white" data-element=".js-color" data-option="bg-" data-value="white">6</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white" data-element=".js-color" data-option="bg-" data-value="white">6</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-transparent" data-element=".js-color" data-option="bg-" data-value="transparent">NO</a>
 
 
     <h2>Menú color style</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-fg" data-option="fg-" data-value="white">Light</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-fg" data-option="fg-" data-value="dark">Dark</a>
-
+    <a href="#" class="js-option bg-dark fg-white" data-element=".js-fg" data-option="fg-" data-value="white">Light</a>
+    <a href="#" class="js-option bg-white fg-dark" data-element=".js-fg" data-option="fg-" data-value="dark">Dark</a>
+    <br><br>
     <h2>Menú 2 background</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="bg-" data-value="one">1</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-subnav" data-option="bg-" data-value="two">2</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-subnav" data-option="bg-" data-value="three">3</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-subnav" data-option="bg-" data-value="four">4</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-subnav" data-option="bg-" data-value="five">5</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-white" data-element=".js-subnav" data-option="bg-" data-value="white">6</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white" data-element=".js-subnav" data-option="bg-" data-value="white">6</a>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-transparent" data-element=".js-subnav" data-option="bg-" data-value="transparent">NO</a>
 
     <h2>Menú 2 border</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-border-2" data-option="nav--" data-value="border">YES</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-border-2" data-option="nav--" data-value="">NO</a>
-
-    <h2>Menú align</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-align" data-option="flex-align-" data-value="left">left</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-align" data-option="flex-align-" data-value="center">center</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-align" data-option="flex-align-" data-value="right">right</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-align" data-option="flex-align-" data-value="justify">justify</a>
-
-    <h2>Border bottom</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-border" data-option="border-" data-value="">NO</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border-2" data-option="nav--" data-value="border">YES</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border-2" data-option="nav--" data-value="">NO</a>
 
 
 
     <h2>CTA</h2>
     <h3>Border radius</h3>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-btn" data-option="border-radius-" data-value="xs">NO</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-btn" data-option="border-radius-" data-value="s">XS</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".js-btn" data-option="border-radius-" data-value="xl">SÍ</a>
-
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one border-radius-xs" data-element=".js-btn" data-option="border-radius-" data-value="xs">NO</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one border-radius-s" data-element=".js-btn" data-option="border-radius-" data-value="s">XS</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one border-radius-m" data-element=".js-btn" data-option="border-radius-" data-value="xl">SÍ</a>
+<br>
     <!--<h2>Bloque superpuesto</h2>-->
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".block" data-option="block-" data-value="floating">SI</a>-->
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".block" data-option="block-" data-value="no-floating">NO</a>-->
@@ -463,7 +451,7 @@
                     <h2 class="title-big fg-white"> On the other hand we denounce with righteout</h2>
                     <form class="form-suscribe-horizontal form-white">
     <input class="input-suscribe" type="text" placeholder="Enter your e-mail">
-    <a class="btn btn-s btn--flat bg-   border-radius-s border-radius-topLeft-bottomLeft-s js-btn fg- js-fg " href="">Suscribe</a>
+    <a class="btn btn-s btn--flat bg-   border-radius-s border-radius-topRight-bottomRight-s js-btn fg- js-fg " href="">Suscribe</a>
 
 
 </form>

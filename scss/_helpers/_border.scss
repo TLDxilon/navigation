@@ -23,7 +23,7 @@
       border-radius: 30px;
     }
   }
-  &-radius-topLeft-bottomLeft{
+  &-radius-topRight-bottomRight{
     &-s {
       border-radius: 0 5px 5px 0;
     }
@@ -38,7 +38,7 @@
     }
 
   }
-  &-radius-topRight-bottomRight{
+  &-radius-topLeft-bottomLeft{
     &-s {
       border-radius: 5px 0 0 5px;
     }

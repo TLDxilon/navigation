@@ -777,6 +777,8 @@ h2 {
   font-size: 1em; }
   .btn--flat {
     color: #FFFFFF !important; }
+    .form-white .btn--flat {
+      color: #00BDB6 !important; }
   .btn--outline {
     background: transparent; }
 
@@ -822,7 +824,7 @@ h2 {
   border-bottom: 1px solid rgba(176, 176, 176, 0.4) !important; }
 .border-top {
   border-color: 1px solid rgba(176, 176, 176, 0.4); }
-.border-radius-s, .js-option {
+.border-radius-s {
   border-radius: 5px; }
 .border-radius-m {
   border-radius: 10px; }
@@ -830,21 +832,21 @@ h2 {
   border-radius: 20px; }
 .border-radius-xl {
   border-radius: 30px; }
-.border-radius-topLeft-bottomLeft-s {
+.border-radius-topRight-bottomRight-s {
   border-radius: 0 5px 5px 0; }
-.border-radius-topLeft-bottomLeft-m {
-  border-radius: 0 10px 10px 0; }
-.border-radius-topLeft-bottomLeft-l {
-  border-radius: 0 20px 20px 0; }
-.border-radius-topLeft-bottomLeft-xl {
-  border-radius: 0 30px 30px 0; }
-.border-radius-topRight-bottomRight-s, .form-suscribe-horizontal .input-suscribe {
-  border-radius: 5px 0 0 5px; }
 .border-radius-topRight-bottomRight-m {
-  border-radius: 10px 0 0 10px; }
+  border-radius: 0 10px 10px 0; }
 .border-radius-topRight-bottomRight-l {
-  border-radius: 20px 0 0 20px; }
+  border-radius: 0 20px 20px 0; }
 .border-radius-topRight-bottomRight-xl {
+  border-radius: 0 30px 30px 0; }
+.border-radius-topLeft-bottomLeft-s, .form-suscribe-horizontal .input-suscribe {
+  border-radius: 5px 0 0 5px; }
+.border-radius-topLeft-bottomLeft-m {
+  border-radius: 10px 0 0 10px; }
+.border-radius-topLeft-bottomLeft-l {
+  border-radius: 20px 0 0 20px; }
+.border-radius-topLeft-bottomLeft-xl {
   border-radius: 30px 0 0 30px; }
 .border-color-success, input:focus {
   border-color: #3DBDB6; }
@@ -856,7 +858,7 @@ h2 {
   border-color: #BBBF60; }
 .border-color-gray-transparent, .search-input .tools-search-content {
   border-color: rgba(176, 176, 176, 0.4); }
-.border-color-one, .js-option {
+.border-color-one {
   border-color: #00BDB6; }
 .border-color-two {
   border-color: #3A3F56; }
@@ -884,10 +886,8 @@ h2 {
   border-width: 2px; }
 
 /* COLORES */
-.fg-one, .menu--simple .active span, .menu--simple .nav-link:hover span, .menu--line-bottom .nav-link:hover, .menu--line-bottom li.active .nav-link, .menu--line-bottom li.active .nav-link:after, .menu--line-top .nav-link:hover, .menu--line-top li.active .nav-link, .menu--line-top li.active .nav-link:after, .form-white .btn {
+.fg-one, .menu--simple .active span, .menu--simple .nav-link:hover span, .menu--line-bottom .nav-link:hover, .menu--line-bottom li.active .nav-link, .menu--line-bottom li.active .nav-link:after, .menu--line-top .nav-link:hover, .menu--line-top li.active .nav-link, .menu--line-top li.active .nav-link:after, .form-white .btn, .js-option:hover {
   color: #00BDB6; }
-  .fg-one--hover:hover {
-    color: #008a85; }
 .fg-two {
   color: #3A3F56; }
 .fg-three {
@@ -896,7 +896,7 @@ h2 {
   color: #E4E5C7; }
 .fg-five {
   color: #FFBF8B; }
-.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .form-white input, .mm-menu_theme-main {
+.fg-white, .search-close .btn:hover, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .form-white input, .mm-menu_theme-main {
   color: #FFFFFF; }
 .fg-light, .form-white input::placeholder {
   color: #D8D8D8; }
@@ -915,7 +915,7 @@ h2 {
 .fg-success {
   color: #3DBDB6; }
 
-.bg-one, .menu--line span:after, .menu--back-all .active .nav-link, .menu--back-all .nav-link:hover, .menu--line-bottom .nav-link:after, .menu--line-top .nav-link:after, .js-option {
+.bg-one, .menu--line span:after, .menu--back-all .active .nav-link, .menu--back-all .nav-link:hover, .menu--line-bottom .nav-link:after, .menu--line-top .nav-link:after, .option-slider::-webkit-slider-thumb {
   background: #00BDB6; }
   .bg-one--hover:hover {
     background: #008a85;
@@ -940,7 +940,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options {
+.bg-white, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
@@ -1056,6 +1056,12 @@ h2 {
 .padding-h-l, .navbar .nav-link, .navbar-fixed .nav-link, .subnav .nav-link {
   padding-left: 15px;
   padding-right: 15px; }
+.padding-h-xl {
+  padding-left: 20px;
+  padding-right: 20px; }
+.padding-h-xxl, .form-search {
+  padding-left: 40px;
+  padding-right: 40px; }
 
 .font-weight-bold {
   font-weight: bold; }
@@ -1793,7 +1799,7 @@ h2 {
   border-right: 1px solid #B0B0B0; }
   .options h2 {
     font-size: 12px;
-    font-weight: normal;
+    font-weight: bold;
     padding: 1px 0;
     -webkit-margin-before: 0;
     -webkit-margin-after: 0; }
@@ -1811,6 +1817,8 @@ h2 {
 .js-option {
   font-size: 0.8em;
   margin: 2px; }
+  .js-option.btn {
+    border: 0; }
 
 .js-option-mobile {
   font-size: 12px;
@@ -1832,8 +1840,32 @@ h2 {
     margin: 2px;
     padding: 2px; } }
 
+/*personalizo el range slider*/
 .option-slider {
-  width: 100px; }
+  -webkit-appearance: none;
+  width: 100%;
+  height: 15px;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: opacity 0.2s linear;
+  -moz-transition: opacity 0.2s linear;
+  -ms-transition: opacity 0.2s linear;
+  -o-transition: opacity 0.2s linear;
+  transition: opacity 0.2s linear;
+  padding: 0;
+  margin-top: 5px; }
+  .option-slider:hover {
+    opacity: 1; }
+  .option-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    cursor: pointer; }
+  .option-slider::-moz-range-thumb {
+    width: 25px;
+    height: 25px;
+    cursor: pointer; }
 
 .fix-padding-container {
   padding: 0; }

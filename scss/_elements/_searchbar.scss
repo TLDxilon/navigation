@@ -21,6 +21,7 @@
 .form-search{
     @extend .flexbox-row-nowrap;
     height: 100%;
+    @extend .padding-h-xxl;
 }
 .input-search {
     background: transparent;
@@ -55,6 +56,7 @@
     @extend .fg-gray;
     &:hover{
       @extend .bg-gray;
+      @extend .fg-white;
     }
   }
 }

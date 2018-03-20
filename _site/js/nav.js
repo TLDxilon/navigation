@@ -165,30 +165,22 @@ $(document).ready(function($){
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
 
-
-
-
+            // expresión regular que busca si esa clase existe ya
+            // y la elimina
             $element.attr('class', function(i, c){
                 var pattern = '(^|\\s)' + dataOption + '\\S+';
                 var myReg  = new RegExp(pattern, "g");
                 return c.replace(myReg, '');
             });
 
-
-            console.log(dataElement);
+            // actualizo con la nueva clase
             $element.addClass(dataOption + dataValue);
-
-
-
-
 
             var widthLogo = $('.js-width-logo').outerWidth(true);
             var $logo2 = $('.logo-floating');
             $logo2.css('width', (widthLogo) + 'px');
         });
     });
-
-
 
 
     $changeOptionMobile.each(function(index) {
@@ -223,8 +215,6 @@ $(document).ready(function($){
          });
     });
 
-
-
     $openOptions.on('click', function(){
         event.preventDefault();
         $('.options').css('display', 'block');
@@ -239,29 +229,33 @@ $(document).ready(function($){
     });
 
 
-
-
-
     var $sliderOptions = $('.option-slider');
-    var brandSize = ["logo-size-xxs", "logo-size-xs", "logo-size-s", "logo-size-m", "logo-size-l", "logo-size-xl"];
 
-    console.log(brandSize[2],brandSize[4]);
 
-    $sliderOptions.prop({
-        max: brandSize.length - 1
-    })
-        .find(".option-slider")
-        .text(brandSize[0]);
 
+    /*
+     Range control init
+    */
     $sliderOptions.on("change", function () {
-        var value = $(this).val(),
-            button = $(this)
 
-                .find(".option-slider");
-        setTimeout(function () { /* update text after jQM refreshes slider */
-            button.text(brandSize[value]);
-            console.log(brandSize[value]);
-        }, 0);
+        var $this = $(this);
+        var value           = $this.val();
+        var dataValues         = $this.data('values');
+        var dataOption        = $this.data('option');
+        var dataElement       = $this.data('element');
+        var $element          = $(dataElement);
+
+        // expresión regular que busca si esa clase existe ya
+        // y la actualiza
+        $element.attr('class', function(i, c){
+            var pattern = '(^|\\s)' + dataOption + '\\S+';
+            var myReg  = new RegExp(pattern, "g");
+            return c.replace(myReg, '');
+        });
+
+        $element.addClass(dataOption+ "-" + dataValues[value]);
+
+        console.log("Clase: ." + dataOption+ "-" + dataValues[value]);
     });
 
 

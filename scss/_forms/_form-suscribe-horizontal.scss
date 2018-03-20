@@ -5,7 +5,7 @@
    }
    .input-suscribe{
       @extend .input-size-s;
-      @extend .border-radius-topRight-bottomRight-s;
+      @extend .border-radius-topLeft-bottomLeft-s;
       @extend .border-width-1-5;
    }
 }
