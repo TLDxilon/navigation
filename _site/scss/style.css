@@ -433,6 +433,12 @@ h2 {
 
 .hero h1 {
   font-size: 3.5em; }
+.hero-inner {
+  -webkit-transition: padding 0.3s linear;
+  -moz-transition: padding 0.3s linear;
+  -ms-transition: padding 0.3s linear;
+  -o-transition: padding 0.3s linear;
+  transition: padding 0.3s linear; }
 .hero-content {
   width: 50%; }
   @media only screen and (min-width: 480px) and (max-width: 960px) {

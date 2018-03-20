@@ -43,10 +43,13 @@
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>-->
 
     <h2>Tamaño del logo</h2>
-    <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl"]' data-element=".branding-logo">
+    <input class="option-slider"  type="range" min="0" max="6" value="1" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
 
-    <h2>Padding</h2>
+    <h2>Nav Padding</h2>
     <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
+
+    <h2>Hero Padding</h2>
+    <input class="option-slider"  type="range" min="0" max="6" value="5" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".js-hero">
 
     <h2>Border bottom</h2>
     <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
@@ -419,7 +422,7 @@
     <!-- hero -->
 
     <div class="hero">
-        <div class="container padding-v-xl">
+        <div class="container hero-inner  padding-v-xl js-hero">
     <div class="hero-content fix-header-padding">
         <h1 class="fg-white">Build a company your customers love. </h1>
           <a class="btn btn-l btn--flat border-color-one bg-one bg-one--hover  border-radius-s border-radius- js-btn fg-white js-fg " href="">Start</a>
