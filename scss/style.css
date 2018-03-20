@@ -940,7 +940,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider {
+.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed.bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
