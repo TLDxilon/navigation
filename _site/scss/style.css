@@ -1878,7 +1878,8 @@ h2 {
   -o-transition: opacity 0.2s linear;
   transition: opacity 0.2s linear;
   padding: 0;
-  margin-top: 5px; }
+  margin-top: 5px;
+  border-color: #B0B0B0; }
   .option-slider:hover {
     opacity: 1; }
   .option-slider::-webkit-slider-thumb {

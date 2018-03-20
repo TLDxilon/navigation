@@ -106,6 +106,7 @@
   @include transition(opacity .2s linear);
   padding: 0;
   margin-top: 5px;
+  border-color: $tone-gray;
   &:hover {
     opacity: 1;
   }
