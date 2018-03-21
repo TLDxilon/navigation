@@ -508,10 +508,6 @@ h2 {
     opacity: 1; }
 
 .navbar-menu-inner {
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  align-items: stretch;
   height: 100%; }
 
 .nav-menu-item {
@@ -1457,9 +1453,6 @@ h2 {
 .form-white input:focus {
   outline: none; }
 
-.navbar .nav-menu-item, .navbar-fixed .nav-menu-item, .subnav .nav-menu-item {
-  border-width: 0 1px 0 1px;
-  border-color: transparent; }
 .navbar .navbar-inner, .navbar-fixed .navbar-inner, .subnav .navbar-inner {
   -webkit-justify-content: space-between;
   -moz-justify-content: space-between;
