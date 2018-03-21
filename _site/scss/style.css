@@ -536,12 +536,6 @@ h2 {
   font-size: 1em; }
   .navbar .nav-link span, .navbar-fixed .nav-link span, .subnav .nav-link span {
     align-self: center; }
-.navbar .nav-link-content, .navbar-fixed .nav-link-content, .subnav .nav-link-content {
-  -webkit-align-items: stretch;
-  -moz-align-items: stretch;
-  -ms-align-items: stretch;
-  align-items: stretch;
-  height: 100%; }
 
 .searchbar {
   overflow: hidden;
@@ -1111,7 +1105,7 @@ h2 {
   -ms-flex-basis: 65%;
   flex-basis: 65%; }
 
-.flexbox-row-nowrap, .navbar .nav-link, .navbar-fixed .nav-link, .subnav .nav-link, .navbar .nav-link-content, .navbar-fixed .nav-link-content, .subnav .nav-link-content, .form-search, .navbar__tools, .topbar-inner, .mm-page {
+.flexbox-row-nowrap, .navbar .nav-link, .navbar-fixed .nav-link, .subnav .nav-link, .form-search, .navbar__tools, .topbar-inner, .mm-page {
   display: -webkit-box;
   display: -moz-box;
   display: -ms-flexbox;

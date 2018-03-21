@@ -28,12 +28,6 @@
     }
   }
 
-  .nav-link-content{
-    @extend .flexbox-row-nowrap;
-    @include align-items(stretch);
-    height: 100%;
-  }
-
 }
 
 
