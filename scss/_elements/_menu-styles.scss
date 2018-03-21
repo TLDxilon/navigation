@@ -83,10 +83,10 @@
         @extend .bg-one;
         content: "";
         opacity: 0;
-        @include transition(opacity 0.3s ease 0s, height 0.3s ease 0s);
 
       }
       &:hover{
+        @include transition(opacity 0.3s ease 0s, height 0.3s ease 0s);
         @extend .fg-one;
         &:after{
           opacity:1;
@@ -123,10 +123,11 @@
         @extend .bg-one;
         content: "";
         opacity: 0;
-        @include transition(opacity 0.3s ease 0s, height 0.3s ease 0s);
+
 
       }
       &:hover{
+        @include transition(opacity 0.3s ease 0s, height 0.3s ease 0s);
         @extend .fg-one;
         &:after{
           opacity:1;
