@@ -1,22 +1,5 @@
 
 
-.navbar, .navbar-fixed, .subnav {
-  &.nav--border {
-    overflow: hidden;
-    border-color: $gray-transparent;
-    border-style: solid;
-    .nav-menu-item {
-      border-left: 1px;
-      border-style: solid;
-      border-color: $gray-transparent;
-      &:last-child {
-        border-right: 1px;
-        border-style: solid;
-        border-color: $gray-transparent;
-      }
-    }
-  }
-}
 .menu{
   &--line {
     span{

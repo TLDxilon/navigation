@@ -602,19 +602,6 @@ h2 {
 .tools__item-cta + .tools__item-cta {
   margin-left: 0; }
 
-.navbar.nav--border, .navbar-fixed.nav--border, .subnav.nav--border {
-  overflow: hidden;
-  border-color: rgba(176, 176, 176, 0.4);
-  border-style: solid; }
-  .navbar.nav--border .nav-menu-item, .navbar-fixed.nav--border .nav-menu-item, .subnav.nav--border .nav-menu-item {
-    border-left: 1px;
-    border-style: solid;
-    border-color: rgba(176, 176, 176, 0.4); }
-    .navbar.nav--border .nav-menu-item:last-child, .navbar-fixed.nav--border .nav-menu-item:last-child, .subnav.nav--border .nav-menu-item:last-child {
-      border-right: 1px;
-      border-style: solid;
-      border-color: rgba(176, 176, 176, 0.4); }
-
 .menu--line span {
   position: relative;
   -webkit-align-self: center;
@@ -1056,10 +1043,10 @@ h2 {
 .padding-v-xs {
   padding-top: 5px;
   padding-bottom: 5px; }
-.padding-v-s, .navbar-fixed .subnav .nav-link {
+.padding-v-s {
   padding-top: 10px;
   padding-bottom: 10px; }
-.padding-v-m, .subnav .nav-link, .navbar-fixed .navbar-item--logo {
+.padding-v-m, .subnav .nav-link, .navbar-fixed .navbar-item--logo, .navbar-fixed .subnav .nav-link {
   padding-top: 20px;
   padding-bottom: 20px; }
 .padding-v-l {
@@ -1185,19 +1172,6 @@ h2 {
   -ms-flex-order: 2;
   -webkit-order: 2;
   order: 2; }
-
-.navbar.nav--border, .navbar-fixed.nav--border, .subnav.nav--border {
-  overflow: hidden;
-  border-color: rgba(176, 176, 176, 0.4);
-  border-style: solid; }
-  .navbar.nav--border .nav-menu-item, .navbar-fixed.nav--border .nav-menu-item, .subnav.nav--border .nav-menu-item {
-    border-left: 1px;
-    border-style: solid;
-    border-color: rgba(176, 176, 176, 0.4); }
-    .navbar.nav--border .nav-menu-item:last-child, .navbar-fixed.nav--border .nav-menu-item:last-child, .subnav.nav--border .nav-menu-item:last-child {
-      border-right: 1px;
-      border-style: solid;
-      border-color: rgba(176, 176, 176, 0.4); }
 
 .menu--line span {
   position: relative;
@@ -1489,23 +1463,19 @@ h2 {
 .form-white input:focus {
   outline: none; }
 
-.navbar, .navbar-fixed, .subnav {
-  border-width: 1px 0 1px 0;
-  border-color: transparent;
-  border-style: solid; }
-  .navbar .nav-menu-item, .navbar-fixed .nav-menu-item, .subnav .nav-menu-item {
-    border-width: 0 1px 0 1px;
-    border-color: transparent; }
-  .navbar .navbar-inner, .navbar-fixed .navbar-inner, .subnav .navbar-inner {
-    -webkit-justify-content: space-between;
-    -moz-justify-content: space-between;
-    -ms-justify-content: space-between;
-    justify-content: space-between;
-    -ms-flex-pack: space-between;
-    -webkit-align-items: center;
-    -moz-align-items: center;
-    -ms-align-items: center;
-    align-items: center; }
+.navbar .nav-menu-item, .navbar-fixed .nav-menu-item, .subnav .nav-menu-item {
+  border-width: 0 1px 0 1px;
+  border-color: transparent; }
+.navbar .navbar-inner, .navbar-fixed .navbar-inner, .subnav .navbar-inner {
+  -webkit-justify-content: space-between;
+  -moz-justify-content: space-between;
+  -ms-justify-content: space-between;
+  justify-content: space-between;
+  -ms-flex-pack: space-between;
+  -webkit-align-items: center;
+  -moz-align-items: center;
+  -ms-align-items: center;
+  align-items: center; }
 
 .navbar-fixed {
   z-index: 99999;
@@ -1516,12 +1486,15 @@ h2 {
   -moz-transition: transform 0.5s ease;
   -ms-transition: transform 0.5s ease;
   -o-transition: transform 0.5s ease;
-  transition: transform 0.5s ease; }
+  transition: transform 0.5s ease;
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.16); }
   .navbar-fixed.is-hide {
-    -webkit-transform: translate(0, -100%);
-    -moz-transform: translate(0, -100%);
-    -ms-transform: translate(0, -100%);
-    transform: translate(0, -100%);
+    -webkit-transform: translate(0, -120%);
+    -moz-transform: translate(0, -120%);
+    -ms-transform: translate(0, -120%);
+    transform: translate(0, -120%);
     -webkit-transition: transform 0.5s ease;
     -moz-transition: transform 0.5s ease;
     -ms-transition: transform 0.5s ease;
