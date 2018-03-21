@@ -52,6 +52,22 @@
     <input class="option-slider"  type="range" min="0" max="6" value="1" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
     <br><br>
     <div class="group-options padding-xs">
+        <h2>Topbar background</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="bg-" data-value="one">1</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".topbar" data-option="bg-" data-value="two">2</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".topbar" data-option="bg-" data-value="three">3</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-light" data-element=".topbar" data-option="bg-" data-value="light">4</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-gray" data-element=".topbar" data-option="bg-" data-value="gray">5</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-white border-color-dark" data-element=".topbar" data-option="bg-" data-value="white">6</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat fg-dark bg-transparent border-color-dark" data-element=".topbar" data-option="bg-" data-value="transparent">NO</a>
+
+        <h2>Topbar color style</h2>
+    <a href="#" class="js-option btn btn-xs bg-dark fg-white" data-element=".topbar .js-fg" data-option="fg-" data-value="white">Light</a>
+    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".topbar .js-fg" data-option="fg-" data-value="dark">Dark</a>
+    </div>
+    <br><br>
+
+    <div class="group-options padding-xs">
     <h2>Nav Padding</h2>
     <input class="option-slider"  type="range" min="0" max="5" value="1" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
 
@@ -290,6 +306,33 @@
 </div>
 
     
+    <!-- topbar -->
+
+
+        <div class="topbar padding-v-xs bg-three">
+    <div class="container js-container">
+      <div class="topbar-inner">
+
+
+                <a class="topbar__item phone-item fg-white js-fg" href="tel:123 456 789"><span class="icon icon-phone2"></span>123 456 789</a>
+                <a class="topbar__item email-item fg-white js-fg" href="mailto:hola@mybrand.com"><span class="icon icon-mail2"></span>hola@mybrand.com</a>
+
+
+            <div class="topbar__item  width-full topbar-social text-align-right">
+                <a class="social-item fg-white js-fg" href=""><span class="icon icon-twitter"></span></a>
+                <a class="social-item fg-white js-fg" href=""><span class="icon icon-pinterest"></span></a>
+                <a class="social-item fg-white js-fg" href=""><span class="icon icon-linkedin"></span></a>
+                <a class="social-item fg-white js-fg" href=""><span class="icon icon-flickr"></span></a>
+                <a class="social-item fg-white js-fg" href=""><span class="icon icon-vimeo"></span></a>
+                <a class="social-item fg-white js-fg" href=""><span class="icon icon-youtube"></span></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    <!-- /topbar -->
+
     
       <!-- navbar -->
  <div class="navbar bg-two  position-relative js-border js-color js-fg-nav">
