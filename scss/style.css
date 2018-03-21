@@ -738,7 +738,7 @@ h2 {
   -ms-flex-pack: space-between;
   font-size: 1em; }
   .topbar-inner .icon {
-    font-size: 1.1em;
+    font-size: 1em;
     vertical-align: middle; }
     .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2 {
       font-size: 0.8em; }
