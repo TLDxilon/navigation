@@ -30,9 +30,9 @@
              </div>
 
             <!-- FIX - FULL - FIX -->
-            <div class="navbar__item width-35 align-self-stretch overflow-hidden hidden-mobile hidden-tablets visible-desktop">
+            <nav class="navbar__item width-35 align-self-stretch overflow-hidden hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
-            </div>
+            </nav>
             <div class="navbar__item width-full text-align-center">
                 {% include _elements/_brand.html %}
             </div>
@@ -53,9 +53,9 @@
             <div class="navbar__item  navbar__item-brand width-auto padding-h-m">
                 {% include _elements/_brand.html class="static-nav-logo" class-js="js-width-logo" %}
             </div>
-            <div class="navbar__item width-full align-self-stretch padding-h-m  overflow-hidden hidden-mobile hidden-tablets visible-desktop">
+            <nav class="navbar__item width-full align-self-stretch padding-h-m  overflow-hidden hidden-mobile hidden-tablets visible-desktop">
                 {% include _elements/_navigation.html %}
-            </div>
+            </nav>
             <div class="navbar__item width-auto">
                 <div class="navbar__tools">
                     {% include _elements/_search.html js-class='js-search-open' %}
@@ -119,9 +119,9 @@
     <!-- subnav -->
     <div class="subnav bg-{{ page.subnav.background }} js-subnav js-border-2 {{ page.subnav.border }} hidden-mobile hidden-tablets visible-desktop">
         <div class="{{ page.container }} js-container fix-padding-container">
-            <div class="navbar__item width-full">
+            <nav class="navbar__item width-full">
                 {% include _elements/_navigation.html %}
-            </div>
+            </nav>
         </div>
     </div><!-- /subnav -->
     {% endif %}
@@ -143,9 +143,9 @@
     <!-- subnav -->
     <div class="subnav bg-{{ page.subnav.background }} js-subnav js-border-2 {{ page.subnav.border }} hidden-mobile hidden-tablets visible-desktop">
        <div class="{{ page.container }} js-container fix-padding-container">
-        <div class="navbar__item width-full">
+        <nav class="navbar__item width-full">
             {% include _elements/_navigation.html %}
-        </div>
+        </nav>
        </div>
     </div><!-- /subnav -->
     {% endif %}

@@ -6,6 +6,7 @@
   border-width: 1.5px;
   border-style: solid;
   font-size: 1em;
+  @extend .margin-h-s;
 
   &--flat{
     color: $tone-white;
