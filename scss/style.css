@@ -452,20 +452,26 @@ h2 {
   margin-left: 50%; }
   @media only screen and (min-width: 480px) and (max-width: 960px) {
     .hero-content-position-right {
-      width: 100%; } }
+      width: 100%;
+      margin-left: 0; } }
   @media only screen and (max-width: 479px) {
     .hero-content-position-right {
-      width: 100%; } }
+      width: 100%;
+      margin-left: 0; } }
 .hero-content-position-center {
   width: 50%;
   margin-left: 25%;
   margin-right: 25%; }
   @media only screen and (min-width: 480px) and (max-width: 960px) {
     .hero-content-position-center {
-      width: 100%; } }
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
   @media only screen and (max-width: 479px) {
     .hero-content-position-center {
-      width: 100%; } }
+      width: 100%;
+      margin-left: 0;
+      margin-right: 0; } }
 
 .mm-wrapper_opening .btn-menu-open {
   display: none; }

@@ -23,10 +23,11 @@
         margin-left: 50%;
         @media #{$tablets}{
           width: 100%;
-
+          margin-left: 0;
         }
         @media #{$mobile}{
           width: 100%;
+          margin-left: 0;
         }
       }
       &-center{
@@ -35,10 +36,13 @@
         margin-right: 25%;
         @media #{$tablets}{
           width: 100%;
-
+          margin-left: 0;
+          margin-right: 0;
         }
         @media #{$mobile}{
           width: 100%;
+          margin-left: 0;
+          margin-right: 0;
         }}
     }
 
