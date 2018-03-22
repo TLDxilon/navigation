@@ -44,3 +44,19 @@
     margin-right: 15px;
   }
 }
+
+.margin-top{
+
+  &-s{
+    margin-top: 5px;
+
+  }
+  &-m{
+    margin-top: 10px;
+
+  }
+  &-l{
+    margin-top: 15px;
+
+  }
+}
