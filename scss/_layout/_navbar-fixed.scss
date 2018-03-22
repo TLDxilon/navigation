@@ -16,7 +16,7 @@
     }
   }
   //Si es transparente fuerzo a que el fixed sea blanco
-  .bg-transparent{
+  &.bg-transparent{
     @extend .bg-white;
     @extend .fg-dark;
     a{
