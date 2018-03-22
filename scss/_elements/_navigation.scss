@@ -15,6 +15,7 @@
 
 .navbar, .navbar-fixed, .subnav{
   .nav-link{
+    width: 100%;
     @extend .flexbox-row-nowrap;
     @include align-items(stretch);
     @include justify-content(center);

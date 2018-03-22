@@ -1,27 +1,17 @@
-.btn-menu{
-  .open-menu, .close-menu{
-    position: absolute;
-    left: 0;
-    top:0;
-  }
-  .open-menu{
-    opacity: 0;
-    @include transition(opacity 0.3s linear);
-    .page-is-moving &{
-      opacity: 0;
-    }
-    .page-is-static &{
-      opacity: 1;
-    }
-  }
-  .close-menu{
-    opacity: 1;
-    @include transition(opacity 0.3s linear);
-    .page-is-moving &{
-      opacity: 1;
-    }
-    .page-is-static &{
-      opacity: 0;
-    }
-  }
+.btn-menu-open{
+   .mm-wrapper_opening &{
+       display: none;
+   }
 }
+
+
+.btn-menu-close{
+    display: none;
+    .icon{
+
+    }
+    .mm-wrapper_opening &{
+        display: block;
+    }
+}
+

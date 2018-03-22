@@ -28,10 +28,10 @@
     background: transparent;
     opacity: 0;
     border: 0;
-    font-size: 22px;
+    font-size: 1.5em;
   @include transform(translate(100px, 0));
     @media #{$mobile}{
-      font-size: 18px;
+      font-size: 1.2em;
     }
     &:focus{
       outline: none;
@@ -49,15 +49,15 @@
 
 }
 .search-close{
+  font-size:2em;
    display: table-cell;
   vertical-align: middle;
-  .btn{
-    letter-spacing: 0;
-    border-color: $tone-gray;
+  .search-close-link{
     @extend .fg-gray;
+    @include transition(color 0.3s ease 0s);
     &:hover{
-      @extend .bg-gray;
-      @extend .fg-white;
+      @extend .fg-dark;
+
     }
   }
 }

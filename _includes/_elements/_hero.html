@@ -1,9 +1,9 @@
 <div class="{{ page.container }}">
-    <div class="hero-inner  padding-v-{{ page.hero-padding }} hero-content-position-left js-hero">
-        <div class="hero-content fix-header-padding text-align-left js-hero-align">
+    <div class="hero-inner  padding-v-{{ page.hero-padding }} hero-content-position-{{ page.hero-content-position }}  js-hero">
+        <div class="hero-content fix-header-padding text-align-{{ page.hero-text-align }} js-hero-align">
             <h1 class="fg-white">Build a company your customers love. </h1>
-            {% if page.hero-cta-1 == 'true' %}  {% include _components/_btn.html size="l" style="flat border-color-one" background="one" hover="bg-one--hover" title="Start" %}{% endif %}
-            {% if page.hero-cta-2 == 'true' %} {% include _components/_btn.html size="l" style="outline fg-white border-color-white"  background="" hover="bg-white--hover" title="Sing in" %}{% endif %}
+            {% if page.hero-cta-1 == 'true' %}  {% include _components/_btn.html size="l" style="flat border-color-one fg-white" background="one" hover="bg-one--hover" title="Start" %}{% endif %}
+            {% if page.hero-cta-2 == 'true' %} {% include _components/_btn.html size="l" style="outline border-color-white  fg-white"  background="" hover="bg-white--hover" title="Sing in" %}{% endif %}
 
         </div>
     </div>
