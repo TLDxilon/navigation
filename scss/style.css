@@ -348,6 +348,24 @@ input {
 h2 {
   -webkit-margin-before: 0; }
 
+.col-4 {
+  -webkit-flex-basis: 33.33%;
+  -moz-flex-basis: 33.33%;
+  -ms-flex-basis: 33.33%;
+  flex-basis: 33.33%; }
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
+    .col-4 {
+      -webkit-flex-basis: 100%;
+      -moz-flex-basis: 100%;
+      -ms-flex-basis: 100%;
+      flex-basis: 100%; } }
+  @media only screen and (max-width: 479px) {
+    .col-4 {
+      -webkit-flex-basis: 100%;
+      -moz-flex-basis: 100%;
+      -ms-flex-basis: 100%;
+      flex-basis: 100%; } }
+
 .col-6 {
   -webkit-flex-basis: 50%;
   -moz-flex-basis: 50%;
@@ -361,6 +379,24 @@ h2 {
       flex-basis: 100%; } }
   @media only screen and (max-width: 479px) {
     .col-6 {
+      -webkit-flex-basis: 100%;
+      -moz-flex-basis: 100%;
+      -ms-flex-basis: 100%;
+      flex-basis: 100%; } }
+
+.col-8 {
+  -webkit-flex-basis: 66.66%;
+  -moz-flex-basis: 66.66%;
+  -ms-flex-basis: 66.66%;
+  flex-basis: 66.66%; }
+  @media only screen and (min-width: 480px) and (max-width: 960px) {
+    .col-8 {
+      -webkit-flex-basis: 100%;
+      -moz-flex-basis: 100%;
+      -ms-flex-basis: 100%;
+      flex-basis: 100%; } }
+  @media only screen and (max-width: 479px) {
+    .col-8 {
       -webkit-flex-basis: 100%;
       -moz-flex-basis: 100%;
       -ms-flex-basis: 100%;
@@ -1878,35 +1914,6 @@ h2 {
 
 .fix-padding-container {
   padding: 0; }
-
-@keyframes showSearch {
-  0% {
-    display: none;
-    opacity: 0; }
-  100% {
-    display: block;
-    opacity: 1; } }
-.showSearch {
-  -webkit-animation-delay: 0.3s;
-  -webkit-animation-duration: 1s;
-  -webkit-animation-name: showSearch;
-  -webkit-animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */
-  -moz-animation-delay: 0.3s;
-  -moz-animation-duration: 1s;
-  -moz-animation-name: showSearch;
-  -moz-animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */
-  -o-animation-delay: 0.3s;
-  -o-animation-duration: 1s;
-  -o-animation-name: showSearch;
-  -o-animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */
-  animation-delay: 0.3s;
-  animation-duration: 1s;
-  animation-name: showSearch;
-  animation-fill-mode: forwards;
-  /* this prevents the animation from restarting! */ }
 
 .mm-menu_theme-main {
   background: #00a49d;

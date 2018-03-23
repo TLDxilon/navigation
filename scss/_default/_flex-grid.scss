@@ -1,16 +1,33 @@
-.col-6{
+.col-4{
+  @include flex-basis(33.33%);
+  @media #{$tablets}{
+    @include flex-basis(100%);
+  }
+  @media #{$mobile}{
+    @include flex-basis(100%);
+  }
+}
 
+
+.col-6{
   @include flex-basis(50%);
 
   @media #{$tablets}{
     @include flex-basis(100%);
-
   }
   @media #{$mobile}{
     @include flex-basis(100%);
-
   }
+}
 
+.col-8{
+  @include flex-basis(66.66%);
+  @media #{$tablets}{
+    @include flex-basis(100%);
+  }
+  @media #{$mobile}{
+    @include flex-basis(100%);
+  }
 }
 .col-12{
 
@@ -18,7 +35,6 @@
 
   @media #{$tablets}{
     @include flex-basis(100%);
-
   }
   @media #{$mobile}{
     @include flex-basis(100%);
