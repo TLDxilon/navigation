@@ -8,7 +8,7 @@
   vertical-align: middle;
   @include transition(transform .3s ease, background .3s ease, width .3s linear);
   @media #{$mobile}{
-    max-width: 100px;
+    max-width: 120px;
   }
   @media #{$tablets}{
     max-width: 175px;
