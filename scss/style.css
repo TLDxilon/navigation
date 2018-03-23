@@ -1547,7 +1547,12 @@ h2 {
   left: 0;
   width: 100%; }
   .subnav-sticky.bg-transparent {
-    background: #FFFFFF; }
+    background: #FFFFFF;
+    -webkit-transition: background 0.3s ease;
+    -moz-transition: background 0.3s ease;
+    -ms-transition: background 0.3s ease;
+    -o-transition: background 0.3s ease;
+    transition: background 0.3s ease; }
 
 @font-face {
   font-family: 'icomoon';
