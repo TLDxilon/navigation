@@ -13,6 +13,12 @@
     @extend .padding-v-m;
     .branding-logo{
       max-width: 180px;
+      @media #{$mobile}{
+        max-width: 120px;
+      }
+      @media #{$tablets}{
+        max-width: 175px;
+      }
     }
   }
   //Si es transparente fuerzo a que el fixed sea blanco

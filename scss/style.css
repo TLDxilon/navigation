@@ -1093,10 +1093,10 @@ h2 {
 .padding-h-l, .navbar .nav-link, .navbar-fixed .nav-link, .subnav .nav-link {
   padding-left: 15px;
   padding-right: 15px; }
-.padding-h-xl {
+.padding-h-xl, .form-search {
   padding-left: 20px;
   padding-right: 20px; }
-.padding-h-xxl, .form-search {
+.padding-h-xxl {
   padding-left: 40px;
   padding-right: 40px; }
 
@@ -1533,6 +1533,21 @@ h2 {
     transition: transform 0.5s ease; }
   .navbar-fixed .navbar-item--logo .branding-logo {
     max-width: 180px; }
+    @media only screen and (max-width: 479px) {
+      .navbar-fixed .navbar-item--logo .branding-logo {
+        max-width: 120px; } }
+    @media only screen and (min-width: 480px) and (max-width: 960px) {
+      .navbar-fixed .navbar-item--logo .branding-logo {
+        max-width: 175px; } }
+
+.subnav-sticky {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%; }
+  .subnav-sticky.bg-transparent {
+    background: #FFFFFF; }
 
 @font-face {
   font-family: 'icomoon';
@@ -1833,12 +1848,10 @@ h2 {
   content: "\f0c9"; }
 
 .design {
-  width: calc( 100vw - 240px ); }
-
-.navbar-fixed {
-  width: calc( 100vw - 240px ); }
+  width: 100%; }
 
 .options {
+  display: none;
   min-width: 240px;
   border-right: 1px solid #B0B0B0; }
   .options h2 {

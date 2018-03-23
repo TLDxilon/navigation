@@ -1,5 +1,7 @@
 $(document).ready(function($){
     var lastScrollPosition = 0;
+    var heightTopbar = $('.topbar').outerHeight(true);
+    var heightNavbar = $('.navbar').outerHeight(true);
     var widthLogo       = $('.js-width-logo').outerWidth(true);
     var $navBarFixed    = $('.navbar-fixed');
     var $searchBar      = $('.js-searchbar');
@@ -11,6 +13,18 @@ $(document).ready(function($){
     var $menuMobile     = $('#menu');
 
 
+/*Subnav fijo */
+
+
+        var heightSubnav = $('.subnav').offset().top;
+
+        $(window).on('scroll', function(){
+            if ( $(window).scrollTop() > heightSubnav ){
+                $('.subnav').addClass('subnav-sticky');
+            } else {
+                $('.subnav').removeClass('subnav-sticky');
+            }
+        });
 
 
 

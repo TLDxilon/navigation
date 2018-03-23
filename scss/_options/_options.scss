@@ -5,14 +5,18 @@
   @extend .flexbox-row-nowrap;
 }
 .design{
-  width: calc( 100vw - 240px );
-
+  width:100%;
 }
-
-.navbar-fixed{
-  width: calc( 100vw - 240px );
-}
+//.design{
+//  width: calc( 100vw - 240px );
+//
+//}
+//
+//.navbar-fixed{
+//  width: calc( 100vw - 240px );
+//}
 .options{
+  display: none;
   @extend .padding-s;
   @extend .bg-light;
   min-width: 240px;
