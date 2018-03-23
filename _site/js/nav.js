@@ -14,6 +14,14 @@ $(document).ready(function($){
 
 
 
+    if($( ".navbar-fixed-inner" ).hasClass( "bg-transparent" )) {
+        console.log("Tiene la clase bg-transparent" + $( ".navbar-fixed-inner" ).hasClass( "bg-transparent" ));
+        $( this ).removeClass('bg-transparent');
+    }
+
+
+
+
     /* Custom mmenu options */
     var menuCustomize = {
         "extensions": [
@@ -150,7 +158,7 @@ $(document).ready(function($){
 
 
 
-
+/*Menú options lateral*/
 
     var $changeOption = $('.js-option');
     var $changeOptionMobile = $('.js-option-mobile');
@@ -214,6 +222,9 @@ $(document).ready(function($){
 
          });
     });
+    /*
+     Para cerrar y abril el panel lateral
+    */
 
     $openOptions.on('click', function(){
         event.preventDefault();
@@ -234,7 +245,7 @@ $(document).ready(function($){
 
 
     /*
-     Range control init
+     Range control init panel lateral
     */
     $sliderOptions.on("change", function () {
 
@@ -257,6 +268,7 @@ $(document).ready(function($){
 
         console.log("Clase: ." + dataOption+ "-" + dataValues[value]);
     });
+
 
 
 });

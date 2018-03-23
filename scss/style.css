@@ -778,6 +778,8 @@ h2 {
   border-width: 1.5px;
   border-style: solid;
   font-size: 1em; }
+  .btn--flat {
+    color: #FFFFFF !important; }
   .btn--outline {
     background: none; }
 
@@ -895,7 +897,7 @@ h2 {
   color: #E4E5C7; }
 .fg-five {
   color: #FFBF8B; }
-.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .btn--flat, .form-white input, .mm-menu_theme-main {
+.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .form-white input, .mm-menu_theme-main {
   color: #FFFFFF; }
 .fg-light, .search-input .tools__item-search:focus, .form-white input::placeholder {
   color: #D8D8D8; }
