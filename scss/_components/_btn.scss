@@ -16,6 +16,14 @@
     }
 
   }
+  &--flat-inverse{
+    color: $tone-white;
+    .form-white &{
+      color: $tone-dark;
+      @extend .bg-white;
+    }
+
+  }
   &--outline{
     background: none;
 

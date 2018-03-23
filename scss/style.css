@@ -782,6 +782,10 @@ h2 {
     color: #FFFFFF !important; }
     .form-white .btn--flat {
       color: #00BDB6; }
+  .btn--flat-inverse {
+    color: #FFFFFF; }
+    .form-white .btn--flat-inverse {
+      color: #4A4A4A; }
   .btn--outline {
     background: none; }
 
@@ -943,7 +947,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed .bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .group-options {
+.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn--flat-inverse, .form-white .btn, .navbar-fixed .bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .group-options {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
