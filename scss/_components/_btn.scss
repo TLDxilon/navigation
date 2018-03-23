@@ -10,16 +10,18 @@
 
 
   &--flat{
-    color: $tone-white;
+    color: $tone-white !important;
     .form-white &{
       color: $tone-one;
     }
 
   }
   &--outline{
-    background: transparent;
+    @extend .bg-transparent;
+
     &:hover{
 
     }
   }
+
 }
