@@ -1924,6 +1924,9 @@ h2 {
   padding-top: 20px;
   padding-bottom: 20px; }
 
+.mm-wrapper_opening [class*=mm-menu_pagedim].mm-menu_opened ~ .mm-page__blocker {
+  opacity: .7; }
+
 input {
   border-style: solid; }
   input:focus {
