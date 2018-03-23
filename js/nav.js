@@ -17,14 +17,16 @@ $(document).ready(function($){
 
 
         var heightSubnav = $('.subnav').offset().top;
-
+        var heightNavbar = $('.navbar').offset().top;
         $(window).on('scroll', function(){
             if ( $(window).scrollTop() > heightSubnav ){
-                $('.subnav').addClass('subnav-sticky');
+                $('.subnav').addClass('sticky');
             } else {
-                $('.subnav').removeClass('subnav-sticky');
+                $('.subnav').removeClass('sticky');
             }
         });
+
+
 
 
 
