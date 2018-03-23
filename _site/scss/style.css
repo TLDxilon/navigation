@@ -563,7 +563,7 @@ h2 {
   height: 100%; }
 
 .search-close {
-  font-size: 2em;
+  font-size: 20px;
   display: table-cell;
   vertical-align: middle; }
   .search-close .search-close-link {
@@ -901,11 +901,11 @@ h2 {
   color: #FFFFFF; }
 .fg-light, .search-input .tools__item-search:focus, .form-white input::placeholder {
   color: #D8D8D8; }
-.fg-gray, .input-search::placeholder, .search-close .search-close-link, .search-input .tools__item-search::placeholder {
+.fg-gray, .input-search::placeholder, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-.fg-dark, .input-search:focus, .search-close .search-close-link:hover, .btn--flat-inverse, .bg-white--hover:hover, .form-white .btn:hover, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .navbar-fixed .bg-transparent a, .js-option-mobile {
+.fg-dark, .input-search:focus, .search-close .search-close-link, .btn--flat-inverse, .bg-white--hover:hover, .form-white .btn:hover, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .navbar-fixed .bg-transparent a, .js-option-mobile {
   color: #4A4A4A; }
-.fg-black {
+.fg-black, .search-close .search-close-link:hover {
   color: #000000; }
 .fg-warning {
   color: #BBBF60; }

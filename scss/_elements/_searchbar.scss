@@ -49,14 +49,14 @@
 
 }
 .search-close{
-  font-size:2em;
+  font-size: $tools-icon-size;
    display: table-cell;
   vertical-align: middle;
   .search-close-link{
-    @extend .fg-gray;
+    @extend .fg-dark;
     @include transition(color 0.3s ease 0s);
     &:hover{
-      @extend .fg-dark;
+      @extend .fg-black;
 
     }
   }
