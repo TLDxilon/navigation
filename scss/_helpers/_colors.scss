@@ -100,6 +100,9 @@
 
   &-white{
     background: $tone-white;
+    a{
+      @extend .fg-dark;
+    }
     &--hover{
       &:hover{
         background: adjust-color($tone-white, $saturation: 10%, $lightness: -10%);
@@ -110,6 +113,9 @@
   }
   &-light{
     background: $tone-light;
+    a{
+      @extend .fg-dark;
+    }
     &--hover{
       &:hover{
         background: adjust-color($tone-light, $saturation: 10%, $lightness: -10%);
@@ -120,6 +126,9 @@
   }
   &-gray{
     background: $tone-gray;
+    a{
+      @extend .fg-white;
+    }
     &--hover{
       &:hover{
         background: adjust-color($tone-gray, $saturation: 10%, $lightness: -10%);
@@ -129,6 +138,9 @@
   }
   &-dark{
     background: $tone-dark;
+    a{
+      @extend .fg-white;
+    }
     &--hover{
       &:hover{
         background: adjust-color($tone-dark, $saturation: 10%, $lightness: -10%);
