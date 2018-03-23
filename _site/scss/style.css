@@ -599,7 +599,7 @@ h2 {
   height: 100%; }
 
 .search-close {
-  font-size: 20px;
+  font-size: 1.5em;
   display: table-cell;
   vertical-align: middle; }
   .search-close .search-close-link {
