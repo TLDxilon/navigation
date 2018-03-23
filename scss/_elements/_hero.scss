@@ -1,6 +1,9 @@
 .hero{
   h1{
     font-size: 4em;
+    small{
+      font-size: 40%;
+    }
   }
   &-inner{
     @include transition(padding .3s linear);

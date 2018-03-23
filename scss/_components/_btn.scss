@@ -17,7 +17,7 @@
 
   }
   &--outline{
-    @extend .bg-transparent;
+    background: none;
 
     &:hover{
 
