@@ -6,5 +6,8 @@
   width:100%;
   &.bg-transparent{
     background: $tone-white;
+    a{
+      @extend .fg-dark;
+    }
   }
 }
