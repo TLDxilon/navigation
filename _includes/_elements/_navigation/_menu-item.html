@@ -1,7 +1,7 @@
 
 {% for item in include.menu %}
 
-    <li class="nav-menu-item {% if item.actual %} active {% endif %} Spacer"><a class="nav-link fg-{{ page.navbar.fg }}  fg-{{ page.subnav.fg }} fg-{{ page.subnav.fg }} {{ page.subnav-padding }} js-fg" href="#"><span class="">{{ item.name }}</span></a></li>
+    <li class="nav-menu-item {% if item.actual %} active {% endif %} Spacer"><a class="nav-link fg-{{ page.navbar.fg }}  fg-{{ page.subnav.fg }} {{ page.subnav-padding }} js-fg" href="#"><span class="">{{ item.name }}</span></a></li>
 
 {% endfor %}
 

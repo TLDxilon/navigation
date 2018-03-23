@@ -778,14 +778,6 @@ h2 {
   border-width: 1.5px;
   border-style: solid;
   font-size: 1em; }
-  .btn--flat {
-    color: #FFFFFF !important; }
-    .form-white .btn--flat {
-      color: #00BDB6; }
-  .btn--flat-inverse {
-    color: #FFFFFF; }
-    .form-white .btn--flat-inverse {
-      color: #4A4A4A; }
   .btn--outline {
     background: none; }
 
@@ -903,13 +895,13 @@ h2 {
   color: #E4E5C7; }
 .fg-five {
   color: #FFBF8B; }
-.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .form-white input, .mm-menu_theme-main {
+.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .btn--flat, .form-white input, .mm-menu_theme-main {
   color: #FFFFFF; }
 .fg-light, .search-input .tools__item-search:focus, .form-white input::placeholder {
   color: #D8D8D8; }
 .fg-gray, .input-search::placeholder, .search-close .search-close-link, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-.fg-dark, .input-search:focus, .search-close .search-close-link:hover, .bg-white--hover:hover, .form-white .btn:hover, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .navbar-fixed .bg-transparent a, .js-option-mobile {
+.fg-dark, .input-search:focus, .search-close .search-close-link:hover, .btn--flat-inverse, .bg-white--hover:hover, .form-white .btn:hover, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .navbar-fixed .bg-transparent a, .js-option-mobile {
   color: #4A4A4A; }
 .fg-black {
   color: #000000; }
@@ -947,7 +939,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn--flat-inverse, .form-white .btn, .navbar-fixed .bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .group-options {
+.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed .bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .group-options {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
@@ -1936,6 +1928,6 @@ input {
     outline-color: #5778A6; }
 
 .form-suscribe-horizontal .btn {
-  margin-left: -3px; }
+  margin-left: -4px; }
 
 /*# sourceMappingURL=style.css.map */

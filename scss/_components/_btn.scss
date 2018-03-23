@@ -10,18 +10,13 @@
 
 
   &--flat{
-    color: $tone-white !important;
-    .form-white &{
-      color: $tone-one;
-    }
+    @extend .fg-white;
+
 
   }
   &--flat-inverse{
-    color: $tone-white;
-    .form-white &{
-      color: $tone-dark;
-      @extend .bg-white;
-    }
+    @extend .fg-dark;
+
 
   }
   &--outline{
