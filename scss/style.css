@@ -1554,6 +1554,16 @@ h2 {
     -o-transition: background 0.3s ease;
     transition: background 0.3s ease; }
 
+.navbar-absolute {
+  position: absolute;
+  width: 100%; }
+
+.subnav-bottom-absolute {
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%; }
+
 @font-face {
   font-family: 'icomoon';
   src: url("../fonts/icomoon.eot?b45r3v");

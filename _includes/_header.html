@@ -1,23 +1,23 @@
 <header class="site-header position-relative" role="banner">
 
 
-    {% if page.topbar =='true' %}
-    <!-- topbar -->
-
-
-        {% include _elements/_topbar.html %}
-
-
-    <!-- /topbar -->
-
-    {% else %}
-    {% endif %}
       <!-- navbar -->
- <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }} position-relative js-border js-color js-fg-nav">
+ <div class="navbar bg-{{ page.navbar.background }} {{ page.navbar.border }} navbar-absolute js-border js-color js-fg-nav">
 
      {% include _elements/_searchbar.html  js-class='js-searchbar' %}
 
-   <div class="{{ page.container }} js-container">
+     {% if page.topbar =='true' %}
+     <!-- topbar -->
+
+
+     {% include _elements/_topbar.html %}
+
+
+     <!-- /topbar -->
+
+     {% else %}
+     {% endif %}
+   <div class="navbar-logo {{ page.container }} js-container">
      <div class="navbar-inner flexbox-row-nowrap">
 
             {% if page.navigation == 'top-left' %}
@@ -111,26 +111,44 @@
 
       </div>
     </div>
+
+     {% if page.navigation =='bottom' %}
+
+     <!-- subnav -->
+     <div class="subnav bg-{{ page.subnav.background }} {{ page.subnav.border }} js-subnav js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop">
+         <div class="{{ page.container }} js-container fix-padding-container">
+             <nav class="navbar__item width-full">
+                 {% include _elements/_navigation.html %}
+             </nav>
+         </div>
+     </div><!-- /subnav -->
+     {% endif %}
+
+
  </div>
     <!-- /navbar -->
 
-    {% if page.navigation =='bottom' %}
 
-    <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} {{ page.subnav.border }} js-subnav js-border-2 hidden-mobile hidden-tablets visible-desktop">
-        <div class="{{ page.container }} js-container fix-padding-container">
-            <nav class="navbar__item width-full">
-                {% include _elements/_navigation.html %}
-            </nav>
-        </div>
-    </div><!-- /subnav -->
-    {% endif %}
 
     {% if page.hero =='true' %}
     <!-- hero -->
 
     <div class="hero">
         {% include _elements/_hero.html %}
+
+
+
+        {% if page.navigation =='subnav' %}
+
+        <!-- subnav -->
+        <div class="subnav  subnav-bottom-absolute bg-{{ page.subnav.background }} js-subnav  js-subnav-bottom {{ page.subnav.border }}  hidden-mobile hidden-tablets visible-desktop">
+            <div class="{{ page.container }} js-container fix-padding-container">
+                <nav class="navbar__item width-full">
+                    {% include _elements/_navigation.html %}
+                </nav>
+            </div>
+        </div><!-- /subnav -->
+        {% endif %}
     </div>
 
     <!-- /hero -->
@@ -138,17 +156,6 @@
     {% else %}
     {% endif %}
 
-    {% if page.navigation =='subnav' %}
-
-    <!-- subnav -->
-    <div class="subnav bg-{{ page.subnav.background }} js-subnav  {{ page.subnav.border }}   hidden-mobile hidden-tablets visible-desktop">
-       <div class="{{ page.container }} js-container fix-padding-container">
-        <nav class="navbar__item width-full">
-            {% include _elements/_navigation.html %}
-        </nav>
-       </div>
-    </div><!-- /subnav -->
-    {% endif %}
 
     <div class="backdrop">
 

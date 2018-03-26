@@ -1,7 +1,8 @@
 $(document).ready(function($){
     var lastScrollPosition = 0;
-    var heightTopbar = $('.topbar').outerHeight(true);
     var heightNavbar = $('.navbar').outerHeight(true);
+    var heightSubnav = $('.subnav').outerHeight(true);
+
     var widthLogo       = $('.js-width-logo').outerWidth(true);
     var $navBarFixed    = $('.navbar-fixed');
     var $searchBar      = $('.js-searchbar');
@@ -11,29 +12,31 @@ $(document).ready(function($){
     var $html           = $('html');
     var $logo           = $('.logo-floating');
     var $menuMobile     = $('#menu');
+    var $subnavBottom   = $('.js-subnav-bottom');
+    var $subnavTop      = $('.js-subnav-top');
+    var $subnav         = $('.js-subnav');
 
 
-/*Subnav fijo */
+    $('.fix-header-padding').css('padding-top', (heightNavbar) + 'px').css('padding-bottom', (heightSubnav) + 'px');
+
+/*Subnav bottom sticky */
 
 
-        var heightSubnav = $('.subnav').offset().top;
-        var heightNavbar = $('.navbar').offset().top;
+        var heightSubnavOffset = $subnav.offset().top;
+
+        console.log(heightSubnavOffset);
         $(window).on('scroll', function(){
-            if ( $(window).scrollTop() > heightSubnav ){
-                $('.subnav').addClass('sticky');
+            if ( $(window).scrollTop() > heightSubnavOffset ){
+                $subnav.addClass('sticky');
+                $subnavBottom.removeClass('subnav-bottom-absolute');
             } else {
-                $('.subnav').removeClass('sticky');
+                $subnavBottom.addClass('subnav-bottom-absolute');
+                $subnav.removeClass('sticky');
             }
         });
 
 
 
-
-
-    if($( ".navbar-fixed-inner" ).hasClass( "bg-transparent" )) {
-        console.log("Tiene la clase bg-transparent" + $( ".navbar-fixed-inner" ).hasClass( "bg-transparent" ));
-        $( this ).removeClass('bg-transparent');
-    }
 
 
 
@@ -148,8 +151,8 @@ $(document).ready(function($){
         // Muestro la navegación al subir
         if (newScrollPosition < lastScrollPosition){
 
-            console.log('newScrollPosition',newScrollPosition);
-            console.log('lastScrollPosition',lastScrollPosition);
+          //  console.log('newScrollPosition',newScrollPosition);
+          //  console.log('lastScrollPosition',lastScrollPosition);
 
 
             // Oculta la navegación cuando está a la altura de la cabecera

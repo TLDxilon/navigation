@@ -52,3 +52,15 @@
     }
   }
 }
+
+.navbar-absolute{
+  position: absolute;
+  width: 100%;
+}
+
+.subnav-bottom-absolute{
+  bottom: 0;
+  height: 60px;
+  position: absolute;
+  width: 100%;
+}
