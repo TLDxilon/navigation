@@ -939,7 +939,7 @@ h2 {
   color: #D8D8D8; }
 .fg-gray, .input-search::placeholder, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-.fg-dark, .input-search:focus, .search-close .search-close-link, .btn--flat-inverse, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .group-options a, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .sticky.bg-transparent a, .js-option-mobile {
+.fg-dark, .input-search:focus, .search-close .search-close-link, .btn--flat-inverse, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .group-options a, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .js-option-mobile {
   color: #4A4A4A; }
 .fg-black, .search-close .search-close-link:hover {
   color: #000000; }
@@ -1546,13 +1546,6 @@ h2 {
   top: 0;
   left: 0;
   width: 100%; }
-  .sticky.bg-transparent {
-    background: #FFFFFF;
-    -webkit-transition: background 0.3s ease;
-    -moz-transition: background 0.3s ease;
-    -ms-transition: background 0.3s ease;
-    -o-transition: background 0.3s ease;
-    transition: background 0.3s ease; }
 
 .navbar-absolute {
   position: absolute;
