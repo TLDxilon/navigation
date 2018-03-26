@@ -1,8 +1,8 @@
 $(document).ready(function($){
 
     var fadeStart=0
-        ,fadeUntil=100
-        ,fading = $('.bg-transparent.sticky');
+        ,fadeUntil=300
+        ,fading = $('.bg-transparent.js-fixed');
 
 
 
@@ -14,6 +14,8 @@ $(document).ready(function($){
             opacity=0;
         }else if( offset<=fadeUntil ){
             opacity=0+offset/fadeUntil;
+        }else if( offset>=fadeUntil ){
+            opacity=1;
         }
         fading.css('background-color','rgba(255, 255, 255,'+ opacity + ')');
     });
