@@ -1,8 +1,5 @@
 $(document).ready(function($){
     var lastScrollPosition = 0;
-    var heightNavbar = $('.navbar').outerHeight(true);
-    var heightSubnav = $('.subnav').outerHeight(true);
-
     var widthLogo       = $('.js-width-logo').outerWidth(true);
     var $navBarFixed    = $('.navbar-fixed');
     var $searchBar      = $('.js-searchbar');
@@ -12,28 +9,6 @@ $(document).ready(function($){
     var $html           = $('html');
     var $logo           = $('.logo-floating');
     var $menuMobile     = $('#menu');
-    var $subnavBottom   = $('.js-subnav-bottom');
-    var $subnavTop      = $('.js-subnav-top');
-    var $subnav         = $('.js-subnav');
-
-
-    $('.fix-header-padding').css('padding-top', (heightNavbar) + 'px').css('padding-bottom', (heightSubnav) + 'px');
-
-/*Subnav bottom sticky */
-
-
-        var heightSubnavOffset = $subnav.offset().top;
-
-        console.log(heightSubnavOffset);
-        $(window).on('scroll', function(){
-            if ( $(window).scrollTop() > heightSubnavOffset ){
-                $subnav.addClass('sticky');
-                $subnavBottom.removeClass('subnav-bottom-absolute');
-            } else {
-                $subnavBottom.addClass('subnav-bottom-absolute');
-                $subnav.removeClass('sticky');
-            }
-        });
 
 
 
@@ -99,6 +74,7 @@ $(document).ready(function($){
 
     $logo.css('width', (widthLogo) + 'px');
 
+    /* Abrimos el buscador al hacer click en la lupa*/
 
     $('.js-search-open').on('click', function(){
         event.preventDefault();
@@ -109,13 +85,15 @@ $(document).ready(function($){
         },200);
 
     });
+    /* Cerramos el buscador al hacer click en la lupa */
+
 
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $html.removeClass('search-is-open');
 
     });
-
+    /* Abrimos el buscador en el fixed menú al hacer click en la lupa*/
 
     $('.js-fixed-search-open').on('click', function(){
         event.preventDefault();
@@ -127,7 +105,7 @@ $(document).ready(function($){
 
 
     });
-
+    /* Cerramos el buscador en el fixed menú al hacer click en la lupa*/
     $('.js-search-close').on('click', function(){
         event.preventDefault();
         $html.removeClass('search-fixed-is-open');
