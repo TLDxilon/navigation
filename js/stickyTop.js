@@ -1,11 +1,8 @@
 var $subnav         = $('.js-subnav');
-
 var $subnavTop      = $('.js-subnav-top');
-
 
 var heightNavbar = $('.navbar').outerHeight(true);
 var heightSubnav = $subnav.outerHeight(true);
-var heightSubnavTopOffset = $subnavTop.offset().top;
 
 
 
@@ -16,15 +13,18 @@ $('.fix-header-padding').css('padding-top', (heightNavbar) + 'px').css('padding-
 
 
 
+if ($subnav.hasClass( "js-subnav-top" ) ) {
+    console.log("Tiene la clase js-subnav-top", $subnav.hasClass( "js-subnav-top" ));
+    var heightSubnavTopOffset = $subnavTop.offset().top;
+    console.log(heightSubnavTopOffset);
+    $(window).on('scroll', function () {
+        if ($(window).scrollTop() > heightSubnavTopOffset) {
+            $subnavTop.addClass('sticky');
 
-console.log(heightSubnavTopOffset);
-$(window).on('scroll', function(){
-    if ( $(window).scrollTop() > heightSubnavTopOffset ){
-        $subnavTop.addClass('sticky');
+        } else {
 
-    } else {
-
-        $subnavTop.removeClass('sticky');
-    }
-});
+            $subnavTop.removeClass('sticky');
+        }
+    });
+}
 
