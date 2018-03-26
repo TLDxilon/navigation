@@ -2,11 +2,11 @@
 
 .border {
   &-bottom {
-    border-bottom: 1px solid $gray-transparent !important;
+    border-bottom: 1px solid $gray-transparent;
 
   }
   &-top {
-    border-color: 1px solid $gray-transparent;
+    border-top: 1px solid $gray-transparent;
 
   }
   &-radius {

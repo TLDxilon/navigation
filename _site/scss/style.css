@@ -858,9 +858,9 @@ h2 {
 
 /* BORDE */
 .border-bottom {
-  border-bottom: 1px solid rgba(176, 176, 176, 0.4) !important; }
+  border-bottom: 1px solid rgba(176, 176, 176, 0.4); }
 .border-top {
-  border-color: 1px solid rgba(176, 176, 176, 0.4); }
+  border-top: 1px solid rgba(176, 176, 176, 0.4); }
 .border-radius-s {
   border-radius: 5px; }
 .border-radius-m {
