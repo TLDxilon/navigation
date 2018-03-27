@@ -1,6 +1,6 @@
 $(document).ready(function($){
 
-    var fadeStart=0
+    var fadeStart=$('.bg-transparent.js-fixed').offset().top
         ,fadeUntil=300
         ,fading = $('.bg-transparent.js-fixed');
 
