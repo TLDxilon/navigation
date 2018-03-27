@@ -1,7 +1,9 @@
-var fadeStart=100
-    ,fadeUntil=400
-    ,dissapear = $('.dissapear')
-;
+var dissapear = $('.dissapear');
+var offsetDissapear = dissapear.offset().top;
+console.log("OFFSET DISSAPEAR", offsetDissapear);
+var fadeStart = 100;
+var fadeUntil = offsetDissapear + 400;
+
 
 
 

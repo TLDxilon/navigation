@@ -15,11 +15,16 @@ $(document).ready(function($){
 
 
     var Start = $fixedNav.offset().top;
+    if ($('.padding-fixed').length) {
+        var maxPadding = $fixPadding.css('padding-top').replace('px', '');
+        var minPadding= 10;
+        var difPadding= maxPadding - minPadding;
+    }else{
 
-    var maxPadding= $fixPadding.css('padding-top').replace('px','');
-    var minPadding= 10;
-    var difPadding= maxPadding - minPadding;
-    var Until = 80;
+    }
+
+
+    var Until = Start + 80;
     var offset, opacity, actualPadding;
 
 
@@ -69,7 +74,7 @@ $(document).ready(function($){
         }
 
         /* Update css */
-        $fixedNavTransparent.css('background-color','rgba(255, 255, 255,'+ opacity + ')');
+        $fixedNavTransparent.css('background-color','rgba(0, 0, 0,'+ opacity + ')');
 
         if ($('padding-fixed')) {
             $fixPadding.css({
