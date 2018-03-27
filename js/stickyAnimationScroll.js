@@ -19,7 +19,7 @@ $(document).ready(function($){
     var maxPadding= $fixPadding.css('padding-top').replace('px','');
     var minPadding= 10;
     var difPadding= maxPadding - minPadding;
-    var Until = 50;
+    var Until = 80;
     var offset, opacity, actualPadding;
 
 
