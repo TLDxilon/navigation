@@ -451,7 +451,7 @@ h2 {
   transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear; }
   @media only screen and (max-width: 479px) {
     .branding-logo {
-      max-width: 120px; } }
+      max-width: 140px; } }
   @media only screen and (min-width: 480px) and (max-width: 960px) {
     .branding-logo {
       max-width: 175px; } }
