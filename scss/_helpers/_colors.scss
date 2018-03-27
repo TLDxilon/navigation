@@ -101,7 +101,7 @@
   &-white{
     background: $tone-white;
     a{
-      @extend .fg-white;
+      @extend .fg-dark;
     }
     &--hover{
       &:hover{

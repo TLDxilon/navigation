@@ -933,13 +933,13 @@ h2 {
   color: #E4E5C7; }
 .fg-five {
   color: #FFBF8B; }
-.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .group-options a, .bg-gray a, .bg-dark a, .form-white input, .mm-menu_theme-main {
+.fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .bg-gray a, .bg-dark a, .form-white input, .mm-menu_theme-main {
   color: #FFFFFF; }
 .fg-light, .search-input .tools__item-search:focus, .form-white input::placeholder {
   color: #D8D8D8; }
 .fg-gray, .input-search::placeholder, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-.fg-dark, .input-search:focus, .search-close .search-close-link, .btn--flat-inverse, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .navbar-fixed .bg-transparent a, .js-option-mobile {
+.fg-dark, .input-search:focus, .search-close .search-close-link, .btn--flat-inverse, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .group-options a, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .js-option-mobile {
   color: #4A4A4A; }
 .fg-black, .search-close .search-close-link:hover {
   color: #000000; }
@@ -1068,7 +1068,7 @@ h2 {
 .padding-v-xs {
   padding-top: 5px;
   padding-bottom: 5px; }
-.padding-v-s {
+.padding-v-s, .sticky .navbar-item--logo {
   padding-top: 10px;
   padding-bottom: 10px; }
 .padding-v-m, .subnav .nav-link, .navbar-fixed .navbar-item--logo, .navbar-fixed .subnav .nav-link {
