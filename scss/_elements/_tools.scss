@@ -12,6 +12,10 @@
 .tools__item-icon {
   @extend .margin-h-s;
    width: 40px;
+  @media #{$mobile}{
+    width: 36px;
+  }
+
   @extend .text-align-center;
 }
 .tools__item-icon + .tools__item-icon{

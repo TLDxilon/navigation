@@ -613,6 +613,9 @@ h2 {
 
 .tools__item-icon {
   width: 40px; }
+  @media only screen and (max-width: 479px) {
+    .tools__item-icon {
+      width: 36px; } }
 
 .tools__item-icon + .tools__item-icon {
   margin-left: 0; }
