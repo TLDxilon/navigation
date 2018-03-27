@@ -6,6 +6,14 @@ $(document).ready(function($){
     var $fixPadding = $('.padding-fixed');
 
 
+    $fixPadding.animate({
+
+
+    }, 1500 );
+
+
+
+
     var Start = $fixedNav.offset().top;
 
     var maxPadding= $fixPadding.css('padding-top').replace('px','');

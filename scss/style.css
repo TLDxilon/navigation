@@ -442,13 +442,6 @@ h2 {
     opacity: 1;
     position: absolute; }
 
-.navbar-item--logo {
-  -webkit-transition: padding 0.3s linear;
-  -moz-transition: padding 0.3s linear;
-  -ms-transition: padding 0.3s linear;
-  -o-transition: padding 0.3s linear;
-  transition: padding 0.3s linear; }
-
 .branding-logo {
   vertical-align: middle;
   -webkit-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
