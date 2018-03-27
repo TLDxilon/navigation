@@ -1,55 +1,39 @@
 
 .logo-size{
   &-xxs{
-    &.branding-logo{
+
       width: 80px;
 
 
-    }
 
   }
   &-xs{
-    &.branding-logo{
+
       width: 120px;
 
 
-    }
-
   }
   &-s{
-    &.branding-logo{
+
       width: 180px;
 
-
-
-    }
   }
   &-m{
-    &.branding-logo{
+
       width: 240px;
-
-
-
-    }
 
   }
 
   &-l{
-    &.branding-logo {
+
       width: 300px;
 
 
-
-    }
-
   }
   &-xl{
-    &.branding-logo {
+
       width: 350px;
 
-
-
-    }
 
   }
 }
