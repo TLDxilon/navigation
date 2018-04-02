@@ -225,15 +225,13 @@ $(document).ready(function($){
 
     $openOptions.on('click', function(){
         event.preventDefault();
-        $('.options').css('display', 'block');
-        $('.design').css('width', '90%');
-        $('.navbar-fixed').css('width', '90%');
+        $html.addClass('panel-is-open');
+
     });
     $closeOptions.on('click', function(){
         event.preventDefault();
-        $('.options').css('display', 'none');
-        $('.design').css('width', '100%');
-        $('.navbar-fixed').css('width', '100%');
+        $html.removeClass('panel-is-open');
+
     });
 
 

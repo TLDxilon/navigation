@@ -7,19 +7,13 @@
 .design{
   width:100%;
 }
-//.design{
-//  width: calc( 100vw - 240px );
-//
-//}
-//
-//.navbar-fixed{
-//  width: calc( 100vw - 240px );
-//}
+
+
 .options{
   display: none;
   @extend .padding-s;
   @extend .bg-light;
-  min-width: 240px;
+  width: 240px;
   border-right: 1px solid $tone-gray;
 
   h2{
@@ -134,4 +128,21 @@
 
 .group-options{
   @extend .bg-white;
+}
+
+
+.panel-is-open{
+  .options{
+    display: block;
+  }
+    .design{
+      width: calc( 100vw - 240px )
+    }
+   .navbar-fixed{
+      width: calc( 100vw - 240px );
+    }
+   .sticky{
+     width: calc( 100vw - 240px );
+     left:240px;
+   }
 }

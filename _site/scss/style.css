@@ -1859,7 +1859,7 @@ h2 {
 
 .options {
   display: none;
-  min-width: 240px;
+  width: 240px;
   border-right: 1px solid #B0B0B0; }
   .options h2 {
     font-size: 12px;
@@ -1931,6 +1931,16 @@ h2 {
     width: 25px;
     height: 25px;
     cursor: pointer; }
+
+.panel-is-open .options {
+  display: block; }
+.panel-is-open .design {
+  width: calc( 100vw - 240px ); }
+.panel-is-open .navbar-fixed {
+  width: calc( 100vw - 240px ); }
+.panel-is-open .sticky {
+  width: calc( 100vw - 240px );
+  left: 240px; }
 
 .fix-padding-container {
   padding: 0; }
