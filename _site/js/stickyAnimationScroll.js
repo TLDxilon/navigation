@@ -23,7 +23,7 @@ $(document).ready(function($){
 
     }
     if ($('.width-logo-fixed').length) {
-        var maxWidth = $fixPadding.css('width').replace('px', '');
+        var maxWidth = $fixBrand.css('width').replace('px', '');
         var minWidth= 180;
         var difWidth= maxWidth - minWidth;
     }else{
