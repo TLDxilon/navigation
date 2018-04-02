@@ -1,4 +1,30 @@
-@import "_variables/_colors.scss";
+@charset "utf-8";
+//Primary palette
+
+$tone-one: #00BDB6;
+$tone-two: #3A3F56;
+$tone-three: #5778A6;
+$tone-four: #E4E5C7;
+$tone-five: #FFBF8B;
+
+//Neutral palette
+
+$tone-white: #FFFFFF;
+$tone-light: #D8D8D8;
+$tone-gray: #B0B0B0;
+$tone-dark: #4A4A4A;
+$tone-black: #000000;
+
+//Neutral palette
+
+$tone-warning: #BBBF60;
+$tone-error: #9A2728;
+$tone-info: #5778A6;
+$tone-success: #3DBDB6;
+
+
+$gray-transparent: transparentize($tone-gray, 0.6);
+
 /* COLORES */
 
 .fg{

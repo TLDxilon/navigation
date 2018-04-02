@@ -1259,8 +1259,7 @@ h2 {
   overflow: hidden; }
 
 .search-is-open {
-  overflow-y: scroll;
-  height: 100%; }
+  overflow-y: scroll; }
   .search-is-open body {
     overflow: hidden;
     height: 100%; }

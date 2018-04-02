@@ -75,27 +75,31 @@ $(document).ready(function($){
     $logo.css('width', (widthLogo) + 'px');
     /* Abrimos el buscador al hacer click en la lupa*/
 
-    $('.position-relative .js-search-open').on('click', function(){
+    $('.js-search-open').on('click', function(event){
         event.preventDefault();
+
         $html.addClass('search-is-open');
+
         setTimeout(function(){
-            $searchBar.find('input').focus();
+            //$searchBar.find('input').focus();
             console.log('INPUT');
-        },200);
+        },2500);
+
+        return false;
     });
     /* Cerramos el buscador al hacer click en la lupa */
 
 
 
 
-    $('.js-search-close').on('click', function(){
+    $('.js-search-close').on('click', function(event){
         event.preventDefault();
         $html.removeClass('search-is-open');
 
     });
     /* Abrimos el buscador en el fixed menú al hacer click en la lupa*/
 
-    $('.js-fixed-search-open').on('click', function(){
+    $('.js-fixed-search-open').on('click', function(event){
         event.preventDefault();
         $html.addClass('search-fixed-is-open');
         setTimeout(function(){
@@ -106,7 +110,7 @@ $(document).ready(function($){
 
     });
     /* Cerramos el buscador en el fixed menú al hacer click en la lupa*/
-    $('.js-search-close').on('click', function(){
+    $('.js-search-close').on('click', function(event){
         event.preventDefault();
         $html.removeClass('search-fixed-is-open');
 
