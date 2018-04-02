@@ -80,11 +80,9 @@ $(document).ready(function($){
         event.preventDefault();
         $html.addClass('search-is-open');
         setTimeout(function(){
-            event.preventDefault();
             $searchBar.find('input').focus();
             console.log('INPUT');
         },200);
-
     });
     /* Cerramos el buscador al hacer click en la lupa */
 
@@ -100,7 +98,6 @@ $(document).ready(function($){
         event.preventDefault();
         $html.addClass('search-fixed-is-open');
         setTimeout(function(){
-            event.preventDefault();
             $searchBarFixed.find('input').focus();
             console.log('INPUT');
         }, 200);
