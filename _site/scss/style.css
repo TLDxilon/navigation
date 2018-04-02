@@ -443,12 +443,7 @@ h2 {
     position: absolute; }
 
 .branding-logo {
-  vertical-align: middle;
-  -webkit-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
-  -moz-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
-  -ms-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
-  -o-transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear;
-  transition: transform 0.3s ease, background 0.3s ease, width 0.3s linear; }
+  vertical-align: middle; }
   @media only screen and (max-width: 479px) {
     .branding-logo {
       max-width: 140px; } }

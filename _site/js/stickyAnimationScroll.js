@@ -30,7 +30,7 @@ $(document).ready(function($){
 
     }
 
-    var Until = Start + 80;
+    var Until = Start + 500;
     var offset, opacity, actualPadding;
 
 
@@ -38,9 +38,9 @@ $(document).ready(function($){
 
         offset = $(document).scrollTop();
 
-        // console.log('MAX PADDING',maxPadding);
-        // console.log('MIN PADDING',minPadding);
-        // console.log('DIFERENCIA PADDING',difPadding);
+         console.log('MAX PADDING',maxPadding);
+         console.log('MIN PADDING',minPadding);
+         console.log('DIFERENCIA PADDING',difPadding);
         console.log('MAX WIDTH',maxWidth);
         console.log('MIN WIDTH',minWidth);
         console.log('DIFERENCIA WIDTH',difWidth);
