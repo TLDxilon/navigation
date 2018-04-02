@@ -3,7 +3,7 @@ $(document).ready(function($){
 
     var $subnavBottom   = $('.js-subnav-bottom');
     var heightNavbar = $('.navbar').outerHeight(true);
-    var heightSubnav = $IsFixed.outerHeight(true);
+    var heightSubnav = $('.subnav').outerHeight(true);
 
 
 
