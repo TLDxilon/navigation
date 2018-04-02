@@ -21,11 +21,13 @@ $(document).ready(function($){
 
         $(window).on('scroll', function () {
             if ($(window).scrollTop() > heightFixedOffset) {
+                $IsFixed.removeClass('position-relative');
                 $IsFixed.addClass('sticky');
                 $subnavBottom.removeClass('subnav-bottom-absolute');
 
             } else {
                 $subnavBottom.addClass('subnav-bottom-absolute');
+                $IsFixed.addClass('position-relative');
                 $IsFixed.removeClass('sticky');
             }
         });

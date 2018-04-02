@@ -73,10 +73,9 @@ $(document).ready(function($){
 
 
     $logo.css('width', (widthLogo) + 'px');
-
     /* Abrimos el buscador al hacer click en la lupa*/
 
-    $('.js-search-open').on('click', function(){
+    $('.position-relative .js-search-open').on('click', function(){
         event.preventDefault();
         $html.addClass('search-is-open');
         setTimeout(function(){
@@ -85,6 +84,8 @@ $(document).ready(function($){
         },200);
     });
     /* Cerramos el buscador al hacer click en la lupa */
+
+
 
 
     $('.js-search-close').on('click', function(){
