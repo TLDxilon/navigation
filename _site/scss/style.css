@@ -550,6 +550,9 @@ h2 {
   font-size: 1em;
   max-height: 64px; }
   .navbar .nav-link span, .navbar-fixed .nav-link span, .subnav .nav-link span {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
     align-self: center; }
 
 .searchbar {

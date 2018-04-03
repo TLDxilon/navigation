@@ -24,7 +24,7 @@
     max-height: 64px;
     @extend .padding-h-l;
     span{
-      align-self: center;
+      @include align-self(center);
     }
     .flex-align-justify &{
       @extend .flex-align-justify;

@@ -17,7 +17,7 @@
 
      {% else %}
      {% endif %}
-   <div class="navbar-logo bg-{{ page.navbar.background }} {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed {% endif %} js-color">
+   <div class="navbar-logo {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed {% endif %} js-color">
        {% include _elements/_searchbar.html  js-class='js-searchbar' %}
        <div class="{{ page.container }} js-container">
            <div class="navbar-inner flexbox-row-nowrap">
@@ -113,18 +113,19 @@
 
            </div>
        </div>
-
+       {% include _elements/_background-nav.html %}
     </div>
 
      {% if page.navigation =='bottom' %}
 
      <!-- subnav -->
-     <div class="subnav bg-{{ page.subnav.background }} {{ page.subnav.border }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop">
+     <div class="subnav } {{ page.subnav.border }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop">
          <div class="{{ page.container }} js-container fix-padding-container">
              <nav class="navbar__item width-full">
                  {% include _elements/_navigation.html %}
              </nav>
          </div>
+         {% include _elements/_background-subnav.html %}
      </div><!-- /subnav -->
      {% endif %}
 
@@ -145,12 +146,13 @@
         {% if page.navigation =='subnav' %}
 
         <!-- subnav -->
-        <div class="subnav  subnav-bottom-absolute bg-{{ page.subnav.background }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-bottom {{ page.subnav.border }}  hidden-mobile hidden-tablets visible-desktop">
+        <div class="subnav  subnav-bottom-absolute  js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-bottom {{ page.subnav.border }}  hidden-mobile hidden-tablets visible-desktop">
             <div class="{{ page.container }} js-container fix-padding-container">
                 <nav class="navbar__item width-full">
                     {% include _elements/_navigation.html %}
                 </nav>
             </div>
+            {% include _elements/_background-subnav.html %}
         </div><!-- /subnav -->
         {% endif %}
     </div>
