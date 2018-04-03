@@ -12,11 +12,8 @@ $(document).ready(function($){
 
     /*Subnav bottom sticky */
 
+        var heightFixedOffset = $IsFixed.offset().top + 1;
 
-
-
-
-        var heightFixedOffset = $IsFixed.offset().top;
         console.log($IsFixed.offset().top);
 
         $(window).on('scroll', function () {
