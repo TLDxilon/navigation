@@ -806,7 +806,7 @@ h2 {
   border-style: solid;
   font-size: 1em; }
   .btn--flat {
-    color: #FFFFFF !important; }
+    color: #FFFFFF; }
   .btn--outline {
     background: none; }
 
