@@ -820,6 +820,7 @@ h2 {
   .btn--flat {
     color: #FFFFFF !important; }
   .btn--flat-inverse {
+    background: #FFFFFF !important;
     color: #4A4A4A !important; }
   .btn--outline {
     background: none; }
