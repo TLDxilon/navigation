@@ -14,7 +14,7 @@ $(document).ready(function($){
 
 
 
-    var Start = $fixedNav.offset().top;
+    var Start = $fixedNav.offset().top + 10;
     if ($('.padding-fixed').length) {
         var maxPadding = $fixPadding.css('padding-top').replace('px', '');
         var minPadding= 10;
@@ -30,7 +30,7 @@ $(document).ready(function($){
 
     }
 
-    var Until = Start + 700;
+    var Until = Start + 500;
     var offset, opacity, actualPadding;
 
 
