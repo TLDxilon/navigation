@@ -6,15 +6,11 @@ $(document).ready(function($){
     var $fixPadding = $('.padding-fixed');
     var $fixBrand = $('.width-logo-fixed');
 
-    $fixPadding.animate({
-
-
-    }, 1500 );
-
-
-
 
     var Start = $fixedNav.offset().top + 10;
+    var Until = Start + 500;
+    var offset, opacity, actualPadding, actualWidthlogo;
+
     if ($('.padding-fixed').length) {
         var maxPadding = $fixPadding.css('padding-top').replace('px', '');
         var minPadding= 10;
@@ -30,23 +26,20 @@ $(document).ready(function($){
 
     }
 
-    var Until = Start + 500;
-    var offset, opacity, actualPadding;
 
 
     $(window).bind('scroll', function(){
 
         offset = $(document).scrollTop();
 
-         console.log('MAX PADDING',maxPadding);
-         console.log('MIN PADDING',minPadding);
-         console.log('DIFERENCIA PADDING',difPadding);
-        console.log('MAX WIDTH',maxWidth);
-        console.log('MIN WIDTH',minWidth);
-        console.log('DIFERENCIA WIDTH',difWidth);
+        console.log('Scrolling' , {
+            'offset' : offset,
+            'start': Start,
+            'until': Until
+        });
 
         /* When scroll is on top */
-        if( offset<=Start ){
+        if( offset <= Start ){
 
             // Opacity
             opacity = 0;
@@ -57,32 +50,27 @@ $(document).ready(function($){
             // Logo width
             actualWidthlogo = maxWidth;
 
-
+            console.log({
+                'actualPadding':actualPadding,
+                'actualWidthlogo': actualWidthlogo
+            });
 
         /* When user is scrolling  */
-        }else if( offset <= Until ){
+        }else if( (offset > Start) && (offset <= Until) ){
 
             // Opacity
             opacity = 0 + offset/Until;
 
             // Logo Padding
-            actualPadding = maxPadding -((offset/Until) * difPadding);
-            // console.log({
-            //    'offset' : offset,
-            //    'until' : Until,
-            //    'difPadding': difPadding,
-            //     'actual': actualPadding
-            // });
+            actualPadding = maxPadding -(( (offset-Start) / Until ) * difPadding);
 
             // Logo Width
-            actualWidthlogo = maxWidth -((offset/Until) * difWidth);
-            console.log({
-                'offset' : offset,
-                'until' : Until,
-                'difPadding': difWidth,
-                'actual': actualWidthlogo
-            });
+            actualWidthlogo = maxWidth - (( (offset-Start) / Until ) * difWidth);
 
+            console.log({
+                'actualPadding':actualPadding,
+                'actualWidthlogo': actualWidthlogo
+            });
 
         /* When scroll is out  */
         }else if( offset > Until ){
@@ -95,6 +83,11 @@ $(document).ready(function($){
 
             // Logo width
             actualWidthlogo = minWidth;
+
+            console.log({
+                'actualPadding':actualPadding,
+                'actualWidthlogo': actualWidthlogo
+            });
 
         }
 
