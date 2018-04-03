@@ -73,18 +73,20 @@
         <h2>Topbar color style</h2>
     <a href="#" class="js-option btn btn-xs btn--flat bg-dark " data-element=".topbar .js-fg" data-option="fg-" data-value="white">Light</a>
     <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".topbar .js-fg" data-option="fg-" data-value="dark">Dark</a>
-    <a href="#" class="js-option btn btn-xs bg-white fg-gray" data-element=".topbar .js-fg" data-option="fg-" data-value="gray">Gray</a>
     </div>
     <br><br>
 
     <div class="group-options padding-xs">
     <h2>Nav Padding</h2>
     <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
+        <h2>Nav border bottom</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
 
 
-    <h2>Nav border bottom</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
+    <h2>Is transparent</h2>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-transparent" data-option="is-" data-value="transparent">YES</a>
+    <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-transparent" data-option="is-" data-value="">NO</a>
 
     <h2>Nav background</h2>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".navbar .js-color" data-option="bg-" data-value="one">1</a>
@@ -97,13 +99,11 @@
         <a href="#" class="js-option btn btn-xs  btn--flat-inverse" data-element=".navbar .js-color" data-option="bg-" data-value="white">W</a>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-black" data-element=".navbar .js-color" data-option="bg-" data-value="black">B</a>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-dark" data-element=".navbar .js-color" data-option="bg-" data-value="dark">D</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat-inverse" data-element=".navbar .js-color" data-option="bg-" data-value="transparent">NO</a>
 
 
     <h2>Nav color style</h2>
-    <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="white">Light</a>
-    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="dark">Dark</a>
-    <a href="#" class="js-option btn btn-xs bg-white fg-gray" data-element=".navbar .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="gray">Gray</a>
+    <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".navbar-logo .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="white">Light</a>
+    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".navbar-logo .js-fg, .navbar-fixed .js-fg" data-option="fg-" data-value="dark">Dark</a>
     </div>
   <br>
     <div class="group-options padding-xs">
@@ -146,7 +146,6 @@
         <h2>Subnav color style</h2>
         <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".subnav .js-fg" data-option="fg-" data-value="white">Light</a>
         <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".subnav .js-fg" data-option="fg-" data-value="dark">Dark</a>
-        <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".subnav .js-fg" data-option="fg-" data-value="gray">Gray</a>
 
 </div>
 <br>
@@ -200,7 +199,7 @@
 
      
      
-   <div class="navbar-logo  ">
+   <div class="navbar-logo    js-transparent ">
        
     <div class="searchbar bg-white  js-searchbar">
 
@@ -231,7 +230,7 @@
 </div>
                </div>
                <div class="navbar__item width-full">
-                   <div class="navbar__tools flex-align-right">
+                   <div class="navbar__tools fg-white  js-fg flex-align-right">
                        
 <div class="tools__item tools__item-input hidden-tablets hidden-mobile search-input">
     <form class="tools-search-content  border-radius-xl">
@@ -244,17 +243,17 @@
 
                        
 <div class="tools__item tools__item-icon hidden-desktop">
-    <a class="btn-search js-search-open fg-white js-fg" href=""><span class="icon icon-search"></span></a>
+    <a class="btn-search js-search-open" href=""><span class="icon icon-search"></span></a>
 </div>
 
 
 
                        
 <div class="tools__item tools__item-icon">
-    <a class="btn-user fg-white js-fg" href=""><span class="icon icon-user"></span></a>
+    <a class="btn-user" href=""><span class="icon icon-user"></span></a>
 </div>
 <div class="tools__item tools__item-icon">
-    <a class="btn-shop fg-white js-fg" href=""><span class="icon icon-shopping-cart2"></span></a>
+    <a class="btn-shop" href=""><span class="icon icon-shopping-cart2"></span></a>
 </div>
 
 
@@ -263,8 +262,8 @@
 
 
                        <div class="tools__item tools__item-icon hidden-desktop ">
-    <a class="btn-menu btn-menu-open js-menu-toogle fg-white js-fg" href="#menu"><span class="icon icon-menu3"></span></a>
-    <a class="btn-menu btn-menu-close js-menu-toogle fg-white js-fg" href="#menu"><span class="icon icon-x"></span></a>
+    <a class="btn-menu btn-menu-open js-menu-toogle" href="#menu"><span class="icon icon-menu3"></span></a>
+    <a class="btn-menu btn-menu-close js-menu-toogle" href="#menu"><span class="icon icon-x"></span></a>
 
 </div>
 
@@ -280,7 +279,7 @@
 
            </div>
        </div>
-       <div class="background">
+       <div class="background js-fixed-background">
     <div class="bg- js-color" ></div>
 
 </div>
@@ -323,38 +322,38 @@
         
 
         <!-- subnav -->
-        <div class="subnav  subnav-bottom-absolute  js-subnav  js-fixed  js-subnav-bottom border-bottom border-top  hidden-mobile hidden-tablets visible-desktop">
+        <div class="subnav  subnav-bottom-absolute  js-subnav  js-fixed  js-subnav-bottom border-bottom border-top   hidden-mobile hidden-tablets visible-desktop">
             <div class="container js-container fix-padding-container">
                 <nav class="navbar__item width-full">
                     
-    <ul class="navbar-menu-inner menu--line flex-align-center js-align" >
+    <ul class="navbar-menu-inner menu--line flex-align-center js-align fg-white fg-white js-fg " >
 
       
 
             
 
 
-    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Home</span></a></li>
+    <li class="nav-menu-item  active  Spacer"><a class="nav-link " href="#"><span class="">Home</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Blog</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Blog</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Products</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Products</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">News</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">News</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Company</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Company</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Contact</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Contact</span></a></li>
 
 
 
@@ -369,7 +368,7 @@
                 </nav>
             </div>
             <div class="background">
-    <div class="bg-color js-color"></div>
+    <div class="bg-black  js-color"></div>
 </div>
         </div><!-- /subnav -->
         
@@ -522,27 +521,27 @@
         
 
 
-    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Home</span></a></li>
+    <li class="nav-menu-item  active  Spacer"><a class="nav-link " href="#"><span class="">Home</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Blog</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Blog</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Products</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Products</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">News</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">News</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Company</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Company</span></a></li>
 
 
 
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-white  js-fg" href="#"><span class="">Contact</span></a></li>
+    <li class="nav-menu-item  Spacer"><a class="nav-link " href="#"><span class="">Contact</span></a></li>
 
 
 
@@ -560,12 +559,15 @@
 <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js" type="text/javascript"></script>
 <script src="components/mmenu/js/jquery.mmenu.all.js" type="text/javascript"></script>
 <script src="js/nav.js" type="text/javascript"></script>
+<script src="js/changeOption.js" type="text/javascript"></script>
 <script src="js/mmenu.js" type="text/javascript"></script>
 <script src="js/css_functions.js" type="text/javascript"></script>
 <script src="js/sticky.js" type="text/javascript"></script>
 <script src="js/stickyAnimationScroll.js" type="text/javascript"></script>
 <script src="js/disappearOnScroll.js" type="text/javascript"></script>
+<script src="js/convertRGBA.js" type="text/javascript"></script>
 <script src="js/changeForeground.js" type="text/javascript"></script>
+
 
 
 </body>

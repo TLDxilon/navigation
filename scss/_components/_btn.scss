@@ -10,12 +10,12 @@
 
 
   &--flat{
-    color: $tone-white;
+    color: $tone-white !important;
 
 
   }
   &--flat-inverse{
-    @extend .fg-dark;
+    color: $tone-dark !important;
 
 
   }

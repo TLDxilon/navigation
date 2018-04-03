@@ -2,7 +2,8 @@ $(document).ready(function($){
 
 
     var $fixedNav = $('.js-fixed');
-    var $isTransparent = $('.is-transparent > .background');
+    var $isTransparent = $('.is-transparent');
+    var $background = $('.js-fixed-background');
     var $fixedPadding = $('.padding-fixed');
     var $fixedBrand = $('.width-logo-fixed');
 
@@ -42,6 +43,8 @@ $(document).ready(function($){
 
             // Opacity
             opacity = 0;
+
+
 
             // Logo padding
             actualPadding = maxPadding;
@@ -95,9 +98,9 @@ $(document).ready(function($){
 
         if ($isTransparent) {
             // background on scroll becomes opacity 1 -> true
-            $isTransparent.css({
-                'opacity': opacity
-            });
+            $background.css({'opacity': opacity});
+        }else{
+
         }
 
 

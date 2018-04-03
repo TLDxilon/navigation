@@ -17,7 +17,7 @@
 
      {% else %}
      {% endif %}
-   <div class="navbar-logo {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %}">
+   <div class="navbar-logo {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %}  js-transparent ">
        {% include _elements/_searchbar.html  js-class='js-searchbar' %}
        <div class="{{ page.container }} js-container">
            <div class="navbar-inner flexbox-row-nowrap">
@@ -25,7 +25,7 @@
                {% if page.navigation == 'top-left' %}
 
                <div class="navbar__item width-35 hidden-desktop">
-                   <div class="navbar__tools">
+                   <div class="navbar__tools fg-{{ page.navbar.fg }} js-fg">
                        {% include _elements/_mobile-nav.html %}
                        {% include _elements/_search.html js-class='js-search-open' %}
                    </div>
@@ -39,7 +39,7 @@
                    {% include _elements/_brand.html %}
                </div>
                <div class="navbar__item width-35">
-                   <div class="navbar__tools flex-align-right">
+                   <div class="navbar__tools flex-align-right fg-{{ page.navbar.fg }}  js-fg">
                        {% include _elements/_search.html js-class='js-search-open' breakpoint='hidden-tablets hidden-mobile' %}
                        {% include _elements/_extras.html %}
                        {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
@@ -59,7 +59,7 @@
                    {% include _elements/_navigation.html %}
                </nav>
                <div class="navbar__item width-auto">
-                   <div class="navbar__tools">
+                   <div class="navbar__tools fg-{{ page.navbar.fg }}  js-fg">
                        {% include _elements/_search.html js-class='js-search-open' %}
                        {% include _elements/_extras.html %}
                        {% include _elements/_ctas.html %}
@@ -79,7 +79,7 @@
                    {% include _elements/_brand.html %}
                </div>
                <div class="navbar__item width-full">
-                   <div class="navbar__tools flex-align-right">
+                   <div class="navbar__tools fg-{{ page.navbar.fg }}  js-fg flex-align-right">
                        {% include _elements/_search-input.html breakpoint='hidden-tablets hidden-mobile' %}
                        {% include _elements/_search.html js-class='js-search-open' breakpoint='hidden-desktop' %}
                        {% include _elements/_extras.html %}
@@ -90,7 +90,7 @@
 
                {% elsif page.brand.position =='center' %}
                <div class="navbar__item width-35">
-                   <div class="navbar__tools">
+                   <div class="navbar__tools fg-{{ page.navbar.fg }} js-fg">
                        {% include _elements/_mobile-nav.html %}
                        {% include _elements/_search-input.html breakpoint='hidden-tablets hidden-mobile' %}
                        {% include _elements/_search.html js-class='js-search-open' breakpoint='hidden-desktop' %}
@@ -100,7 +100,7 @@
                    {% include _elements/_brand.html %}
                </div>
                <div class="navbar__item width-35">
-                   <div class="navbar__tools flex-align-right">
+                   <div class="navbar__tools  fg-{{ page.navbar.fg }} js-fg flex-align-right">
                        {% include _elements/_extras.html %}
                        {% include _elements/_ctas.html breakpoint='hidden-tablets' %}
                    </div>
@@ -119,7 +119,7 @@
      {% if page.navigation =='bottom' %}
 
      <!-- subnav -->
-     <div class="subnav } {{ page.subnav.border }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop">
+     <div class="subnav  {{ page.subnav.border }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} {% if page.subnav.is-transparent == 'true' %} is-transparent {% endif %} js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop">
          <div class="{{ page.container }} js-container fix-padding-container">
              <nav class="navbar__item width-full">
                  {% include _elements/_navigation.html %}
@@ -146,7 +146,7 @@
         {% if page.navigation =='subnav' %}
 
         <!-- subnav -->
-        <div class="subnav  subnav-bottom-absolute  js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-bottom {{ page.subnav.border }}  hidden-mobile hidden-tablets visible-desktop">
+        <div class="subnav  subnav-bottom-absolute  js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-bottom {{ page.subnav.border }} {% if page.subnav.is-transparent == 'true' %} is-transparent {% endif %}  hidden-mobile hidden-tablets visible-desktop">
             <div class="{{ page.container }} js-container fix-padding-container">
                 <nav class="navbar__item width-full">
                     {% include _elements/_navigation.html %}

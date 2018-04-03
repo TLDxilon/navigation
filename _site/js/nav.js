@@ -159,12 +159,32 @@ $(document).ready(function($){
 
 
 
-/*Menú options lateral*/
-
+    /*Menú options lateral*/
+    var $html           = $('html');
     var $changeOption = $('.js-option');
     var $changeOptionMobile = $('.js-option-mobile');
     var $openOptions = $('.open-options');
     var $closeOptions = $('.close-options');
+
+
+    /*
+     Para cerrar y abril el panel lateral
+    */
+
+    $openOptions.on('click', function(){
+        event.preventDefault();
+        $html.addClass('panel-is-open');
+
+    });
+    $closeOptions.on('click', function(){
+        event.preventDefault();
+        $html.removeClass('panel-is-open');
+
+    });
+
+
+
+
 
     $changeOption.each(function(index) {
         $(this).on('click', function(){
@@ -188,55 +208,75 @@ $(document).ready(function($){
             var widthLogo = $('.js-width-logo').outerWidth(true);
             var $logo2 = $('.logo-floating');
             $logo2.css('width', (widthLogo) + 'px');
+
+            function checkContrastForegroundColor( color ) {
+
+                var rgb = colorValues(color);
+
+                //http://www.w3.org/TR/AERT#color-contrast
+                var o = Math.round(((parseInt(rgb[0]) * 299) + (parseInt(rgb[1]) * 587) + (parseInt(rgb[2]) * 114)) /1000);
+
+                if(o > 125) {
+                    return 'dark';
+                }else{
+                    return 'light';
+                }
+
+
+            }
+
+            var color = $('.navbar').find('.js-color').css('background-color');
+
+            if (checkContrastForegroundColor(color) === 'dark') {
+                $('.navbar-menu-inner, .navbar__tools').addClass('fg-dark');
+                $('.navbar-menu-inner, .navbar__tools').removeClass('fg-white');
+            } else {
+                $('.navbar-menu-inner, .navbar__tools').addClass('fg-white');
+                $('.navbar-menu-inner, .navbar__tools').removeClass('fg-dark');
+            }
+
+
+
         });
     });
 
 
     $changeOptionMobile.each(function(index) {
-            $(this).on('click', function(){
-                event.preventDefault();
-                var dataValue             = $(this).data('value');
-                var dataOption            = $(this).data('option');
-                var dataElement           = $(this).data('element');
-                var dataType              = $(this).data('type');
-                var $element              = $(dataElement);
+        $(this).on('click', function(){
+            event.preventDefault();
+            var dataValue             = $(this).data('value');
+            var dataOption            = $(this).data('option');
+            var dataElement           = $(this).data('element');
+            var dataType              = $(this).data('type');
+            var $element              = $(dataElement);
 
 
 
-                $element.attr('data-'+ dataType, dataOption + dataValue);
-                console.log(dataType, dataOption + dataValue);
+            $element.attr('data-'+ dataType, dataOption + dataValue);
+            console.log(dataType, dataOption + dataValue);
 
-                /* Update mmenu options */
-                menuCustomize = {
-                    "extensions": [
-                        $menuMobile.data('extension-position'),
-                        $menuMobile.data('extension-theme'),
-                    ],
-                    "iconPanels": $menuMobile.data('icon-panels')
+            /* Update mmenu options */
+            menuCustomize = {
+                "extensions": [
+                    $menuMobile.data('extension-position'),
+                    $menuMobile.data('extension-theme'),
+                ],
+                "iconPanels": $menuMobile.data('icon-panels')
 
-                };
+            };
 
-                /* Update mmenu with custom options */
-                API.initPanels();
-                //initMmenu(menuCustomize);
+            /* Update mmenu with custom options */
+            API.initPanels();
+            //initMmenu(menuCustomize);
 
 
-         });
+        });
     });
-    /*
-     Para cerrar y abril el panel lateral
-    */
 
-    $openOptions.on('click', function(){
-        event.preventDefault();
-        $html.addClass('panel-is-open');
 
-    });
-    $closeOptions.on('click', function(){
-        event.preventDefault();
-        $html.removeClass('panel-is-open');
 
-    });
+
+
 
 
     var $sliderOptions = $('.option-slider');
@@ -267,7 +307,4 @@ $(document).ready(function($){
 
         console.log("Clase: ." + dataOption+ "-" + dataValues[value]);
     });
-
-
-
 });
