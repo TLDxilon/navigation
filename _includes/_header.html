@@ -17,7 +17,7 @@
 
      {% else %}
      {% endif %}
-   <div class="navbar-logo {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %}  js-transparent ">
+   <div class="navbar-logo {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %} ">
        {% include _elements/_searchbar.html  js-class='js-searchbar' %}
        <div class="{{ page.container }} js-container">
            <div class="navbar-inner flexbox-row-nowrap">
