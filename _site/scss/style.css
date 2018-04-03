@@ -1816,8 +1816,8 @@ h2 {
 .panel-is-open .navbar-fixed {
   width: calc( 100% - 240px ); }
 .panel-is-open .sticky {
-  width: calc( 100% - 240px );
-  left: 240px; }
+  width: calc( 100% - 257.09px );
+  left: 257.09px; }
 
 .fix-padding-container {
   padding: 0; }
