@@ -1800,11 +1800,11 @@ h2 {
 .panel-is-open .options {
   display: block; }
 .panel-is-open .design {
-  width: calc( 100vw - 240px ); }
+  width: calc( 100% - 240px ); }
 .panel-is-open .navbar-fixed {
-  width: calc( 100vw - 240px ); }
+  width: calc( 100% - 240px ); }
 .panel-is-open .sticky {
-  width: calc( 100vw - 240px );
+  width: calc( 100% - 240px );
   left: 240px; }
 
 .fix-padding-container {

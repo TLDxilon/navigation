@@ -136,13 +136,13 @@
     display: block;
   }
     .design{
-      width: calc( 100vw - 240px )
+      width: calc( 100% - 240px )
     }
    .navbar-fixed{
-      width: calc( 100vw - 240px );
+      width: calc( 100% - 240px );
     }
    .sticky{
-     width: calc( 100vw - 240px );
+     width: calc( 100% - 240px );
      left:240px;
    }
 }

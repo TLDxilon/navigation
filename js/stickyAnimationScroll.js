@@ -30,7 +30,7 @@ $(document).ready(function($){
 
     }
 
-    var Until = Start + 500;
+    var Until = Start + 700;
     var offset, opacity, actualPadding;
 
 
