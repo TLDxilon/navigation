@@ -200,7 +200,7 @@
 
      
      
-   <div class="navbar-logo bg-two  js-color">
+   <div class="navbar-logo bg-transparent  position-relative js-fixed  js-color">
        
     <div class="searchbar bg-white  js-searchbar js-color">
 
@@ -220,47 +220,56 @@
 
                
 
+               <!-- AUTO - FULL - AUTO -->
+               <div class="navbar__item  navbar__item-brand width-auto padding-h-m">
+                   <div class="navbar-item--logo padding-v-m static-nav-logo  padding-fixed ">
+     <a href="/"><img class="branding-logo logo-size-s  width-logo-fixed  js-width-logo" src="img/logo.png"></a>
+    
+</div>
+               </div>
+               <nav class="navbar__item width-full align-self-stretch padding-h-m  overflow-hidden hidden-mobile hidden-tablets visible-desktop">
+                   
+    <ul class="navbar-menu-inner menu--line flex-align-right js-align" >
 
-               
+      
 
-               
-               <div class="navbar__item width-35">
+            
+
+
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Home</span></a></li>
+
+
+
+    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Blog</span></a></li>
+
+
+
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Products</span></a></li>
+
+
+
+    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Contact</span></a></li>
+
+
+
+
+
+      
+
+
+    </ul>
+
+
+               </nav>
+               <div class="navbar__item width-auto">
                    <div class="navbar__tools">
-                       <div class="tools__item tools__item-icon hidden-desktop ">
-    <a class="btn-menu btn-menu-open js-menu-toogle fg-white js-fg" href="#menu"><span class="icon icon-menu3"></span></a>
-    <a class="btn-menu btn-menu-close js-menu-toogle fg-white js-fg" href="#menu"><span class="icon icon-x"></span></a>
-
-</div>
-
-
-
                        
-<div class="tools__item tools__item-input hidden-tablets hidden-mobile search-input">
-    <form class="tools-search-content  border-radius-s">
-        <input class="tools__item-search js-color fg-white  js-fg" type="text" placeholder="Buscar en mybrand.com">
-        <a class="btn-search fg-gray  fg-white js-fg"><span class="icon icon-search"></span></a>
-    </form>
-
-</div>
-
-
-                       
-<div class="tools__item tools__item-icon hidden-desktop">
+<div class="tools__item tools__item-icon ">
     <a class="btn-search js-search-open fg-white js-fg" href=""><span class="icon icon-search"></span></a>
 </div>
 
 
 
-                   </div>
-               </div>
-               <div class="navbar__item width-full text-align-center">
-                   <div class="navbar-item--logo padding-v-m  ">
-     <a href="/"><img class="branding-logo logo-size-s  " src="img/logo.png"></a>
-    
-</div>
-               </div>
-               <div class="navbar__item width-35">
-                   <div class="navbar__tools flex-align-right">
                        <div class="tools__item tools__item-icon">
     <a class="btn-user fg-white js-fg" href=""><span class="icon icon-user"></span></a>
 </div>
@@ -270,15 +279,26 @@
 
 
 
-                        <div class="tools__item tools__item-cta hidden-mobile hidden-tablets"><a class="btn btn-s  fg-white btn--flat bg-one bg-one--hover border-color-one  bg-   border-radius-s border-radius- js-btn js-fg " href="">Log in</a>
+                        <div class="tools__item tools__item-cta hidden-mobile "><a class="btn btn-s  fg-white btn--flat bg-one bg-one--hover border-color-one  bg-   border-radius-s border-radius- js-btn js-fg " href="">Log in</a>
 
 </div>
 
 
+                       <div class="tools__item tools__item-icon hidden-desktop ">
+    <a class="btn-menu btn-menu-open js-menu-toogle fg-white js-fg" href="#menu"><span class="icon icon-menu3"></span></a>
+    <a class="btn-menu btn-menu-close js-menu-toogle fg-white js-fg" href="#menu"><span class="icon icon-x"></span></a>
+
+</div>
+
+
+
                    </div>
+
+
                </div>
 
                
+
 
                
 
@@ -301,9 +321,10 @@
 
     <div class="hero">
         <div class="container">
-    <div class="hero-inner  padding-v-l hero-content-position-  js-hero">
-        <div class="hero-content fix-header-padding text-align- js-hero-align">
-            <h1 class="fg-white js-fg ">Latest news </h1>
+    <div class="hero-inner  padding-v-xl hero-content-position-center  js-hero">
+        <div class="hero-content fix-header-padding text-align-center js-hero-align">
+            <h1 class="fg-white js-fg ">Is simple, powerful and very easy. </h1>
+            <p class="copy fg-white js-fg ">Vivamus eros est, eleifend a ante et, efficitur bibendum purus. Fusce id neque nisl. Sed dui erat, volutpat a ex eu, volutpat ornare ante. In pellentesque tincidunt elementum. </p>
             
             
 
@@ -313,61 +334,12 @@
 </div>
 
 <div class="background">
-    <div class="bg-color" style="background-color: rgba(0, 0, 0, 0.4)"></div>
-    <div class="bg-image" style="background-image:url('https://images.pexels.com/photos/323705/pexels-photo-323705.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260')"></div>
+    <div class="bg-color" style="background-color: rgba(0, 0, 0, 0)"></div>
+    <div class="bg-image" style="background-image:url('https://www.siweb.es/images/features-background.jpg')"></div>
 </div>
 
 
 
-        
-
-        <!-- subnav -->
-        <div class="subnav  subnav-bottom-absolute bg-three js-subnav  js-fixed  js-subnav-bottom   hidden-mobile hidden-tablets visible-desktop">
-            <div class="container js-container fix-padding-container">
-                <nav class="navbar__item width-full">
-                    
-    <ul class="navbar-menu-inner menu--back-all flex-align-left js-align" >
-
-      
-
-            
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Home</span></a></li>
-
-
-
-    <li class="nav-menu-item  active  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Blog</span></a></li>
-
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Products</span></a></li>
-
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">News</span></a></li>
-
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Company</span></a></li>
-
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Contact</span></a></li>
-
-
-
-
-
-      
-
-
-    </ul>
-
-
-                </nav>
-            </div>
-        </div><!-- /subnav -->
         
     </div>
 
@@ -533,14 +505,6 @@
 
 
     <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Products</span></a></li>
-
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">News</span></a></li>
-
-
-
-    <li class="nav-menu-item  Spacer"><a class="nav-link fg-white  fg-  js-fg" href="#"><span class="">Company</span></a></li>
 
 
 
