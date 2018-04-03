@@ -8,7 +8,7 @@ $(document).ready(function($){
 
 
     var Start = $fixedNav.offset().top + 10;
-    var Until = Start + 500;
+    var Until = Start + 300;
     var offset, opacity, actualPadding, actualWidthlogo;
 
     if ($('.padding-fixed').length) {
