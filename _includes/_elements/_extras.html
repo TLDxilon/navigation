@@ -1,8 +1,9 @@
+{% if page.navbar.e-commerce == 'true' %}
 <div class="tools__item tools__item-icon">
     <a class="btn-user fg-{{ page.navbar.fg }} js-fg" href="">{% include _components/_icon.html icon="user" %}</a>
 </div>
 <div class="tools__item tools__item-icon">
     <a class="btn-shop fg-{{ page.navbar.fg }} js-fg" href="">{% include _components/_icon.html icon="shopping-cart2" %}</a>
 </div>
-
+{% endif %}
 
