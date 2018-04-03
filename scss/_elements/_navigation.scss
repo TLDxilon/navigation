@@ -2,6 +2,7 @@
   .navbar-menu-inner{
     @extend .flexbox-row-wrap;
     height:100%;
+    margin: 0;
   }
 
   .nav-menu-item {
@@ -41,3 +42,9 @@
 
 
 
+.is-transparent:not(.sticky){
+  .background{
+    opacity: 0;
+  }
+
+  }

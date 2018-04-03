@@ -2,10 +2,9 @@ $(document).ready(function($){
 
 
     var $fixedNav = $('.js-fixed');
-    var $fixedNavTransparent = $('.js-fixed.bg-transparent');
+    var $isTransparent = $('.is-transparent > .background');
     var $fixedPadding = $('.padding-fixed');
     var $fixedBrand = $('.width-logo-fixed');
-
 
     var start = $fixedNav.offset().top + 10;
     var until = start + 300;
@@ -92,15 +91,23 @@ $(document).ready(function($){
         }
 
         /* Update css */
-        $fixedNavTransparent.css('background-color','rgba(0, 0, 0,'+ opacity + ')');
 
-        if ($('padding-fixed')) {
+
+        if ($isTransparent) {
+            // background on scroll becomes opacity 1 -> true
+            $isTransparent.css({
+                'opacity': opacity
+            });
+        }
+
+
+        if ($fixedPadding) {
             $fixedPadding.css({
                 'padding-top': actualPadding + 'px',
                 'padding-bottom': actualPadding + 'px'
             });
         }
-        if ($('width-logo-fixed')) {
+        if ($fixedBrand) {
             $fixedBrand.css({
                 'width': actualWidthlogo + 'px'
             });
