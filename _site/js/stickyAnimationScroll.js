@@ -3,7 +3,7 @@ $(document).ready(function($){
 
     var $fixedNav = $('.js-fixed');
     var $isTransparent = $('.is-transparent');
-    var $background = $('.js-fixed-background');
+    var $background = $('.is-transparent .js-fixed-background');
     var $fixedPadding = $('.padding-fixed');
     var $fixedBrand = $('.width-logo-fixed');
 
