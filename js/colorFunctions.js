@@ -1,8 +1,9 @@
-
-// return array of [r,g,b,a] from any valid color. if failed returns undefined
-
-function colorValues(color)
-{
+/*
+    colorValues
+    @color puede ser HEX, RGB, HSL
+    return array of [r,g,b,a] from any valid color. if failed returns undefine
+ */
+function colorValues(color) {
     if (color === '')
         return;
     if (color.toLowerCase() === 'transparent')
@@ -43,3 +44,27 @@ function colorValues(color)
         });
     }
 }
+
+
+/*
+     checkContrastForegroundColor
+     @color puede ser HEX, RGB, HSL
+     return 'dark' or 'light' como color recomendado de foreground
+ */
+function checkContrastForegroundColor( color ) {
+
+    /* colorValues devuelve cualquier color en array RGBA */
+    var rgb = colorValues(color);
+
+    //http://www.w3.org/TR/AERT#color-contrast
+    var o = Math.round(((parseInt(rgb[0]) * 299) + (parseInt(rgb[1]) * 587) + (parseInt(rgb[2]) * 114)) /1000);
+
+    if(o > 125) {
+        return 'dark';
+    }else{
+        return 'light';
+    }
+
+
+};
+

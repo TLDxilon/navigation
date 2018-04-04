@@ -1,62 +1,69 @@
-$(document).ready(function($){
-    var $IsFixed        = $('.js-fixed');
-
-    var $subnavBottom   = $('.js-subnav-bottom');
-    var heightNavbar = $('.navbar').outerHeight(true);
-    var heightSubnav = $('.subnav').outerHeight(true);
+$(document).ready(function($) {
 
 
-
-    $('.fix-header-padding').css('padding-top', (heightNavbar) + 'px').css('padding-bottom', (heightSubnav) + 'px');
-
+    var $header  = $('header');  /* site header */
 
 
-    function checkContrastForegroundColor( color ) {
-
-        var rgb = colorValues(color);
-
-        //http://www.w3.org/TR/AERT#color-contrast
-        var o = Math.round(((parseInt(rgb[0]) * 299) + (parseInt(rgb[1]) * 587) + (parseInt(rgb[2]) * 114)) /1000);
-
-        if(o > 125) {
-            return 'dark';
-        }else{
-            return 'light';
-        }
+    var $fixedElement   = $header.find('.js-fixed');        /* check if there is a menu is fixed */
+    var _isTransparent  = $header.find('.is-transparent');  /* check if there is a menu is transparent */
 
 
-    }
+    /* if menu is Fixed */
+    if ($fixedElement.length) {
 
-    /*Subnav bottom sticky */
+        var _fixedElementIsSubnavButton = $fixedElement.hasClass('js-subnav-bottom');
+        var heightFixedOffset = $fixedElement.offset().top;
+        var _oldTextColor, _stickyBgColor;
 
-        var heightFixedOffset = $IsFixed.offset().top;
+        /* Foreground color when navbar is NOT sticky */
+       // _oldTextColor = $fixedElement.css('color');
 
-        console.log($IsFixed.offset().top);
 
+        // expresión regular que busca una clase que empiece por:
+        function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}
+
+        _oldTextColor = getClassStartsWith( $fixedElement[0].className,'fg-');
+
+
+
+
+        /* on window scroll event */
         $(window).on('scroll', function () {
 
             if ($(window).scrollTop() > heightFixedOffset) {
-                $IsFixed.addClass('sticky');
-                $subnavBottom.removeClass('subnav-bottom-absolute');
 
+                $fixedElement.addClass('sticky');
 
-                var color = $('.sticky').find('.js-background-color').css('background-color');
-                if (checkContrastForegroundColor(color) === 'dark') {
-                    $('.navbar-logo, .subnav').addClass('fg-dark');
-                    $('.navbar-logo, .subnav').removeClass('fg-white');
+                if (_fixedElementIsSubnavButton) {
+                    $fixedElement.removeClass('subnav-bottom-absolute');
+                }
+
+                /* Background-color del menu fixed */
+                _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
+
+                if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
+                    $fixedElement.addClass('fg-dark');
+                    $fixedElement.removeClass('fg-white');
                 } else {
-                    $('.navbar-logo, .subnav').addClass('fg-white');
-                    $('.navbar-logo, .subnav').removeClass('fg-dark');
+                    $fixedElement.addClass('fg-white');
+                    $fixedElement.removeClass('fg-dark');
                 }
 
             } else {
-                $subnavBottom.addClass('subnav-bottom-absolute');
-                $IsFixed.removeClass('sticky');
 
+                if (_fixedElementIsSubnavButton) {
+                    $fixedElement.addClass('subnav-bottom-absolute');
+                }
+
+                $fixedElement.removeClass('sticky');
+                $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
+                $fixedElement.addClass(_oldTextColor);
             }
 
 
         });
+
+    }/* _isFixed */
 
 
 });
