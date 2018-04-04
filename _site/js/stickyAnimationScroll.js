@@ -22,6 +22,7 @@ $(document).ready(function($){
         var maxWidth = $fixedBrand.css('width').replace('px', '');
         var minWidth= 180;
         var difWidth= maxWidth - minWidth;
+        console.log('maxWidth', maxWidth)
     }else{
 
     }
