@@ -42,11 +42,11 @@ $(document).ready(function($){
 
                 var color = $('.sticky').find('.js-background-color').css('background-color');
                 if (checkContrastForegroundColor(color) === 'dark') {
-                    $('.navbar-logo').addClass('fg-dark');
-                    $('.navbar-logo').removeClass('fg-white');
+                    $('.navbar-logo, .subnav').addClass('fg-dark');
+                    $('.navbar-logo, .subnav').removeClass('fg-white');
                 } else {
-                    $('.navbar-logo').addClass('fg-white');
-                    $('.navbar-logo').removeClass('fg-dark');
+                    $('.navbar-logo, .subnav').addClass('fg-white');
+                    $('.navbar-logo, .subnav').removeClass('fg-dark');
                 }
 
             } else {

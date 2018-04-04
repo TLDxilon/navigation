@@ -225,14 +225,14 @@ $(document).ready(function($){
 
             }
 
-            var color = $('.navbar').find('.js-color').css('background-color');
+            var color = $('.navbar').find('.js-background-color').css('background-color');
 
             if (checkContrastForegroundColor(color) === 'dark') {
-                $('.navbar-menu-inner, .navbar__tools').addClass('fg-dark');
-                $('.navbar-menu-inner, .navbar__tools').removeClass('fg-white');
+                $('.navbar-logo, .subnav').addClass('fg-dark');
+                $('.navbar-logo, .subnav').removeClass('fg-white');
             } else {
-                $('.navbar-menu-inner, .navbar__tools').addClass('fg-white');
-                $('.navbar-menu-inner, .navbar__tools').removeClass('fg-dark');
+                $('.navbar-logo, .subnav').addClass('fg-white');
+                $('.navbar-logo, .subnav').removeClass('fg-dark');
             }
 
 
