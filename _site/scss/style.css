@@ -327,7 +327,8 @@ ul {
   -webkit-margin-after: 0; }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: inherit; }
 
 img {
   width: 100%; }
@@ -427,7 +428,7 @@ h2 {
   height: 100%;
   top: 0;
   left: 0; }
-  .background .bg-color {
+  .background .background-color {
     width: 100%;
     height: 100%;
     z-index: -2;
@@ -939,24 +940,14 @@ h2 {
   color: #FFBF8B; }
 .fg-white, .topbar-inner .social-item:hover .icon, .topbar-inner .phone-item:hover, .topbar-inner .email-item:hover, .bg-transparent .search-input .tools__item-search:focus, .bg-gray a, .bg-dark a, .form-white input, .mm-menu_theme-main {
   color: #FFFFFF; }
-  .fg-white a, .topbar-inner .social-item:hover .icon a, .topbar-inner .phone-item:hover a, .topbar-inner .email-item:hover a, .bg-transparent .search-input .tools__item-search:focus a, .bg-gray a a, .bg-dark a a, .form-white input a, .mm-menu_theme-main a {
-    color: #FFFFFF; }
 .fg-light, .search-input .tools__item-search:focus, .form-white input::placeholder {
   color: #D8D8D8; }
-  .fg-light a, .search-input .tools__item-search:focus a, .form-white input::placeholder a {
-    color: #D8D8D8; }
 .fg-gray, .input-search::placeholder, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-  .fg-gray a, .input-search::placeholder a, .search-input .tools__item-search::placeholder a {
-    color: #B0B0B0; }
 .fg-dark, .input-search:focus, .search-close .search-close-link, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .group-options a, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .js-option-mobile {
   color: #4A4A4A; }
-  .fg-dark a, .input-search:focus a, .search-close .search-close-link a, .bg-white a a, .searchbar a a, .searchbar.bg-transparent a a, .form-white .btn a a, .site-one a a, .options .open-options a a, .options .close-options a a, .option-slider a a, .group-options a a, .bg-white--hover:hover a, .form-white .btn:hover a, .bg-light a a, .options a a, .bg-light--hover:hover a, .navbar-fixed .bg-transparent a, .js-option-mobile a {
-    color: #4A4A4A; }
 .fg-black, .search-close .search-close-link:hover {
   color: #000000; }
-  .fg-black a, .search-close .search-close-link:hover a {
-    color: #000000; }
 .fg-warning {
   color: #BBBF60; }
 .fg-error {
