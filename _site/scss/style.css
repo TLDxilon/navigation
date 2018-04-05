@@ -1301,11 +1301,11 @@ h2 {
   .search-is-open .backdrop {
     opacity: 1;
     z-index: 0;
-    -webkit-transition: opacity 0.4s ease 0.4s;
-    -moz-transition: opacity 0.4s ease 0.4s;
-    -ms-transition: opacity 0.4s ease 0.4s;
-    -o-transition: opacity 0.4s ease 0.4s;
-    transition: opacity 0.4s ease 0.4s; }
+    -webkit-transition: opacity 0.4s ease 0.2s;
+    -moz-transition: opacity 0.4s ease 0.2s;
+    -ms-transition: opacity 0.4s ease 0.2s;
+    -o-transition: opacity 0.4s ease 0.2s;
+    transition: opacity 0.4s ease 0.2s; }
 
 .search-fixed-is-open body {
   overflow: hidden;
@@ -1337,11 +1337,11 @@ h2 {
 .search-fixed-is-open .backdrop {
   opacity: 1;
   z-index: 0;
-  -webkit-transition: opacity 0.4s ease 0.4s;
-  -moz-transition: opacity 0.4s ease 0.4s;
-  -ms-transition: opacity 0.4s ease 0.4s;
-  -o-transition: opacity 0.4s ease 0.4s;
-  transition: opacity 0.4s ease 0.4s; }
+  -webkit-transition: opacity 0.4s ease 0.2s;
+  -moz-transition: opacity 0.4s ease 0.2s;
+  -ms-transition: opacity 0.4s ease 0.2s;
+  -o-transition: opacity 0.4s ease 0.2s;
+  transition: opacity 0.4s ease 0.2s; }
 
 .block-floating {
   margin-top: -120px;
@@ -1844,7 +1844,12 @@ h2 {
   padding-bottom: 20px; }
 
 .mm-wrapper_opening [class*=mm-menu_pagedim].mm-menu_opened ~ .mm-page__blocker {
-  opacity: .7; }
+  opacity: .7;
+  -webkit-transition: opacity 0.2s ease 0.2s;
+  -moz-transition: opacity 0.2s ease 0.2s;
+  -ms-transition: opacity 0.2s ease 0.2s;
+  -o-transition: opacity 0.2s ease 0.2s;
+  transition: opacity 0.2s ease 0.2s; }
 
 input {
   border-style: solid; }
