@@ -51,70 +51,152 @@ $(document).ready(function($){
 
 
 
-
-            var $header  = $('header');  /* site header */
-
-
-            var $fixedElement   = $header.find('.js-fixed');        /* check if there is a menu is fixed */
-            var _isTransparent  = $header.find('.is-transparent');  /* check if there is a menu is transparent */
+            /*
+            /*Aquí vuelvo a poner el javascript del stickyAnimantion.js para actualizarlo al cambiar tamaños*/
 
 
-            /* if menu is Fixed */
-            if ($fixedElement.length) {
+            var $fixedNav = $('.js-fixed');
+            var $isTransparent = $('.is-transparent');
+            var $background = $('.is-transparent .js-background');
+            var $fixedPadding = $('.padding-fixed');
+            var $fixedBrand = $('.width-logo-fixed');
 
-                var _fixedElementIsSubnavButton = $fixedElement.hasClass('js-subnav-bottom');
-                var heightFixedOffset = $fixedElement.offset().top;
-                var _oldTextColor, _stickyBgColor;
+            var start = $fixedNav.offset().top ;
+            var until = start + 300;
+            var offset, opacity, actualPadding, actualWidthlogo;
 
-                /* Foreground color when navbar is NOT sticky */
-                // _oldTextColor = $fixedElement.css('color');
+            if ($('.padding-fixed').length) {
+                var maxPadding = $fixedPadding.css('padding-top').replace('px', '');
+                var minPadding= 10;
+                var difPadding= maxPadding - minPadding;
+            }else{
+
+            }
+            if ($('.width-logo-fixed').length) {
+                var maxWidth = $fixedBrand.css('width').replace('px', '');
+                var minWidth= 180;
+                if(maxWidth <= 180){
+                    minWidth = maxWidth;
+                }
+                var difWidth= maxWidth - minWidth;
+                console.log('maxWidth', maxWidth)
+            }else{
+
+            }
 
 
-                // expresión regular que busca una clase que empiece por:
-                function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}
 
-                _oldTextColor = getClassStartsWith( $fixedElement[0].className,'fg-');
+            $(window).bind('scroll', function(){
+
+                offset = $(document).scrollTop();
+
+                console.log('Scrolling' , {
+                    'offset' : offset,
+                    'start': start,
+                    'until': until
+                });
+
+                /* When scroll is on top */
+                if( offset <= start ){
+
+                    // Opacity
+                    opacity = 0;
+
+                    // Logo padding
+                    //actualPadding = maxPadding;
+
+                    // Logo width
+                    //actualWidthlogo = maxWidth;
+
+                    console.log({
+                        'actualPadding':actualPadding,
+                        'actualWidthlogo': actualWidthlogo
+                    });
+
+                    if ($fixedPadding) {
+                        $fixedPadding.css({
+                            'padding-top': '',
+                            'padding-bottom': ''
+                        });
+                    }
+                    if ($fixedBrand) {
+                        $fixedBrand.css({
+                            'width': ''
+                        });
+                    }
+                    if ($isTransparent) {
+                        // background on scroll becomes opacity 1 -> true
+                        $background.css({'opacity': '' });
+                    }
+                }
+
+                /* When sticky starts */
+                else {
+
+                    /* When user is scrolling  */
+                    if( (offset > start) && (offset <= until) ){
+
+                        // Opacity
+                        opacity = 0 + offset/until;
+
+                        // Logo Padding
+                        actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
+
+                        // Logo Width
+                        actualWidthlogo = maxWidth - (( (offset-start) / until ) * difWidth);
+
+                        console.log({
+                            'actualPadding':actualPadding,
+                            'actualWidthlogo': actualWidthlogo
+                        });
 
 
+                    }
 
+                    /* When scroll is out  */
+                    else if( offset > until ){
 
-                /* on window scroll event */
-                $(window).on('scroll', function () {
+                        // Opacity
+                        opacity=1;
 
-                    if ($(window).scrollTop() > heightFixedOffset) {
+                        // Logo padding
+                        actualPadding = minPadding;
 
-                        $fixedElement.addClass('sticky');
+                        // Logo width
+                        actualWidthlogo = minWidth;
 
-                        if (_fixedElementIsSubnavButton) {
-                            $fixedElement.removeClass('subnav-bottom-absolute');
-                        }
+                        console.log({
+                            'actualPadding':actualPadding,
+                            'actualWidthlogo': actualWidthlogo
+                        });
 
-                        /* Background-color del menu fixed */
-                        _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
+                    }
 
-                        if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
-                            $fixedElement.addClass('fg-dark');
-                            $fixedElement.removeClass('fg-white');
-                        } else {
-                            $fixedElement.addClass('fg-white');
-                            $fixedElement.removeClass('fg-dark');
-                        }
-
-                    } else {
-
-                        if (_fixedElementIsSubnavButton) {
-                            $fixedElement.addClass('subnav-bottom-absolute');
-                        }
-
-                        $fixedElement.removeClass('sticky');
-                        $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
-                        $fixedElement.addClass(_oldTextColor);
+                    if ($fixedPadding) {
+                        $fixedPadding.css({
+                            'padding-top': actualPadding + 'px',
+                            'padding-bottom': actualPadding + 'px'
+                        });
+                    }
+                    if ($fixedBrand) {
+                        $fixedBrand.css({
+                            'width': actualWidthlogo + 'px'
+                        });
+                    }
+                    if ($isTransparent) {
+                        // background on scroll becomes opacity 1 -> true
+                        $background.css({'opacity': opacity });
                     }
 
 
-                });
+                }
 
-            }/* _isFixed */
+
+            });
+
+
+
+
 
         });
     });
@@ -156,7 +238,7 @@ $(document).ready(function($){
         var $subNav  = $header.find('.subnav');   /* subnav */
 
 
-
+        /*Aquí vuelvo a poner el javascript del fixHeaderPadding.js para actualizarlo al cambiar tamaño de nav*/
         var $fixHeaderPadding = $('.fix-header-padding');
         var heightNavbar = $navBar.outerHeight(true);
         var heightSubnav = $subNav.outerHeight(true);
@@ -173,10 +255,8 @@ $(document).ready(function($){
         /* Fix end */
 
 
-
         /*
-        Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixed y hacemos scroll
-         */
+        /*Aquí vuelvo a poner el javascript del stickyAnimantion.js para actualizarlo al cambiar tamaños*/
 
 
         var $fixedNav = $('.js-fixed');
@@ -185,7 +265,7 @@ $(document).ready(function($){
         var $fixedPadding = $('.padding-fixed');
         var $fixedBrand = $('.width-logo-fixed');
 
-        var start = $fixedNav.offset().top + 10;
+        var start = $fixedNav.offset().top ;
         var until = start + 300;
         var offset, opacity, actualPadding, actualWidthlogo;
 
@@ -248,7 +328,10 @@ $(document).ready(function($){
                         'width': ''
                     });
                 }
-
+                if ($isTransparent) {
+                    // background on scroll becomes opacity 1 -> true
+                    $background.css({'opacity': '' });
+                }
             }
 
             /* When sticky starts */
@@ -258,7 +341,7 @@ $(document).ready(function($){
                 if( (offset > start) && (offset <= until) ){
 
                     // Opacity
-                    opacity = 0 + offset/until;
+                    opacity = 0 + (offset-start)/until;
 
                     // Logo Padding
                     actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
@@ -304,16 +387,17 @@ $(document).ready(function($){
                         'width': actualWidthlogo + 'px'
                     });
                 }
+                if ($isTransparent) {
+                    // background on scroll becomes opacity 1 -> true
+                    $background.css({'opacity': opacity });
+                }
+
 
             }
 
-            /* Update css */
-            if ($isTransparent) {
-                // background on scroll becomes opacity 1 -> true
-                $background.css({'opacity': opacity});
-            }
 
         });
+
 
 
     });

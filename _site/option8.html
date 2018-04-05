@@ -20,11 +20,6 @@
 </head>
 
 
-<script type="text/javascript">
-    /* global design variables */
-    var GLOBAL_SELECTED_PALETTE = "palette-one";
-
-</script>
 
 <body>
 
@@ -50,33 +45,18 @@
     <h2>Tamaño del logo</h2>
     <input class="option-slider"  type="range" min="0" max="6" value="3" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
     <br><br>
-    <div class="group-options padding-xs">
-        <h2>Topbar border bottom</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="border-" data-value="bottom">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="border-" data-value="">NO</a>
 
-        <h2>Topbar background</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="bg-" data-value="one">1</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".topbar" data-option="bg-" data-value="two">2</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".topbar" data-option="bg-" data-value="three">3</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".topbar" data-option="bg-" data-value="four">4</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".topbar" data-option="bg-" data-value="five">5</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-light" data-element=".topbar" data-option="bg-" data-value="light">L</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-gray" data-element=".topbar" data-option="bg-" data-value="gray">G</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat-inverse" data-element=".topbar" data-option="bg-" data-value="white">W</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-black" data-element=".topbar" data-option="bg-" data-value="black">B</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-dark" data-element=".topbar" data-option="bg-" data-value="dark">D</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat-inverse" data-element=".topbar" data-option="bg-" data-value="transparent">NO</a>
+    <!--Topbar-->
+    
 
-        <h2>Topbar color style</h2>
-    <a href="#" class="js-option btn btn-xs btn--flat bg-dark " data-element=".topbar .js-fg" data-option="fg-" data-value="white">Light</a>
-    <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".topbar .js-fg" data-option="fg-" data-value="dark">Dark</a>
-    </div>
-    <br><br>
 
     <div class="group-options padding-xs">
     <h2>Nav Padding</h2>
-    <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
+        <h2>Is transparent</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="transparent">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="notransparent">NO</a>
+
+        <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
         <h2>Nav border bottom</h2>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
@@ -118,52 +98,9 @@
    </div>
 
 <br>
+    
 
-    <div class="group-options padding-xs">
-        <h2>Subnav border bottom</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="border-" data-value="bottom">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="border-" data-value="">NO</a>
-
-        <h2>Subnav background</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="one">1</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="two">2</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="three">3</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-four" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="four">4</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-five" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="five">5</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-light" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="light">L</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-gray" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="gray">G</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat-inverse" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="white">W</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-black" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="black">B</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-dark" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="dark">D</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat-inverse" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="transparent">NO</a>
-
-        <h2>Subnav color style</h2>
-        <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".subnav .js-fg" data-option="fg-" data-value="white">Light</a>
-        <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".subnav .js-fg" data-option="fg-" data-value="dark">Dark</a>
-
-</div>
-<br>
-    <div class="group-options padding-xs">
-        <h2>Hero Padding</h2>
-        <input class="option-slider"  type="range" min="0" max="4" value="4" data-option="padding-v" data-values='["xxs","s","l","xl","xxl"]' data-element=".js-hero">
-
-        <h2>Hero align</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="left">left</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="center">center</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="right">right</a>
-
-        <h2>Hero position</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="left">left</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="center">center</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="right">right</a>
-        <h2>Nav color style</h2>
-        <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".hero .js-fg" data-option="fg-" data-value="white">Light</a>
-        <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".hero .js-fg" data-option="fg-" data-value="dark">Dark</a>
-        <a href="#" class="js-option btn btn-xs bg-white fg-gray" data-element=".hero .js-fg" data-option="fg-" data-value="gray">Gray</a>
-
-
-    </div>
-    <br>
+    
     <!--<h2>Bloque superpuesto</h2>-->
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".block" data-option="block-" data-value="floating">SI</a>-->
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".block" data-option="block-" data-value="no-floating">NO</a>-->
@@ -187,13 +124,13 @@
 
 
       <!-- navbar -->
- <div class="navbar  navbar-absolute  js-border  js-fg-nav">
+ <div class="navbar navbar-absolute js-fg-nav">
 
 
 
      
      
-   <div class="logobar navbar-logo  position-relative js-fixed    fg-white js-fg ">
+   <div class="logobar navbar-logo js-logobar position-relative js-fixed    fg-white js-fg  js-border">
        
     <div class="searchbar bg-white  js-searchbar">
 

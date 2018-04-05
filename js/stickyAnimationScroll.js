@@ -1,8 +1,8 @@
 $(document).ready(function($){
 
-/*
-Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixed y hacemos scroll
- */
+    /*
+    Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixed y hacemos scroll
+     */
 
 
     var $fixedNav = $('.js-fixed');
@@ -11,8 +11,8 @@ Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixe
     var $fixedPadding = $('.padding-fixed');
     var $fixedBrand = $('.width-logo-fixed');
 
-    var start = $fixedNav.offset().top + 10;
-    var until = start + 300;
+    var start = $fixedNav.offset().top;
+    var until = start + 200;
     var offset, opacity, actualPadding, actualWidthlogo;
 
     if ($('.padding-fixed').length) {
@@ -50,7 +50,7 @@ Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixe
         if( offset <= start ){
 
             // Opacity
-            opacity = 0;
+           // opacity = 0;
 
             // Logo padding
             //actualPadding = maxPadding;
@@ -74,7 +74,10 @@ Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixe
                     'width': ''
                 });
             }
-
+            if ($isTransparent) {
+                // background on scroll becomes opacity 1 -> true
+                $background.css({'opacity': '' });
+            }
         }
 
         /* When sticky starts */
@@ -84,7 +87,7 @@ Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixe
             if( (offset > start) && (offset <= until) ){
 
                 // Opacity
-                opacity = 0 + offset/until;
+                opacity = 0 + (offset-start)/until;
 
                 // Logo Padding
                 actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
@@ -130,14 +133,14 @@ Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixe
                     'width': actualWidthlogo + 'px'
                 });
             }
+            if ($isTransparent) {
+                // background on scroll becomes opacity 1 -> true
+                $background.css({'opacity': opacity });
+            }
+
 
         }
 
-        /* Update css */
-        if ($isTransparent) {
-            // background on scroll becomes opacity 1 -> true
-            $background.css({'opacity': opacity});
-        }
 
     });
 });

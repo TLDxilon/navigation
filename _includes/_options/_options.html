@@ -20,6 +20,9 @@
     <h2>Tamaño del logo</h2>
     <input class="option-slider"  type="range" min="0" max="6" value="3" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
     <br><br>
+
+    <!--Topbar-->
+    {% if page.topbar =='true' %}
     <div class="group-options padding-xs">
         <h2>Topbar border bottom</h2>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="border-" data-value="bottom">YES</a>
@@ -43,10 +46,16 @@
     <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".topbar .js-fg" data-option="fg-" data-value="dark">Dark</a>
     </div>
     <br><br>
+    {% endif %}
+
 
     <div class="group-options padding-xs">
     <h2>Nav Padding</h2>
-    <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
+        <h2>Is transparent</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="transparent">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="notransparent">NO</a>
+
+        <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
         <h2>Nav border bottom</h2>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
@@ -88,8 +97,12 @@
    </div>
 
 <br>
-
+    {% if page.navigation == 'bottom' or page.navigation == 'subnav' %}
     <div class="group-options padding-xs">
+        <h2>Is transparent</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="is-" data-value="transparent">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="is-" data-value="notransparent">NO</a>
+
         <h2>Subnav border bottom</h2>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="border-" data-value="bottom">YES</a>
         <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="border-" data-value="">NO</a>
@@ -113,6 +126,9 @@
 
 </div>
 <br>
+    {% endif %}
+
+    {% if page.hero =='true' %}
     <div class="group-options padding-xs">
         <h2>Hero Padding</h2>
         <input class="option-slider"  type="range" min="0" max="4" value="4" data-option="padding-v" data-values='["xxs","s","l","xl","xxl"]' data-element=".js-hero">
@@ -134,6 +150,7 @@
 
     </div>
     <br>
+    {% endif %}
     <!--<h2>Bloque superpuesto</h2>-->
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".block" data-option="block-" data-value="floating">SI</a>-->
     <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".block" data-option="block-" data-value="no-floating">NO</a>-->

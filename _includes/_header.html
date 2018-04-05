@@ -2,7 +2,7 @@
 
 
       <!-- navbar -->
- <div class="navbar {{ page.navbar.border }} navbar-absolute  js-border  js-fg-nav">
+ <div class="navbar navbar-absolute js-fg-nav">
 
 
 
@@ -17,7 +17,7 @@
 
      {% else %}
      {% endif %}
-   <div class="logobar navbar-logo {% if page.navbar.is-fixed == 'true' %} position-relative js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %}   fg-{{ page.navbar.fg }} js-fg ">
+   <div class="logobar navbar-logo js-logobar{% if page.navbar.is-fixed == 'true' %} position-relative js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %}   fg-{{ page.navbar.fg }} js-fg {{ page.navbar.border }} js-border">
        {% include _elements/_searchbar.html  js-class='js-searchbar' %}
        <div class="{{ page.container }} js-container">
            <div class="navbar-inner flexbox-row-nowrap">
