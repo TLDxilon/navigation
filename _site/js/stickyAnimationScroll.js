@@ -1,5 +1,9 @@
 $(document).ready(function($){
 
+/*
+Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixed y hacemos scroll
+ */
+
 
     var $fixedNav = $('.js-fixed');
     var $isTransparent = $('.is-transparent');
@@ -47,16 +51,21 @@ $(document).ready(function($){
 
 
 
-            // Logo padding
-            actualPadding = maxPadding;
+            // // Logo padding
+            // actualPadding = maxPadding;
+            //
+            // // Logo width
+            // actualWidthlogo = maxWidth;
+            //
+            // console.log({
+            //     'actualPadding':actualPadding,
+            //     'actualWidthlogo': actualWidthlogo
+            // });
 
-            // Logo width
-            actualWidthlogo = maxWidth;
 
-            console.log({
-                'actualPadding':actualPadding,
-                'actualWidthlogo': actualWidthlogo
-            });
+            $fixedPadding.attr('style','');
+            $fixedBrand.attr('style','');
+
 
         /* When user is scrolling  */
         }else if( (offset > start) && (offset <= until) ){
@@ -100,6 +109,9 @@ $(document).ready(function($){
         if ($isTransparent) {
             // background on scroll becomes opacity 1 -> true
             $background.css({'opacity': opacity});
+
+
+
         }else{
 
         }
