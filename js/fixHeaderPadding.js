@@ -10,7 +10,7 @@ $(document).ready(function($){
 
 
 
-    var $fixHeaderPadding = $header.find('.fix-header-padding');
+    var $fixHeaderPadding = $('.fix-header-padding');
     var heightNavbar = $navBar.outerHeight(true);
     var heightSubnav = $subNav.outerHeight(true);
 
