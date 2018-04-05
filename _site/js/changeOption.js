@@ -174,8 +174,14 @@ $(document).ready(function($){
 
 
 
-        var $fixedNav = $('.js-fixed');
+        /*
+        Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixed y hacemos scroll
+         */
 
+
+        var $fixedNav = $('.js-fixed');
+        var $isTransparent = $('.is-transparent');
+        var $background = $('.is-transparent .js-background');
         var $fixedPadding = $('.padding-fixed');
         var $fixedBrand = $('.width-logo-fixed');
 
@@ -193,6 +199,9 @@ $(document).ready(function($){
         if ($('.width-logo-fixed').length) {
             var maxWidth = $fixedBrand.css('width').replace('px', '');
             var minWidth= 180;
+            if(maxWidth <= 180){
+                minWidth = maxWidth;
+            }
             var difWidth= maxWidth - minWidth;
             console.log('maxWidth', maxWidth)
         }else{
@@ -214,64 +223,96 @@ $(document).ready(function($){
             /* When scroll is on top */
             if( offset <= start ){
 
+                // Opacity
+                opacity = 0;
 
                 // Logo padding
-                actualPadding = maxPadding;
+                //actualPadding = maxPadding;
 
                 // Logo width
-                actualWidthlogo = maxWidth;
+                //actualWidthlogo = maxWidth;
 
                 console.log({
                     'actualPadding':actualPadding,
                     'actualWidthlogo': actualWidthlogo
                 });
+
+                if ($fixedPadding) {
+                    $fixedPadding.css({
+                        'padding-top': '',
+                        'padding-bottom': ''
+                    });
+                }
+                if ($fixedBrand) {
+                    $fixedBrand.css({
+                        'width': ''
+                    });
+                }
+
+            }
+
+            /* When sticky starts */
+            else {
 
                 /* When user is scrolling  */
-            }else if( (offset > start) && (offset <= until) ){
+                if( (offset > start) && (offset <= until) ){
+
+                    // Opacity
+                    opacity = 0 + offset/until;
+
+                    // Logo Padding
+                    actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
+
+                    // Logo Width
+                    actualWidthlogo = maxWidth - (( (offset-start) / until ) * difWidth);
+
+                    console.log({
+                        'actualPadding':actualPadding,
+                        'actualWidthlogo': actualWidthlogo
+                    });
 
 
-                // Logo Padding
-                actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
-
-                // Logo Width
-                actualWidthlogo = maxWidth - (( (offset-start) / until ) * difWidth);
-
-                console.log({
-                    'actualPadding':actualPadding,
-                    'actualWidthlogo': actualWidthlogo
-                });
+                }
 
                 /* When scroll is out  */
-            }else if( offset > until ){
+                else if( offset > until ){
 
+                    // Opacity
+                    opacity=1;
 
-                // Logo padding
-                actualPadding = minPadding;
+                    // Logo padding
+                    actualPadding = minPadding;
 
-                // Logo width
-                actualWidthlogo = minWidth;
+                    // Logo width
+                    actualWidthlogo = minWidth;
 
-                console.log({
-                    'actualPadding':actualPadding,
-                    'actualWidthlogo': actualWidthlogo
-                });
+                    console.log({
+                        'actualPadding':actualPadding,
+                        'actualWidthlogo': actualWidthlogo
+                    });
+
+                }
+
+                if ($fixedPadding) {
+                    $fixedPadding.css({
+                        'padding-top': actualPadding + 'px',
+                        'padding-bottom': actualPadding + 'px'
+                    });
+                }
+                if ($fixedBrand) {
+                    $fixedBrand.css({
+                        'width': actualWidthlogo + 'px'
+                    });
+                }
 
             }
 
             /* Update css */
-
-
-            if ($fixedPadding) {
-                $fixedPadding.css({
-                    'padding-top': actualPadding + 'px',
-                    'padding-bottom': actualPadding + 'px'
-                });
+            if ($isTransparent) {
+                // background on scroll becomes opacity 1 -> true
+                $background.css({'opacity': opacity});
             }
-            if ($fixedBrand) {
-                $fixedBrand.css({
-                    'width': actualWidthlogo + 'px'
-                });
-            }
+
         });
 
 
