@@ -9,14 +9,12 @@ $(document).ready(function($) {
 
 
     /* if menu is Fixed */
-    if ($fixedElement.length) {
+    if ($fixedElement.length){
 
         var _fixedElementIsSubnavButton = $fixedElement.hasClass('js-subnav-bottom');
         var heightFixedOffset = $fixedElement.offset().top;
         var _oldTextColor, _stickyBgColor;
 
-        /* Foreground color when navbar is NOT sticky */
-       // _oldTextColor = $fixedElement.css('color');
 
 
         // expresión regular que busca una clase que empiece por:
@@ -38,16 +36,19 @@ $(document).ready(function($) {
                     $fixedElement.removeClass('subnav-bottom-absolute');
                 }
 
-                /* Background-color del menu fixed */
-                _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
+                if(_isTransparent){
+                    /* Background-color del menu fixed */
+                    _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
 
-                if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
-                    $fixedElement.addClass('fg-dark');
-                    $fixedElement.removeClass('fg-white');
-                } else {
-                    $fixedElement.addClass('fg-white');
-                    $fixedElement.removeClass('fg-dark');
+                    if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
+                        $fixedElement.addClass('fg-dark');
+                        $fixedElement.removeClass('fg-white');
+                    } else {
+                        $fixedElement.addClass('fg-white');
+                        $fixedElement.removeClass('fg-dark');
+                    }
                 }
+
 
             } else {
 
@@ -56,8 +57,12 @@ $(document).ready(function($) {
                 }
 
                 $fixedElement.removeClass('sticky');
+
+                if (_isTransparent) {
                 $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
-                $fixedElement.addClass(_oldTextColor);
+                    $fixedElement.addClass(_oldTextColor);
+                }
+
             }
 
 
@@ -67,3 +72,5 @@ $(document).ready(function($) {
 
 
 });
+
+

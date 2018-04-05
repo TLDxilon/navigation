@@ -4,6 +4,7 @@ $(document).ready(function($){
     /*Menú options lateral*/
     var $html           = $('html');
     var $changeOption = $('.js-option');
+    var $changeOptionColor = $('.js-option-color');
     var $openOptions = $('.open-options');
     var $closeOptions = $('.close-options');
 
@@ -85,7 +86,6 @@ $(document).ready(function($){
             }
 
 
-
             $(window).bind('scroll', function(){
 
                 offset = $(document).scrollTop();
@@ -102,28 +102,12 @@ $(document).ready(function($){
                     // Opacity
                     opacity = 0;
 
-                    // Logo padding
-                    //actualPadding = maxPadding;
-
-                    // Logo width
-                    //actualWidthlogo = maxWidth;
 
                     console.log({
                         'actualPadding':actualPadding,
                         'actualWidthlogo': actualWidthlogo
                     });
 
-                    if ($fixedPadding) {
-                        $fixedPadding.css({
-                            'padding-top': '',
-                            'padding-bottom': ''
-                        });
-                    }
-                    if ($fixedBrand) {
-                        $fixedBrand.css({
-                            'width': ''
-                        });
-                    }
                     if ($isTransparent) {
                         // background on scroll becomes opacity 1 -> true
                         $background.css({'opacity': '' });
@@ -137,52 +121,19 @@ $(document).ready(function($){
                     if( (offset > start) && (offset <= until) ){
 
                         // Opacity
-                        opacity = 0 + offset/until;
+                        opacity = 0 + (offset-start)/until;
 
-                        // Logo Padding
-                        actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
-
-                        // Logo Width
-                        actualWidthlogo = maxWidth - (( (offset-start) / until ) * difWidth);
-
-                        console.log({
-                            'actualPadding':actualPadding,
-                            'actualWidthlogo': actualWidthlogo
-                        });
 
 
                     }
 
                     /* When scroll is out  */
                     else if( offset > until ){
-
                         // Opacity
                         opacity=1;
 
-                        // Logo padding
-                        actualPadding = minPadding;
-
-                        // Logo width
-                        actualWidthlogo = minWidth;
-
-                        console.log({
-                            'actualPadding':actualPadding,
-                            'actualWidthlogo': actualWidthlogo
-                        });
-
                     }
 
-                    if ($fixedPadding) {
-                        $fixedPadding.css({
-                            'padding-top': actualPadding + 'px',
-                            'padding-bottom': actualPadding + 'px'
-                        });
-                    }
-                    if ($fixedBrand) {
-                        $fixedBrand.css({
-                            'width': actualWidthlogo + 'px'
-                        });
-                    }
                     if ($isTransparent) {
                         // background on scroll becomes opacity 1 -> true
                         $background.css({'opacity': opacity });
@@ -194,12 +145,54 @@ $(document).ready(function($){
 
             });
 
-
-
-
-
         });
+
     });
+
+
+    $changeOptionColor.each(function(index) {
+        $(this).on('click', function(){
+            event.preventDefault();
+            var dataValue         = $(this).data('value');
+            var dataOption        = $(this).data('option');
+            var dataElement       = $(this).data('element');
+            var $element          = $(dataElement);
+
+            // expresión regular que busca si esa clase existe ya
+            // y la elimina
+            $element.attr('class', function(i, c){
+                var pattern = '(^|\\s)' + dataOption + '\\S+';
+                var myReg  = new RegExp(pattern, "g");
+                return c.replace(myReg, '');
+            });
+
+            // actualizo con la nueva clase
+            $element.addClass(dataOption + dataValue);
+
+
+            /*Change colors según fondo*/
+            var _stickyBgColor;
+            var $changeFg = $('.js-change-color');
+            /* Background-color del menu fixed */
+            _stickyBgColor = $changeFg.find('.js-background-color').css('background-color');
+
+            if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
+                $changeFg.addClass('fg-dark');
+                $changeFg.removeClass('fg-white');
+            }
+            else {
+                $changeFg.addClass('fg-white');
+                $changeFg.removeClass('fg-dark');
+            }
+        });
+
+
+
+    });
+
+
+
+
 
 
     var $sliderOptions = $('.option-slider');

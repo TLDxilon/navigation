@@ -1,20 +1,23 @@
-<div class="topbar padding-v-s bg-{{ page.topbar-background }}">
+<div class="topbar padding-v-s position-relative js-changecolor fg-{{ page.topbar-fg }} js-fg">
     <div class="{{ page.container }} js-container">
       <div class="topbar-inner">
 
 
-                {% if site.phonenumber %}<a class="topbar__item phone-item fg-white js-fg" href="tel:{{ site.phonenumber }}"><span class="icon icon-phone2"></span>{{ site.phonenumber }}</a>{% endif %}
-                {% if site.email %}<a class="topbar__item email-item fg-white js-fg" href="mailto:{{ site.email }}"><span class="icon icon-mail2"></span>{{ site.email }}</a>{% endif %}
+                {% if site.phonenumber %}<a class="topbar__item phone-item" href="tel:{{ site.phonenumber }}"><span class="icon icon-phone2"></span>{{ site.phonenumber }}</a>{% endif %}
+                {% if site.email %}<a class="topbar__item email-item" href="mailto:{{ site.email }}"><span class="icon icon-mail2"></span>{{ site.email }}</a>{% endif %}
 
 
             <div class="topbar__item  width-full topbar-social text-align-right">
-                {% if site.icontwitter %}<a class="social-item fg-white js-fg" href="{{ site.twitter }}"><span class="icon icon-twitter"></span></a>{% endif %}
-                {% if site.iconpinterest %}<a class="social-item fg-white js-fg" href="{{ site.pinterest }}"><span class="icon icon-pinterest"></span></a>{% endif %}
-                {% if site.iconlinkedin %}<a class="social-item fg-white js-fg" href="{{ site.linkedin }}"><span class="icon icon-linkedin"></span></a>{% endif %}
-                {% if site.iconflickr %}<a class="social-item fg-white js-fg" href="{{ site.flickr }}"><span class="icon icon-flickr"></span></a>{% endif %}
-                {% if site.iconvimeo %}<a class="social-item fg-white js-fg" href="{{ site.vimeo }}"><span class="icon icon-vimeo"></span></a>{% endif %}
-                {% if site.iconyoutube %}<a class="social-item fg-white js-fg" href="{{ site.youtube }}"><span class="icon icon-youtube"></span></a>{% endif %}
+                {% if site.icontwitter %}<a class="social-item" href="{{ site.twitter }}"><span class="icon icon-twitter"></span></a>{% endif %}
+                {% if site.iconpinterest %}<a class="social-item" href="{{ site.pinterest }}"><span class="icon icon-pinterest"></span></a>{% endif %}
+                {% if site.iconlinkedin %}<a class="social-item" href="{{ site.linkedin }}"><span class="icon icon-linkedin"></span></a>{% endif %}
+                {% if site.iconflickr %}<a class="social-item" href="{{ site.flickr }}"><span class="icon icon-flickr"></span></a>{% endif %}
+                {% if site.iconvimeo %}<a class="social-item" href="{{ site.vimeo }}"><span class="icon icon-vimeo"></span></a>{% endif %}
+                {% if site.iconyoutube %}<a class="social-item" href="{{ site.youtube }}"><span class="icon icon-youtube"></span></a>{% endif %}
             </div>
         </div>
+
+
     </div>
+    {% include _elements/_background-topbar.html %}
 </div>
