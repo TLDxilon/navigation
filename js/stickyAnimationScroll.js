@@ -1,5 +1,9 @@
 $(document).ready(function($){
 
+/*
+Animación de opacidad, tamaño del logo y padding de la cabecera cuando es fixed y hacemos scroll
+ */
+
 
     var $fixedNav = $('.js-fixed');
     var $isTransparent = $('.is-transparent');
