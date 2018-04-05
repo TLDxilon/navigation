@@ -1,8 +1,6 @@
 
 $(document).ready(function($){
 
-
-
     /*Menú options lateral*/
     var $html           = $('html');
     var $changeOption = $('.js-option');
@@ -14,17 +12,16 @@ $(document).ready(function($){
      Para cerrar y abril el panel lateral
     */
 
-    $openOptions.on('click', function(){
+    $openOptions.on('click', function(event){
         event.preventDefault();
         $html.addClass('panel-is-open');
 
     });
-    $closeOptions.on('click', function(){
+    $closeOptions.on('click', function(event){
         event.preventDefault();
         $html.removeClass('panel-is-open');
 
     });
-
 
 
 
@@ -68,32 +65,13 @@ $(document).ready(function($){
 
             }
 
-            var color = $('.navbar').find('.js-background-color').css('background-color');
-
-            if (checkContrastForegroundColor(color) === 'dark') {
-                $('.navbar-logo, .subnav').addClass('fg-dark');
-                $('.navbar-logo, .subnav').removeClass('fg-white');
-            } else {
-                $('.navbar-logo, .subnav').addClass('fg-white');
-                $('.navbar-logo, .subnav').removeClass('fg-dark');
-            }
-
-
 
 
         });
     });
 
 
-
-
-
-
-
-
     var $sliderOptions = $('.option-slider');
-
-
 
     /*
      Range control init panel lateral
@@ -119,12 +97,6 @@ $(document).ready(function($){
 
         console.log("Clase: ." + dataOption+ "-" + dataValues[value]);
 
-
-        var heightNavbar = $('.navbar').outerHeight(true);
-        var heightSubnav = $('.subnav').outerHeight(true);
-
-
-        $('.fix-header-padding').css('padding-top', (heightNavbar) + 'px').css('padding-bottom', (heightSubnav) + 'px');
 
 
 
