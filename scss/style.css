@@ -1430,7 +1430,7 @@ h2 {
 .navbar-absolute {
   position: absolute;
   width: 100%;
-  z-index: 0; }
+  z-index: 1; }
 
 .subnav-bottom-absolute {
   bottom: 0;
