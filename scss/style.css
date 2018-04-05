@@ -434,7 +434,6 @@ h2 {
   .background .background-color {
     width: 100%;
     height: 100%;
-    z-index: -3;
     position: absolute; }
   .background .background-image {
     width: 100%;
@@ -1430,7 +1429,8 @@ h2 {
 
 .navbar-absolute {
   position: absolute;
-  width: 100%; }
+  width: 100%;
+  z-index: 0; }
 
 .subnav-bottom-absolute {
   bottom: 0;
