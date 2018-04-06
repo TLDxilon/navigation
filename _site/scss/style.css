@@ -930,7 +930,7 @@ h2 {
   border-width: 2px; }
 
 /* COLORES */
-.fg-one, .menu--simple .active span, .menu--simple .nav-link:hover span, .menu--line-bottom .nav-link:hover, .menu--line-bottom li.active .nav-link, .menu--line-bottom li.active .nav-link:after, .menu--line-top .nav-link:hover, .menu--line-top li.active .nav-link, .menu--line-top li.active .nav-link:after, .form-white .btn, .js-option:hover {
+.fg-one, .menu--simple .active span, .menu--simple .nav-link:hover span, .menu--line-bottom .nav-link:hover, .menu--line-bottom li.active .nav-link, .menu--line-bottom li.active .nav-link:after, .menu--line-top .nav-link:hover, .menu--line-top li.active .nav-link, .menu--line-top li.active .nav-link:after, .form-white .btn, .options .btn:hover {
   color: #00BDB6; }
 .fg-two {
   color: #3A3F56; }
@@ -946,7 +946,7 @@ h2 {
   color: #D8D8D8; }
 .fg-gray, .input-search::placeholder, .search-input .tools__item-search::placeholder {
   color: #B0B0B0; }
-.fg-dark, .input-search:focus, .search-close .search-close-link, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .group-options a, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .js-option-mobile {
+.fg-dark, .input-search:focus, .search-close .search-close-link, .bg-white a, .searchbar a, .searchbar.bg-transparent a, .form-white .btn a, .navbar-fixed .bg-transparent a, .site-one a, .options .open-options a, .options .close-options a, .option-slider a, .bg-white--hover:hover, .form-white .btn:hover, .bg-light a, .options a, .bg-light--hover:hover, .navbar-fixed .bg-transparent, .js-option-mobile {
   color: #4A4A4A; }
 .fg-black, .search-close .search-close-link:hover {
   color: #000000; }
@@ -984,7 +984,7 @@ h2 {
   .bg-five--hover:hover {
     background: #ffa358;
     border-color: #ffa358; }
-.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed .bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider, .group-options {
+.bg-white, .searchbar, .searchbar.bg-transparent, .form-white .btn, .navbar-fixed .bg-transparent, .site-one, .options .open-options, .options .close-options, .option-slider {
   background: #FFFFFF; }
   .bg-white--hover:hover, .form-white .btn:hover {
     background: #e8e3e3;
@@ -1760,10 +1760,10 @@ h2 {
   .options .close-options {
     z-index: 111; }
 
-.js-option {
+.options .btn {
   font-size: 0.8em;
   margin: 2px 0; }
-  .js-option.btn {
+  .options .btn.btn {
     border: 0; }
 
 .js-option-mobile {
@@ -1813,6 +1813,9 @@ h2 {
     width: 25px;
     height: 25px;
     cursor: pointer; }
+
+.group-options {
+  background: #f2f2f2; }
 
 .panel-is-open .options {
   display: block; }

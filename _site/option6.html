@@ -38,9 +38,9 @@
     <a href="#" class="js-option btn btn-s  btn--flat bg-two border-radius-s" data-element=".js-btn" data-option="border-radius-" data-value="s">Little</a>
     <a href="#" class="js-option btn btn-s  btn--flat bg-two border-radius-l" data-element=".js-btn" data-option="border-radius-" data-value="xl">Rounded</a>
     <br>
-    <h2>Logo flotante</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".static-nav-logo" data-option="logo-" data-value="static">No</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>
+    <!--<h2>Logo flotante</h2>-->
+    <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="static">No</a>-->
+    <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>-->
 
     <h2>Tamaño del logo</h2>
     <input class="option-slider"  type="range" min="0" max="6" value="3" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
@@ -49,9 +49,15 @@
     <!--Topbar-->
     
     <div class="group-options padding-xs">
+        <h2>TOPBAR</h2>
+        <hr>
+        <h2>Is transparent</h2>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".topbar" data-option="is-" data-value="transparent">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".topbar" data-option="is-" data-value="notransparent">NO</a>
+
         <h2>Topbar border bottom</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="border-" data-value="bottom">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".topbar" data-option="border-" data-value="">NO</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".topbar" data-option="border-" data-value="bottom">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".topbar" data-option="border-" data-value="">NO</a>
 
         <h2>Topbar background</h2>
         <a href="#" class="js-option-color btn btn-xs  btn--flat bg-one" data-element=".topbar .js-background-color" data-option="bg-" data-value="one">1</a>
@@ -64,7 +70,6 @@
         <a href="#" class="js-option-color btn btn-xs  btn--flat-inverse" data-element=".topbar .js-background-color" data-option="bg-" data-value="white">W</a>
         <a href="#" class="js-option-color btn btn-xs  btn--flat bg-black" data-element=".topbar .js-background-color" data-option="bg-" data-value="black">B</a>
         <a href="#" class="js-option-color btn btn-xs  btn--flat bg-dark" data-element=".topbar .js-background-color" data-option="bg-" data-value="dark">D</a>
-        <a href="#" class="js-option-color btn btn-xs  btn--flat-inverse" data-element=".topbar .js-background-color" data-option="bg-" data-value="transparent">NO</a>
 
         <h2>Topbar color style</h2>
     <a href="#" class="js-option btn btn-xs btn--flat bg-dark " data-element=".topbar.js-fg" data-option="fg-" data-value="white">Light</a>
@@ -75,15 +80,16 @@
 
 
     <div class="group-options padding-xs">
-
+        <h2>NAV LOGO</h2>
+        <hr>
         <h2>Is transparent</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="transparent">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="notransparent">NO</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-logobar" data-option="is-" data-value="transparent">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-logobar" data-option="is-" data-value="notransparent">NO</a>
         <h2>Nav Padding</h2>
         <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
         <h2>Nav border bottom</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-border" data-option="border-" data-value="">NO</a>
 
 
     <h2>Nav background</h2>
@@ -113,11 +119,11 @@
 
 
     <h2>Menú style</h2>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">Simple</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">Back all</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">Line bottom</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">Line top</a><br>
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a> |
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">Simple</a>|
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">Back all</a>|
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">Line bottom</a>|
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">Line top</a>
 
    </div>
 
@@ -281,7 +287,7 @@
                        
 
 
-                        <div class="tools__item tools__item-cta hidden-mobile "><a class="btn btn-s  fg-white btn--flat bg-one bg-one--hover border-color-one  bg-    border-radius-s border-radius-  js-btn js-fg " href="">Log in</a>
+                        <div class="tools__item tools__item-cta hidden-mobile "><a class="btn btn-s  btn--flat bg-one bg-one--hover border-color-one  bg-  border-radius-s border-radius-  js-btn js-fg " href="">Log in</a>
 
 </div>
 
@@ -384,6 +390,17 @@
                        Mauris mollis at nibh ve . Vivamus hendrerit auctor mauris, et aliquet urna feugiat et. Morbi eu dui posuere, consectetur velit nec, auctor diam. Sed eu imperdiet magna. Sed gravida, metus sollicitudin vulputate consectetur, orci sem tempus sapien, vitae porta lacus ligula ut metus.
 
                         Cras dapibus tincidunt lobortis. Nulla mattis sem nec gravida commodo. Aliquam placerat congue nisl sed gravida. Vestibulum rutrum maximus est, a consectetur nulla.
+                    <p>
+                        <a class="open-options" href="#">Abrir opciones</a><br>
+                        <a class="fg-dark padding-h-s" href="option1">Option 1 </a>
+                        <a class="fg-dark padding-h-s" href="option2">Option 2 </a>
+                        <a class="fg-dark padding-h-s"  href="option3">Option 3 </a>
+                        <a class="fg-dark padding-h-s"  href="option4">Option 4 </a>
+                        <a class="fg-dark padding-h-s"  href="option5">Option 5 </a>
+                        <a class="fg-dark padding-h-s"  href="option6">Option 6 </a>
+                        <a class="fg-dark padding-h-s"  href="option7">Option 7 </a>
+                        <a class="fg-dark padding-h-s"  href="option8">Option 8 </a>
+                    </p>
                     </p>
 
                 </div>
@@ -410,6 +427,17 @@
                        Mauris mollis at nibh ve . Vivamus hendrerit auctor mauris, et aliquet urna feugiat et. Morbi eu dui posuere, consectetur velit nec, auctor diam. Sed eu imperdiet magna. Sed gravida, metus sollicitudin vulputate consectetur, orci sem tempus sapien, vitae porta lacus ligula ut metus.
 
                         Cras dapibus tincidunt lobortis. Nulla mattis sem nec gravida commodo. Aliquam placerat congue nisl sed gravida. Vestibulum rutrum maximus est, a consectetur nulla.
+                    <p>
+                        <a class="open-options" href="#">Abrir opciones</a><br>
+                        <a class="fg-dark padding-h-s" href="option1">Option 1 </a>
+                        <a class="fg-dark padding-h-s" href="option2">Option 2 </a>
+                        <a class="fg-dark padding-h-s"  href="option3">Option 3 </a>
+                        <a class="fg-dark padding-h-s"  href="option4">Option 4 </a>
+                        <a class="fg-dark padding-h-s"  href="option5">Option 5 </a>
+                        <a class="fg-dark padding-h-s"  href="option6">Option 6 </a>
+                        <a class="fg-dark padding-h-s"  href="option7">Option 7 </a>
+                        <a class="fg-dark padding-h-s"  href="option8">Option 8 </a>
+                    </p>
                     </p>
 
                 </div>
@@ -436,6 +464,17 @@
                        Mauris mollis at nibh ve . Vivamus hendrerit auctor mauris, et aliquet urna feugiat et. Morbi eu dui posuere, consectetur velit nec, auctor diam. Sed eu imperdiet magna. Sed gravida, metus sollicitudin vulputate consectetur, orci sem tempus sapien, vitae porta lacus ligula ut metus.
 
                         Cras dapibus tincidunt lobortis. Nulla mattis sem nec gravida commodo. Aliquam placerat congue nisl sed gravida. Vestibulum rutrum maximus est, a consectetur nulla.
+                    <p>
+                        <a class="open-options" href="#">Abrir opciones</a><br>
+                        <a class="fg-dark padding-h-s" href="option1">Option 1 </a>
+                        <a class="fg-dark padding-h-s" href="option2">Option 2 </a>
+                        <a class="fg-dark padding-h-s"  href="option3">Option 3 </a>
+                        <a class="fg-dark padding-h-s"  href="option4">Option 4 </a>
+                        <a class="fg-dark padding-h-s"  href="option5">Option 5 </a>
+                        <a class="fg-dark padding-h-s"  href="option6">Option 6 </a>
+                        <a class="fg-dark padding-h-s"  href="option7">Option 7 </a>
+                        <a class="fg-dark padding-h-s"  href="option8">Option 8 </a>
+                    </p>
                     </p>
 
                 </div>
@@ -462,6 +501,17 @@
                        Mauris mollis at nibh ve . Vivamus hendrerit auctor mauris, et aliquet urna feugiat et. Morbi eu dui posuere, consectetur velit nec, auctor diam. Sed eu imperdiet magna. Sed gravida, metus sollicitudin vulputate consectetur, orci sem tempus sapien, vitae porta lacus ligula ut metus.
 
                         Cras dapibus tincidunt lobortis. Nulla mattis sem nec gravida commodo. Aliquam placerat congue nisl sed gravida. Vestibulum rutrum maximus est, a consectetur nulla.
+                    <p>
+                        <a class="open-options" href="#">Abrir opciones</a><br>
+                        <a class="fg-dark padding-h-s" href="option1">Option 1 </a>
+                        <a class="fg-dark padding-h-s" href="option2">Option 2 </a>
+                        <a class="fg-dark padding-h-s"  href="option3">Option 3 </a>
+                        <a class="fg-dark padding-h-s"  href="option4">Option 4 </a>
+                        <a class="fg-dark padding-h-s"  href="option5">Option 5 </a>
+                        <a class="fg-dark padding-h-s"  href="option6">Option 6 </a>
+                        <a class="fg-dark padding-h-s"  href="option7">Option 7 </a>
+                        <a class="fg-dark padding-h-s"  href="option8">Option 8 </a>
+                    </p>
                     </p>
 
                 </div>
@@ -544,9 +594,12 @@
 
 <!--<script src="js/navFixed.js" type="text/javascript"></script>-->
 
-<script src="js/sticky.js" type="text/javascript"></script>
+
+<script src="js/stickyAndChangeColor.js" type="text/javascript"></script>
+
 
 <script src="js/stickyAnimationScroll.js" type="text/javascript"></script>
+
 
 <script src="js/disappearOnScroll.js" type="text/javascript"></script>
 

@@ -52,38 +52,63 @@ $(document).ready(function($){
 
 
 
+
+        });
+
+    });
+
+
+    $changeOptionColor.each(function(index) {
+        $(this).on('click', function(){
+            event.preventDefault();
+            var dataValue         = $(this).data('value');
+            var dataOption        = $(this).data('option');
+            var dataElement       = $(this).data('element');
+            var $element          = $(dataElement);
+
+            // expresión regular que busca si esa clase existe ya
+            // y la elimina
+            $element.attr('class', function(i, c){
+                var pattern = '(^|\\s)' + dataOption + '\\S+';
+                var myReg  = new RegExp(pattern, "g");
+                return c.replace(myReg, '');
+            });
+
+            // actualizo con la nueva clase
+            $element.addClass(dataOption + dataValue);
+
+
+            /*Change colors según fondo*/
+            var _stickyBgColor;
+            var $changeFg = $('.js-change-color');
+            /* Background-color del menu  */
+            _stickyBgColor = $changeFg.find('.js-background-color').css('background-color');
+
+            if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
+                $changeFg.addClass('fg-dark');
+                $changeFg.removeClass('fg-white');
+            }
+            else {
+                $changeFg.addClass('fg-white');
+                $changeFg.removeClass('fg-dark');
+            }
+
+
+
             /*
-            /*Aquí vuelvo a poner el javascript del stickyAnimantion.js para actualizarlo al cambiar tamaños*/
+            /*Aquí vuelvo a poner el javascript del stickyAnimantion.js para actualizarlo respecto la opacidad*/
 
 
             var $fixedNav = $('.js-fixed');
             var $isTransparent = $('.is-transparent');
             var $background = $('.is-transparent .js-background');
-            var $fixedPadding = $('.padding-fixed');
-            var $fixedBrand = $('.width-logo-fixed');
+
 
             var start = $fixedNav.offset().top ;
             var until = start + 300;
-            var offset, opacity, actualPadding, actualWidthlogo;
+            var offset, opacity;
 
-            if ($('.padding-fixed').length) {
-                var maxPadding = $fixedPadding.css('padding-top').replace('px', '');
-                var minPadding= 10;
-                var difPadding= maxPadding - minPadding;
-            }else{
 
-            }
-            if ($('.width-logo-fixed').length) {
-                var maxWidth = $fixedBrand.css('width').replace('px', '');
-                var minWidth= 180;
-                if(maxWidth <= 180){
-                    minWidth = maxWidth;
-                }
-                var difWidth= maxWidth - minWidth;
-                console.log('maxWidth', maxWidth)
-            }else{
-
-            }
 
 
             $(window).bind('scroll', function(){
@@ -103,10 +128,6 @@ $(document).ready(function($){
                     opacity = 0;
 
 
-                    console.log({
-                        'actualPadding':actualPadding,
-                        'actualWidthlogo': actualWidthlogo
-                    });
 
                     if ($isTransparent) {
                         // background on scroll becomes opacity 1 -> true
@@ -144,46 +165,6 @@ $(document).ready(function($){
 
 
             });
-
-        });
-
-    });
-
-
-    $changeOptionColor.each(function(index) {
-        $(this).on('click', function(){
-            event.preventDefault();
-            var dataValue         = $(this).data('value');
-            var dataOption        = $(this).data('option');
-            var dataElement       = $(this).data('element');
-            var $element          = $(dataElement);
-
-            // expresión regular que busca si esa clase existe ya
-            // y la elimina
-            $element.attr('class', function(i, c){
-                var pattern = '(^|\\s)' + dataOption + '\\S+';
-                var myReg  = new RegExp(pattern, "g");
-                return c.replace(myReg, '');
-            });
-
-            // actualizo con la nueva clase
-            $element.addClass(dataOption + dataValue);
-
-
-            /*Change colors según fondo*/
-            var _stickyBgColor;
-            var $changeFg = $('.js-change-color');
-            /* Background-color del menu fixed */
-            _stickyBgColor = $changeFg.find('.js-background-color').css('background-color');
-
-            if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
-                $changeFg.addClass('fg-dark');
-                $changeFg.removeClass('fg-white');
-            }
-            else {
-                $changeFg.addClass('fg-white');
-                $changeFg.removeClass('fg-dark');
-            }
         });
 
 

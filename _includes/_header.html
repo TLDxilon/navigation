@@ -119,7 +119,7 @@
      {% if page.navigation =='bottom' %}
 
      <!-- subnav -->
-     <div class="subnav  position-relative {{ page.subnav.border }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} {% if page.subnav.is-transparent == 'true' %} is-transparent {% endif %} fg-{{ page.subnav.fg }} js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop js-change-color">
+     <div class="subnav  position-relative {{ page.subnav.border }} js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} {% if page.subnav.is-transparent == 'true' %} is-transparent {% endif %} fg-{{ page.subnav.fg }} js-subnav-top js-border-2 hidden-mobile hidden-tablets visible-desktop js-fg js-change-color">
          <div class="{{ page.container }} js-container fix-padding-container">
              <nav class="navbar__item width-full">
                  {% include _elements/_navigation.html %}
@@ -146,7 +146,7 @@
         {% if page.navigation =='subnav' %}
 
         <!-- subnav -->
-        <div class="subnav  subnav-bottom-absolute  js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-bottom {{ page.subnav.border }} {% if page.subnav.is-transparent == 'true' %} is-transparent {% endif %}  fg-{{ page.subnav.fg }} hidden-mobile hidden-tablets visible-desktop js-change-color">
+        <div class="subnav  subnav-bottom-absolute  js-subnav {% if page.subnav.is-fixed == 'true' %} js-fixed {% endif %} js-subnav-bottom {{ page.subnav.border }} {% if page.subnav.is-transparent == 'true' %} is-transparent {% endif %}  fg-{{ page.subnav.fg }} hidden-mobile hidden-tablets visible-desktop js-fg js-change-color">
             <div class="{{ page.container }} js-container fix-padding-container">
                 <nav class="navbar__item width-full">
                     {% include _elements/_navigation.html %}

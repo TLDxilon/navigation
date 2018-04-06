@@ -43,11 +43,13 @@ $(document).ready(function($) {
                     if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
                         $fixedElement.addClass('fg-dark');
                         $fixedElement.removeClass('fg-white');
-                    } else {
+                    }
+                    else {
                         $fixedElement.addClass('fg-white');
                         $fixedElement.removeClass('fg-dark');
                     }
                 }
+
 
 
             } else {
@@ -58,19 +60,43 @@ $(document).ready(function($) {
 
                 $fixedElement.removeClass('sticky');
 
+
                 if (_isTransparent) {
                 $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
                     $fixedElement.addClass(_oldTextColor);
                 }
+
 
             }
 
 
         });
 
+
+        /* Mientras no se hace fixed y no es transparente cógeme el color según el fondo si no es transparente*/
+
+
+            _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
+            console.log('_stickyBgColor', _stickyBgColor);
+            if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
+                $fixedElement.addClass('fg-dark');
+                $fixedElement.removeClass('fg-white');
+            }
+            else {
+                $fixedElement.addClass('fg-white');
+                $fixedElement.removeClass('fg-dark');
+            }
+        if (_isTransparent) {
+            $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
+            $fixedElement.addClass(_oldTextColor);
+        }
+
+
+
+
     }/* _isFixed */
 
 
-});
+    });
 
 

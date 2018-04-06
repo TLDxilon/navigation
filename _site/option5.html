@@ -38,9 +38,9 @@
     <a href="#" class="js-option btn btn-s  btn--flat bg-two border-radius-s" data-element=".js-btn" data-option="border-radius-" data-value="s">Little</a>
     <a href="#" class="js-option btn btn-s  btn--flat bg-two border-radius-l" data-element=".js-btn" data-option="border-radius-" data-value="xl">Rounded</a>
     <br>
-    <h2>Logo flotante</h2>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".static-nav-logo" data-option="logo-" data-value="static">No</a>
-    <a href="#" class="js-option btn btn-xs  btn--flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>
+    <!--<h2>Logo flotante</h2>-->
+    <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="static">No</a>-->
+    <!--<a href="#" class="js-option btn btn-xs  btn&#45;&#45;flat" data-element=".static-nav-logo" data-option="logo-" data-value="floating">Sí</a>-->
 
     <h2>Tamaño del logo</h2>
     <input class="option-slider"  type="range" min="0" max="6" value="3" data-option="logo-size" data-values='["xxs","xs","s","m","l","xl","xxl"]' data-element=".branding-logo">
@@ -51,15 +51,16 @@
 
 
     <div class="group-options padding-xs">
-
+        <h2>NAV LOGO</h2>
+        <hr>
         <h2>Is transparent</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="transparent">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-logobar" data-option="is-" data-value="notransparent">NO</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-logobar" data-option="is-" data-value="transparent">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-logobar" data-option="is-" data-value="notransparent">NO</a>
         <h2>Nav Padding</h2>
         <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
         <h2>Nav border bottom</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-border" data-option="border-" data-value="">NO</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-border" data-option="border-" data-value="bottom">YES</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-border" data-option="border-" data-value="">NO</a>
 
 
     <h2>Nav background</h2>
@@ -89,11 +90,11 @@
 
 
     <h2>Menú style</h2>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">Simple</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">Back all</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">Line bottom</a><br>
-    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">Line top</a><br>
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a> |
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">Simple</a>|
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">Back all</a>|
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-bottom">Line bottom</a>|
+    <a href="#" class="js-option btn fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line-top">Line top</a>
 
    </div>
 
@@ -285,7 +286,7 @@
             <h1 class="fg-white js-fg ">Delicious food to fit your lifestyle. </h1>
             <p class="copy fg-white js-fg "> </p>
             
-             <a class="btn btn-l  fg-white btn--outline border-color-white  fg-white  open-options  bg-  bg-white--hover  border-radius-xl border-radius-  js-btn js-fg " href="">Sing in</a>
+             <a class="btn btn-l  btn--outline border-color-white  fg-white  open-options  bg-  border-radius-xl border-radius-  js-btn js-fg " href="">Sing in</a>
 
 
 
@@ -304,7 +305,7 @@
         
 
         <!-- subnav -->
-        <div class="subnav  subnav-bottom-absolute  js-subnav  js-fixed  js-subnav-bottom border-bottom border-top   fg-white hidden-mobile hidden-tablets visible-desktop js-change-color">
+        <div class="subnav  subnav-bottom-absolute  js-subnav  js-fixed  js-subnav-bottom border-bottom border-top   fg- hidden-mobile hidden-tablets visible-desktop js-fg js-change-color">
             <div class="container js-container fix-padding-container">
                 <nav class="navbar__item width-full">
                     
@@ -424,7 +425,7 @@
                     <h2 class="title-big fg-white"> On the other hand we denounce with righteout</h2>
                     <form class="form-suscribe-horizontal form-white">
     <input class="input-suscribe" type="text" placeholder="Enter your e-mail">
-    <a class="btn btn-s  fg-white btn--flat-inverse  bg-    border-radius-xl border-radius-topRight-bottomRight-s  js-btn js-fg " href="">Suscribe</a>
+    <a class="btn btn-s  btn--flat-inverse  bg-  border-radius-xl border-radius-topRight-bottomRight-s  js-btn js-fg " href="">Suscribe</a>
 
 
 </form>
@@ -558,9 +559,12 @@
 
 <!--<script src="js/navFixed.js" type="text/javascript"></script>-->
 
-<script src="js/sticky.js" type="text/javascript"></script>
+
+<script src="js/stickyAndChangeColor.js" type="text/javascript"></script>
+
 
 <script src="js/stickyAnimationScroll.js" type="text/javascript"></script>
+
 
 <script src="js/disappearOnScroll.js" type="text/javascript"></script>
 

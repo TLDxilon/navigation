@@ -51,18 +51,22 @@
 
 
 
+.options{
+  .btn{
+    font-size: 0.8em;
+    margin:2px 0;
+    &:hover{
+      @extend .fg-one;
+    }
+    &.btn{
+      border: 0;
+    }
 
-.js-option{
-  font-size: 0.8em;
-  margin:2px 0;
-  &:hover{
-    @extend .fg-one;
   }
-  &.btn{
-    border: 0;
-  }
-
 }
+
+
+
 .js-option-mobile{
 
   font-size: 12px;
@@ -127,7 +131,7 @@
 
 
 .group-options{
-  @extend .bg-white;
+  background: lighten($tone-light, 10%);
 }
 
 
