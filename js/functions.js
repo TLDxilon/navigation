@@ -67,3 +67,10 @@ function checkContrastForegroundColor( color ) {
 
 
 };
+
+
+
+
+
+
+function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}

@@ -17,7 +17,7 @@
 
      {% else %}
      {% endif %}
-   <div class="logobar navbar-logo js-logobar position-relative {% if page.navbar.is-fixed == 'true' %}  js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent {% endif %}   fg-{{ page.hero-fg}} js-fg {{ page.navbar.border }} js-border js-change-color">
+   <div class="logobar navbar-logo js-logobar position-relative {% if page.navbar.is-fixed == 'true' %}  js-fixed{% endif %} {% if page.navbar.is-transparent == 'true' %} is-transparent  fg-{{ page.hero-fg }} {% endif %}   js-fg {{ page.navbar.border }} js-border js-change-color">
        {% include _elements/_searchbar.html  js-class='js-searchbar' %}
        <div class="{{ page.container }} js-container">
            <div class="navbar-inner flexbox-row-nowrap">

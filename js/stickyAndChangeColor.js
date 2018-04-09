@@ -7,6 +7,9 @@ $(document).ready(function($) {
     var $fixedElement   = $header.find('.js-fixed');        /* check if there is a menu is fixed */
     var _isTransparent  = $header.find('.is-transparent');  /* check if there is a menu is transparent */
 
+    var _BgColor;
+
+
 
     /* if menu is Fixed */
     if ($fixedElement.length){
@@ -73,28 +76,32 @@ $(document).ready(function($) {
         });
 
 
-        /* Mientras no se hace fixed y no es transparente cógeme el color según el fondo si no es transparente*/
-
-
-        _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
-        console.log('_stickyBgColor', _stickyBgColor);
-        if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
-            $fixedElement.addClass('fg-dark');
-            $fixedElement.removeClass('fg-white');
-        }
-        else {
-            $fixedElement.addClass('fg-white');
-            $fixedElement.removeClass('fg-dark');
-        }
-        if (_isTransparent) {
-            $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
-            $fixedElement.addClass(_oldTextColor);
-        }
-
-
 
 
     }/* _isFixed */
+
+    /* Mientras no se hace fixed y no es transparente cógeme el color según el fondo*/
+
+
+    /* Background-color del menu  */
+
+
+    //* Elemento que actualiza el fg-
+    var $fgChange = ('.js-change-color');
+
+    _BgColor = $fgChange.find('.js-background-color').css('background-color');
+
+    //Compruebo el ratio de color
+    if (checkContrastForegroundColor(_BgColor) === 'dark') {
+        $fgChange.addClass('fg-dark');
+        $fgChange.removeClass('fg-white');
+    }
+    else {
+        $fgChange.addClass('fg-white');
+        $fgChange.removeClass('fg-dark');
+    }
+
+
 
 
 });
