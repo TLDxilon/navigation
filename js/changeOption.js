@@ -1,4 +1,3 @@
-
 $(document).ready(function($){
 
     /*Menú options lateral*/
@@ -65,6 +64,7 @@ $(document).ready(function($){
             var dataOption        = $(this).data('option');
             var dataElement       = $(this).data('element');
             var $element          = $(dataElement);
+            var _BgColor;
 
             // expresión regular que busca si esa clase existe ya
             // y la elimina
@@ -77,26 +77,24 @@ $(document).ready(function($){
             // actualizo con la nueva clase
             $element.addClass(dataOption + dataValue);
 
-
-            /*Change colors según fondo*/
-            var _stickyBgColor;
-            var $changeFg = $('.js-change-color');
             /* Background-color del menu  */
-            _stickyBgColor = $changeFg.find('.js-background-color').css('background-color');
-
-            if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
-                $changeFg.addClass('fg-dark');
-                $changeFg.removeClass('fg-white');
+            _BgColor = $element.css('background-color');
+            //* Elemento que actualiza el fg-
+            var $fgChange = $element.parents( ".js-change-color" );
+            //Compruebo el ratio de color
+            if (checkContrastForegroundColor(_BgColor) === 'dark') {
+                $fgChange.addClass('fg-dark');
+                $fgChange.removeClass('fg-white');
             }
             else {
-                $changeFg.addClass('fg-white');
-                $changeFg.removeClass('fg-dark');
+                $fgChange.addClass('fg-white');
+                $fgChange.removeClass('fg-dark');
             }
 
 
 
             /*
-            /*Aquí vuelvo a poner el javascript del stickyAnimantion.js para actualizarlo respecto la opacidad*/
+            /*Aquí vuelvo a poner el javascript del stickyAnimation.js para actualizarlo respecto la opacidad*/
 
 
             var $fixedNav = $('.js-fixed');

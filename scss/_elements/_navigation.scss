@@ -23,7 +23,7 @@
     height: 100%;
     font-size: 1em;
     max-height: 64px;
-    @extend .padding-h-l;
+    @extend .padding-h-m;
     span{
       @include align-self(center);
     }

@@ -1,38 +1,16 @@
 
-.logo-size{
-  &-xxs{
+$sizes: (
+        'xxs': 80px,
+        'xs': 120px,
+        's': 180px,
+        'm': 240px,
+        'l': 300px,
+        'xl': 350px,
+        'xxl': 380px,
+);
 
-      width: 80px;
-
-
-  }
-  &-xs{
-
-      width: 120px;
-
-
-  }
-  &-s{
-
-      width: 180px;
-
-  }
-  &-m{
-
-      width: 240px;
-
-  }
-
-  &-l{
-
-      width: 300px;
-
-
-  }
-  &-xl{
-
-      width: 350px;
-
-
+@each $section, $size in $sizes {
+  .logo-size-#{$section} {
+    width: $size;
   }
 }

@@ -1,4 +1,4 @@
 <div class="navbar-item--logo padding-v-{{ page.brand.padding }} {{ include.class }} {% if page.navbar.is-fixed == 'true' %} padding-fixed {% endif %}">
     {% if site.logo-image %} <a href="/"><img class="branding-logo logo-size-{{ page.logo.size }} {% if page.navbar.is-fixed == 'true' %} width-logo-fixed {% endif %} {{ include.class-js}}" src="img/{{site.logo-image}}"></a>{% endif %}
-    {% if site.logo-title %} <h1 class="nav-item branding-title"><a class="fg-gray" href="/" title="">{{site.logo-title}}</a></h1>{% endif %}
+    {% if site.logo-title %} <h1 class="nav-item branding-logo branding-title"><a class="fg-gray" href="/" title="">{{site.logo-title}}</a></h1>{% endif %}
 </div>

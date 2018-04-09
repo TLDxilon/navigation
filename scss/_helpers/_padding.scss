@@ -3,79 +3,52 @@
 
 
 
-.padding{
-  &-xxs{
-    padding: 0;
-  }
-  &-xs{
-    padding: 5px;
-  }
-  &-s{
-    padding: 10px;
-  }
-  &-m{
-    padding: 15px;
-  }
-  &-l{
-    padding: 20px;
-  }
-  &-xl{
-    padding: 25px;
+$paddings: (
+        'xxs': 0px,
+        'xs': 5px,
+        's': 10px,
+        'm': 15px,
+        'l': 20px,
+        'xl': 25px,
+);
+
+@each $section, $padding in $paddings {
+  .padding-#{$section} {
+    padding: $padding;
   }
 }
 
-.padding-v{
-  &-xxs{
-    padding-top: 0;
-    padding-bottom: 0;
-  }
-  &-xs{
-    padding-top: 5px;
-    padding-bottom: 5px;
-  }
-  &-s{
-    padding-top: 10px;
-    padding-bottom: 10px;
-  }
-  &-m{
-    padding-top: 20px;
-    padding-bottom: 20px;
-  }
-  &-l{
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-  &-xl{
-    padding-top: 80px;
-    padding-bottom: 80px;
-  }
-  &-xxl{
-    padding-top: 160px;
-    padding-bottom: 160px;
-  }
+$v-paddings: (
+        'xxs': 0em,
+        'xs': 0.4em,
+        's': 0.8em,
+        'm': 1.5em,
+        'l': 2.5em,
+        'xl': 5em,
+        'xxl': 10em,
+);
 
-}
 
-.padding-h{
-  &-s{
-    padding-left: 5px;
-    padding-right: 5px;
-  }
-  &-m{
-    padding-left: 10px;
-    padding-right: 10px;
-  }
-  &-l{
-    padding-left: 15px;
-    padding-right: 15px;
-  }
-  &-xl{
-    padding-left: 20px;
-    padding-right: 20px;
-  }
-  &-xxl{
-    padding-left: 40px;
-    padding-right: 40px;
+@each $section, $v-padding in $v-paddings {
+  .padding-v-#{$section} {
+    padding-top: $v-padding;
+    padding-bottom: $v-padding;
+
   }
 }
+$h-paddings: (
+        'xxs': 0px,
+        'xs': 5px,
+        's': 10px,
+        'm': 15px,
+        'l': 20px,
+        'xl': 30px,
+        'xxl': 40px,
+);
+@each $section, $h-padding in $h-paddings {
+  .padding-h-#{$section} {
+    padding-left: $h-padding;
+    padding-right: $h-padding;
 
+  }
+}

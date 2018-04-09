@@ -21,13 +21,13 @@
     vertical-align: middle;
     &.icon-phone2, &.icon-mail2{
       font-size: 0.8em;
-      @extend .padding-h-s;
+      @extend .padding-h-xs;
     }
 
   }
   .social-item{
     display: inline-block;
-    @extend .padding-h-s;
+    @extend .padding-h-xs;
    &:hover{
      .icon{
        @extend .fg-white;

@@ -50,7 +50,7 @@ $(document).ready(function($){
         if( offset <= start ){
 
             // Opacity
-           // opacity = 0;
+            // opacity = 0;
 
             // Logo padding
             //actualPadding = maxPadding;

@@ -67,4 +67,3 @@ function checkContrastForegroundColor( color ) {
 
 
 };
-
