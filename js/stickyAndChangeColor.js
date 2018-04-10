@@ -12,15 +12,13 @@ $(document).ready(function($) {
     var $fgChange = $('.js-change-color');
 
 
-
-
-
-
-
      $fgChange.each(function(index) {
 
+         var $this = $(this);
 
-         if(_isTransparent.length) {
+         _isTransparent = $this.hasClass('is-transparent');
+
+         if(_isTransparent) {
 
              console.log('%c Oh es transparente estoy en el elemento ' + index + ' del EACH', 'background: #222; color: #eee');
 
@@ -33,14 +31,14 @@ $(document).ready(function($) {
                  var $Hero = $('.hero');
                  var _getHeroFg = getClassStartsWith($Hero[0].className, 'fg-');
                  console.log('_getHeroFg', _getHeroFg);
-                 $fgChange.addClass(_getHeroFg);
+                 $this.addClass(_getHeroFg);
 
              }
              else {
                  var _getNextBlockFg = getClassStartsWith($NextBLock[0].className, 'fg-');
                  console.log('_getNextBlockFg', _getNextBlockFg);
                  $NextBLock.addClass('fix-header-padding');
-                 $fgChange.addClass(_getNextBlockFg);
+                 $this.addClass(_getNextBlockFg);
 
              }
           }/* _isTransparent */
@@ -51,7 +49,7 @@ $(document).ready(function($) {
              console.log('%c Oh no es transparente estoy en el elemento ' + index + ' del EACH', 'background: #222; color: #eee');
 
              /* Elemento que contien la clase para el color del texto (fg-'color') */
-             var $this = $(this);
+
 
              /* Leemos el color de fondo del elemento que js-change-color */
              var _bgCssColor = $this.find('.js-background-color').css('background-color');
@@ -63,29 +61,29 @@ $(document).ready(function($) {
 
              /* Check para el contraste del color de fondo */
              if (checkContrastForegroundColor(_bgCssColor) === 'dark') {
-                 $fgChange.addClass('fg-dark');
-                 $fgChange.removeClass('fg-white');
+                 $this.addClass('fg-dark');
+                 $this.removeClass('fg-white');
              }
              else {
-                 $fgChange.addClass('fg-white');
-                 $fgChange.removeClass('fg-dark');
+                 $this.addClass('fg-white');
+                 $this.removeClass('fg-dark');
              }
 
          }/* _No Transparent */
 
 
-         if ($fixedElement.length){
+         if($this.hasClass('js-fixed')){
 
              var _fixedElementIsSubnavButton = $fixedElement.hasClass('js-subnav-bottom');
              var heightFixedOffset = $fixedElement.offset().top;
              var _oldTextColor, _stickyBgColor;
 
-
-
-             if (_isTransparent.length) {
+             if (_isTransparent) {
                  _oldTextColor = getClassStartsWith( $fixedElement[0].className,'fg-');
                  console.log('old text color', _oldTextColor);
              }
+
+
              /* on window scroll event */
              $(window).on('scroll', function () {
 
@@ -122,7 +120,7 @@ $(document).ready(function($) {
                      $fixedElement.removeClass('sticky');
 
 
-                     if (_isTransparent.length) {
+                     if (_isTransparent) {
                          $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
                          $fixedElement.addClass(_oldTextColor);
                      }
@@ -144,9 +142,6 @@ $(document).ready(function($) {
 
          }
      });
-
-
-
 
 
 
