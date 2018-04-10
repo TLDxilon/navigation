@@ -871,13 +871,13 @@ h2 {
   border-bottom: 1px solid rgba(176, 176, 176, 0.4); }
 .border-top {
   border-top: 1px solid rgba(176, 176, 176, 0.4); }
-.border-radius-s {
+.border-radius-s, .options .btn {
   border-radius: 5px; }
 .border-radius-m {
   border-radius: 10px; }
 .border-radius-l, .js-option-color {
   border-radius: 20px; }
-.border-radius-xl {
+.border-radius-xl, .options .btn.js-option-color {
   border-radius: 30px; }
 .border-radius-topRight-bottomRight-s {
   border-radius: 0 5px 5px 0; }
@@ -1796,7 +1796,11 @@ h2 {
 
 .options .btn {
   font-size: 0.8em;
-  margin: 2px 0; }
+  margin: 2px 0;
+  padding: 5px 10px;
+  border-color: #999; }
+  .options .btn.option-justify {
+    width: 85%; }
 
 .js-option-mobile {
   font-size: 12px;
@@ -1846,7 +1850,7 @@ h2 {
     height: 25px;
     cursor: pointer; }
 
-.group-options:hover {
+.group-options {
   background: #e5e5e5; }
 
 .panel-is-open .options {

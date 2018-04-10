@@ -54,12 +54,19 @@
 .options{
   .btn{
     font-size: 0.8em;
-    margin:2px 0;
+    margin: 2px 0;
+    padding: 5px 10px;
+    border-color: #999;
+    @extend .border-radius-s;
     &:hover{
       @extend .fg-one;
     }
-
-
+   &.js-option-color{
+     @extend .border-radius-xl;
+   }
+    &.option-justify{
+      width: 85%;
+    }
   }
 }
 
@@ -129,9 +136,9 @@
 
 
 .group-options{
-  &:hover{
+
     background: lighten($tone-light, 5%);
-  }
+
 
 }
 
