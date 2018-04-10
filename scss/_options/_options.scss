@@ -150,3 +150,11 @@
      left:257.09px;
    }
 }
+
+.js-option-color{
+  @extend .border-radius-l;
+  border:1px solid #666 !important;
+  height: 15px;
+  width: 15px;
+  padding: 5px !important;
+}

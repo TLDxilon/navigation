@@ -875,7 +875,7 @@ h2 {
   border-radius: 5px; }
 .border-radius-m {
   border-radius: 10px; }
-.border-radius-l {
+.border-radius-l, .js-option-color {
   border-radius: 20px; }
 .border-radius-xl {
   border-radius: 30px; }
@@ -1860,6 +1860,12 @@ h2 {
 .panel-is-open .sticky {
   width: calc( 100% - 257.09px );
   left: 257.09px; }
+
+.js-option-color {
+  border: 1px solid #666 !important;
+  height: 15px;
+  width: 15px;
+  padding: 5px !important; }
 
 .fix-padding-container {
   padding: 0; }
