@@ -14,6 +14,16 @@ $(document).ready(function($){
     var heightNavbar = $navBar.outerHeight(true);
     var heightSubnav = $subNav.outerHeight(true);
 
+
+    if(!($('.hero').length)){
+        var $NextBLock = $('.site-header + * ');
+        $NextBLock.addClass('fix-header-padding');
+    }
+    else{
+
+    }
+
+
     if ($fixHeaderPadding.length) {
 
         $fixHeaderPadding.css({'padding-top'  : (heightNavbar) + 'px'});

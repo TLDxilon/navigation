@@ -30,15 +30,13 @@ $(document).ready(function($) {
                 var _getHeroFg = getClassStartsWith( $Hero[0].className,'fg-');
                 console.log('_getHeroFg', _getHeroFg);
                 $fgChange.addClass(_getHeroFg);
-                $NextBLock.addClass('fix-header-padding');
+
             }
             else{
                 var _getNextBlockFg = getClassStartsWith( $NextBLock[0].className,'fg-');
-
                 console.log('_getNextBlockFg', _getNextBlockFg);
-
                 $fgChange.addClass(_getNextBlockFg);
-                $NextBLock.addClass('fix-header-padding');
+
             }
         });
 
