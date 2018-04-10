@@ -1086,32 +1086,32 @@ h2 {
   padding: 25px; }
 
 .padding-v-xxs {
-  padding-top: 0em;
-  padding-bottom: 0em; }
+  padding-top: 0px;
+  padding-bottom: 0px; }
 
 .padding-v-xs {
-  padding-top: 0.4em;
-  padding-bottom: 0.4em; }
+  padding-top: 5px;
+  padding-bottom: 5px; }
 
 .padding-v-s {
-  padding-top: 0.8em;
-  padding-bottom: 0.8em; }
+  padding-top: 10px;
+  padding-bottom: 10px; }
 
 .padding-v-m, .subnav .nav-link, .navbar-fixed .navbar-item--logo, .navbar-fixed .subnav .nav-link {
-  padding-top: 1.5em;
-  padding-bottom: 1.5em; }
+  padding-top: 20px;
+  padding-bottom: 20px; }
 
 .padding-v-l {
-  padding-top: 2.5em;
-  padding-bottom: 2.5em; }
+  padding-top: 40px;
+  padding-bottom: 40px; }
 
 .padding-v-xl {
-  padding-top: 5em;
-  padding-bottom: 5em; }
+  padding-top: 80px;
+  padding-bottom: 80px; }
 
 .padding-v-xxl {
-  padding-top: 10em;
-  padding-bottom: 10em; }
+  padding-top: 160px;
+  padding-bottom: 160px; }
 
 .padding-h-xxs {
   padding-left: 0px;
@@ -1797,8 +1797,6 @@ h2 {
 .options .btn {
   font-size: 0.8em;
   margin: 2px 0; }
-  .options .btn.btn {
-    border: 0; }
 
 .js-option-mobile {
   font-size: 12px;
@@ -1848,8 +1846,8 @@ h2 {
     height: 25px;
     cursor: pointer; }
 
-.group-options {
-  background: #f2f2f2; }
+.group-options:hover {
+  background: #e5e5e5; }
 
 .panel-is-open .options {
   display: block; }

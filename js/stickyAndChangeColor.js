@@ -7,7 +7,78 @@ $(document).ready(function($) {
     var $fixedElement   = $header.find('.js-fixed');        /* check if there is a menu is fixed */
     var _isTransparent  = $header.find('.is-transparent');  /* check if there is a menu is transparent */
 
-    var _BgColor;
+
+    /* Elemento que contien la clase para el color del texto (fg-'color') */
+    var $fgChange = $('.js-change-color');
+
+
+    if(_isTransparent.length){
+
+        $fgChange.each(function(index) {
+
+            console.log('% Oh estoy en el elemento ' + index + ' del EACH', 'background: #222; color: #eee');
+
+
+            var $NextBLock = $('.site-header + * ');
+            console.log('$NextBLock', $NextBLock);
+
+
+
+
+            if($('.hero').length){
+                var $Hero = $('.hero');
+                var _getHeroFg = getClassStartsWith( $Hero[0].className,'fg-');
+                console.log('_getHeroFg', _getHeroFg);
+                $fgChange.addClass(_getHeroFg);
+                $NextBLock.addClass('fix-header-padding');
+            }
+            else{
+                var _getNextBlockFg = getClassStartsWith( $NextBLock[0].className,'fg-');
+
+                console.log('_getNextBlockFg', _getNextBlockFg);
+
+                $fgChange.addClass(_getNextBlockFg);
+                $NextBLock.addClass('fix-header-padding');
+            }
+        });
+
+    }
+    else{
+        $fgChange.each(function(index) {
+
+            console.log('%c Oh estoy en el elemento ' + index + ' del EACH', 'background: #222; color: #eee');
+
+            /* Elemento que contien la clase para el color del texto (fg-'color') */
+            var $this = $(this);
+
+            /* Leemos el color de fondo del elemento que js-change-color */
+            var _bgCssColor = $this.find('.js-background-color').css('background-color');
+
+            console.log('El color de fondo para este elemento es '
+                + _bgCssColor + ' y le añado la clase "'+ checkContrastForegroundColor(_bgCssColor) + "'");
+
+
+
+            /* Check para el contraste del color de fondo */
+            if (checkContrastForegroundColor(_bgCssColor) === 'dark') {
+                $fgChange.addClass('fg-dark');
+                $fgChange.removeClass('fg-white');
+            }
+            else {
+                $fgChange.addClass('fg-white');
+                $fgChange.removeClass('fg-dark');
+            }
+
+        });
+    }
+
+
+
+
+
+
+
+
 
 
 
@@ -18,15 +89,9 @@ $(document).ready(function($) {
         var heightFixedOffset = $fixedElement.offset().top;
         var _oldTextColor, _stickyBgColor;
 
-
-
-        // expresión regular que busca una clase que empiece por:
-        function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}
-
         _oldTextColor = getClassStartsWith( $fixedElement[0].className,'fg-');
 
-
-
+        console.log('old text color', _oldTextColor);
 
         /* on window scroll event */
         $(window).on('scroll', function () {
@@ -39,7 +104,7 @@ $(document).ready(function($) {
                     $fixedElement.removeClass('subnav-bottom-absolute');
                 }
 
-                if(_isTransparent){
+                if(_isTransparent.length){
                     /* Background-color del menu fixed */
                     _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
 
@@ -55,7 +120,8 @@ $(document).ready(function($) {
 
 
 
-            } else {
+            }
+            else {
 
                 if (_fixedElementIsSubnavButton) {
                     $fixedElement.addClass('subnav-bottom-absolute');
@@ -64,7 +130,7 @@ $(document).ready(function($) {
                 $fixedElement.removeClass('sticky');
 
 
-                if (_isTransparent) {
+                if (_isTransparent.length) {
                     $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
                     $fixedElement.addClass(_oldTextColor);
                 }
@@ -73,33 +139,14 @@ $(document).ready(function($) {
             }
 
 
+
+
         });
 
 
 
 
     }/* _isFixed */
-
-    /* Mientras no se hace fixed y no es transparente cógeme el color según el fondo*/
-
-
-    /* Background-color del menu  */
-
-
-    //* Elemento que actualiza el fg-
-    var $fgChange = ('.js-change-color');
-
-    _BgColor = $fgChange.find('.js-background-color').css('background-color');
-
-    //Compruebo el ratio de color
-    if (checkContrastForegroundColor(_BgColor) === 'dark') {
-        $fgChange.addClass('fg-dark');
-        $fgChange.removeClass('fg-white');
-    }
-    else {
-        $fgChange.addClass('fg-white');
-        $fgChange.removeClass('fg-dark');
-    }
 
 
 

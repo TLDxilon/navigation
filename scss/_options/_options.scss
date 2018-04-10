@@ -58,9 +58,7 @@
     &:hover{
       @extend .fg-one;
     }
-    &.btn{
-      border: 0;
-    }
+
 
   }
 }
@@ -131,7 +129,10 @@
 
 
 .group-options{
-  background: lighten($tone-light, 10%);
+  &:hover{
+    background: lighten($tone-light, 5%);
+  }
+
 }
 
 

@@ -45,7 +45,6 @@ function colorValues(color) {
     }
 }
 
-
 /*
      checkContrastForegroundColor
      @color puede ser HEX, RGB, HSL
@@ -68,9 +67,10 @@ function checkContrastForegroundColor( color ) {
 
 };
 
-
-
-
-
-
+/*
+    getClassStartsWith
+    @t elemento
+    @n string con string de inicio de clase
+    return la clase/s que encuentre
+ */
 function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}
