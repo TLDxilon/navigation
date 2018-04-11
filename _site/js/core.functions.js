@@ -314,7 +314,9 @@ function initMmenu(options) {
 
 
 
-
+/*
+ función que al hacer scroll desaparece poco a poco el elemento que tenga esa clase.
+ */
 function disappearOnScroll() {
 
     var $dissapear = $('.dissapear');
