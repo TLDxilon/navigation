@@ -45,11 +45,16 @@ $(document).ready(function($){
 
     });
     /* Cerramos el buscador en el fixed menú al hacer click en la lupa*/
-    $('.js-search-close').on('click', function(event){
+    $('.js-fixed-search-close').on('click', function(event){
         event.preventDefault();
         $html.removeClass('search-fixed-is-open');
 
     });
+
+
+
+
+
     $backdrop.on('click', function(){
         $html.removeClass('search-is-open');
         $html.removeClass('search-fixed-is-open');

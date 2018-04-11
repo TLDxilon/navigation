@@ -50,6 +50,36 @@ function colorValues(color) {
      @color puede ser HEX, RGB, HSL
      return 'dark' or 'light' como color recomendado de foreground
  */
+function checkContrastForegroundColor( color ) {
+
+    /* colorValues devuelve cualquier color en array RGBA */
+    var rgb = colorValues(color);
+
+    //http://www.w3.org/TR/AERT#color-contrast
+    var o = Math.round(((parseInt(rgb[0]) * 299) + (parseInt(rgb[1]) * 587) + (parseInt(rgb[2]) * 114)) /1000);
+
+    if(o > 125) {
+        return 'dark';
+    }else{
+        return 'light';
+    }
+
+
+};
+
+/*
+    getClassStartsWith
+    @t elemento
+    @n string con string de inicio de clase
+    return la clase/s que encuentre
+ */
+function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}
+
+/*
+     checkContrastForegroundColor
+     @color puede ser HEX, RGB, HSL
+     return 'dark' or 'light' como color recomendado de foreground
+ */
 function getColorBrightness(color,callback) {
 
     /* colorValues devuelve cualquier color en array RGBA */
@@ -103,32 +133,6 @@ function getImageLightness(imageSrc,callback) {
 
     }
 }
-
-/*
-check-if-a-javascript-string-is-a-url
-https://stackoverflow.com/a/5717133
-*/
-function ValidURL(str) {
-    var pattern = new RegExp('^(https?:\/\/)?'+ // protocol
-        '((([a-z\d]([a-z\d-]*[a-z\d])*)\.)+[a-z]{2,}|'+ // domain name
-        '((\d{1,3}\.){3}\d{1,3}))'+ // OR ip (v4) address
-        '(\:\d+)?(\/[-a-z\d%_.~+]*)*'+ // port and path
-        '(\?[;&a-z\d%_.~+=-]*)?'+ // query string
-        '(\#[-a-z\d_]*)?$','i'); // fragment locater
-    if(!pattern.test(str)) {
-        alert("Please enter a valid URL.");
-        return false;
-    } else {
-        return true;
-    }
-}
-
-/*
-    getClassStartsWith
-    @stringClass
-    returns class name if exists
-*/
-function getClassStartsWith(t,n){var r=$.grep(t.split(" "),function(t,r){return 0===t.indexOf(n);}).join();return r||!1;}
 
 /*
     checkForegroundContrast
