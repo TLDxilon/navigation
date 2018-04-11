@@ -10,11 +10,13 @@
 
 
 .options{
+  z-index: 9;
   display: none;
   @extend .padding-s;
-  @extend .bg-light;
+  @extend .bg-white;
   width: 240px;
-  border-right: 1px solid $tone-gray;
+  border-right: 1px solid $tone-light;
+  @include box-shadow(11px, 0px, 20px, rgba(0, 0, 0, 0.07));
 
   h2{
     font-size: 12px;
@@ -40,9 +42,13 @@
     @extend .padding-xs;
   }
   .close-options{
-
+    right: 0;
+    top:0;
+    position: absolute;
     @extend .bg-white;
     z-index: 111;
+    font-size: 1.5em;
+    font-weight: bold;
 
     @extend .padding-xs;
   }
@@ -55,8 +61,9 @@
   .btn{
     font-size: 0.8em;
     margin: 2px 0;
-    padding: 5px 10px;
-    border-color: #999;
+    padding: 10px 20px;
+    border-color: #eaeaea;
+    border-width: 1px;
     @extend .border-radius-s;
     &:hover{
       @extend .fg-one;
@@ -64,13 +71,20 @@
    &.js-option-color{
      @extend .border-radius-xl;
    }
-    &.option-justify{
-      width: 85%;
-    }
   }
 }
 
-
+.js-option{
+  display: inline-block;
+  font-size: 0.8em;
+  &.border-bottom{
+    border-bottom: 2px solid #999;
+  }
+}
+.option-align{
+  font-size: 1.5em;
+  @extend .padding-s;
+}
 
 .js-option-mobile{
 
@@ -137,7 +151,7 @@
 
 .group-options{
 
-    background: lighten($tone-light, 5%);
+    background: lighten($tone-light, 10%);
 
 
 }
@@ -146,6 +160,7 @@
 .panel-is-open{
   .options{
     display: block;
+    position: relative;
   }
     .design{
       width: calc( 100% - 240px )

@@ -26,7 +26,7 @@
 <div class="options">
 
     <a href="#" class="close-options">X</a>
-    <br><br>
+
     <h2>Ancho del menú</h2>
     <a href="#" class="js-option btn btn-xs  btn--outline  border-radius-s" data-element=".js-container" data-option="container" data-value="container">Fijo</a>
     <a href="#" class="js-option btn btn-xs  btn--outline border-radius-s" data-element=".js-container" data-option="container" data-value="-fluid">100%</a>
@@ -60,9 +60,9 @@
             <h2>Altura</h2>
             <input class="option-slider"  type="range" min="0" max="5" value="3" data-option="padding-v" data-values='["xxs","xs","s","m","l","xl"]' data-element=".navbar-item--logo">
             <h2>Decoración inferior</h2>
-            <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-border" data-option="border-" data-value="bottom">Línea</a>
-            <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-border" data-option="border-" data-value="">Ninguna</a>
-
+            <a href="#" class="js-option border-bottom padding-s" data-element=".js-border" data-option="border-" data-value="bottom">Línea</a>
+            <a href="#" class="js-option  padding-s" data-element=".js-border" data-option="border-" data-value="">Ninguna</a>
+            <br><br>
 
             <h2>Color de fondo</h2>
             <a href="#" class="js-option-color btn btn-xs  btn--flat bg-one" data-element=".navbar-logo .js-background-color" data-option="bg-" data-value="one"></a>
@@ -88,13 +88,15 @@
   <br>
     <div class="group-options padding-xs">
     <h2>Alineación del menú</h2>
-    <a href="#" class="js-option btn btn-xs  btn--outline" data-element=".js-align" data-option="flex-align-" data-value="left">Izquierda</a>
-    <a href="#" class="js-option btn btn-xs  btn--outline" data-element=".js-align" data-option="flex-align-" data-value="center">Centro</a>
-    <a href="#" class="js-option btn btn-xs  btn--outline" data-element=".js-align" data-option="flex-align-" data-value="right">Derecha</a>
-    <a href="#" class="js-option btn btn-xs  btn--outline option-justify" data-element=".js-align" data-option="flex-align-" data-value="justify">Justificado</a>
+     <hr>
+    <a href="#" class="js-option btn--outline option-align" data-element=".js-align" data-option="flex-align-" data-value="left"><span class="icon-align-left"></span></a>
+    <a href="#" class="js-option btn--outline option-align" data-element=".js-align" data-option="flex-align-" data-value="center"><span class="icon-align-center"></span></a>
+    <a href="#" class="js-option btn--outline option-align" data-element=".js-align" data-option="flex-align-" data-value="right"><span class="icon-align-right"></span></a>
+    <a href="#" class="js-option btn--outline option-align" data-element=".js-align" data-option="flex-align-" data-value="justify"><span class="icon-align-justify"></span></a>
 
 
     <h2>Estilo del menú</h2>
+        <hr>
     <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="line">Line</a> |
     <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="simple">Simple</a>|
     <a href="#" class="js-option fg-dark" data-element=".navbar-menu-inner" data-option="menu--" data-value="back-all">Back all</a>|
@@ -109,13 +111,13 @@
         <h2>Navegación inferior</h2>
         <hr>
         <h2>Transparencia</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-two js-transparent" data-element=".js-subnav"  data-option="is-" data-value="transparent">Transparente</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-two" data-element=".js-subnav" data-option="is-" data-value="notransparent">No transparente</a>
+        <a href="#" class="js-option btn btn-xs   bg-transparent fg-dark js-transparent" data-element=".js-subnav"  data-option="is-" data-value="transparent">Transparente</a>
+        <a href="#" class="js-option btn btn-xs  btn--flat bg-three" data-element=".js-subnav" data-option="is-" data-value="notransparent">Color</a>
 
-        <h2>Subnav border bottom</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="border-" data-value="bottom">YES</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-subnav" data-option="border-" data-value="">NO</a>
-
+        <h2>Decoración inferior</h2>
+        <a href="#" class="js-option border-bottom padding-s" data-element=".js-subnav" data-option="border-" data-value="bottom">YES</a>
+        <a href="#" class="js-option padding-s" data-element=".js-subnav" data-option="border-" data-value="">NO</a>
+        <br><br>
         <h2>Subnav background</h2>
         <a href="#" class="js-option-color btn btn-xs  btn--flat bg-one" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="one"></a>
         <a href="#" class="js-option-color btn btn-xs  btn--flat bg-two" data-element=".js-subnav .js-background-color" data-option="bg-" data-value="two"></a>
@@ -145,17 +147,18 @@
         <input class="option-slider"  type="range" min="0" max="4" value="4" data-option="padding-v" data-values='["xxs","s","l","xl","xxl"]' data-element=".js-hero">
 
         <h2>Alineación del texto</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="left">Izquierda</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="center">Centro</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero-align" data-option="text-align-" data-value="right">Derecha</a>
+        <a href="#" class="js-option option-align" data-element=".js-hero-align" data-option="text-align-" data-value="left"><span class="icon-align-left"></span></a>
+        <a href="#" class="js-option option-align" data-element=".js-hero-align" data-option="text-align-" data-value="center"><span class="icon-align-center"></span></a>
+        <a href="#" class="js-option option-align" data-element=".js-hero-align" data-option="text-align-" data-value="right"><span class="icon-align-right"></span></a>
 
         <h2>Posición del texto</h2>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="left">Izquierda</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="center">Centro</a>
-        <a href="#" class="js-option btn btn-xs  btn--flat bg-one" data-element=".js-hero" data-option="hero-content-position-" data-value="right">Derecha</a>
+        <a href="#" class="js-option option-align" data-element=".js-hero" data-option="hero-content-position-" data-value="left"><span class="icon-align-left"></span></a>
+        <a href="#" class="js-option option-align" data-element=".js-hero" data-option="hero-content-position-" data-value="center"><span class="icon-align-center"></span></a>
+        <a href="#" class="js-option option-align" data-element=".js-hero" data-option="hero-content-position-" data-value="right"><span class="icon-align-right"></span></a>
+
         <h2>Estilo del texto</h2>
-        <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".hero .js-fg" data-option="fg-" data-value="white">Claro</a>
-        <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".hero .js-fg" data-option="fg-" data-value="dark">Oscuro</a>
+        <a href="#" class="js-option btn btn-xs btn--flat bg-dark" data-element=".hero" data-option="fg-" data-value="white">Claro</a>
+        <a href="#" class="js-option btn btn-xs bg-white fg-dark" data-element=".hero" data-option="fg-" data-value="dark">Oscuro</a>
 
 
     </div>

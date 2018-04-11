@@ -60,7 +60,7 @@ $(document).ready(function($){
 
 
 
-        $changeOptionColor.each(function(index) {
+  $changeOptionColor.each(function(index) {
             $(this).on('click', function(){
                 event.preventDefault();
                 var dataValue         = $(this).data('value');
