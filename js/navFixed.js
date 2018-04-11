@@ -53,6 +53,31 @@ $(document).ready(function($){
         lastScrollPosition = newScrollPosition;
     });
 
+/* open search*/
+    $('.js-fixed-search-open').on('click', function(event){
+        event.preventDefault();
+        $html.addClass('search-fixed-is-open');
+        setTimeout(function(){
+            $searchBarFixed.find('input').focus();
+            console.log('INPUT');
+        }, 200);
+
+
+    });
+    /* Cerramos el buscador en el fixed menú al hacer click en la lupa*/
+    $('.js-fixed-search-close').on('click', function(event){
+        event.preventDefault();
+        $html.removeClass('search-fixed-is-open');
+
+    });
+
+    $backdrop.on('click', function(){
+        $html.removeClass('search-fixed-is-open');
+
+    });
+
+
+
 
 
 });

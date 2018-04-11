@@ -11,6 +11,7 @@ function initFixedHeader() {
 
     // Check to know if element is transparent
     var _isTransparent  = $fixedNav.hasClass('is-transparent');
+    var _isSubnavButton = $fixedNav.hasClass('js-subnav-bottom');
 
     var start = $fixedNav.offset().top;
     var until = start + HEADER_LEEWAY;
@@ -19,6 +20,10 @@ function initFixedHeader() {
     // Style fixes on scroll
     var $fixPadding     = $header.find('.padding-fixed');
     var $fixLogoSize    = $header.find('.width-logo-fixed');
+
+    // Color variables
+    var _oldTextColor = getClassStartsWith( $fixedNav[0].className,'fg-');
+    var _stickyBgColor;
 
     var maxPadding, minPadding, difPadding;
     var maxWidth, minWidth, difWidth;
@@ -36,10 +41,11 @@ function initFixedHeader() {
         }
         difWidth = maxWidth - minWidth;
     }
+
     function _checkScroll(){
 
         // Check actual scroll position
-        offset = $(document).scrollTop();
+        offset = $(window).scrollTop();
 
         /* When scroll is on top */
         if( offset <= start ){
@@ -60,15 +66,25 @@ function initFixedHeader() {
                 _fixDefaultLogoSize();
                 console.log('maxWidth is on top:'+ maxWidth);
             }
+
             if (_isTransparent) {
                 // background on scroll becomes opacity 1 -> true
                 $header.find('.js-background').css({'opacity': '' });
+
+                $fixedNav.removeClass( getClassStartsWith( $fixedNav[0].className,'fg-') );
+                $fixedNav.addClass(_oldTextColor);
             }
 
+            if (_isSubnavButton) {
+                $fixedNav.addClass('subnav-bottom-absolute');
+            }
+            $fixedNav.removeClass('sticky');
         }
 
         /* When sticky starts */
         else {
+
+            $fixedNav.addClass('sticky');
 
             /* When user is scrolling inside leeway */
             if( (offset > start) && (offset <= until) ){
@@ -114,7 +130,21 @@ function initFixedHeader() {
                 // background on scroll becomes opacity 1 -> true
                 $header.find('.js-background').css({'opacity': opacity });
             }
+            if (_isSubnavButton) {
+                $fixedNav.removeClass('subnav-bottom-absolute');
+            }
 
+            /* Background-color del menu fixed */
+            _stickyBgColor = $fixedNav.find('.js-background-color').css('background-color');
+
+            if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
+                $fixedNav.addClass('fg-dark');
+                $fixedNav.removeClass('fg-white');
+            }
+            else {
+                $fixedNav.addClass('fg-white');
+                $fixedNav.removeClass('fg-dark');
+            }
 
         }
 
@@ -126,6 +156,7 @@ function initFixedHeader() {
     if ($fixLogoSize.length) {
         _fixDefaultLogoSize();
     }
+
     $(window).on('scroll', function(){
         _checkScroll();
     });
@@ -188,71 +219,45 @@ function fixHeaderPadding(){
 
 
 /*
-  Funcion para actualizar el foreground según el color de fondo transparencia..
+  Funcion para actualizar el foreground según el color de fondo o transparencia..
 */
+function fixForegroundColor() {
 
-function refreshForeground() {
     var $header  = $('header');  /* site header */
+    var $hero = $header.find('.hero');
 
-
-    var $fixedElement   = $header.find('.js-fixed');        /* check if there is a menu is fixed */
-    var _isTransparent  = $header.find('.is-transparent');  /* check if there is a menu is transparent */
-
-
-    /* Elemento que contien la clase para el color del texto (fg-'color') */
+    /* .js-change-color es la clase de los elementos que deben actualizar su color (foreground) */
     var $fgChange = $('.js-change-color');
-
-
 
     $fgChange.each(function(index) {
 
         var $this = $(this);
 
-        _isTransparent = $this.hasClass('is-transparent');
+        /* If element is transparent */
+        if($this.hasClass('is-transparent')) {
 
-        if(_isTransparent) {
+            var $firstBlockAfterHeader = $('.site-header + * ');
 
-            console.log('%c Oh es transparente estoy en el elemento ' + index + ' del EACH', 'background: #222; color: #eee');
-
-
-            var $NextBLock = $('.site-header + * ');
-            console.log('$NextBLock', $NextBLock);
-
-
-            if ($('.hero').length) {
-                var $Hero = $('.hero');
-                var _getHeroFg = getClassStartsWith($Hero[0].className, 'fg-');
-                console.log('_getHeroFg', _getHeroFg);
-                $this.addClass(_getHeroFg);
+            if ($hero.length) {
+                var _heroForegroundClass = getClassStartsWith($hero[0].className, 'fg-');
+                $this.addClass(_heroForegroundClass);
 
             }
             else {
-                var _getNextBlockFg = getClassStartsWith($NextBLock[0].className, 'fg-');
-                console.log('_getNextBlockFg', _getNextBlockFg);
-                $NextBLock.addClass('fix-header-padding');
-                $this.addClass(_getNextBlockFg);
+                var _firstBlockForegroundClass = getClassStartsWith($firstBlockAfterHeader[0].className, 'fg-');
+                $this.addClass(_firstBlockForegroundClass);
 
             }
         }/* _isTransparent */
 
-
+        /* If element isn't transparent */
         else{
 
-            console.log('%c Oh no es transparente estoy en el elemento ' + index + ' del EACH', 'background: #222; color: #eee');
-
-            /* Elemento que contien la clase para el color del texto (fg-'color') */
-
-
             /* Leemos el color de fondo del elemento que js-change-color */
-            var _bgCssColor = $this.find('.js-background-color').css('background-color');
-
-            console.log('El color de fondo para este elemento es '
-                + _bgCssColor + ' y le añado la clase "'+ checkContrastForegroundColor(_bgCssColor) + "'");
-
-
+            var _thisBackgroundColor = $this.find('.js-background-color').css('background-color');
 
             /* Check para el contraste del color de fondo */
-            if (checkContrastForegroundColor(_bgCssColor) === 'dark') {
+            if (checkContrastForegroundColor(_thisBackgroundColor) === 'dark') {
                 $this.addClass('fg-dark');
                 $this.removeClass('fg-white');
             }
@@ -263,76 +268,6 @@ function refreshForeground() {
 
         }/* _No Transparent */
 
-
-        if($this.hasClass('js-fixed')){
-
-            var _fixedElementIsSubnavButton = $fixedElement.hasClass('js-subnav-bottom');
-            var heightFixedOffset = $fixedElement.offset().top;
-            var _oldTextColor, _stickyBgColor;
-
-            if (_isTransparent) {
-                _oldTextColor = getClassStartsWith( $fixedElement[0].className,'fg-');
-                console.log('old text color', _oldTextColor);
-            }
-
-
-            /* on window scroll event */
-            $(window).on('scroll', function () {
-
-                if ($(window).scrollTop() > heightFixedOffset) {
-
-                    $fixedElement.addClass('sticky');
-
-                    if (_fixedElementIsSubnavButton) {
-                        $fixedElement.removeClass('subnav-bottom-absolute');
-                    }
-
-                    /* Background-color del menu fixed */
-                    _stickyBgColor = $fixedElement.find('.js-background-color').css('background-color');
-
-                    if (checkContrastForegroundColor(_stickyBgColor) === 'dark') {
-                        $fixedElement.addClass('fg-dark');
-                        $fixedElement.removeClass('fg-white');
-                    }
-                    else {
-                        $fixedElement.addClass('fg-white');
-                        $fixedElement.removeClass('fg-dark');
-                    }
-
-
-
-
-                }
-                else {
-
-                    if (_fixedElementIsSubnavButton) {
-                        $fixedElement.addClass('subnav-bottom-absolute');
-                    }
-
-                    $fixedElement.removeClass('sticky');
-
-
-                    if (_isTransparent) {
-                        $fixedElement.removeClass( getClassStartsWith( $fixedElement[0].className,'fg-') );
-                        $fixedElement.addClass(_oldTextColor);
-                    }
-
-
-                }
-
-
-
-
-            });
-
-
-
-
-        }/* _isFixed */
-
-        else{
-
-        }
     });
 
 
@@ -340,23 +275,12 @@ function refreshForeground() {
 
 
 /*
- * initMmenu funtcion
+ * initMmenu function
  * @options: object with custom mmenu options
  *
  */
 function initMmenu(options) {
-    var $menuMobile     = $('#menu');
 
-
-    /* Custom mmenu options */
-    var menuCustomize = {
-        "extensions": [
-            $menuMobile.data('extension-position'),
-            $menuMobile.data('extension-theme'),
-        ],
-        "iconPanels": $menuMobile.data('icon-panels')
-
-    };
     var menuDefault = {
         "extensions": [
             "pagedim-black",
@@ -384,8 +308,81 @@ function initMmenu(options) {
 
     var menuOptions = $.extend({}, menuDefault, options);
 
-    console.log("calling mmenu!!!");
-    $menuMobile.mmenu(menuOptions);
+    $MENU_MOBILE.mmenu(menuOptions);
 
 }// initMmenu
 
+
+
+
+function disappearOnScroll() {
+
+    var $dissapear = $('.dissapear');
+
+    if ($dissapear.length) {
+        $(window).bind('scroll', function () {
+
+            var offsetDissapear = dissapear.offset().top;
+
+            console.log("OFFSET DISSAPEAR", offsetDissapear);
+            var fadeStart = 100;
+            var fadeUntil = offsetDissapear + 400;
+
+            var offset = $(document).scrollTop()
+                , opacity = 0
+            ;
+            if (offset <= fadeStart) {
+                opacity = 1;
+            } else if (offset <= fadeUntil) {
+                opacity = 1 - offset / fadeUntil;
+            }
+            dissapear.css('opacity', opacity);
+        });
+    }
+}
+
+
+
+function initSearch() {
+
+    var $backdrop       = $('.backdrop');
+    var $searchBar      = $('.js-searchbar');
+    var $searchOpen      = $('.js-search-open');
+    var $searchClose      = $('.js-search-close');
+    var $html           = $('html');
+
+
+
+    /* Abrimos el buscador al hacer click en la lupa*/
+
+    $searchOpen.on('click', function(event){
+        event.preventDefault();
+
+        $html.addClass('search-is-open');
+
+        // setTimeout(function(){
+        //     $searchBar.find('input').focus();
+        //     console.log('INPUT');
+        // },2500);
+
+        return false;
+    });
+    /* Cerramos el buscador al hacer click en la lupa */
+
+
+
+
+    $searchClose.on('click', function(event){
+        event.preventDefault();
+        $html.removeClass('search-is-open');
+
+    });
+    /* Abrimos el buscador en el fixed menú al hacer click en la lupa*/
+
+
+    $backdrop.on('click', function(){
+        $html.removeClass('search-is-open');
+
+    });
+
+}
