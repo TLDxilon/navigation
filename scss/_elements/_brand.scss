@@ -8,10 +8,10 @@
   vertical-align: middle;
  // @include transition(transform .3s ease, background .3s ease, width .3s linear);
   @media #{$mobile}{
-    max-width: 140px;
+    max-width: 150px;
   }
   @media #{$tablets}{
-    max-width: 175px;
+    max-width: 180px;
   }
 }
 
@@ -25,4 +25,7 @@
     top: 0;
 
   }
+}
+.navbar__item-brand {
+  @extend .padding-h-xs;
 }

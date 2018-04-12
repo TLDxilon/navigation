@@ -452,10 +452,10 @@ h2 {
   vertical-align: middle; }
   @media only screen and (max-width: 479px) {
     .branding-logo {
-      max-width: 140px; } }
+      max-width: 150px; } }
   @media only screen and (min-width: 480px) and (max-width: 960px) {
     .branding-logo {
-      max-width: 175px; } }
+      max-width: 180px; } }
 
 .branding-title {
   margin-bottom: 0; }
@@ -1117,7 +1117,7 @@ h2 {
   padding-left: 0px;
   padding-right: 0px; }
 
-.padding-h-xs, .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2, .topbar-inner .social-item {
+.padding-h-xs, .navbar__item-brand, .topbar-inner .icon.icon-phone2, .topbar-inner .icon.icon-mail2, .topbar-inner .social-item {
   padding-left: 5px;
   padding-right: 5px; }
 
