@@ -59,44 +59,29 @@ $(document).ready(function($){
 
 
 
-
-  $changeOptionColor.each(function(index) {
-            $(this).on('click', function(){
-                event.preventDefault();
-                var dataValue         = $(this).data('value');
-                var dataOption        = $(this).data('option');
-                var dataElement       = $(this).data('element');
-                var $element          = $(dataElement);
-                var _BgColor;
-
-                // expresión regular que busca si esa clase existe ya
-                // y la elimina
-                $element.attr('class', function(i, c){
-                    var pattern = '(^|\\s)' + dataOption + '\\S+';
-                    var myReg  = new RegExp(pattern, "g");
-                    return c.replace(myReg, '');
-                });
-
-                // actualizo con la nueva clase
-                $element.addClass(dataOption + dataValue);
-
-                /* Background-color del menu  */
-                _BgColor = $element.css('background-color');
-                //* Elemento que actualiza el fg-
-                var $fgChange = $element.parents( ".js-change-color" );
-                //Compruebo el ratio de color
-                if (checkContrastForegroundColor(_BgColor) === 'dark') {
-                    $fgChange.addClass('fg-dark');
-                    $fgChange.removeClass('fg-white');
-                }
-                else {
-                    $fgChange.addClass('fg-white');
-                    $fgChange.removeClass('fg-dark');
-                }
+   $changeOptionColor.each(function(index) {
+        $(this).on('click', function(){
+            event.preventDefault();
+            var dataValue         = $(this).data('value');
+            var dataOption        = $(this).data('option');
+            var dataElement       = $(this).data('element');
+            var $element          = $(dataElement);
 
 
-
+            // expresión regular que busca si esa clase existe ya
+            // y la elimina
+            $element.attr('class', function(i, c){
+                var pattern = '(^|\\s)' + dataOption + '\\S+';
+                var myReg  = new RegExp(pattern, "g");
+                return c.replace(myReg, '');
             });
+
+            // actualizo con la nueva clase
+            $element.addClass(dataOption + dataValue);
+
+
+
+            fixForegroundColor();
 
 
 
@@ -104,7 +89,41 @@ $(document).ready(function($){
 
 
 
+    });
 
+
+
+  $changeTransparent.each(function(index) {
+        $(this).on('click', function(){
+            event.preventDefault();
+            var dataValue         = $(this).data('value');
+            var dataOption        = $(this).data('option');
+            var dataElement       = $(this).data('element');
+            var $element          = $(dataElement);
+
+
+            // expresión regular que busca si esa clase existe ya
+            // y la elimina
+            $element.attr('class', function(i, c){
+                var pattern = '(^|\\s)' + dataOption + '\\S+';
+                var myReg  = new RegExp(pattern, "g");
+                return c.replace(myReg, '');
+            });
+
+            // actualizo con la nueva clase
+            $element.addClass(dataOption + dataValue);
+
+            initFixedHeader();
+            fixForegroundColor();
+
+
+
+
+        });
+
+
+
+    });
 
 
 
@@ -134,7 +153,8 @@ $(document).ready(function($){
 
         console.log("Clase: ." + dataOption+ "-" + dataValues[value]);
 
-
+        /* Check padding del primer bloque en funcion de la altura del nav */
+        fixHeaderPadding();
 
     });
 });

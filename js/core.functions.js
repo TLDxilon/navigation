@@ -89,8 +89,9 @@ function initFixedHeader() {
             /* When user is scrolling inside leeway */
             if( (offset > start) && (offset <= until) ){
 
-                // Opacity
+               // Opacity
                 opacity = 0 + (offset-start)/until;
+
 
                 // Logo Padding
                 actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
