@@ -4,15 +4,21 @@ $sizes: (
         'xs': 120px,
         's': 180px,
         'm': 240px,
-        'l': 300px,
-        'xl': 350px,
-        'xxl': 380px,
+        'l': 260px,
+        'xl': 280px,
+        'xxl': 300px,
 );
 
 @each $section, $size in $sizes {
   .logo-size-#{$section} {
     max-width: $size;
     width: auto;
-    max-height:200px;
+    max-height: 200px;
+
+    &.is-vertical {
+      max-height: $size;
+      height: auto;
+      max-width: 200px;
+    }
   }
 }

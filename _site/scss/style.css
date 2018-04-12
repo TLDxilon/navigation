@@ -644,36 +644,64 @@ h2 {
   max-width: 80px;
   width: auto;
   max-height: 200px; }
+  .logo-size-xxs.is-vertical {
+    max-height: 80px;
+    height: auto;
+    max-width: 200px; }
 
 .logo-size-xs {
   max-width: 120px;
   width: auto;
   max-height: 200px; }
+  .logo-size-xs.is-vertical {
+    max-height: 120px;
+    height: auto;
+    max-width: 200px; }
 
 .logo-size-s {
   max-width: 180px;
   width: auto;
   max-height: 200px; }
+  .logo-size-s.is-vertical {
+    max-height: 180px;
+    height: auto;
+    max-width: 200px; }
 
 .logo-size-m {
   max-width: 240px;
   width: auto;
   max-height: 200px; }
+  .logo-size-m.is-vertical {
+    max-height: 240px;
+    height: auto;
+    max-width: 200px; }
 
 .logo-size-l {
+  max-width: 260px;
+  width: auto;
+  max-height: 200px; }
+  .logo-size-l.is-vertical {
+    max-height: 260px;
+    height: auto;
+    max-width: 200px; }
+
+.logo-size-xl {
+  max-width: 280px;
+  width: auto;
+  max-height: 200px; }
+  .logo-size-xl.is-vertical {
+    max-height: 280px;
+    height: auto;
+    max-width: 200px; }
+
+.logo-size-xxl {
   max-width: 300px;
   width: auto;
   max-height: 200px; }
-
-.logo-size-xl {
-  max-width: 350px;
-  width: auto;
-  max-height: 200px; }
-
-.logo-size-xxl {
-  max-width: 380px;
-  width: auto;
-  max-height: 200px; }
+  .logo-size-xxl.is-vertical {
+    max-height: 300px;
+    height: auto;
+    max-width: 200px; }
 
 /*CLASES PADDINGS*/
 .padding-xxs {

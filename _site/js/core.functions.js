@@ -15,7 +15,10 @@ function initFixedHeader() {
 
     var start = $fixedNav.offset().top;
     var until = start + HEADER_LEEWAY;
-    var offset, opacity, actualPadding, actualWidthlogo;
+    var offset, opacity, actualPadding, actualSizelogo;
+
+
+
 
     // Style fixes on scroll
     var $fixPadding     = $header.find('.padding-fixed');
@@ -26,7 +29,17 @@ function initFixedHeader() {
     var _stickyBgColor;
 
     var maxPadding, minPadding, difPadding;
-    var maxWidth, minWidth, difWidth;
+    var maxLogoSize, minLogoSize, difWidth;
+    var cssSizeProperty;
+
+    var $myBrand =  $('.branding-logo');
+    cssSizeProperty = 'width';
+
+    if($myBrand.hasClass('is-vertical')) {
+      cssSizeProperty = 'height';
+    }
+
+
 
     function _fixDefaultPadding(){
         maxPadding = $fixPadding.css('padding-top').replace('px', '');
@@ -34,12 +47,13 @@ function initFixedHeader() {
         difPadding = maxPadding - minPadding;
     }
     function _fixDefaultLogoSize(){
-        maxWidth = $fixLogoSize.css('width').replace('px', '');
-        minWidth = LOGO_MIN_WIDTH;
-        if(maxWidth <= minWidth){
-            minWidth = maxWidth;
+
+        maxLogoSize = $fixLogoSize.css(cssSizeProperty).replace('px', '');
+        minLogoSize = LOGO_MIN_SIZE;
+        if(maxLogoSize <= minLogoSize){
+            minLogoSize = maxLogoSize;
         }
-        difWidth = maxWidth - minWidth;
+        difWidth = maxLogoSize - minLogoSize;
     }
 
     function _checkScroll(){
@@ -57,14 +71,12 @@ function initFixedHeader() {
                     'padding-bottom': ''
                 });
                 _fixDefaultPadding();
-                console.log('maxPadding is on top:'+ maxPadding);
+
             }
             if ($fixLogoSize.length) {
-                $fixLogoSize.css({
-                    'width': ''
-                });
+                $fixLogoSize.css(cssSizeProperty, '');
                 _fixDefaultLogoSize();
-                console.log('maxWidth is on top:'+ maxWidth);
+
             }
 
             if (_isTransparent) {
@@ -97,7 +109,8 @@ function initFixedHeader() {
                 actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
 
                 // Logo Width
-                actualWidthlogo = maxWidth - (( (offset-start) / until ) * difWidth);
+                actualSizelogo = maxLogoSize - (( (offset-start) / until ) * difWidth);
+                console.log(window.scrollY);
 
             }
 
@@ -111,7 +124,7 @@ function initFixedHeader() {
                 actualPadding = minPadding;
 
                 // Logo width
-                actualWidthlogo = minWidth;
+                actualSizelogo = minLogoSize;
 
             }
 
@@ -123,9 +136,7 @@ function initFixedHeader() {
                 });
             }
             if ($fixLogoSize.length) {
-                $fixLogoSize.css({
-                    'width': actualWidthlogo + 'px'
-                });
+                $fixLogoSize.css(cssSizeProperty,actualSizelogo + 'px');
             }
             if (_isTransparent) {
                 // background on scroll becomes opacity 1 -> true
@@ -161,6 +172,16 @@ function initFixedHeader() {
     $(window).on('scroll', function(){
         _checkScroll();
     });
+
+
+    /*Cuando recargo la página también detectamos la posición del scroll para poner el menú fixed*/
+    if(window.scrollY > start){
+        _checkScroll();
+
+    }
+
+
+
 
 }
 
@@ -327,7 +348,7 @@ function disappearOnScroll() {
 
             var offsetDissapear = dissapear.offset().top;
 
-            console.log("OFFSET DISSAPEAR", offsetDissapear);
+
             var fadeStart = 100;
             var fadeUntil = offsetDissapear + 400;
 
@@ -347,11 +368,13 @@ function disappearOnScroll() {
 
 
 function initSearch() {
+    var $header  = $('header');  /* site header */
 
-    var $backdrop       = $('.backdrop');
-    var $searchBar      = $('.js-searchbar');
-    var $searchOpen      = $('.js-search-open');
-    var $searchClose      = $('.js-search-close');
+
+    var $backdrop       = $header.find('.backdrop');
+    var $searchBar      = $header.find('.js-searchbar');
+    var $searchOpen      = $header.find('.js-search-open');
+    var $searchClose      = $header.find('.js-search-close');
     var $html           = $('html');
 
 
@@ -387,5 +410,28 @@ function initSearch() {
         $html.removeClass('search-is-open');
 
     });
+
+}
+
+
+
+function ratioImgLogo(){
+     var $myBrand      = $('.branding-logo');
+     var _myBrandWidth = $myBrand.width();
+     var _myBrandHeight = $myBrand.height();
+
+
+
+
+     var _ratioImg = _myBrandWidth/_myBrandHeight;
+
+
+     if (_ratioImg > 1){
+         $myBrand.addClass('is-horizontal');
+     }
+     else if (_ratioImg < 1){
+         $myBrand.addClass('is-vertical');
+     }
+
 
 }
