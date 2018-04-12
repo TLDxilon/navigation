@@ -1,5 +1,6 @@
 .navbar-item--logo{
  // @include transition(padding .3s linear);
+
 }
 
 
@@ -8,7 +9,7 @@
   vertical-align: middle;
  // @include transition(transform .3s ease, background .3s ease, width .3s linear);
   @media #{$mobile}{
-    max-width: 150px;
+    max-width: 140px;
   }
   @media #{$tablets}{
     max-width: 180px;

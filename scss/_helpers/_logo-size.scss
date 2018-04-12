@@ -11,6 +11,8 @@ $sizes: (
 
 @each $section, $size in $sizes {
   .logo-size-#{$section} {
-    width: $size;
+    max-width: $size;
+    width: auto;
+    max-height:200px;
   }
 }
