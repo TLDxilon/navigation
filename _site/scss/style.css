@@ -945,7 +945,7 @@ h2 {
   overflow: hidden !important; }
   .search-is-open body {
     overflow: hidden !important;
-    height: 100%; }
+    height: 100% !important; }
   .search-is-open .js-searchbar {
     opacity: 1;
     z-index: 1;
@@ -1953,11 +1953,11 @@ h2 {
 
 .mm-wrapper_opening [class*=mm-menu_pagedim].mm-menu_opened ~ .mm-page__blocker {
   opacity: .7;
-  -webkit-transition: opacity 0.2s ease 0.2s;
-  -moz-transition: opacity 0.2s ease 0.2s;
-  -ms-transition: opacity 0.2s ease 0.2s;
-  -o-transition: opacity 0.2s ease 0.2s;
-  transition: opacity 0.2s ease 0.2s; }
+  -webkit-transition: opacity 0.4s ease 0.4s;
+  -moz-transition: opacity 0.4s ease 0.4s;
+  -ms-transition: opacity 0.4s ease 0.4s;
+  -o-transition: opacity 0.4s ease 0.4s;
+  transition: opacity 0.4s ease 0.4s; }
 
 input {
   border-style: solid; }

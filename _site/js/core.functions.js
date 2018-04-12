@@ -373,8 +373,8 @@ function initSearch() {
 
     var $backdrop       = $header.find('.backdrop');
     var $searchBar      = $header.find('.js-searchbar');
-    var $searchOpen      = $header.find('.js-search-open');
-    var $searchClose      = $header.find('.js-search-close');
+    var $searchOpen     = $header.find('.js-search-open');
+    var $searchClose    = $header.find('.js-search-close');
     var $html           = $('html');
 
 
@@ -386,14 +386,14 @@ function initSearch() {
 
         $html.addClass('search-is-open');
 
-        // setTimeout(function(){
-        //     $searchBar.find('input').focus();
-        //     console.log('INPUT');
-        // },2500);
+        setTimeout(function(){
+            $searchBar.find('input').focus();
+            console.log('INPUT');
+        },500);
 
         return false;
     });
-    /* Cerramos el buscador al hacer click en la lupa */
+    /* Cerramos el buscador al hacer click en la equis */
 
 
 
@@ -403,7 +403,7 @@ function initSearch() {
         $html.removeClass('search-is-open');
 
     });
-    /* Abrimos el buscador en el fixed menú al hacer click en la lupa*/
+
 
 
     $backdrop.on('click', function(){
