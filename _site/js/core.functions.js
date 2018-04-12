@@ -14,11 +14,12 @@ function initFixedHeader() {
     var _isSubnavButton = $fixedNav.hasClass('js-subnav-bottom');
 
     var start = $fixedNav.offset().top;
-    var until = start + HEADER_LEEWAY;
+    var until =  start + HEADER_LEEWAY;
     var offset, opacity, actualPadding, actualSizelogo;
 
-
-
+    console.log('start', start);
+    console.log('until', until);
+    console.log('HEADER_LEEWAY', HEADER_LEEWAY);
 
     // Style fixes on scroll
     var $fixPadding     = $header.find('.padding-fixed');
@@ -29,7 +30,7 @@ function initFixedHeader() {
     var _stickyBgColor;
 
     var maxPadding, minPadding, difPadding;
-    var maxLogoSize, minLogoSize, difWidth;
+    var maxLogoSize, minLogoSize, difSize;
     var cssSizeProperty;
 
     var $myBrand =  $('.branding-logo');
@@ -53,7 +54,8 @@ function initFixedHeader() {
         if(maxLogoSize <= minLogoSize){
             minLogoSize = maxLogoSize;
         }
-        difWidth = maxLogoSize - minLogoSize;
+        difSize = maxLogoSize - minLogoSize;
+        console.log(difSize);
     }
 
     function _checkScroll(){
@@ -109,12 +111,8 @@ function initFixedHeader() {
                 actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
 
                 // Logo Width
-                actualSizelogo = maxLogoSize - (( (offset-start) / until ) * difWidth);
-                console.log({
-                    'actualPadding': actualPadding,
-                    'actualSizelogo': actualSizelogo,
-                    'opacity': opacity
-                });
+                actualSizelogo = maxLogoSize - (( (offset-start) / until ) * difSize);
+
 
             }
 
