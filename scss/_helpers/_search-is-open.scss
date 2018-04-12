@@ -1,10 +1,10 @@
 .search-is-open{
-    overflow-y: scroll;
-  overflow: hidden;
+    overflow-y: scroll !important;
+  overflow: hidden !important;
 
   body{
-    overflow: hidden;
-    height: 100%;
+    overflow: hidden !important;
+    height: 100% !important;
   }
   .js-searchbar{
     opacity: 1;

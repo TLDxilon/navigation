@@ -941,10 +941,10 @@ h2 {
   overflow: hidden; }
 
 .search-is-open {
-  overflow-y: scroll;
-  overflow: hidden; }
+  overflow-y: scroll !important;
+  overflow: hidden !important; }
   .search-is-open body {
-    overflow: hidden;
+    overflow: hidden !important;
     height: 100%; }
   .search-is-open .js-searchbar {
     opacity: 1;
