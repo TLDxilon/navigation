@@ -110,7 +110,11 @@ function initFixedHeader() {
 
                 // Logo Width
                 actualSizelogo = maxLogoSize - (( (offset-start) / until ) * difWidth);
-                console.log(window.scrollY);
+                console.log({
+                    'actualPadding': actualPadding,
+                    'actualSizelogo': actualSizelogo,
+                    'opacity': opacity
+                });
 
             }
 
