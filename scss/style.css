@@ -677,29 +677,29 @@ h2 {
     max-width: 200px; }
 
 .logo-size-l {
-  max-width: 260px;
-  width: auto;
-  max-height: 200px; }
-  .logo-size-l.is-vertical {
-    max-height: 260px;
-    height: auto;
-    max-width: 200px; }
-
-.logo-size-xl {
   max-width: 280px;
   width: auto;
   max-height: 200px; }
-  .logo-size-xl.is-vertical {
+  .logo-size-l.is-vertical {
     max-height: 280px;
     height: auto;
     max-width: 200px; }
 
+.logo-size-xl {
+  max-width: 320px;
+  width: auto;
+  max-height: 200px; }
+  .logo-size-xl.is-vertical {
+    max-height: 320px;
+    height: auto;
+    max-width: 200px; }
+
 .logo-size-xxl {
-  max-width: 300px;
+  max-width: 350px;
   width: auto;
   max-height: 200px; }
   .logo-size-xxl.is-vertical {
-    max-height: 300px;
+    max-height: 350px;
     height: auto;
     max-width: 200px; }
 

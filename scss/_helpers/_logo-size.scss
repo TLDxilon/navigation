@@ -4,9 +4,9 @@ $sizes: (
         'xs': 120px,
         's': 180px,
         'm': 240px,
-        'l': 260px,
-        'xl': 280px,
-        'xxl': 300px,
+        'l': 280px,
+        'xl': 320px,
+        'xxl': 350px,
 );
 
 @each $section, $size in $sizes {
