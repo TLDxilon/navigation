@@ -15,11 +15,8 @@ function initFixedHeader() {
 
     var start = $fixedNav.offset().top;
     var until =  start + HEADER_LEEWAY;
-    var offset, opacity, actualPadding, actualSizelogo;
+    var offset, opacity, actualPadding, actualLogoSize;
 
-    console.log('start', start);
-    console.log('until', until);
-    console.log('HEADER_LEEWAY', HEADER_LEEWAY);
 
     // Style fixes on scroll
     var $fixPadding     = $header.find('.padding-fixed');
@@ -35,9 +32,13 @@ function initFixedHeader() {
 
     var $myBrand =  $('.branding-logo');
     cssSizeProperty = 'width';
-
+    
+    if($myBrand.hasClass('is-horizontal')) {
+       var logoMinSize      = 150;
+    }
     if($myBrand.hasClass('is-vertical')) {
       cssSizeProperty = 'height';
+      var logoMinSize      = 80;
     }
 
 
@@ -50,18 +51,20 @@ function initFixedHeader() {
     function _fixDefaultLogoSize(){
 
         maxLogoSize = $fixLogoSize.css(cssSizeProperty).replace('px', '');
-        minLogoSize = LOGO_MIN_SIZE;
+        minLogoSize = logoMinSize;
         if(maxLogoSize <= minLogoSize){
             minLogoSize = maxLogoSize;
         }
         difSize = maxLogoSize - minLogoSize;
-        console.log(difSize);
+
     }
 
     function _checkScroll(){
 
         // Check actual scroll position
         offset = $(window).scrollTop();
+
+
 
         /* When scroll is on top */
         if( offset <= start ){
@@ -104,14 +107,13 @@ function initFixedHeader() {
             if( (offset > start) && (offset <= until) ){
 
                // Opacity
-                opacity = 0 + (offset-start)/until;
-
+                opacity = 0 + (offset-start)/HEADER_LEEWAY;
 
                 // Logo Padding
-                actualPadding = maxPadding -(( (offset-start) / until ) * difPadding);
+                actualPadding = maxPadding -(( (offset-start) / HEADER_LEEWAY ) * difPadding);
 
                 // Logo Width
-                actualSizelogo = maxLogoSize - (( (offset-start) / until ) * difSize);
+                actualLogoSize = maxLogoSize - (( (offset-start) / HEADER_LEEWAY ) * difSize);
 
 
             }
@@ -126,7 +128,7 @@ function initFixedHeader() {
                 actualPadding = minPadding;
 
                 // Logo width
-                actualSizelogo = minLogoSize;
+                actualLogoSize = minLogoSize;
 
             }
 
@@ -138,7 +140,7 @@ function initFixedHeader() {
                 });
             }
             if ($fixLogoSize.length) {
-                $fixLogoSize.css(cssSizeProperty,actualSizelogo + 'px');
+                $fixLogoSize.css(cssSizeProperty,actualLogoSize + 'px');
             }
             if (_isTransparent) {
                 // background on scroll becomes opacity 1 -> true

@@ -1,7 +1,6 @@
 
 //Header GLOBAL default options
 var HEADER_MIN_PADDING = 10; // padding mínimo para el elemento fixed
-var LOGO_MIN_SIZE      = 150; // tamaño mínimo del logo en fixed
 var HEADER_LEEWAY      = 200; // space where magic happens!
 var $MENU_MOBILE       = $('#menu'); // menu mobile
 
