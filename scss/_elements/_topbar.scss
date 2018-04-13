@@ -8,6 +8,7 @@
 
 .topbar__item{
   @extend .padding-h-m;
+  @include align-self(center);
 }
 
 .topbar-inner{

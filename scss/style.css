@@ -954,6 +954,11 @@ h2 {
     -ms-transition: opacity 0.3s ease, width 0.3s ease;
     -o-transition: opacity 0.3s ease, width 0.3s ease;
     transition: opacity 0.3s ease, width 0.3s ease; }
+  .search-is-open .form-search-item {
+    -webkit-align-self: center;
+    -moz-align-self: center;
+    -ms-align-self: center;
+    align-self: center; }
   .search-is-open .input-search {
     opacity: 1;
     -webkit-transform: translate(0, 0);
@@ -1388,6 +1393,12 @@ h2 {
 @media only screen and (max-width: 479px) {
   .topbar {
     display: none; } }
+
+.topbar__item {
+  -webkit-align-self: center;
+  -moz-align-self: center;
+  -ms-align-self: center;
+  align-self: center; }
 
 .topbar-inner {
   -webkit-justify-content: space-between;

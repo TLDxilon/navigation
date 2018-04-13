@@ -12,12 +12,16 @@
     @include transition(opacity 0.3s ease, width 0.3s ease);
 
   }
+  .form-search-item{
+    @include align-self(center);
+  }
   .input-search{
     opacity: 1;
     @include transform(translate(0, 0));
     @include transition(transform 0.3s ease, opacity 0.3s ease);
     @include transition-delay(0.1s);
   }
+
   .backdrop{
     opacity: 1;
     z-index: 0;
