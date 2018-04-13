@@ -439,3 +439,15 @@ function ratioImgLogo(){
 
 
 }
+
+
+
+function createSubnav(){
+
+    var $newSubnav = $('<div class="subnav position-relative"></div>');
+    $newSubnav.appendTo('.navbar');
+
+    var $navBarMenu = $('navbar-menu-inner');
+
+    $newSubnav.append($(''))
+}
