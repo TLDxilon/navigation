@@ -466,7 +466,7 @@ h2 {
   border-bottom: 1px solid rgba(176, 176, 176, 0.4); }
 .border-top {
   border-top: 1px solid rgba(176, 176, 176, 0.4); }
-.border-radius-s, .options .btn {
+.border-radius-s {
   border-radius: 5px; }
 .border-radius-m {
   border-radius: 10px; }

@@ -64,7 +64,7 @@
     padding: 10px 20px;
     border-color: #eaeaea;
     border-width: 1px;
-    @extend .border-radius-s;
+    //@extend .border-radius-s;
     &:hover{
       @extend .fg-one;
     }
