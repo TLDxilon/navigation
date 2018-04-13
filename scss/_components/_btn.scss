@@ -1,5 +1,5 @@
 .btn{
-  @include transition(color 0.15s ease-in-out, background-color .15s ease-in-out, border .15s ease-in-out);
+//  @include transition(color 0.15s, background-color .15s, border .15s);
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -24,7 +24,7 @@
     background: none;
 
     &:hover{
-
+      @include transition(color 0.15s, background-color .15s, border .15s);
     }
   }
 

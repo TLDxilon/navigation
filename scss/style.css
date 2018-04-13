@@ -1432,11 +1432,6 @@ h2 {
     outline: none; }
 
 .btn {
-  -webkit-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out;
-  -moz-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out;
-  -ms-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out;
-  -o-transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out, border 0.15s ease-in-out;
   display: inline-block;
   text-align: center;
   white-space: nowrap;
@@ -1450,6 +1445,12 @@ h2 {
     color: #4A4A4A !important; }
   .btn--outline {
     background: none; }
+    .btn--outline:hover {
+      -webkit-transition: color 0.15s, background-color 0.15s, border 0.15s;
+      -moz-transition: color 0.15s, background-color 0.15s, border 0.15s;
+      -ms-transition: color 0.15s, background-color 0.15s, border 0.15s;
+      -o-transition: color 0.15s, background-color 0.15s, border 0.15s;
+      transition: color 0.15s, background-color 0.15s, border 0.15s; }
 
 .navbar .navbar-inner, .navbar-fixed .navbar-inner, .subnav .navbar-inner {
   -webkit-justify-content: space-between;
